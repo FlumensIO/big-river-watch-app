@@ -1,0 +1,50 @@
+ion-tab-bar {
+  --background: var(--ion-color-primary-gradient);
+  padding: 5px 0 9px;
+  padding-bottom: var(--ion-safe-area-bottom + 0, 9px);
+
+  &.ios {
+    // TODO: check if needed
+    padding-bottom: calc(var(--ion-safe-area-bottom) + 9px);
+  }
+
+  ion-tab-button {
+    background: transparent;
+    --color: var(--ion-color-primary-contrast);
+
+    ion-icon {
+      font-size: 2rem;
+      --ionicon-stroke-width: 20px;
+    }
+
+    ion-label {
+      margin: 0;
+    }
+
+    @keyframes upscale {
+      from {
+        transform: scale(1);
+      }
+      to {
+        transform: scale(1.2);
+      }
+    }
+
+    &.tab-selected {
+      --color-selected: var(--ion-color-secondary);
+
+      animation-fill-mode: forwards;
+      animation-name: upscale;
+      animation-duration: 0.5s;
+
+      ion-label {
+        font-family: 'Inter';
+        font-weight: 700;
+      }
+
+      ion-icon {
+        --ionicon-stroke-width: 30px;
+      }
+    }
+  }
+}
