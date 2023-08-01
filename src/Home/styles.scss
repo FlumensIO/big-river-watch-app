@@ -11,6 +11,7 @@ ion-tab-bar {
   ion-tab-button {
     background: transparent;
     --color: var(--ion-color-primary-contrast);
+    --color-selected: var(--ion-color-secondary);
 
     ion-icon {
       font-size: 2rem;
@@ -31,8 +32,6 @@ ion-tab-bar {
     }
 
     &.tab-selected {
-      --color-selected: var(--ion-color-secondary);
-
       animation-fill-mode: forwards;
       animation-name: upscale;
       animation-duration: 0.5s;
