@@ -10,6 +10,7 @@ import { setupIonicReact, isPlatform } from '@ionic/react';
 import config from 'common/config';
 import 'common/theme.scss';
 import appModel from 'models/app';
+import records from 'models/collections/records';
 import App from './App';
 
 console.log('🚩 App starting.'); // eslint-disable-line
@@ -24,6 +25,7 @@ setupIonicReact({
 
 async function init() {
   await appModel.ready;
+  await records.ready;
 
   appModel.attrs.sendAnalytics &&
     initAnalytics({

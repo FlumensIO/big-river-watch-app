@@ -1,0 +1,60 @@
+#home-records {
+  ion-header ion-toolbar {
+    --background: transparent;
+
+    ion-segment {
+      max-width: calc(
+        100% - 20px
+      ); // -20px to match the padding of the list below
+      margin: 8px auto;
+      z-index: 100000000;
+      border-radius: var(--theme-border-radius);
+      background: #fff;
+
+      box-shadow: -1px 2px 7px 0 #0000001a, 0 2px 9px 0 #3e396b1a;
+
+      ion-badge {
+        display: inline;
+        vertical-align: top;
+        margin: 3px;
+        margin-left: 3px;
+      }
+
+      ion-label {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+      }
+    }
+
+    position: fixed;
+    color: var(--ion-color-main);
+  }
+
+  ion-content {
+    --overflow: hidden;
+
+    ion-list {
+      height: 100%;
+      width: calc(100% - 20px);
+      padding: 0 !important;
+      max-width: 600px; // ipad
+      margin: 0 auto;
+    }
+  }
+
+  ion-item-divider {
+    padding: 0px 4px 0 12px;
+    background: #dcdae0 !important;
+    color: #080014;
+    border-radius: var(--theme-border-radius);
+  }
+}
+
+html.plt-tablet {
+  #surveys-list.ion-page ion-segment {
+    max-width: calc(600px - 20px);
+  }
+}

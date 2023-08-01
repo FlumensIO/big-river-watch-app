@@ -1,5 +1,3 @@
-const backendUrl = process.env.APP_BACKEND_URL || 'https://TODO:';
-
 const CONFIG = {
   environment: process.env.NODE_ENV as string,
   version: process.env.APP_VERSION as string,
@@ -8,7 +6,8 @@ const CONFIG = {
   sentryDNS: process.env.APP_SENTRY_KEY as string,
 
   backend: {
-    url: backendUrl,
+    url: 'https://zroimasbjhsbchprbllu.supabase.co',
+    anonKey: process.env.SUPABASE_ANON_KEY as string,
   },
 };
 

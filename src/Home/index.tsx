@@ -18,6 +18,7 @@ import records from 'models/collections/records';
 import Home from './Home';
 import Menu from './Menu';
 import PendingSurveysBadge from './PendingSurveysBadge';
+import Records from './Records';
 import './styles.scss';
 
 const HomeController = () => {
@@ -25,7 +26,7 @@ const HomeController = () => {
     <IonTabs>
       <IonRouterOutlet>
         <Redirect exact path="/home" to="/home/landing" />
-        {/* <Route path="/home/user-surveys/:id?" component={UserSurveys} exact /> */}
+        <Route path="/home/records/:id?" component={Records} exact />
         <Route path="/home/landing" component={Home} exact />
         <Route path="/home/menu" component={Menu} exact />
       </IonRouterOutlet>
@@ -38,7 +39,7 @@ const HomeController = () => {
           </IonLabel>
         </IonTabButton>
 
-        <IonTabButton tab="/home/user-surveys" href="/home/user-surveys">
+        <IonTabButton tab="/home/records" href="/home/records">
           <IonIcon icon={layersOutline} />
           <IonLabel>
             <T>Surveys</T>
