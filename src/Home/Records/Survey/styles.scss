@@ -1,12 +1,10 @@
 ion-item-sliding.survey-list-item {
-  --survey-item-height: 73px;
   border-radius: var(--theme-border-radius);
   max-width: 600px;
 
   & > ion-item {
     --border-style: none;
-    --min-height: var(--survey-item-height);
-    --padding-start: 12px;
+    --padding-start: 0;
     --inner-padding-end: 5px;
     --border-radius: var(--theme-border-radius);
   }

@@ -7,7 +7,9 @@ import {
   IonItemSliding,
   IonItemOptions,
   IonItemOption,
+  IonIcon,
 } from '@ionic/react';
+import riverIcon from 'common/images/river.svg';
 import Record, { useValidateCheck } from 'models/record';
 import OnlineStatus from './OnlineStatus';
 import './styles.scss';
@@ -62,12 +64,25 @@ const Survey: FC<Props> = ({ record, uploadIsPrimary, style }) => {
     record.upload().catch(toast.error);
   };
 
+  const image = record.media[0];
+  let avatar = <IonIcon icon={riverIcon} className="h-3/4 w-3/4" />;
+
+  if (image) {
+    avatar = (
+      <img src={image.getURL()} className="h-full w-full object-cover" />
+    );
+  }
+
   return (
     <IonItemSliding className="survey-list-item" style={style}>
       <IonItem
         // routerLink={href} // TODO:
         detail={false}
       >
+        <div className="m-2 mr-3 flex h-[60px] w-[60px] shrink-0 items-center justify-center overflow-hidden rounded-md bg-slate-200">
+          {avatar}
+        </div>
+
         <div className="w-full">
           <h3 className="text-base">
             <T>Survey</T>
