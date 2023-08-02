@@ -1,4 +1,4 @@
-import { observable } from 'mobx';
+import { intercept, IObservableArray, observable } from 'mobx';
 import { useTranslation } from 'react-i18next';
 import {
   Model,
@@ -9,12 +9,9 @@ import {
   ModelOptions,
   device,
 } from '@flumens';
-import { createClient } from '@supabase/supabase-js';
-import config from 'common/config';
+import supabase from 'common/supabase';
+import Media from './media';
 import { modelStore } from './store';
-
-// Create a single supabase client for interacting with the db
-const supabase = createClient(config.backend.url, config.backend.anonKey);
 
 function printErroneousPayload(payload: any) {
   try {
@@ -38,25 +35,40 @@ type Metadata = ModelMetadata & {
 
 export interface Remote {
   synchronising?: boolean;
-  url?: string | null;
-  headers?: any;
-  timeout?: number;
 }
 
 export default class Record extends Model {
   static fromJSON(json: any) {
-    const { ...options } = json;
-    const sample = new this(options);
+    const { media, ...options } = json;
+    const record = new this(options);
 
-    return sample;
+    const addMedia = (m: any) => record.media.push(Media.fromJSON(m));
+    media?.forEach(addMedia);
+
+    return record;
   }
 
   declare metadata: Metadata;
 
   declare attrs: Attrs;
 
+  media: IObservableArray<Media>;
+
   constructor(options: ModelOptions) {
     super({ store: modelStore, ...options });
+
+    this.media = observable([]);
+
+    const onAddedSetParent = (change: any) => {
+      if (change.added && change.added.length) {
+        // eslint-disable-next-line no-param-reassign, no-return-assign
+        const attachParent = (model: any) => (model.parent = this);
+        change.added.forEach(attachParent);
+      }
+
+      return change;
+    };
+    intercept(this.media, onAddedSetParent);
   }
 
   remote: Remote = observable({
@@ -103,8 +115,11 @@ export default class Record extends Model {
       const submission = this.toJSON();
       try {
         this.remote.synchronising = true;
-        // const warehouseMediaNames = await this._uploadMedia(); // TODO:
-        const { id, updated_at } = await this._createRemote(submission);
+        const mediaRemoteURLs = await this._uploadMedia();
+        const { id, updated_at } = await this._createRemote(
+          submission,
+          mediaRemoteURLs
+        );
         this.remote.synchronising = false;
 
         // update the model with new remote IDs
@@ -128,13 +143,24 @@ export default class Record extends Model {
     }
   }
 
-  private async _createRemote({ attrs }: any): Promise<any> {
+  private async _uploadMedia() {
+    if (!this.media.length) return [];
+
+    const upload = (m: Media) => m.saveRemote();
+    const promises = this.media.map(upload);
+    await Promise.all(promises);
+
+    const getRemoteUrl = (m: Media) => m.id!;
+    return this.media.map(getRemoteUrl);
+  }
+
+  private async _createRemote({ attrs }: any, media: string[]): Promise<any> {
     const { deleted, latitude, longitude, ...data } = attrs;
 
     try {
       const res = await supabase
         .from('records')
-        .insert([{ cid: this.cid, data, latitude, longitude, deleted }])
+        .insert([{ cid: this.cid, data, latitude, longitude, deleted, media }])
         .select();
 
       if (res.error) {
@@ -160,6 +186,18 @@ export default class Record extends Model {
 
       throw e;
     }
+  }
+
+  /**
+   * Returns a clean (no observables) JSON representation of the model.
+   */
+  toJSON() {
+    const data: any = super.toJSON();
+
+    const getMedia = (model: Media) => model.toJSON();
+    data.media = this.media?.map(getMedia) || [];
+
+    return JSON.parse(JSON.stringify(data));
   }
 }
 
