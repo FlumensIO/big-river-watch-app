@@ -150,7 +150,8 @@ export default class Record extends Model {
     const promises = this.media.map(upload);
     await Promise.all(promises);
 
-    const getRemoteUrl = (m: Media) => m.id!;
+    const getRemoteUrl = (m: Media) =>
+      `https://zroimasbjhsbchprbllu.supabase.co/storage/v1/object/public/media/${m.id!}`;
     return this.media.map(getRemoteUrl);
   }
 
