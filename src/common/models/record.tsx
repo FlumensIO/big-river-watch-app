@@ -9,6 +9,7 @@ import {
   ModelOptions,
   device,
 } from '@flumens';
+import config from 'common/config';
 import supabase from 'common/supabase';
 import Media from './media';
 import { modelStore } from './store';
@@ -151,7 +152,7 @@ export default class Record extends Model {
     await Promise.all(promises);
 
     const getRemoteUrl = (m: Media) =>
-      `https://zroimasbjhsbchprbllu.supabase.co/storage/v1/object/public/media/${m.id!}`;
+      `${config.backend.url}/${config.backend.mediaPath}/${m.id!}`;
     return this.media.map(getRemoteUrl);
   }
 

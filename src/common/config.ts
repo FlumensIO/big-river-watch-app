@@ -7,6 +7,7 @@ const CONFIG = {
 
   backend: {
     url: 'https://zroimasbjhsbchprbllu.supabase.co',
+    mediaPath: 'storage/v1/object/public/media',
     anonKey: process.env.SUPABASE_ANON_KEY as string,
   },
 };
