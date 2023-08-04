@@ -12,6 +12,8 @@ import {
 import dragonflyIcon from 'common/images/dragonfly.svg';
 import sewerIcon from 'common/images/sewer.svg';
 import records from 'models/collections/records';
+import Pollution from './Guides/Pollution';
+import Wildlife from './Guides/Wildlife';
 import Home from './Home';
 import Menu from './Menu';
 import PendingSurveysBadge from './PendingSurveysBadge';
@@ -23,8 +25,10 @@ const HomeController = () => {
     <IonTabs>
       <IonRouterOutlet>
         <Redirect exact path="/home" to="/home/landing" />
-        <Route path="/home/records/:id?" component={Records} exact />
         <Route path="/home/landing" component={Home} exact />
+        <Route path="/home/records/:id?" component={Records} exact />
+        <Route path="/home/wildlife" component={Wildlife} exact />
+        <Route path="/home/pollution" component={Pollution} exact />
         <Route path="/home/menu" component={Menu} exact />
       </IonRouterOutlet>
 

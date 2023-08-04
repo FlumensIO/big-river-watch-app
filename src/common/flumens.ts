@@ -26,3 +26,9 @@ export * from '@flumens/ionic/dist/models/Indicia/helpers';
 export { default as initStoredSamples } from '@flumens/ionic/dist/models/initStoredSamples';
 export { default as MenuAttrToggle } from '@flumens/ionic/dist/components/MenuAttrToggle';
 export { default as InfoMessage } from '@flumens/ionic/dist/components/InfoMessage';
+export { default as Gallery } from '@flumens/ionic/dist/components/Gallery';
+export {
+  useDisableBackButton,
+  useOnBackButton,
+  useOnHideModal,
+} from '@flumens/ionic/dist/hooks/navigation';

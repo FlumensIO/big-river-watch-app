@@ -1,0 +1,14 @@
+import './beaver_thumbnail.jpg?originalName';
+import './coot_thumbnail.jpg?originalName';
+import './dipper_thumbnail.jpg?originalName';
+import './dragonfly_thumbnail.jpg?originalName';
+import './duck_thumbnail.jpg?originalName';
+import './fish_thumbnail.jpg?originalName';
+import './heron_thumbnail.jpg?originalName';
+import './kingfisher_thumbnail.jpg?originalName';
+import './mayfly_thumbnail.jpg?originalName';
+import './moorhen_thumbnail.jpg?originalName';
+import './otter_thumbnail.jpg?originalName';
+import './rat_thumbnail.jpg?originalName';
+import './swan_thumbnail.jpg?originalName';
+import './wagtail_thumbnail.jpg?originalName';

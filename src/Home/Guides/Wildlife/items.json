@@ -1,0 +1,85 @@
+[
+  {
+    "id": "duck",
+    "name": "Ducks",
+    "description": "Ducks are common in many waterways. There are many different species of duck, each with large bills, short necks and webbed feet. The mallard is one of the UK’s best-known ducks; males have a distinctive green head, and females are brown."
+  },
+
+  {
+    "id": "swan",
+    "name": "Swan",
+    "description": "Swans are large white waterbirds, with elongated s-shaped necks, often orange bills and a large wingspan. You might also see younger swans, known as cygnets, which are grey/brown in colour before they turn white."
+  },
+
+  {
+    "id": "moorhen",
+    "name": "Moorhen",
+    "description": "Moorhens are about the size of a duck, but are largely black with a bright red and yellow beak, with long green legs and un-webbed feet. "
+  },
+
+  {
+    "id": "coot",
+    "name": "Coot",
+    "description": "Coots are also medium-sized and have dark black feathers, but they have a bright white bill and white feathers that extends backwards over their forehead."
+  },
+
+  {
+    "id": "heron",
+    "name": "Heron",
+    "description": "Herons are large birds, reaching up to a meter in height and you’re unlikely to mistake them for another species. They have mainly grey plumage, long yellow legs and a long neck leading to a pointed yellow bill."
+  },
+
+  {
+    "id": "kingfisher",
+    "name": "Kingfisher",
+    "description": "These small, fast-flying birds are always a treat to see. Their bright blue and orange bodies add a splash of colour as they perch on branches, or dart quickly into the water to catch fish with their long black bills."
+  },
+
+  {
+    "id": "dipper",
+    "name": "Dipper",
+    "description": "Dippers are small, dark brown birds with a white breast patch that extends down their throat. They can often be seen standing and bobbing up and down on rocks on the water’s edge in fast-flowing rivers, where they search for insects."
+  },
+
+  {
+    "id": "wagtail",
+    "name": "Grey Wagtail",
+    "description": "These small birds have slate grey plumage on their upper parts, but their underside is a vibrant yellow. Grey wagtails nest near fast-flowing water and eat insects found at the river edge. "
+  },
+
+  {
+    "id": "dragonfly",
+    "name": "Dragonflies or damselflies",
+    "description": "By a river in the summer, you might spot a variety of different sized and coloured dragonflies and dameselflies; These are thin insects with dark wings, large heads and long abdomens and are often seen hovering and flying over and around the water. The wings on a resting dragonfly extend out to the sides of their body, while the wings on a resting damselfly, which are normally smaller and more delicate, reach backwards in line with their long bodies."
+  },
+
+  {
+    "id": "mayfly",
+    "name": "Mayflies, caddisflies, and stoneflies",
+    "description": "Collectively known as ‘riverflies’, the larvae of these winged insects spend most of their life in the river, where they are a great food source for large fish. They emerge as flying adults for just a short period of time to reproduce. They are often under 3 cm in size. Many of the riverflies  are not tolerant of pollution, so their presence can be used as an indicator of good water quality."
+  },
+
+  {
+    "id": "fish",
+    "name": "Fish",
+    "description": "A large number of different fish species can be found in rivers in the UK and Ireland. They vary in size and shape, and it is not always possible to identify them just by sight from the riverbank. So, for this survey, simply record whether you saw any fish or not during your river observation."
+  },
+
+  {
+    "id": "beaver",
+    "name": "Beaver",
+    "description": "Beavers are becoming more common across the UK. These large, semi-aquatic rodents have brown fur, a flat paddle-like tail and can sometimes be seen swimming or eating willow on the riverbank. You’re most likely to spot them at dawn or at dusk."
+  },
+
+  {
+    "id": "otter",
+    "name": "Otter",
+    "description": "Otters appear brown or grey, have slimmer bodies than beavers and a long thin tail. They’re a top predator in a river habitat, can be playful and are very fast swimmers with an impressive ability to hold their breath underwater."
+  },
+
+  {
+    "id": "rat",
+    "name": "Rat",
+    "description": "Rats are strong swimmers and can often be found around rivers, particularly in urban waterways. They are brown with short fur, a pointy face and a long pink tail. Rats can carry some human diseases and so it is important to always wash hands carefully after being in contact with river water."
+  }
+]

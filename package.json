@@ -45,7 +45,8 @@
     "react-dom": "18.2.0",
     "react-i18next": "13.0.2",
     "react-router": "5.3.4",
-    "react-router-dom": "5.3.4"
+    "react-router-dom": "5.3.4",
+    "swiper": "^10.1.0"
   },
   "devDependencies": {
     "@babel/core": "7.22.9",

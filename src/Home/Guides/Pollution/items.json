@@ -1,0 +1,43 @@
+[
+  {
+    "id": "sewage",
+    "name": "Sewage",
+    "description": "Sewage in the river can look brown, or it can look milky grey if it has been mixed with grey wastewater before it reaches the river. It can also smell strongly, and you might spot personal care or sanitary items in or around it, making it easy to identify. Sometimes sewage outlets themselves can also be seen."
+  },
+
+  {
+    "id": "sewage-fungus",
+    "name": "Sewage fungus",
+    "description": "Sewage fungus can be tricky to identify. Often it looks slimy and grey, and cotton wool-like. It is often found downstream from a sewage outfall."
+  },
+
+  {
+    "id": "livestock",
+    "name": "Livestock",
+    "description": "Are there livestock in or that have access to the water? You may see cows or sheep that are able to enter the river, where they have potential to erode the bank, disturb the bottom and transfer faeces or chemicals into the water."
+  },
+
+  {
+    "id": "silt",
+    "name": "Silt",
+    "description": "Silty water has lots of sediment in it and often appears brown, a bit like milky tea or hot chocolate. This type of pollution often happens after heavy rain or cattle/animals entering the water."
+  },
+
+  {
+    "id": "mine-water",
+    "name": "Mine water",
+    "description": "Mine water in a river can be quite distinctive and is often a vibrant orange colour. It can flow out of abandoned mines, bringing high levels of iron and other metals with it which can be damaging to river wildlife."
+  },
+
+  {
+    "id": "run-off",
+    "name": "Run-off",
+    "description": "Water containing run-off can look oily, blackish or have a rainbow sheen on the surface. Often this is washed off from roads and contains oil and brake and tyre residues that gets into rivers."
+  },
+
+  {
+    "id": "algae",
+    "name": "Algae",
+    "description": "Algal blooms or scums can make the water look bright green or blue-green, and sometimes the water surface appears dirty and crusty. Some algae blooms can produce harmful toxins, and you and your pets should keep out of the water. You may also see filamentous algae which can looks like stringy or slimy material under the water."
+  }
+]
