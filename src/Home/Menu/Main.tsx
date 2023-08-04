@@ -1,11 +1,24 @@
 import { observer } from 'mobx-react';
-import { informationCircleOutline, heartOutline } from 'ionicons/icons';
-import { Main } from '@flumens';
+import { informationCircleOutline, shareSocialOutline } from 'ionicons/icons';
+import { InfoMessage, Main, MenuAttrToggle, PickByType } from '@flumens';
 import { IonIcon, IonList, IonItem, IonItemDivider } from '@ionic/react';
 import CONFIG from 'common/config';
 import flumensLogo from 'common/images/flumens.svg';
+import appModel, { Attrs } from 'models/app';
 
-const MainComponent = () => {
+type Props = {
+  onToggle: (
+    setting: keyof PickByType<Attrs, boolean>,
+    checked: boolean
+  ) => void;
+};
+
+const MainComponent = ({ onToggle }: Props) => {
+  const { sendAnalytics } = appModel.attrs;
+
+  const onSendAnalyticsToggle = (checked: boolean) =>
+    onToggle('sendAnalytics', checked);
+
   return (
     <Main>
       <IonList lines="full">
@@ -21,11 +34,20 @@ const MainComponent = () => {
             />
             About
           </IonItem>
+        </div>
 
-          <IonItem routerLink="/info/credits" detail>
-            <IonIcon icon={heartOutline} size="small" slot="start" />
-            Credits
-          </IonItem>
+        <IonItemDivider>Settings</IonItemDivider>
+        <div className="rounded">
+          <MenuAttrToggle
+            icon={shareSocialOutline}
+            label="Share App Analytics"
+            value={sendAnalytics}
+            onChange={onSendAnalyticsToggle}
+            className="[&>ion-icon]:text-[18px]"
+          />
+          <InfoMessage color="medium">
+            Share app crash data so we can make the app more reliable.
+          </InfoMessage>
         </div>
 
         <div className="text-center">

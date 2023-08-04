@@ -20,6 +20,9 @@ export {
 export { default as Store } from '@flumens/ionic/dist/models/Store';
 export { default as date } from '@flumens/ionic/dist/utils/date';
 export { HandledError } from '@flumens/ionic/dist/utils/errors';
+export * from '@flumens/ionic/dist/utils/type';
 export * from '@flumens/ionic/dist/utils/image';
 export * from '@flumens/ionic/dist/models/Indicia/helpers';
 export { default as initStoredSamples } from '@flumens/ionic/dist/models/initStoredSamples';
+export { default as MenuAttrToggle } from '@flumens/ionic/dist/components/MenuAttrToggle';
+export { default as InfoMessage } from '@flumens/ionic/dist/components/InfoMessage';

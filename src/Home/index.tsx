@@ -1,9 +1,4 @@
-import {
-  menuOutline,
-  homeOutline,
-  bookOutline,
-  layersOutline,
-} from 'ionicons/icons';
+import { menuOutline, homeOutline, layersOutline } from 'ionicons/icons';
 import { Trans as T } from 'react-i18next';
 import { Route, Redirect } from 'react-router-dom';
 import {
@@ -14,6 +9,8 @@ import {
   IonTabBar,
   IonRouterOutlet,
 } from '@ionic/react';
+import dragonflyIcon from 'common/images/dragonfly.svg';
+import sewerIcon from 'common/images/sewer.svg';
 import records from 'models/collections/records';
 import Home from './Home';
 import Menu from './Menu';
@@ -48,14 +45,14 @@ const HomeController = () => {
         </IonTabButton>
 
         <IonTabButton tab="home/wildlife" href="/home/wildlife">
-          <IonIcon icon={bookOutline} />
+          <IonIcon icon={dragonflyIcon} />
           <IonLabel>
             <T>Wildlife</T>
           </IonLabel>
         </IonTabButton>
 
         <IonTabButton tab="home/pollution" href="/home/pollution">
-          <IonIcon icon={bookOutline} />
+          <IonIcon icon={sewerIcon} />
           <IonLabel>
             <T>Pollution</T>
           </IonLabel>
