@@ -1,8 +1,8 @@
 import { Page, Main, Header, Section } from '@flumens';
 import config from 'common/config';
+import TheBigRiverWatchLogo from 'common/images/TheBigRiverWatchLogo.png';
 import logo from 'common/images/flumens.svg';
 import CaSTCoLogo from './CaSTCoLogo.png';
-import TheBigRiverWatchLogo from './TheBigRiverWatchLogo.png';
 import TheRiversTrustLogo from './TheRiversTrustLogo.png';
 
 const { P } = Section;
