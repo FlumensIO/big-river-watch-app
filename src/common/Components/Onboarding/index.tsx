@@ -54,15 +54,11 @@ const Onboarding = ({ children }: any) => {
   if (showedWelcome) return children;
 
   const headerWave = (
-    <div className="slide-wave">
-      <div className="custom-shape-divider-bottom-1593438501">
-        <svg width="0" height="0">
-          <clipPath id="svgClip" clipPathUnits="objectBoundingBox">
-            <path d="M0.406,0.955c0.074,-0.009 0.145,-0.025 0.218,-0.035c0.104,-0.014 0.212,-0.014 0.316,0c0.101,0.014 0.206,0.048 0.306,0.066c0.088,0.015 0.185,0.021 0.271,0.002l-0,-0.988l-1.517,0l0,0.931c0.13,0.032 0.27,0.041 0.406,0.024Z" />
-          </clipPath>
-        </svg>
-      </div>
-    </div>
+    <svg width="0" height="0">
+      <clipPath id="svgClip" clipPathUnits="objectBoundingBox">
+        <path d="M0.406,0.955c0.074,-0.009 0.145,-0.025 0.218,-0.035c0.104,-0.014 0.212,-0.014 0.316,0c0.101,0.014 0.206,0.048 0.306,0.066c0.088,0.015 0.185,0.021 0.271,0.002l-0,-0.988l-1.517,0l0,0.931c0.13,0.032 0.27,0.041 0.406,0.024Z" />
+      </clipPath>
+    </svg>
   );
 
   return (
