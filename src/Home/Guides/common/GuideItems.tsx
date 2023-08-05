@@ -48,7 +48,7 @@ const GuideItems = ({ items, onClick }: Props) => {
   const speciesColumns = speciesList.map(getSpeciesElement);
 
   return (
-    <IonGrid className="guide-items ion-no-padding ion-no-margin">
+    <IonGrid className="guide-items ion-no-padding ion-no-margin bg-slate-600">
       <IonRow className="ion-no-padding ion-no-margin">{speciesColumns}</IonRow>
     </IonGrid>
   );

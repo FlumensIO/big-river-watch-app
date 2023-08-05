@@ -10,6 +10,7 @@ import {
 } from '@ionic/react';
 import languages from 'common/languages';
 import appModel from 'models/app';
+// import './language-page-background.jpg?originalName';
 import './styles.scss';
 
 type Props = {

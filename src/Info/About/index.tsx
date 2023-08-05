@@ -1,4 +1,5 @@
 import { Page, Main, Header, Section } from '@flumens';
+import config from 'common/config';
 import logo from 'common/images/flumens.svg';
 import CaSTCoLogo from './CaSTCoLogo.png';
 import TheBigRiverWatchLogo from './TheBigRiverWatchLogo.png';
@@ -19,9 +20,11 @@ const Component: React.FC = () => (
       <Section>
         <P>
           The Big River Watch has been developed by{' '}
-          <a href="https://theriverstrust.org">The Rivers Trust</a> and other
-          partner organisations within{' '}
-          <a href="https://theriverstrust.org/our-work/our-projects/castco-catchment-systems-thinking-cooperative">
+          <a href={config.websitePath}>The Rivers Trust</a> and other partner
+          organisations within{' '}
+          <a
+            href={`${config.websitePath}/our-work/our-projects/castco-catchment-systems-thinking-cooperative`}
+          >
             CaSTCo
           </a>{' '}
           (a project creating a national framework for improving river health

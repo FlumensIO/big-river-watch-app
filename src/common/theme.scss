@@ -148,6 +148,33 @@ h3 {
   color: var(--ion-color-primary-dark);
 }
 
+// info messages
+.attr-page .info-message,
+.info-message.blue {
+  --background: rgba(var(--ion-color-secondary-rgb), 0.1);
+  background: white; // above is transparent
+  border: 1px solid #dcedff;
+  border-radius: var(--theme-border-radius);
+
+  ion-note,
+  ion-icon {
+    color: var(--ion-color-secondary-dark) !important;
+  }
+
+  ion-button {
+    color: var(--ion-color-secondary-dark) !important;
+    --border-color: var(--ion-color-secondary-dark) !important;
+  }
+}
+.info-message ion-note {
+  &.ios {
+    font-size: 1.2em;
+  }
+  &.md {
+    font-size: 1em;
+  }
+}
+
 // // move south from status-bar
 // .ion-page ion-content:only-child {
 //   --padding-top: 20px !important;

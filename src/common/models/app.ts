@@ -5,12 +5,14 @@ import { genericStore } from './store';
 export interface Attrs extends ModelAttrs {
   appSession: number;
   sendAnalytics: boolean;
+  showedWelcome: boolean;
   language?: keyof typeof languages;
 }
 
 const defaults: Attrs = {
   sendAnalytics: true,
   appSession: 0,
+  showedWelcome: false,
 };
 
 class AppModel extends Model {

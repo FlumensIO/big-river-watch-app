@@ -5,6 +5,8 @@ const CONFIG = {
 
   sentryDNS: process.env.APP_SENTRY_KEY as string,
 
+  websitePath: 'https://theriverstrust.org',
+
   backend: {
     url: 'https://zroimasbjhsbchprbllu.supabase.co',
     mediaPath: 'storage/v1/object/public/media',

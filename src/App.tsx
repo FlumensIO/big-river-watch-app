@@ -18,6 +18,7 @@ import '@ionic/react/css/structure.css';
 import '@ionic/react/css/typography.css';
 import appModel from 'models/app';
 import LanguageSelectRequired from 'Components/LanguageSelectRequired';
+import Onboarding from 'Components/Onboarding';
 import Home from './Home';
 import Info from './Info/router';
 
@@ -49,13 +50,15 @@ const App = () => {
   return (
     <IonApp lang={language as any}>
       <LanguageSelectRequired>
-        <IonReactRouter>
-          <IonRouterOutlet id="main">
-            <Route exact path="/" component={HomeRedirect} />
-            <Route path="/home" component={Home} />
-            {Info}
-          </IonRouterOutlet>
-        </IonReactRouter>
+        <Onboarding>
+          <IonReactRouter>
+            <IonRouterOutlet id="main">
+              <Route exact path="/" component={HomeRedirect} />
+              <Route path="/home" component={Home} />
+              {Info}
+            </IonRouterOutlet>
+          </IonReactRouter>
+        </Onboarding>
       </LanguageSelectRequired>
     </IonApp>
   );

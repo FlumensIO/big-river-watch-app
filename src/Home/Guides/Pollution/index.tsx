@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import { Main, Page } from '@flumens';
+import { informationCircle } from 'ionicons/icons';
+import { InfoMessage, Main, Page } from '@flumens';
 import GuideItemProfile from '../common/GuideItemProfile';
 import GuideItems, { GuideItem } from '../common/GuideItems';
 import './images';
@@ -15,6 +16,15 @@ const Wildlife = () => {
   return (
     <Page id="pollution">
       <Main>
+        <InfoMessage
+          className="!m-0 !max-w-none ![--border-radius:0] ![border-radius:0]"
+          icon={informationCircle}
+        >
+          There are many different types of pollution that can be found in our
+          waterways. Some, like chemicals and nutrients are hard to identify,
+          but others are easier to see. Here are a few examples of the more
+          common types of pollution.
+        </InfoMessage>
         <GuideItems items={items} onClick={onOpen} />
         <GuideItemProfile item={item} onClose={onClose} />
       </Main>
