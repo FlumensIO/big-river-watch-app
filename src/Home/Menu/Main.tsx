@@ -5,6 +5,7 @@ import { IonIcon, IonList, IonItem, IonItemDivider } from '@ionic/react';
 import CONFIG from 'common/config';
 import flumensLogo from 'common/images/flumens.svg';
 import appModel, { Attrs } from 'models/app';
+import './styles.scss';
 
 type Props = {
   onToggle: (
@@ -55,7 +56,7 @@ const MainComponent = ({ onToggle }: Props) => {
             <img className="m-auto block w-1/3" src={flumensLogo} alt="logo" />
           </a>
 
-          <p className="mb-10 pt-4 opacity-50">
+          <p className="mb-10 pt-4 text-primary-900 opacity-70">
             <span>
               App version: v{CONFIG.version} ({CONFIG.build})
             </span>

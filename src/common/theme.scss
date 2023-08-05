@@ -31,6 +31,8 @@
     var(--ion-color-primary),
     var(--ion-color-primary-shade)
   );
+  --ion-color-primary-border: #cdd3e7;
+  --ion-color-primary-dark-border: #cdd3e7;
 
   --ion-color-secondary: var(--color-secondary);
   --ion-color-secondary-rgb: var(--color-secondary-rgb);
@@ -86,7 +88,7 @@
   --ion-color-light-shade: var(--color-slate-200);
   --ion-color-light-tint: var(--color-white);
 
-  --ion-page-background: var(--color-slate-50);
+  --ion-page-background: #f1f2f6;
   --ion-item-background: var(--color-white);
 
   --ion-headings-font-weight: 300;
@@ -193,4 +195,121 @@ ion-item-divider {
   color: var(--ion-text-color);
   padding: 0 5px 7px 5px;
   font-weight: 500;
+}
+
+// ACCESSIBILITY IMPROVEMENTS START
+ion-button:not(.button-has-icon-only),
+ion-item {
+  font-size: 1em;
+  &.md {
+    font-size: 0.9em;
+  }
+}
+// clearer image picker empty message
+.photo-picker {
+  &.ios .empty {
+    font-size: 0.9em !important;
+  }
+  &.md .empty {
+    font-size: 1em !important;
+  }
+}
+
+// brighter and bigger divider
+ion-item-divider {
+  font-size: 0.9em;
+  color: var(--ion-text-color);
+  padding: 0 5px 7px 5px;
+}
+
+// brighter attribute page divider
+.attr-page ion-item-divider ion-label {
+  font-family: 'Quicksand Bold' !important;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+// brighter default radio option
+.radio-input-attr ion-radio-group > ion-item.radio-input-default-option {
+  opacity: 1 !important;
+  --background: #ffffff78;
+}
+
+// clearer date picker
+.date-input-attr ion-label[slot='end'] {
+  font-size: 1em;
+
+  &.ios {
+    font-size: 0.9em;
+  }
+}
+
+// clearer menu items
+.menu-attr-item,
+.attr-wrapper {
+  ion-icon[slot='start'] {
+    --ionicon-stroke-width: 24px;
+  }
+  ion-label[slot='end'] {
+    opacity: 1 !important;
+    color: #000000b3;
+
+    &.ios {
+      font-size: 0.9em;
+    }
+  }
+}
+
+// larger collapse headers
+.collapse-block ion-label.ion-text-wrap {
+  font-size: 0.9em;
+}
+
+// larger radio inputs
+.radio-input-attr ion-item ion-label.ios {
+  font-size: 0.9em !important;
+}
+
+// clearer alert messages
+ion-alert div.alert-message.sc-ion-alert-md {
+  color: black;
+  font-size: 1.1em;
+}
+// ACCESSIBILITY IMPROVEMENTS END
+
+// info message styles // TODO: describe or clean up
+.info-message {
+  border-bottom: 1px solid var(--ion-color-primary-border);
+
+  ion-icon {
+    color: var(--ion-color-primary);
+  }
+  ion-label {
+    padding: 10px;
+
+    ion-note {
+      color: var(--ion-color-primary);
+      font-size: 1em;
+    }
+
+    ion-button {
+      color: var(--ion-color-primary);
+      --border-color: var(--ion-color-primary);
+    }
+  }
+}
+
+// subtle borders around rounded items
+.survey-list-item,
+.slider-input-attr,
+.input-list-attr .input-list-attr-item,
+.radio-input-attr ion-item,
+.taxa-filter-edit-dialog-form ion-item,
+ion-textarea.textarea-attr,
+ion-col.grid-input-attr-item,
+ion-item-sliding.survey-list-item,
+.rounded:not(:empty) {
+  border: 1px solid var(--ion-color-primary-border);
+  border-radius: var(--theme-border-radius);
+  color: red;
 }

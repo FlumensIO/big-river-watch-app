@@ -11,13 +11,13 @@ const Component: React.FC = () => (
   <Page id="about">
     <Header title="About" />
     <Main>
-      <div className="mt-5 flex flex-wrap justify-center gap-3 [&>img]:block [&>img]:w-2/5">
-        <img src={TheRiversTrustLogo} alt="TheRiversTrustLogo" />
-        <img src={TheBigRiverWatchLogo} alt="TheBigRiverWatchLogo" />
-        <img src={CaSTCoLogo} alt="CaSTCoLogo" />
-      </div>
-
       <Section>
+        <div className="mt-5 flex flex-wrap justify-center gap-3 [&>img]:block [&>img]:w-2/5">
+          <img src={TheRiversTrustLogo} alt="TheRiversTrustLogo" />
+          <img src={TheBigRiverWatchLogo} alt="TheBigRiverWatchLogo" />
+          <img src={CaSTCoLogo} alt="CaSTCoLogo" />
+        </div>
+
         <P>
           The Big River Watch has been developed by{' '}
           <a href={config.websitePath}>The Rivers Trust</a> and other partner
