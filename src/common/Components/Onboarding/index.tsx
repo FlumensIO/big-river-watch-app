@@ -162,11 +162,14 @@ const Onboarding = ({ children }: any) => {
               <p className="mt-4">
                 <T>
                   Click to confirm you’ve read the{' '}
-                  <a href={`${config.websitePath}/safety-guidance`}>
+                  <a
+                    href={`${config.websitePath}/safety-guidance`}
+                    className="underline"
+                  >
                     Health and Safety guidance
                   </a>{' '}
                   and you agree to our{' '}
-                  <a href={`${config.websitePath}/terms`}>
+                  <a href={`${config.websitePath}/terms`} className="underline">
                     Terms and Conditions
                   </a>
                   .
