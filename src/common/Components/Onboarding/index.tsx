@@ -77,7 +77,10 @@ const Onboarding = ({ children }: any) => {
           }
 
           <SwiperSlide>
-            <img src={slide1} alt="" />
+            <div className="with-shadow">
+              <img src={slide1} alt="" />
+              <img src={slide1} alt="" className="shadow" />
+            </div>
 
             <div className="message">
               <h1 className="mb-5">
@@ -95,7 +98,11 @@ const Onboarding = ({ children }: any) => {
           </SwiperSlide>
 
           <SwiperSlide>
-            <img src={slide2} alt="" />
+            <div className="with-shadow">
+              <img src={slide2} alt="" />
+              <img src={slide2} alt="" className="shadow" />
+            </div>
+
             <div className="message">
               <h1 className="mb-5">
                 <T>
@@ -114,7 +121,11 @@ const Onboarding = ({ children }: any) => {
           </SwiperSlide>
 
           <SwiperSlide>
-            <img src={slide3} alt="" />
+            <div className="with-shadow">
+              <img src={slide3} alt="" />
+              <img src={slide3} alt="" className="shadow" />
+            </div>
+
             <div className="message">
               <h1 className="mb-5">
                 <T>Not sure what you’re looking at?</T>
@@ -129,7 +140,11 @@ const Onboarding = ({ children }: any) => {
           </SwiperSlide>
 
           <SwiperSlide>
-            <img src={slide4} alt="" />
+            <div className="with-shadow">
+              <img src={slide4} alt="" />
+              <img src={slide4} alt="" className="shadow" />
+            </div>
+
             <div className="message">
               <h1 className="mb-5">
                 <T>
