@@ -53,14 +53,6 @@ const Onboarding = ({ children }: any) => {
 
   if (showedWelcome) return children;
 
-  const headerWave = (
-    <svg width="0" height="0">
-      <clipPath id="svgClip" clipPathUnits="objectBoundingBox">
-        <path d="M0.406,0.955c0.074,-0.009 0.145,-0.025 0.218,-0.035c0.104,-0.014 0.212,-0.014 0.316,0c0.101,0.014 0.206,0.048 0.306,0.066c0.088,0.015 0.185,0.021 0.271,0.002l-0,-0.988l-1.517,0l0,0.931c0.13,0.032 0.27,0.041 0.406,0.024Z" />
-      </clipPath>
-    </svg>
-  );
-
   return (
     <Page id="welcome">
       <Main scrollY={false}>
@@ -72,10 +64,6 @@ const Onboarding = ({ children }: any) => {
           }}
           onSlideChange={handleSlideChangeStart}
         >
-          {
-            headerWave // clip-path reference in css
-          }
-
           <SwiperSlide>
             <div className="with-shadow">
               <img src={slide1} alt="" />
@@ -83,7 +71,7 @@ const Onboarding = ({ children }: any) => {
             </div>
 
             <div className="message">
-              <h1 className="mb-5">
+              <h1 className="mb-5 mt-0">
                 <T>
                   Welcome to <b>Big River Watch</b>!
                 </T>
@@ -104,7 +92,7 @@ const Onboarding = ({ children }: any) => {
             </div>
 
             <div className="message">
-              <h1 className="mb-5">
+              <h1 className="mb-5 mt-0">
                 <T>
                   Simply sign up and pick a riverside location that you can
                   spend 10-15 mins observing.
@@ -127,7 +115,7 @@ const Onboarding = ({ children }: any) => {
             </div>
 
             <div className="message">
-              <h1 className="mb-5">
+              <h1 className="mb-5 mt-0">
                 <T>Not sure what you’re looking at?</T>
               </h1>
               <p>
@@ -146,7 +134,7 @@ const Onboarding = ({ children }: any) => {
             </div>
 
             <div className="message">
-              <h1 className="mb-5">
+              <h1 className="mb-5 mt-0">
                 <T>
                   Remember, you should never enter the river to take part in{' '}
                   <b>Big River Watch</b>.
