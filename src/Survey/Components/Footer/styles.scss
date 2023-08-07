@@ -1,0 +1,28 @@
+#survey-footer {
+  position: none;
+  padding: 20px;
+  background: transparent;
+
+  .next-button {
+    z-index: 24;
+    left: 50%;
+    transform: translateX(-50%);
+    --background: var(--ion-color-secondary);
+    --background-activated: none;
+    --color: white;
+    width: 80%;
+    --border-radius: 5px;
+    border-radius: 5px;
+    color: white;
+    box-shadow: 0 0 5px rgba(244, 169, 0, 0.9);
+    font-weight: bold;
+
+    ion-icon {
+      margin: 0;
+    }
+  }
+
+  .finish-button {
+    text-transform: uppercase;
+  }
+}

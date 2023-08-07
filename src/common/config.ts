@@ -7,6 +7,10 @@ const CONFIG = {
 
   websitePath: 'https://theriverstrust.org',
 
+  map: {
+    mapboxApiKey: process.env.APP_MAPBOX_MAP_KEY as string,
+  },
+
   backend: {
     url: 'https://zroimasbjhsbchprbllu.supabase.co',
     mediaPath: 'storage/v1/object/public/media',

@@ -1,0 +1,40 @@
+#survey-header {
+  ion-buttons.cancel-button {
+    padding-left: 10px;
+  }
+
+  ion-title {
+    span {
+      opacity: 0.9;
+      font-weight: 300;
+    }
+  }
+
+  #countdown {
+    padding: 0 5px;
+    margin: 0;
+  }
+
+  ion-item {
+    --background: transparent;
+    --color: white;
+    --inner-border-width: 0;
+
+    ion-label {
+      font-weight: bold;
+      font-size: 1.2em;
+
+      span.warn {
+        color: var(--ion-color-warning);
+      }
+    }
+  }
+
+  ion-progress-bar {
+    height: 7px;
+
+    &::part(progress) {
+      transition: transform 700ms linear 0s;
+    }
+  }
+}

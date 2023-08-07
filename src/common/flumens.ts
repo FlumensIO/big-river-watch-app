@@ -32,3 +32,18 @@ export {
   useOnBackButton,
   useOnHideModal,
 } from '@flumens/ionic/dist/hooks/navigation';
+export {
+  default as RouteWithModels,
+  getModels as getModelsFromRoute,
+} from '@flumens/ionic/dist/components/RouteWithModels';
+export {
+  default as MapContainer,
+  useMapStyles,
+} from '@flumens/ionic/dist/components/Map/Container';
+export {
+  prettyPrintLocation,
+  updateModelLocation,
+  type Location,
+} from '@flumens/ionic/dist/utils/location';
+export * from '@flumens/ionic/dist/components/Map/utils';
+export { default as InfoButton } from '@flumens/ionic/dist/components/InfoButton';

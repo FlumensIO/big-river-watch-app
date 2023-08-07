@@ -7,12 +7,16 @@ export interface Attrs extends ModelAttrs {
   sendAnalytics: boolean;
   showedWelcome: boolean;
   language?: keyof typeof languages;
+
+  // draft survey pointers
+  'draftId:survey': string;
 }
 
 const defaults: Attrs = {
   sendAnalytics: true,
   appSession: 0,
   showedWelcome: false,
+  'draftId:survey': '',
 };
 
 class AppModel extends Model {

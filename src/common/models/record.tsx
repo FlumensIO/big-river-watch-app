@@ -8,10 +8,12 @@ import {
   ModelMetadata,
   ModelOptions,
   device,
+  Location,
 } from '@flumens';
 import config from 'common/config';
 import supabase from 'common/supabase';
 import Media from './media';
+import GPSExtension from './recordGPSExt';
 import { modelStore } from './store';
 
 function printErroneousPayload(payload: any) {
@@ -25,6 +27,7 @@ function printErroneousPayload(payload: any) {
 
 type Attrs = ModelAttrs & {
   date: any;
+  location: Location;
 };
 
 type Metadata = ModelMetadata & {
@@ -55,6 +58,16 @@ export default class Record extends Model {
 
   media: IObservableArray<Media>;
 
+  gps: any;
+
+  startGPS: any;
+
+  stopGPS: any;
+
+  isGPSRunning: any;
+
+  gpsExtensionInit: any;
+
   constructor(options: ModelOptions) {
     super({ store: modelStore, ...options });
 
@@ -70,6 +83,8 @@ export default class Record extends Model {
       return change;
     };
     intercept(this.media, onAddedSetParent);
+
+    Object.assign(this, GPSExtension());
   }
 
   remote: Remote = observable({

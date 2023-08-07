@@ -176,6 +176,16 @@ h3 {
     font-size: 1em;
   }
 }
+.info-message.warning {
+  --background: rgba(var(--ion-color-warning-rgb), 0.1);
+  background: white; // needed for opacity
+  border: 1px solid var(--ion-color-warning);
+
+  ion-note,
+  ion-icon {
+    color: var(--ion-color-warning-dark) !important;
+  }
+}
 
 // // move south from status-bar
 // .ion-page ion-content:only-child {
@@ -311,5 +321,4 @@ ion-item-sliding.survey-list-item,
 .rounded:not(:empty) {
   border: 1px solid var(--ion-color-primary-border);
   border-radius: var(--theme-border-radius);
-  color: red;
 }
