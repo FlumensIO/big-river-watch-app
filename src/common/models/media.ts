@@ -1,5 +1,10 @@
 /* eslint-disable @getify/proper-arrows/name */
+import {
+  Filesystem,
+  Directory as FilesystemDirectory,
+} from '@capacitor/filesystem';
 import { Model, ModelAttrs, createImage, getBlobFromURL } from '@flumens';
+import { isPlatform } from '@ionic/core';
 import supabase from 'common/supabase';
 import Record from './record';
 
@@ -177,7 +182,7 @@ class Media extends Model {
     const imageModel = new MediaClass({
       attrs: {
         data,
-        type: 'jpeg',
+        type: 'jpg',
         width,
         height,
         path: dataDirPath,
@@ -188,6 +193,43 @@ class Media extends Model {
   }
 
   parent?: Record = this.parent;
+
+  async destroy(silent?: boolean) {
+    console.log('MediaModel: destroying.');
+
+    // remove from internal storage
+    if (!isPlatform('hybrid')) {
+      if (!this.parent) return;
+
+      this.parent.media.remove(this);
+
+      if (silent) return;
+
+      this.parent.save();
+    }
+
+    const URL = this.attrs.data;
+
+    try {
+      if (this.attrs.path) {
+        // backwards compatible - don't delete old media
+        await Filesystem.deleteFile({
+          path: URL,
+          directory: FilesystemDirectory.Data,
+        });
+      }
+
+      if (!this.parent) return;
+
+      this.parent.media.remove(this);
+
+      if (silent) return;
+
+      this.parent.save();
+    } catch (err) {
+      console.error(err);
+    }
+  }
 
   async sync() {
     return this.parent ? this.parent.sync() : super.sync();
@@ -211,12 +253,9 @@ class Media extends Model {
 
     const res = await supabase.storage
       .from('media')
-      .upload(`public/${fileName}`, blob, {
-        cacheControl: '3600',
-        upsert: true,
-      });
+      .upload(`public/${fileName}`, blob, { upsert: true });
 
-    if (res.error) throw res.error;
+    if (res.error) throw new Error(res.error.message); // https://github.com/supabase/storage-api/issues/273
 
     this.id = res.data.path;
     return this.save();

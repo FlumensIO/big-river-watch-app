@@ -1,12 +1,48 @@
 import * as Yup from 'yup';
+import user from 'models/user';
 
 const survey = {
-  attrs: {},
+  stepCount: 7,
+
+  attrs: {
+    rain: {
+      pageProps: {
+        attrProps: {
+          attr: 'rain',
+          input: 'radio',
+          inputProps: {
+            options: [
+              { value: 'Yes' },
+              { value: 'No' },
+              { value: "Don't know" },
+              { value: 'Currently raining' },
+            ],
+          },
+        },
+      },
+    },
+
+    surveyors: {
+      pageProps: {
+        attrProps: {
+          attr: 'surveyors',
+          input: 'slider',
+          inputProps: {
+            min: 1,
+            max: 20,
+            step: 1,
+          },
+        },
+      },
+    },
+  },
 
   create({ Record }: any) {
     const record = new Record({
       attrs: {
-        location: null,
+        date: new Date().toISOString(),
+        surveyors: 1,
+        ...user.attrs,
       },
     });
 

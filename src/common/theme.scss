@@ -151,39 +151,53 @@ h3 {
 }
 
 // info messages
-.attr-page .info-message,
-.info-message.blue {
-  --background: rgba(var(--ion-color-secondary-rgb), 0.1);
+.info-message {
+  --background: white;
   background: white; // above is transparent
-  border: 1px solid #dcedff;
+  border: 1px solid var(--ion-color-primary-border);
   border-radius: var(--theme-border-radius);
+
+  ion-label {
+    padding: 10px;
+
+    ion-note {
+      color: var(--ion-color-primary);
+      font-size: 1em;
+    }
+
+    ion-button {
+      color: var(--ion-color-primary);
+      --border-color: var(--ion-color-primary);
+    }
+  }
 
   ion-note,
   ion-icon {
-    color: var(--ion-color-secondary-dark) !important;
+    color: var(--ion-color-primary-dark) !important;
   }
 
   ion-button {
     color: var(--ion-color-secondary-dark) !important;
     --border-color: var(--ion-color-secondary-dark) !important;
   }
-}
-.info-message ion-note {
-  &.ios {
-    font-size: 1.2em;
+  ion-note {
+    &.ios {
+      font-size: 1.2em;
+    }
+    &.md {
+      font-size: 1em;
+    }
   }
-  &.md {
-    font-size: 1em;
-  }
-}
-.info-message.warning {
-  --background: rgba(var(--ion-color-warning-rgb), 0.1);
-  background: white; // needed for opacity
-  border: 1px solid var(--ion-color-warning);
 
-  ion-note,
-  ion-icon {
-    color: var(--ion-color-warning-dark) !important;
+  &.warning {
+    --background: rgba(var(--ion-color-warning-rgb), 0.1);
+    background: white; // needed for opacity
+    border: 1px solid var(--ion-color-warning);
+
+    ion-note,
+    ion-icon {
+      color: var(--ion-color-warning-dark) !important;
+    }
   }
 }
 
@@ -208,7 +222,7 @@ ion-item-divider {
 }
 
 // ACCESSIBILITY IMPROVEMENTS START
-ion-button:not(.button-has-icon-only),
+ion-button:not(.button-has-icon-only):not(.info-button),
 ion-item {
   font-size: 1em;
   &.md {
@@ -287,28 +301,6 @@ ion-alert div.alert-message.sc-ion-alert-md {
 }
 // ACCESSIBILITY IMPROVEMENTS END
 
-// info message styles // TODO: describe or clean up
-.info-message {
-  border-bottom: 1px solid var(--ion-color-primary-border);
-
-  ion-icon {
-    color: var(--ion-color-primary);
-  }
-  ion-label {
-    padding: 10px;
-
-    ion-note {
-      color: var(--ion-color-primary);
-      font-size: 1em;
-    }
-
-    ion-button {
-      color: var(--ion-color-primary);
-      --border-color: var(--ion-color-primary);
-    }
-  }
-}
-
 // subtle borders around rounded items
 .survey-list-item,
 .slider-input-attr,
@@ -321,4 +313,18 @@ ion-item-sliding.survey-list-item,
 .rounded:not(:empty) {
   border: 1px solid var(--ion-color-primary-border);
   border-radius: var(--theme-border-radius);
+}
+
+.rounded > .info-message {
+  border-style: none;
+  padding: 0;
+  --background: var(--ion-color-primary-contrast);
+  ion-note {
+    color: var(--ion-color-primary-shade);
+  }
+}
+
+.rounded > .attr > ion-input {
+  margin: 0px !important;
+  max-width: 100%;
 }

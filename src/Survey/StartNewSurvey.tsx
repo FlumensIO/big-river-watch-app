@@ -74,7 +74,7 @@ function StartNewSurvey(): null {
         record = await getNewRecord();
       }
 
-      const path = '/0';
+      const path = '/1';
 
       context.navigate(`${baseURL}/${record.cid}${path}`, 'forward', 'replace');
     };

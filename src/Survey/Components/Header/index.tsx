@@ -11,6 +11,7 @@ import {
   useIonRouter,
   useIonViewWillEnter,
 } from '@ionic/react';
+import config from '../../config';
 import BackButton from './BackButton';
 import './styles.scss';
 
@@ -27,7 +28,7 @@ const SurveyHeader: FC<Props> = ({ onCancel, rightSlot }) => {
 
   const backButtonLabel = router.routeInfo.routeOptions?.comingFrom || 'Back';
 
-  const surveyStepCount = 18;
+  const surveyStepCount = config.stepCount;
 
   const lastIndex = parseInt(
     router.routeInfo.lastPathname?.split('/').pop() || '',

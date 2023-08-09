@@ -49,10 +49,10 @@ const Survey: FC<Props> = ({ record, uploadIsPrimary, style }) => {
 
   const showDeleteSurveyPrompt = useDeleteSurveyPrompt(record);
 
-  // const { synchronising } = record.remote;
+  const { synchronising } = record.remote;
 
-  // const canShowLink = !synchronising;
-  // const href = canShowLink ? `/survey/${record.cid}` : '';
+  const canShowLink = !synchronising && !record.isDisabled();
+  const href = canShowLink ? `/survey/${record.cid}/1` : undefined;
 
   const onUpload = async (e: SyntheticEvent) => {
     e.preventDefault();
@@ -75,10 +75,7 @@ const Survey: FC<Props> = ({ record, uploadIsPrimary, style }) => {
 
   return (
     <IonItemSliding className="survey-list-item" style={style}>
-      <IonItem
-        // routerLink={href} // TODO:
-        detail={false}
-      >
+      <IonItem routerLink={href} detail={false}>
         <div className="m-2 mr-3 flex h-[60px] w-[60px] shrink-0 items-center justify-center overflow-hidden rounded-md bg-slate-200">
           {avatar}
         </div>

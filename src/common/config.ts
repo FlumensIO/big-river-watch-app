@@ -1,3 +1,6 @@
+import { Filesystem, Directory } from '@capacitor/filesystem';
+import { isPlatform } from '@ionic/react';
+
 const CONFIG = {
   environment: process.env.NODE_ENV as string,
   version: process.env.APP_VERSION as string,
@@ -16,6 +19,18 @@ const CONFIG = {
     mediaPath: 'storage/v1/object/public/media',
     anonKey: process.env.SUPABASE_ANON_KEY as string,
   },
+
+  dataPath: '',
 };
+
+(async function getMediaDirectory() {
+  if (isPlatform('hybrid')) {
+    const { uri } = await Filesystem.getUri({
+      path: '',
+      directory: Directory.Data,
+    });
+    CONFIG.dataPath = uri;
+  }
+})();
 
 export default CONFIG;

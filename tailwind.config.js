@@ -24,10 +24,9 @@ function exposeColorsAsCssVariables({ addBase, theme }) {
           ? `--color${colorGroup}`
           : `--color${colorGroup}-${colorKey}`;
 
-      const rgb = toRGB(value);
-      const rgbVars = {
-        [`${cssVariable}-rbg`]: isCustomGroup(colorGroup) ? rgb : null,
-      };
+      const rgbVars = isCustomGroup(colorGroup)
+        ? { [`${cssVariable}-rgb`]: toRGB(value) }
+        : {};
 
       const newVars =
         typeof value === 'string'
@@ -64,7 +63,7 @@ module.exports = {
           700: '#00428D',
           800: '#002855',
           900: '#001731',
-          950: '#000F1F'
+          950: '#000F1F',
         },
 
         secondary: {

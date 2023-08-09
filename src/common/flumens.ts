@@ -47,3 +47,5 @@ export {
 } from '@flumens/ionic/dist/utils/location';
 export * from '@flumens/ionic/dist/components/Map/utils';
 export { default as InfoButton } from '@flumens/ionic/dist/components/InfoButton';
+export { default as Attr } from '@flumens/ionic/dist/components/Attr';
+export { default as PhotoPicker } from '@flumens/ionic/dist/components/PhotoPicker';

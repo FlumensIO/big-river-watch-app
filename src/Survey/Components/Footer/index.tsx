@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import { observer } from 'mobx-react';
 import clsx from 'clsx';
-import { chevronForwardOutline } from 'ionicons/icons';
+import { chevronForwardOutline, flagOutline } from 'ionicons/icons';
 import { Trans as T } from 'react-i18next';
 import { useRouteMatch } from 'react-router';
 import {
@@ -11,26 +11,33 @@ import {
   IonIcon,
   NavContext,
 } from '@ionic/react';
+import config from '../../config';
 import './styles.scss';
 
 type Props = {
-  title?: string;
   className?: string;
   comingFrom?: string;
 };
 
-const Footer = ({ title, comingFrom, className }: Props) => {
+const Footer = ({ comingFrom, className }: Props) => {
   const { navigate } = useContext(NavContext);
   const match = useRouteMatch();
-
   const route = match.url.split('/');
   const step = parseInt(route.pop()!, 10);
-  route.push(`${step + 1}`);
-  const navigateTo = route.join('/');
 
-  const footerTitle = title || 'Next';
+  const surveyStepCount = config.stepCount;
+  const isLastStep = surveyStepCount === step;
+  const footerTitle = isLastStep ? 'Finish' : 'Next';
 
   const onClick = () => {
+    if (isLastStep) {
+      route.push(`end`);
+    } else {
+      route.push(`${step + 1}`);
+    }
+
+    const navigateTo = route.join('/');
+
     navigate(navigateTo, 'forward', 'push', undefined, {
       comingFrom,
       unmount: true,
@@ -45,11 +52,15 @@ const Footer = ({ title, comingFrom, className }: Props) => {
       <div>
         <IonItem
           lines="none"
-          className={clsx('next-button', title && 'finish-button')}
+          className="next-button"
           onClick={onClick}
           mode="md"
         >
-          <IonIcon slot="end" color="light" icon={chevronForwardOutline} />
+          <IonIcon
+            slot="end"
+            color="light"
+            icon={isLastStep ? flagOutline : chevronForwardOutline}
+          />
           <IonLabel className="ion-text-center">
             <T>{footerTitle}</T>
           </IonLabel>

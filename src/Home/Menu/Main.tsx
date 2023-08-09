@@ -5,7 +5,6 @@ import { IonIcon, IonList, IonItem, IonItemDivider } from '@ionic/react';
 import CONFIG from 'common/config';
 import flumensLogo from 'common/images/flumens.svg';
 import appModel, { Attrs } from 'models/app';
-import './styles.scss';
 
 type Props = {
   onToggle: (

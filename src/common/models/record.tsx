@@ -15,6 +15,7 @@ import supabase from 'common/supabase';
 import Media from './media';
 import GPSExtension from './recordGPSExt';
 import { modelStore } from './store';
+import { Attrs as UserAttrs } from './user';
 
 function printErroneousPayload(payload: any) {
   try {
@@ -25,10 +26,13 @@ function printErroneousPayload(payload: any) {
   }
 }
 
-type Attrs = ModelAttrs & {
-  date: any;
-  location: Location;
-};
+type Attrs = ModelAttrs &
+  UserAttrs & {
+    date: string;
+    rain: any;
+    surveyors: number;
+    location: Location;
+  };
 
 type Metadata = ModelMetadata & {
   /**
@@ -172,12 +176,12 @@ export default class Record extends Model {
   }
 
   private async _createRemote({ attrs }: any, media: string[]): Promise<any> {
-    const { deleted, latitude, longitude, ...data } = attrs;
+    const { deleted, ...data } = attrs;
 
     try {
       const res = await supabase
         .from('records')
-        .insert([{ cid: this.cid, data, latitude, longitude, deleted, media }])
+        .insert([{ cid: this.cid, data, deleted, media }])
         .select();
 
       if (res.error) {

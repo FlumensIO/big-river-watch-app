@@ -90,7 +90,6 @@ const Location = ({ sample: record }: Props) => {
   const [mapRef, setMapRef] = useState<MapRef>();
   const flyToLocation = () => mapFlyToLocation(mapRef, location);
   useEffect(flyToLocation, [mapRef, location]);
-
   return (
     <Page id="survey-location">
       <Header />
