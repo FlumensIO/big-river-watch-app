@@ -1,17 +1,31 @@
 import { observer } from 'mobx-react';
-import { informationCircleOutline } from 'ionicons/icons';
 import { useTranslation } from 'react-i18next';
+import * as Yup from 'yup';
 import { Page, InfoMessage, Main, Attr } from '@flumens';
 import { IonList } from '@ionic/react';
 import Record from 'models/record';
 import Footer from './Components/Footer';
 import Header from './Components/Header';
 
+function isValid(attrs: any) {
+  try {
+    Yup.object()
+      .shape({
+        firstName: Yup.string().required(),
+        lastName: Yup.string().required(),
+        email: Yup.string().email().required(),
+      })
+      .validateSync(attrs, { abortEarly: false });
+  } catch (attrError) {
+    return false;
+  }
+  return true;
+}
+
 type Props = { sample: Record };
 
 const User = ({ sample: record }: Props) => {
-  const isComplete =
-    record.attrs.firstName && record.attrs.lastName && record.attrs.email;
+  const isComplete = isValid(record.attrs);
 
   const { t } = useTranslation();
 
@@ -20,7 +34,7 @@ const User = ({ sample: record }: Props) => {
       <Header />
 
       <Main className="[--padding-bottom:100px]">
-        <InfoMessage icon={informationCircleOutline} className="info-message">
+        <InfoMessage className="info-message">
           Please tell us more about yourself.
         </InfoMessage>
 

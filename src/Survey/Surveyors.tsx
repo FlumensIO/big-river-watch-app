@@ -1,5 +1,4 @@
 import { observer } from 'mobx-react';
-import { informationCircleOutline } from 'ionicons/icons';
 import { Page, InfoMessage, Main, Attr } from '@flumens';
 import Record from 'models/record';
 import Footer from './Components/Footer';
@@ -16,7 +15,7 @@ const Rain = ({ sample: record }: Props) => {
       <Header />
 
       <Main>
-        <InfoMessage icon={informationCircleOutline} className="info-message">
+        <InfoMessage className="info-message">
           How many of you have taken part in this survey today?
         </InfoMessage>
 

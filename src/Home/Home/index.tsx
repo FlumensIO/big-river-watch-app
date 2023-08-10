@@ -8,7 +8,7 @@ const HomeController = () => {
   return (
     <Page id="home">
       <Main>
-        <img src={appLogo} alt="" className="m-auto mt-4 w-3/4" />
+        <img src={appLogo} alt="" className="m-auto mt-16 w-3/4" />
 
         <IonItemGroup>
           <IonRouterLink routerLink="/survey" routerDirection="none">

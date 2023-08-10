@@ -19,8 +19,8 @@ const getQuestionRoute = (Component: unknown, index: number) => [
 
 const questionRoutes = [
   User,
-  UserExperience,
   UserContact,
+  UserExperience,
   Surveyors,
   Location,
   Photo,

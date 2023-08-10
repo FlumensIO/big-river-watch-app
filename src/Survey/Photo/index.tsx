@@ -1,5 +1,4 @@
 import { observer } from 'mobx-react';
-import { informationCircleOutline } from 'ionicons/icons';
 import { Page, Main, InfoMessage } from '@flumens';
 import { IonList } from '@ionic/react';
 import Record from 'models/record';
@@ -15,7 +14,7 @@ const Photo = ({ sample: record }: Props) => {
       <Header />
 
       <Main>
-        <InfoMessage icon={informationCircleOutline} className="info-message">
+        <InfoMessage className="info-message">
           Upload a photo of the river.
         </InfoMessage>
 

@@ -1,5 +1,13 @@
 import { observer } from 'mobx-react';
-import { informationCircleOutline, shareSocialOutline } from 'ionicons/icons';
+import {
+  documentTextOutline,
+  informationCircleOutline,
+  lockClosedOutline,
+  openOutline,
+  shareSocialOutline,
+  shieldOutline,
+} from 'ionicons/icons';
+import { Trans as T } from 'react-i18next';
 import { InfoMessage, Main, MenuAttrToggle, PickByType } from '@flumens';
 import { IonIcon, IonList, IonItem, IonItemDivider } from '@ionic/react';
 import CONFIG from 'common/config';
@@ -14,7 +22,7 @@ type Props = {
 };
 
 const MainComponent = ({ onToggle }: Props) => {
-  const { sendAnalytics } = appModel.attrs;
+  const { sendAnalytics, language } = appModel.attrs;
 
   const onSendAnalyticsToggle = (checked: boolean) =>
     onToggle('sendAnalytics', checked);
@@ -33,6 +41,30 @@ const MainComponent = ({ onToggle }: Props) => {
               slot="start"
             />
             About
+          </IonItem>
+          <IonItem
+            href={`${CONFIG.websitePath}/safety-guidance?lang=${language}`}
+            detail
+            detailIcon={openOutline}
+          >
+            <IonIcon icon={shieldOutline} size="small" slot="start" />
+            <T>Health and Safety</T>
+          </IonItem>{' '}
+          <IonItem
+            href={`${CONFIG.websitePath}/terms?lang=${language}`}
+            detail
+            detailIcon={openOutline}
+          >
+            <IonIcon icon={documentTextOutline} size="small" slot="start" />
+            <T>Terms and Conditions</T>
+          </IonItem>
+          <IonItem
+            href={`${CONFIG.websitePath}/privacy?lang=${language}`}
+            detail
+            detailIcon={openOutline}
+          >
+            <IonIcon icon={lockClosedOutline} size="small" slot="start" />
+            <T>Privacy Policy</T>
           </IonItem>
         </div>
 
