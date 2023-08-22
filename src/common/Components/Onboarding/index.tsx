@@ -26,6 +26,8 @@ import slide3 from './welcome3.jpg';
 import slide4 from './welcome4.jpg';
 
 const Onboarding = ({ children }: any) => {
+  const { language } = appModel.attrs;
+
   const [moreSlidesExist, setMoreSlidesExist] = useState(true);
   const [controlledSwiper, setControlledSwiper] = useState<SwiperCore>();
 
@@ -151,7 +153,7 @@ const Onboarding = ({ children }: any) => {
                 <T>
                   Click to confirm you’ve read the{' '}
                   <a
-                    href={`${config.websitePath}/safety-guidance`}
+                    href={`${config.websitePath}/take-action/the-big-river-watch/health-and-safety-brw?lang=${language}`}
                     className="underline"
                   >
                     Health and Safety guidance

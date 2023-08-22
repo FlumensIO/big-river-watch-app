@@ -43,7 +43,7 @@ const MainComponent = ({ onToggle }: Props) => {
             About
           </IonItem>
           <IonItem
-            href={`${CONFIG.websitePath}/safety-guidance?lang=${language}`}
+            href={`${CONFIG.websitePath}/take-action/the-big-river-watch/health-and-safety-brw?lang=${language}`}
             detail
             detailIcon={openOutline}
           >
