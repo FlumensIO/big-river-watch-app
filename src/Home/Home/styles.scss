@@ -5,11 +5,4 @@
     background: url('./background.jpg') no-repeat center center fixed;
     background-size: cover;
   }
-
-  .survey-button {
-    @apply absolute bottom-20 left-1/2 w-3/4 -translate-x-1/2 -translate-y-1/2 transform rounded-md text-center text-lg font-bold uppercase shadow-2xl;
-
-    --border-radius: 15px;
-    height: 60px;
-  }
 }
