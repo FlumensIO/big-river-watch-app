@@ -1,4 +1,8 @@
-import { menuOutline, homeOutline, layersOutline } from 'ionicons/icons';
+import {
+  layersOutline,
+  readerOutline,
+  informationCircleOutline,
+} from 'ionicons/icons';
 import { Trans as T } from 'react-i18next';
 import { Route, Redirect } from 'react-router-dom';
 import {
@@ -34,7 +38,7 @@ const HomeController = () => {
 
       <IonTabBar slot="bottom">
         <IonTabButton tab="home/landing" href="/home/landing">
-          <IonIcon icon={homeOutline} />
+          <IonIcon icon={readerOutline} />
           <IonLabel>
             <T>Home</T>
           </IonLabel>
@@ -63,7 +67,7 @@ const HomeController = () => {
         </IonTabButton>
 
         <IonTabButton tab="info" href="/home/info">
-          <IonIcon icon={menuOutline} />
+          <IonIcon icon={informationCircleOutline} />
           <IonLabel>
             <T>Info</T>
           </IonLabel>
