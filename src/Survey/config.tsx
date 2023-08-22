@@ -29,7 +29,7 @@ const survey = {
           input: 'slider',
           inputProps: {
             min: 1,
-            max: 20,
+            max: 35,
             step: 1,
           },
         },
