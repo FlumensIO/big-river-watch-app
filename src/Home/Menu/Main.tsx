@@ -31,7 +31,7 @@ const MainComponent = ({ onToggle }: Props) => {
   return (
     <Main>
       <IonList lines="full">
-        <h1 className="my-10 text-center">Menu</h1>
+        <h1 className="my-10 text-center">Info</h1>
 
         <IonItemDivider>Info</IonItemDivider>
         <div className="rounded">

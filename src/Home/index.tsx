@@ -29,7 +29,7 @@ const HomeController = () => {
         <Route path="/home/records/:id?" component={Records} exact />
         <Route path="/home/wildlife" component={Wildlife} exact />
         <Route path="/home/pollution" component={Pollution} exact />
-        <Route path="/home/menu" component={Menu} exact />
+        <Route path="/home/info" component={Menu} exact />
       </IonRouterOutlet>
 
       <IonTabBar slot="bottom">
@@ -62,10 +62,10 @@ const HomeController = () => {
           </IonLabel>
         </IonTabButton>
 
-        <IonTabButton tab="menu" href="/home/menu">
+        <IonTabButton tab="info" href="/home/info">
           <IonIcon icon={menuOutline} />
           <IonLabel>
-            <T>Menu</T>
+            <T>Info</T>
           </IonLabel>
         </IonTabButton>
       </IonTabBar>
