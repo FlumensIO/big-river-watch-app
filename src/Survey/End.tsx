@@ -14,13 +14,15 @@ function useShowThankYouMessage() {
         <div>
           <div className="text-center">
             <IonIcon
-              className="text-6xl text-success"
+              className="text-6xl text-primary-700"
               icon={checkmarkCircleOutline}
             />
           </div>
           <h3 className="my-3 text-center text-lg">Thank you!</h3>
 
-          <p>We appreciate you taking the time to fill out the survey.</p>
+          <p className="text-center">
+            We appreciate you taking the time to fill out the survey.
+          </p>
         </div>
       ),
 
