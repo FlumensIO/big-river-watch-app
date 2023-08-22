@@ -7,14 +7,13 @@
     z-index: 24;
     left: 50%;
     transform: translateX(-50%);
-    --background: var(--ion-color-secondary);
+    --background: var(--ion-color-primary);
     --background-activated: none;
-    --color: white;
+    --color: var(--ion-color-secondary);
     width: 80%;
     --border-radius: 5px;
     border-radius: 5px;
-    color: white;
-    box-shadow: 0 0 5px rgba(244, 169, 0, 0.9);
+    box-shadow: 0 0 5px rgba(var(--ion-color-primary-rgb), 0.5);
     font-weight: bold;
 
     ion-icon {

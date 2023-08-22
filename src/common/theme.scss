@@ -328,3 +328,8 @@ ion-item-sliding.survey-list-item,
   margin: 0px !important;
   max-width: 100%;
 }
+
+// make all primary button text colours secondary
+ion-button[color='primary'] {
+  --ion-color-contrast: var(--color-secondary) !important;
+}

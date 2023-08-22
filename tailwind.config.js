@@ -67,6 +67,22 @@ module.exports = {
         },
 
         secondary: {
+          // https://www.tailwindshades.com/#color=175.0259067357513%2C88.9400921658986%2C57.45098039215686&step-up=9&step-down=12&hue-shift=0&name=bright-turquoise&base-stop=5&v=1&overrides=e30%3D
+          DEFAULT: '#32F3E3',
+          50: '#F5FEFE',
+          100: '#DFFDFB',
+          200: '#B4FBF5',
+          300: '#89F8EF',
+          400: '#5DF6E9',
+          500: '#32F3E3',
+          600: '#0DDBCA',
+          700: '#09A195',
+          800: '#06675F',
+          900: '#032E2A',
+          950: '#01110F',
+        },
+
+        tertiary: {
           // https://www.tailwindshades.com/#color=37.02127659574467%2C100%2C53.92156862745098&step-up=9&step-down=11&hue-shift=0&name=sun&base-stop=5&v=1&overrides=e30%3D
           DEFAULT: '#FFA514',
           50: '#FFF4E3',
@@ -80,22 +96,6 @@ module.exports = {
           800: '#6B4200',
           900: '#331F00',
           950: '#170E00',
-        },
-
-        tertiary: {
-          // https://www.tailwindshades.com/#color=203.89830508474577%2C100%2C46.27450980392157&step-up=9&step-down=12&hue-shift=0&name=azure-radiance&base-stop=6&v=1&overrides=e30%3D
-          DEFAULT: '#008EEC',
-          50: '#E9F6FF',
-          100: '#D3EDFF',
-          200: '#A5DBFF',
-          300: '#77C9FF',
-          400: '#49B6FF',
-          500: '#1BA4FF',
-          600: '#008EEC',
-          700: '#0069AF',
-          800: '#004472',
-          900: '#002034',
-          950: '#000D16',
         },
 
         success: {

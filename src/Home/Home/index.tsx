@@ -14,7 +14,7 @@ const HomeController = () => {
           <IonRouterLink routerLink="/survey" routerDirection="none">
             <IonButton
               className="absolute bottom-20 left-1/2 h-14 w-3/4 -translate-x-1/2 -translate-y-1/2 transform rounded-md text-center text-lg font-bold shadow-2xl [--border-radius:15px]"
-              color="secondary"
+              color="primary"
               mode="ios"
             >
               <IonLabel className="p-1">

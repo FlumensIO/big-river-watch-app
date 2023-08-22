@@ -23,7 +23,7 @@ const PendingSurveysBadge = ({ collection }: Props) => {
   }
 
   return (
-    <IonBadge color="secondary" className="pending-surveys-badge">
+    <IonBadge color="tertiary" className="pending-surveys-badge">
       {count}
     </IonBadge>
   );

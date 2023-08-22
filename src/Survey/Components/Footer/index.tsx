@@ -58,7 +58,7 @@ const Footer = ({ comingFrom, className }: Props) => {
         >
           <IonIcon
             slot="end"
-            color="light"
+            color="secondary"
             icon={isLastStep ? flagOutline : chevronForwardOutline}
           />
           <IonLabel className="ion-text-center">

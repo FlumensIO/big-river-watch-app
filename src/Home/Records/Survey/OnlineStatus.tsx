@@ -33,7 +33,7 @@ const OnlineStatus: FC<Props> = ({ record, onUpload, hasManyPending }) => {
 
   return (
     <IonButton
-      color={isValid ? 'secondary' : 'medium'}
+      color={isValid ? 'primary' : 'medium'}
       fill={hasManyPending ? 'outline' : 'solid'}
       shape="round"
       className="primary-button"
