@@ -1,6 +1,7 @@
 import { observer } from 'mobx-react';
 import {
   documentTextOutline,
+  heartOutline,
   informationCircleOutline,
   lockClosedOutline,
   openOutline,
@@ -42,6 +43,14 @@ const MainComponent = ({ onToggle }: Props) => {
             />
             About
           </IonItem>
+          <IonItem
+            href={`${CONFIG.websitePath}/take-action/the-big-river-watch/big-river-watch-partners?lang=${language}`}
+            detail
+            detailIcon={openOutline}
+          >
+            <IonIcon icon={heartOutline} size="small" slot="start" />
+            <T>Partners</T>
+          </IonItem>{' '}
           <IonItem
             href={`${CONFIG.websitePath}/take-action/the-big-river-watch/health-and-safety-brw?lang=${language}`}
             detail
