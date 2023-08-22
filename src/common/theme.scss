@@ -330,6 +330,7 @@ ion-item-sliding.survey-list-item,
 }
 
 // make all primary button text colours secondary
+ion-item[type='button'][color='primary'],
 ion-button[color='primary'] {
   --ion-color-contrast: var(--color-secondary) !important;
 }

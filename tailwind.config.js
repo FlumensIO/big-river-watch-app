@@ -146,6 +146,9 @@ module.exports = {
           950: '#310404',
         },
       },
+      boxShadow: {
+        btn: '0 0 5px rgba(var(--ion-color-primary-rgb), 0.5)',
+      },
     },
   },
   plugins: [exposeColorsAsCssVariables],
