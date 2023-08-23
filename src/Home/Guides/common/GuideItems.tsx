@@ -37,7 +37,7 @@ const GuideItems = ({ items, onClick }: Props) => {
             backgroundImage: `url('/images/${id}_thumbnail.jpg')`,
           }}
         >
-          <span className="absolute bottom-0 w-full bg-black/60 px-4 py-1 text-sm text-white">
+          <span className="absolute bottom-0 w-full bg-black/60 px-4 py-1 text-sm font-semibold text-white">
             {name}
           </span>
         </div>

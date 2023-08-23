@@ -31,7 +31,7 @@ const LanguageSelectRequired = ({ children }: Props) => {
       <IonItem
         key={value}
         onClick={onSelectWrap}
-        className="pretty-button-language"
+        className="pretty-button-language font-semibold"
         detail
       >
         <IonLabel>{language}</IonLabel>
