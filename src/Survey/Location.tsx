@@ -71,6 +71,8 @@ type Props = { sample: Record };
 
 const Location = ({ sample: record }: Props) => {
   const { location } = record.attrs;
+  const hasAccuracy =
+    Number.isFinite(location.accuracy) && location.accuracy! < 100;
 
   const [showInfo, setShowInfo] = useState(true);
   const closeInfoMessage = () => setShowInfo(false);
@@ -142,6 +144,13 @@ const Location = ({ sample: record }: Props) => {
               onClick={onGPSClick}
               className={clsx(showInfo && '!mt-40')}
             />
+            {hasAccuracy && (
+              <MapContainer.Control>
+                <div className="mx-auto flex h-[41px] w-[41px] flex-col items-center justify-center rounded-full bg-slate-300 text-center text-xs font-semibold text-slate-800 shadow-lg">
+                  ±{location.accuracy?.toFixed(0)}m
+                </div>
+              </MapContainer.Control>
+            )}
 
             <MapContainer.Marker {...location} />
           </MapContainer>
