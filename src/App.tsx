@@ -16,6 +16,7 @@ import '@ionic/react/css/core.css';
 import '@ionic/react/css/normalize.css';
 import '@ionic/react/css/structure.css';
 import '@ionic/react/css/typography.css';
+import 'common/translations/translator';
 import appModel from 'models/app';
 import LanguageSelectRequired from 'Components/LanguageSelectRequired';
 import Onboarding from 'Components/Onboarding';
