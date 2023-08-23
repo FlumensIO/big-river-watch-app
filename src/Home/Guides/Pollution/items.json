@@ -6,7 +6,7 @@
   },
 
   {
-    "id": "sewage-fungus",
+    "id": "sewageFungus",
     "name": "Sewage fungus",
     "description": "Sewage fungus can be tricky to identify. Often it looks slimy and grey, and cotton wool-like. It is often found downstream from a sewage outfall."
   },
@@ -24,13 +24,13 @@
   },
 
   {
-    "id": "mine-water",
+    "id": "mineWater",
     "name": "Mine water",
     "description": "Mine water in a river can be quite distinctive and is often a vibrant orange colour. It can flow out of abandoned mines, bringing high levels of iron and other metals with it which can be damaging to river wildlife."
   },
 
   {
-    "id": "run-off",
+    "id": "runOff",
     "name": "Run-off",
     "description": "Water containing run-off can look oily, blackish or have a rainbow sheen on the surface. Often this is washed off from roads and contains oil and brake and tyre residues that gets into rivers."
   },

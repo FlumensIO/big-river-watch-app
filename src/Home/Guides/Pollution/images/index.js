@@ -1,0 +1,14 @@
+import './algae_1.jpg?originalName';
+import './algae_2.jpg?originalName';
+import './livestock_1.jpg?originalName';
+import './livestock_2.jpg?originalName';
+import './mineWater_1.jpg?originalName';
+import './mineWater_2.jpg?originalName';
+import './runOff_1.jpg?originalName';
+import './runOff_2.jpg?originalName';
+import './sewageFungus_1.jpg?originalName';
+import './sewageFungus_2.jpg?originalName';
+import './sewage_1.jpg?originalName';
+import './sewage_2.jpg?originalName';
+import './silt_1.jpg?originalName';
+import './silt_2.jpg?originalName';
