@@ -41,7 +41,7 @@ export {
   useMapStyles,
 } from '@flumens/ionic/dist/components/Map/Container';
 export {
-  prettyPrintLocation,
+  prettyPrintGridRef,
   updateModelLocation,
   type Location,
 } from '@flumens/ionic/dist/utils/location';

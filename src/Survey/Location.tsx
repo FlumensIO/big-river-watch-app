@@ -18,7 +18,7 @@ import {
   InfoButton,
   mapFlyToLocation,
   device,
-  prettyPrintLocation,
+  prettyPrintGridRef,
 } from '@flumens';
 import { IonButton, IonIcon, IonSpinner } from '@ionic/react';
 import config from 'common/config';
@@ -29,40 +29,53 @@ import Header from './Components/Header';
 type OfflineLocationProps = { record: Record; onGPSClick: any };
 const OfflineLocation = ({ record, onGPSClick }: OfflineLocationProps) => {
   const { location } = record.attrs;
-  const prettyLocation = prettyPrintLocation(location) || 'missing';
+  const hasLocation = Number.isFinite(location.latitude);
+  const gridref = location.gridref && prettyPrintGridRef(location.gridref);
+
+  const latLng = hasLocation
+    ? `${location.latitude.toFixed(3)},${location.longitude.toFixed(3)}`
+    : '';
 
   return (
     <>
-      {!device.isOnline && (
-        <InfoMessage icon={warningOutline} className="info-message warning">
-          Looks like you're offline. The map view is only available with an
-          internet connection. You can still use the GPS to set your current
-          survey location.
-        </InfoMessage>
-      )}
+      <InfoMessage icon={warningOutline} className="info-message warning">
+        Looks like you're offline. The map view is only available with an
+        internet connection. You can still use the GPS to set your current
+        survey location.
+      </InfoMessage>
 
-      {!device.isOnline && (
-        <div className="m-3 rounded bg-white p-5 text-base">
+      <div className="m-3 rounded bg-white p-5 text-base">
+        <div>
           <div>
-            <div>
-              <T>
-                Current survey location:{' '}
-                <b>{{ location: prettyLocation } as any}</b>
-              </T>
+            <div className="mb-3 text-center font-bold">
+              <T>Current survey location</T>
             </div>
-
-            <IonButton
-              fill="outline"
-              size="small"
-              onClick={onGPSClick}
-              className="m-auto mt-4 block w-2/3"
-            >
-              <IonIcon icon={locateOutline} slot="start" />
-              {record.isGPSRunning() ? <IonSpinner /> : <T>Refresh</T>}
-            </IonButton>
+            <ul className="mx-4 list-disc">
+              <li>
+                <T>Coordinates</T>: {latLng}
+              </li>
+              {gridref && (
+                <li>
+                  <T>OS Grid</T>: {gridref}
+                </li>
+              )}
+              <li>
+                <T>Accuracy</T>: ±{location.accuracy?.toFixed(0)}m
+              </li>
+            </ul>
           </div>
+
+          <IonButton
+            fill="outline"
+            size="small"
+            onClick={onGPSClick}
+            className="m-auto mt-4 block w-2/3"
+          >
+            <IonIcon icon={locateOutline} slot="start" />
+            {record.isGPSRunning() ? <IonSpinner /> : <T>Refresh</T>}
+          </IonButton>
         </div>
-      )}
+      </div>
     </>
   );
 };
@@ -80,14 +93,9 @@ const Location = ({ sample: record }: Props) => {
   const setLocation = async (newLocation: any) => {
     if (!newLocation) return;
     if (record.isGPSRunning()) record.stopGPS();
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    const { gridref, ...newLocationWithoutGridref } = newLocation;
 
     // eslint-disable-next-line no-param-reassign
-    record.attrs.location = {
-      ...record.attrs.location,
-      ...newLocationWithoutGridref,
-    };
+    record.attrs.location = { ...record.attrs.location, ...newLocation };
   };
 
   const onMapClick = (e: any) => setLocation(mapEventToLocation(e));
@@ -96,6 +104,9 @@ const Location = ({ sample: record }: Props) => {
   const [mapRef, setMapRef] = useState<MapRef>();
   const flyToLocation = () => mapFlyToLocation(mapRef, location);
   useEffect(flyToLocation, [mapRef, location]);
+
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const { gridref, ...locationWithoutGridRef } = location;
 
   return (
     <Page id="survey-location">
@@ -152,7 +163,7 @@ const Location = ({ sample: record }: Props) => {
               </MapContainer.Control>
             )}
 
-            <MapContainer.Marker {...location} />
+            <MapContainer.Marker {...locationWithoutGridRef} />
           </MapContainer>
         )}
       </Main>
