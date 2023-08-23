@@ -159,7 +159,10 @@ const Onboarding = ({ children }: any) => {
                     Health and Safety guidance
                   </a>{' '}
                   and you agree to our{' '}
-                  <a href={`${config.websitePath}/terms`} className="underline">
+                  <a
+                    href={`${config.websitePath}/take-action/the-big-river-watch/big-river-watch-t-cs?lang=${language}`}
+                    className="underline"
+                  >
                     Terms and Conditions
                   </a>
                   .
