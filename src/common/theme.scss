@@ -355,3 +355,8 @@ a[href]:not([role='listitem']) {
   font-weight: 600;
   text-decoration-line: underline;
 }
+
+// survey pages need extra padding for the footer navigation
+ion-content.survey {
+  --padding-bottom: 100px;
+}

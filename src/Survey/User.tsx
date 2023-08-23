@@ -33,7 +33,7 @@ const User = ({ sample: record }: Props) => {
     <Page id="survey-user">
       <Header />
 
-      <Main className="[--padding-bottom:100px]">
+      <Main className="survey">
         <InfoMessage className="info-message">
           Please tell us more about yourself.
         </InfoMessage>

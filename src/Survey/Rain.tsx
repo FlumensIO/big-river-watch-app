@@ -14,7 +14,7 @@ const Rain = ({ sample: record }: Props) => {
     <Page id="survey-rain">
       <Header />
 
-      <Main>
+      <Main className="survey">
         <InfoMessage className="info-message">
           Has it rained in the last 24 hours?
         </InfoMessage>

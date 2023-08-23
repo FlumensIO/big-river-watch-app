@@ -27,7 +27,7 @@ const UserExperience = ({ sample: record }: Props) => {
     <Page id="survey-user-experience">
       <Header />
 
-      <Main>
+      <Main className="survey">
         <InfoMessage className="info-message">
           Have you ever taken part in a citizen science activity before?
         </InfoMessage>

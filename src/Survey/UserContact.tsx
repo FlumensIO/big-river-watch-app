@@ -65,7 +65,7 @@ const UserContact = ({ sample: record }: Props) => {
     <Page id="survey-user-contact">
       <Header />
 
-      <Main>
+      <Main className="survey">
         <InfoMessage className="info-message">
           Are you happy to be contacted by The Rivers Trust? Read our full{' '}
           <a
@@ -80,7 +80,7 @@ const UserContact = ({ sample: record }: Props) => {
         <IonList>
           <div className="rounded">
             <MenuAttrToggle
-              label="Happy to be contacted"
+              label="I am happy to be contacted by The Rivers Trust"
               value={record.attrs.allowContact}
               onChange={toggleAllowContact}
             />
@@ -88,24 +88,28 @@ const UserContact = ({ sample: record }: Props) => {
         </IonList>
 
         {record.attrs.allowContact && (
-          <IonList>
-            <div className="rounded">
-              <MenuAttrToggle
-                label="Connect to my local trust"
-                value={allowLocalContact}
-                onChange={toggleAllowLocalContact}
-              />
-            </div>
-          </IonList>
+          <>
+            <InfoMessage color="medium">
+              Are you happy to be contacted by your local Rivers Trust to
+              receive the results from this survey and information about future
+              campaigns, local events and volunteering? To match you to your
+              local Rivers Trust, please share with us your postcode.
+            </InfoMessage>
+
+            <IonList>
+              <div className="rounded">
+                <MenuAttrToggle
+                  label="I am happy to be contacted by my local Rivers Trust"
+                  value={allowLocalContact}
+                  onChange={toggleAllowLocalContact}
+                />
+              </div>
+            </IonList>
+          </>
         )}
 
         {allowLocalContact && (
           <>
-            <InfoMessage color="medium">
-              Please share with us your postcode so that you can get involved
-              with more local events and volunteering.
-            </InfoMessage>
-
             <IonList>
               <div className="rounded">
                 <Attr
