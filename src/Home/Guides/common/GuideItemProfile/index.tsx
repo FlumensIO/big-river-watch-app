@@ -104,7 +104,7 @@ const GuideItemProfile = ({ item, onClose }: Props) => {
           </IonCardHeader>
 
           <IonCardContent>
-            <h3>
+            <h3 className="text-primary">
               <T>Description</T>:
             </h3>
             <p>{item.description}</p>

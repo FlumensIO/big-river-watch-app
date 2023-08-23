@@ -103,6 +103,11 @@
 @font-face {
   font-family: 'Inter';
   src: url('./fonts/Inter-Light.ttf');
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('./fonts/Inter-Regular.ttf');
   font-weight: 400;
 }
 @font-face {
@@ -112,12 +117,12 @@
 }
 @font-face {
   font-family: 'Inter';
-  src: url('./fonts/Inter-Regular.ttf');
+  src: url('./fonts/Inter-SemiBold.ttf');
   font-weight: 600;
 }
 @font-face {
   font-family: 'Inter';
-  src: url('./fonts/Inter-SemiBold.ttf');
+  src: url('./fonts/Inter-Bold.ttf');
   font-weight: 700;
 }
 
@@ -128,13 +133,13 @@
 
 ion-title,
 h1 {
-  font-weight: 700;
-}
-h2 {
   font-weight: 600;
 }
-h3 {
+h2 {
   font-weight: 500;
+}
+h3 {
+  font-weight: 400;
 }
 // FONTS END
 
@@ -163,8 +168,8 @@ h3 {
 
 // info messages
 .info-message {
-  --background: white;
-  background: white; // above is transparent
+  --background: var(--ion-color-primary-contrast);
+  background: var(--ion-color-primary-contrast); // above is transparent
   border: 1px solid var(--ion-color-primary-border);
   border-radius: var(--theme-border-radius);
 
@@ -235,7 +240,7 @@ ion-item-divider {
 // ACCESSIBILITY IMPROVEMENTS START
 ion-button:not(.button-has-icon-only):not(.info-button),
 ion-item {
-  font-size: 1em;
+  font-size: 0.9em;
   &.md {
     font-size: 0.9em;
   }
@@ -344,4 +349,9 @@ ion-item-sliding.survey-list-item,
 ion-item[type='button'][color='primary'],
 ion-button[color='primary'] {
   --ion-color-contrast: var(--color-secondary) !important;
+}
+
+a[href]:not([role='listitem']) {
+  font-weight: 600;
+  text-decoration-line: underline;
 }

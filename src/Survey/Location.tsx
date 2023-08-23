@@ -146,7 +146,7 @@ const Location = ({ sample: record }: Props) => {
             />
             {hasAccuracy && (
               <MapContainer.Control>
-                <div className="mx-auto flex h-[41px] w-[41px] flex-col items-center justify-center rounded-full bg-slate-300 text-center text-xs font-semibold text-slate-800 shadow-lg">
+                <div className="mx-auto flex h-[41px] w-[41px] flex-col items-center justify-center rounded-full bg-white/90 text-center text-xs font-semibold text-slate-800 shadow-lg">
                   ±{location.accuracy?.toFixed(0)}m
                 </div>
               </MapContainer.Control>
