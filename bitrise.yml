@@ -22,6 +22,7 @@ workflows:
   android:
     steps:
       - set-java-version@1:
+          run_if: .IsCI
           inputs:
             - set_java_version: '17'
       - change-android-versioncode-and-versionname@1:
@@ -42,7 +43,7 @@ workflows:
   ci:
     before_run:
       - web
-      # - android
+      - android
       # - ios
     after_run:
       - deploy
@@ -53,29 +54,29 @@ workflows:
           run_if: enveq "BUILD_ONLY" ""
           inputs:
             - command: run deploy
-      # - google-play-deploy@3:
-      #     run_if: enveq "BUILD_ONLY" ""
-      #     inputs:
+      - google-play-deploy@3:
+          run_if: enveq "BUILD_ONLY" ""
+          inputs:
             - package_name: $BITRISE_PROJECT_NAME
             - service_account_json_key_path: $BITRISEIO_GOOGLE_SERVICE_KEY_URL
-      # - deploy-to-itunesconnect-application-loader@1:
-      #     run_if: enveq "BUILD_ONLY" ""
-      #     inputs:
-            - password: $ITUNES_CONNECT_PASS
-            - app_password: $ITUNES_CONNECT_APP_PASS
-            - itunescon_user: $ITUNES_CONNECT_USER
-      # - script@1:
-      #     title: Upload Builds to OneDrive
-      #     inputs:
-      #       - content: |
-      #           DIRECTORY="$BITRISE_PROJECT_NAME/$NPM_PACKAGE_VERSION"
-      #           npx @flumens/onedrive-upload --directory $DIRECTORY --file $BITRISE_DEPLOY_DIR/app-debug.aab
-      # - script@1:
-      #     title: Upload Builds to OneDrive
-      #     inputs:
+            # - deploy-to-itunesconnect-application-loader@1:
+            #     run_if: enveq "BUILD_ONLY" ""
+            #     inputs:
+            #       - password: $ITUNES_CONNECT_PASS
+            #       - app_password: $ITUNES_CONNECT_APP_PASS
+            #       - itunescon_user: $ITUNES_CONNECT_USER
+      - script@1:
+          title: Upload Builds to OneDrive
+          inputs:
             - content: |
                 DIRECTORY="$BITRISE_PROJECT_NAME/$NPM_PACKAGE_VERSION"
-                npx @flumens/onedrive-upload --directory $DIRECTORY --file $BITRISE_DEPLOY_DIR/App.ipa
+                npx @flumens/onedrive-upload --directory $DIRECTORY --file $BITRISE_DEPLOY_DIR/app-debug.aab
+            # - script@1:
+            #     title: Upload Builds to OneDrive
+            #     inputs:
+            #       - content: |
+            #           DIRECTORY="$BITRISE_PROJECT_NAME/$NPM_PACKAGE_VERSION"
+            #           npx @flumens/onedrive-upload --directory $DIRECTORY --file $BITRISE_DEPLOY_DIR/App.ipa
       - script@1:
           title: Git Tag
           run_if: enveq "BUILD_ONLY" ""
