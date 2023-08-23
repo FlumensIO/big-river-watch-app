@@ -1,7 +1,8 @@
 import { FC, SyntheticEvent } from 'react';
 import { observer } from 'mobx-react';
+import { locationOutline } from 'ionicons/icons';
 import { Trans as T } from 'react-i18next';
-import { useToast, useAlert } from '@flumens';
+import { useToast, useAlert, prettyPrintLocation } from '@flumens';
 import {
   IonItem,
   IonItemSliding,
@@ -73,6 +74,8 @@ const Survey: FC<Props> = ({ record, uploadIsPrimary, style }) => {
     );
   }
 
+  const prettyLocation = prettyPrintLocation(record.attrs.location);
+
   return (
     <IonItemSliding className="survey-list-item" style={style}>
       <IonItem routerLink={href} detail={false}>
@@ -81,8 +84,10 @@ const Survey: FC<Props> = ({ record, uploadIsPrimary, style }) => {
         </div>
 
         <div className="w-full">
-          <h3 className="text-base">
-            <T>Survey</T>
+          <h3 className="text-sm">
+            <div>
+              <IonIcon icon={locationOutline} /> {prettyLocation}
+            </div>
           </h3>
 
           <div className="record-details" />
