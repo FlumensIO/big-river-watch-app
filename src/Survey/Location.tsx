@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
 import { observer } from 'mobx-react';
+import clsx from 'clsx';
 import {
-  informationCircleOutline,
+  closeCircleOutline,
   locateOutline,
   warningOutline,
 } from 'ionicons/icons';
@@ -71,6 +72,9 @@ type Props = { sample: Record };
 const Location = ({ sample: record }: Props) => {
   const { location } = record.attrs;
 
+  const [showInfo, setShowInfo] = useState(true);
+  const closeInfoMessage = () => setShowInfo(false);
+
   const setLocation = async (newLocation: any) => {
     if (!newLocation) return;
     if (record.isGPSRunning()) record.stopGPS();
@@ -100,11 +104,15 @@ const Location = ({ sample: record }: Props) => {
           <OfflineLocation record={record} onGPSClick={onGPSClick} />
         )}
 
-        {device.isOnline && (
-          <InfoMessage
-            icon={informationCircleOutline}
-            className="info-message absolute left-1/2 top-0 z-10 !mx-0 w-[calc(100%-20px)] -translate-x-1/2"
-          >
+        {device.isOnline && showInfo && (
+          <InfoMessage className="info-message absolute left-1/2 top-0 z-10 !mx-0 w-[calc(100%-20px)] -translate-x-1/2">
+            <IonButton
+              onClick={closeInfoMessage}
+              fill="clear"
+              className="absolute -right-6 top-0"
+            >
+              <IonIcon icon={closeCircleOutline} slot="icon-only" />
+            </IonButton>
             Enable your GPS to set your location, or use the map to zoom in and
             tap on your location.
             <InfoButton label="READ MORE" header="Info">
@@ -132,7 +140,7 @@ const Location = ({ sample: record }: Props) => {
             <MapContainer.Control.Geolocate
               isLocating={record.gps.locating}
               onClick={onGPSClick}
-              className="!mt-40"
+              className={clsx(showInfo && '!mt-40')}
             />
 
             <MapContainer.Marker {...location} />
