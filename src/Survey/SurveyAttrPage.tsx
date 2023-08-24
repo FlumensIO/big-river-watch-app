@@ -10,19 +10,38 @@ type Props = { sample: Record; attr: keyof Attrs };
 const SurveyAttrPage = ({ sample: record, attr }: Props) => {
   const attrConf = (survey.attrs as any)[attr].pageProps;
 
-  const isComplete =
-    attrConf.attrProps.required === false ||
-    (Array.isArray(record.attrs[attr])
-      ? record.attrs[attr].length
-      : !!record.attrs[attr]);
+  const validate = () => {
+    if (attrConf.attrProps?.inputProps?.min) {
+      const length = Array.isArray(record.attrs[attr])
+        ? record.attrs[attr].length
+        : record.attrs[attr];
+
+      return length >= attrConf.attrProps?.inputProps?.min;
+    }
+
+    return (
+      attrConf.attrProps.required === false ||
+      (Array.isArray(record.attrs[attr])
+        ? record.attrs[attr].length
+        : !!record.attrs[attr])
+    );
+  };
+
+  const isComplete = validate();
+
+  const getAttr = (attrProps: any) => (
+    <Attr key={attr} model={record} attr={attr} {...attrProps} />
+  );
+
+  const attrs = Array.isArray(attrConf.attrProps)
+    ? attrConf.attrProps.map(getAttr)
+    : [getAttr(attrConf.attrProps)];
 
   return (
     <Page id={`survey-${attr}`}>
       <Header />
 
-      <Main className="survey">
-        <Attr model={record} attr={attr} {...attrConf.attrProps} />
-      </Main>
+      <Main className="survey">{attrs}</Main>
 
       {!!isComplete && <Footer comingFrom={attrConf.headerProps.title} />}
     </Page>

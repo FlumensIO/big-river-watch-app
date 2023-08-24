@@ -27,16 +27,16 @@ const getQuestionRoute = (Component: unknown, index: number) => {
 export const questionRoutes = [
   User,
   UserContact,
-  'citSciExperience',
+  'experience',
   'surveyors',
   Location,
   Photo,
   'rain',
   'flow',
-  'visitFrequency',
-  'riverHealth',
+  'visits',
+  'health',
   'feeling',
-  'riverNaturalness',
+  'naturalness',
   'barriers',
   'banks',
   'wildlife',
@@ -45,8 +45,8 @@ export const questionRoutes = [
   'smell',
   'litter',
   'pollution',
-  // TODO: 3 things
-  'comments',
+  'goodThings',
+  'comment',
 ];
 
 const routes = [

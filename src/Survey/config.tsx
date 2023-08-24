@@ -4,7 +4,7 @@ import user from 'models/user';
 
 const survey = {
   attrs: {
-    citSciExperience: {
+    experience: {
       pageProps: {
         headerProps: { title: 'Experience' },
         attrProps: {
@@ -71,7 +71,7 @@ const survey = {
       },
     },
 
-    visitFrequency: {
+    visits: {
       pageProps: {
         headerProps: { title: 'Visits' },
         attrProps: {
@@ -95,9 +95,9 @@ const survey = {
       },
     },
 
-    riverHealth: {
+    health: {
       pageProps: {
-        headerProps: { title: 'River Health' },
+        headerProps: { title: 'Health' },
         attrProps: {
           input: 'radio',
           info: (
@@ -170,7 +170,7 @@ const survey = {
       },
     },
 
-    riverNaturalness: {
+    naturalness: {
       pageProps: {
         headerProps: { title: 'Naturalness' },
         attrProps: {
@@ -546,7 +546,37 @@ const survey = {
       },
     },
 
-    comments: {
+    goodThings: {
+      pageProps: {
+        headerProps: { title: 'Good things' },
+        attrProps: {
+          input: 'inputList',
+          required: false,
+          info: (
+            <>
+              <div className="font-medium">
+                <T>
+                  Noticing the good things in nature can bring sustained and
+                  significant improvements in your well-being. Note down three
+                  good things that you've noticed by the river today.
+                </T>
+              </div>
+              <div className="mt-2">
+                <i>
+                  <T>
+                    This could be something you have seen, heard, or smelled.
+                  </T>
+                </i>
+              </div>
+            </>
+          ),
+          infoProps: { icon: null, skipTranslation: true },
+          inputProps: { min: 3, max: 3 },
+        },
+      },
+    },
+
+    comment: {
       pageProps: {
         headerProps: { title: 'Comment' },
         attrProps: {
@@ -583,6 +613,7 @@ const survey = {
       attrs: {
         date: new Date().toISOString(),
         surveyors: 1,
+        location: {},
         ...user.attrs,
       },
     });

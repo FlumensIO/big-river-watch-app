@@ -7,7 +7,7 @@ export interface Attrs extends ModelAttrs {
   email: string;
   allowContact: boolean;
   postcode?: string;
-  citSciExperience?: boolean;
+  experience?: boolean;
 }
 
 const defaults: Attrs = {
