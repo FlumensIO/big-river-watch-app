@@ -15,6 +15,7 @@ import './heron_2.jpg?originalName';
 import './kingfisher_1.jpg?originalName';
 import './kingfisher_2.jpg?originalName';
 import './mayfly_1.jpg?originalName';
+import './mayfly_2.jpg?originalName';
 import './moorhen_1.jpg?originalName';
 import './moorhen_2.jpg?originalName';
 import './otter_1.jpg?originalName';
