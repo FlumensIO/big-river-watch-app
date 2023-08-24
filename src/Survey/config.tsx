@@ -312,7 +312,7 @@ const survey = {
               { value: 'Dipper' },
               { value: 'Grey Wagtail' },
               { value: 'Dragonflies or damselflies' },
-              { value: 'Mayflies or stoneflies ' },
+              { value: 'Mayflies or stoneflies' },
               { value: 'Fish' },
               { value: 'Beaver' },
               { value: 'Otter' },
@@ -548,7 +548,7 @@ const survey = {
 
     comments: {
       pageProps: {
-        headerProps: { title: 'Comments' },
+        headerProps: { title: 'Comment' },
         attrProps: {
           input: 'textarea',
           required: false,

@@ -7,10 +7,10 @@ import resources from './loader';
 const DEFAULT_LANGUAGE = 'en';
 
 window.getNewTerms = function getNewTermsWrap() {
-  window.dic = window.dic || [];
+  window.dic = window.dic || new Map();
   let all = '';
-  const showUntranslatedTerms = word => {
-    all += `\n# ${window.location.pathname} \nmsgid "${word}"\nmsgstr "${word}"\n`;
+  const showUntranslatedTerms = (path, word) => {
+    all += `\n# ${path} \nmsgid "${word}"\nmsgstr "${word}"\n`;
   };
   window.dic.forEach(showUntranslatedTerms);
   console.log(all);
@@ -19,16 +19,16 @@ window.getNewTerms = function getNewTermsWrap() {
 // console command to extract into .po file
 // all='';dic.forEach(word => {all+=`\nmsgid "${word}"\nmsgstr "${word}"\n`})
 function saveMissingKey(key) {
-  window.dic = window.dic || [];
+  window.dic = window.dic || new Map();
 
-  if (window.dic.includes(key)) return;
+  if (window.dic.has(key)) return;
 
   if (!`${key}`.trim()) return;
 
   if (Number.isFinite(parseInt(key, 10))) return;
 
   console.warn(`🇬🇧: ${key}`);
-  window.dic.push(key);
+  window.dic.set(key, window.location.pathname);
 }
 
 i18n

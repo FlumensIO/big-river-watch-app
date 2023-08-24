@@ -183,7 +183,9 @@ const Onboarding = ({ children }: any) => {
               className={clsx('!m-3 h-12', moreSlidesExist && 'w-12')}
             >
               {!moreSlidesExist ? (
-                <span className="px-5 font-bold">Confirm</span>
+                <span className="px-5 font-bold">
+                  <T>Confirm</T>
+                </span>
               ) : (
                 <IonIcon slot="icon-only" icon={arrowForward} />
               )}

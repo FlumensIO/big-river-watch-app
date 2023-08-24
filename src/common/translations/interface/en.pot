@@ -6,5 +6,850 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language: en\n"
 
+# /onboarding 
+msgid "Welcome to <1>Big River Watch</1>!"
+msgstr "Welcome to <1>Big River Watch</1>!"
+
+# /onboarding 
+msgid "Take part in the survey to help us understand the health of our rivers."
+msgstr "Take part in the survey to help us understand the health of our rivers."
+
+# /onboarding 
+msgid "Simply sign up and pick a riverside location that you can spend 10-15 mins observing."
+msgstr "Simply sign up and pick a riverside location that you can spend 10-15 mins observing."
+
+# /onboarding 
+msgid "Look out for things like wildlife, plants and pollution, then start the survey in this app to tell us what you can see. Click ‘submit’ to send us your results!"
+msgstr "Look out for things like wildlife, plants and pollution, then start the survey in this app to tell us what you can see. Click ‘submit’ to send us your results!"
+
+# /onboarding 
+msgid "Not sure what you’re looking at?"
+msgstr "Not sure what you’re looking at?"
+
+# /onboarding 
+msgid "Use our handy ID guides to help identify some of the different species or types of pollution you might come across."
+msgstr "Use our handy ID guides to help identify some of the different species or types of pollution you might come across."
+
+# /onboarding 
+msgid "Remember, you should never enter the river to take part in <2>Big River Watch</2>."
+msgstr "Remember, you should never enter the river to take part in <2>Big River Watch</2>."
+
+# /onboarding 
+msgid "Find somewhere safe nearby to the river where there is no risk of slipping into the water, and enjoy a peaceful time observing river life."
+msgstr "Find somewhere safe nearby to the river where there is no risk of slipping into the water, and enjoy a peaceful time observing river life."
+
+# /onboarding 
+msgid "Click to confirm you’ve read the <2>Health and Safety guidance</2> and you agree to our <6>Terms and Conditions</6>."
+msgstr "Click to confirm you’ve read the <2>Health and Safety guidance</2> and you agree to our <6>Terms and Conditions</6>."
+
+# /onboarding 
+msgid "Confirm"
+msgstr "Confirm"
+
+# /home 
+msgid "Home"
+msgstr "Home"
+
+# /home 
+msgid "Surveys"
+msgstr "Surveys"
+
+# /home 
+msgid "Wildlife"
+msgstr "Wildlife"
+
+# /home 
+msgid "Pollution"
+msgstr "Pollution"
+
+# /home/landing 
+msgid "Start survey"
+msgstr "Start survey"
+
+# /home/records 
+msgid "Pending"
+msgstr "Pending"
+
+# /home/records 
+msgid "Uploaded"
+msgstr "Uploaded"
+
+# /home/records 
+msgid "You don't have any records in this list yet."
+msgstr "You don't have any records in this list yet."
+
+# /home/wildlife 
+msgid "Beaver"
+msgstr "Beaver"
+
+# /home/wildlife 
+msgid "Coot"
+msgstr "Coot"
+
+# /home/wildlife 
+msgid "Dipper"
+msgstr "Dipper"
+
+# /home/wildlife 
+msgid "Dragonflies or damselflies"
+msgstr "Dragonflies or damselflies"
+
+# /home/wildlife 
+msgid "Ducks"
+msgstr "Ducks"
+
+# /home/wildlife 
+msgid "Fish"
+msgstr "Fish"
+
+# /home/wildlife 
+msgid "Grey Wagtail"
+msgstr "Grey Wagtail"
+
+# /home/wildlife 
+msgid "Heron"
+msgstr "Heron"
+
+# /home/wildlife 
+msgid "Kingfisher"
+msgstr "Kingfisher"
+
+# /home/wildlife 
+msgid "Mayflies, caddisflies, and stoneflies"
+msgstr "Mayflies, caddisflies, and stoneflies"
+
+# /home/wildlife 
+msgid "Moorhen"
+msgstr "Moorhen"
+
+# /home/wildlife 
+msgid "Otter"
+msgstr "Otter"
+
+# /home/wildlife 
+msgid "Rat"
+msgstr "Rat"
+
+# /home/wildlife 
+msgid "Swan"
+msgstr "Swan"
+
+# /home/wildlife 
+msgid "Description"
+msgstr "Description"
+
+# /home/wildlife 
+msgid "Beavers are becoming more common across the UK. These large, semi-aquatic rodents have brown fur, a flat paddle-like tail and can sometimes be seen swimming or eating willow on the riverbank. You’re most likely to spot them at dawn or at dusk."
+msgstr "Beavers are becoming more common across the UK. These large, semi-aquatic rodents have brown fur, a flat paddle-like tail and can sometimes be seen swimming or eating willow on the riverbank. You’re most likely to spot them at dawn or at dusk."
+
+# /home/wildlife 
+msgid "Coots are also medium-sized and have dark black feathers, but they have a bright white bill and white feathers that extends backwards over their forehead."
+msgstr "Coots are also medium-sized and have dark black feathers, but they have a bright white bill and white feathers that extends backwards over their forehead."
+
+# /home/wildlife 
+msgid "Dippers are small, dark brown birds with a white breast patch that extends down their throat. They can often be seen standing and bobbing up and down on rocks on the water’s edge in fast-flowing rivers, where they search for insects."
+msgstr "Dippers are small, dark brown birds with a white breast patch that extends down their throat. They can often be seen standing and bobbing up and down on rocks on the water’s edge in fast-flowing rivers, where they search for insects."
+
+# /home/wildlife 
+msgid "By a river in the summer, you might spot a variety of different sized and coloured dragonflies and dameselflies; These are thin insects with dark wings, large heads and long abdomens and are often seen hovering and flying over and around the water. The wings on a resting dragonfly extend out to the sides of their body, while the wings on a resting damselfly, which are normally smaller and more delicate, reach backwards in line with their long bodies."
+msgstr "By a river in the summer, you might spot a variety of different sized and coloured dragonflies and dameselflies; These are thin insects with dark wings, large heads and long abdomens and are often seen hovering and flying over and around the water. The wings on a resting dragonfly extend out to the sides of their body, while the wings on a resting damselfly, which are normally smaller and more delicate, reach backwards in line with their long bodies."
+
+# /home/wildlife 
+msgid "Ducks are common in many waterways. There are many different species of duck, each with large bills, short necks and webbed feet. The mallard is one of the UK’s best-known ducks; males have a distinctive green head, and females are brown."
+msgstr "Ducks are common in many waterways. There are many different species of duck, each with large bills, short necks and webbed feet. The mallard is one of the UK’s best-known ducks; males have a distinctive green head, and females are brown."
+
+# /home/wildlife 
+msgid "A large number of different fish species can be found in rivers in the UK and Ireland. They vary in size and shape, and it is not always possible to identify them just by sight from the riverbank. So, for this survey, simply record whether you saw any fish or not during your river observation."
+msgstr "A large number of different fish species can be found in rivers in the UK and Ireland. They vary in size and shape, and it is not always possible to identify them just by sight from the riverbank. So, for this survey, simply record whether you saw any fish or not during your river observation."
+
+# /home/wildlife 
+msgid "These small birds have slate grey plumage on their upper parts, but their underside is a vibrant yellow. Grey wagtails nest near fast-flowing water and eat insects found at the river edge."
+msgstr "These small birds have slate grey plumage on their upper parts, but their underside is a vibrant yellow. Grey wagtails nest near fast-flowing water and eat insects found at the river edge."
+
+# /home/wildlife 
+msgid "Herons are large birds, reaching up to a meter in height and you’re unlikely to mistake them for another species. They have mainly grey plumage, long yellow legs and a long neck leading to a pointed yellow bill."
+msgstr "Herons are large birds, reaching up to a meter in height and you’re unlikely to mistake them for another species. They have mainly grey plumage, long yellow legs and a long neck leading to a pointed yellow bill."
+
+# /home/wildlife 
+msgid "These small, fast-flying birds are always a treat to see. Their bright blue and orange bodies add a splash of colour as they perch on branches, or dart quickly into the water to catch fish with their long black bills."
+msgstr "These small, fast-flying birds are always a treat to see. Their bright blue and orange bodies add a splash of colour as they perch on branches, or dart quickly into the water to catch fish with their long black bills."
+
+# /home/wildlife 
+msgid "Collectively known as ‘riverflies’, the larvae of these winged insects spend most of their life in the river, where they are a great food source for large fish. They emerge as flying adults for just a short period of time to reproduce. They are often under 3 cm in size. Many of the riverflies  are not tolerant of pollution, so their presence can be used as an indicator of good water quality."
+msgstr "Collectively known as ‘riverflies’, the larvae of these winged insects spend most of their life in the river, where they are a great food source for large fish. They emerge as flying adults for just a short period of time to reproduce. They are often under 3 cm in size. Many of the riverflies  are not tolerant of pollution, so their presence can be used as an indicator of good water quality."
+
+# /home/wildlife 
+msgid "Moorhens are about the size of a duck, but are largely black with a bright red and yellow beak, with long green legs and un-webbed feet."
+msgstr "Moorhens are about the size of a duck, but are largely black with a bright red and yellow beak, with long green legs and un-webbed feet."
+
+# /home/wildlife 
+msgid "Otters appear brown or grey, have slimmer bodies than beavers and a long thin tail. They’re a top predator in a river habitat, can be playful and are very fast swimmers with an impressive ability to hold their breath underwater."
+msgstr "Otters appear brown or grey, have slimmer bodies than beavers and a long thin tail. They’re a top predator in a river habitat, can be playful and are very fast swimmers with an impressive ability to hold their breath underwater."
+
+# /home/wildlife 
+msgid "Rats are strong swimmers and can often be found around rivers, particularly in urban waterways. They are brown with short fur, a pointy face and a long pink tail. Rats can carry some human diseases and so it is important to always wash hands carefully after being in contact with river water."
+msgstr "Rats are strong swimmers and can often be found around rivers, particularly in urban waterways. They are brown with short fur, a pointy face and a long pink tail. Rats can carry some human diseases and so it is important to always wash hands carefully after being in contact with river water."
+
+# /home/wildlife 
+msgid "Swans are large white waterbirds, with elongated s-shaped necks, often orange bills and a large wingspan. You might also see younger swans, known as cygnets, which are grey/brown in colour before they turn white."
+msgstr "Swans are large white waterbirds, with elongated s-shaped necks, often orange bills and a large wingspan. You might also see younger swans, known as cygnets, which are grey/brown in colour before they turn white."
+
+# /home/pollution 
+msgid "There are many different types of pollution that can be found in our waterways. Some, like chemicals and nutrients are hard to identify, but others are easier to see. Here are a few examples of the more common types of pollution."
+msgstr "There are many different types of pollution that can be found in our waterways. Some, like chemicals and nutrients are hard to identify, but others are easier to see. Here are a few examples of the more common types of pollution."
+
+# /home/pollution 
+msgid "Algae"
+msgstr "Algae"
+
+# /home/pollution 
+msgid "Livestock"
+msgstr "Livestock"
+
+# /home/pollution 
+msgid "Mine water"
+msgstr "Mine water"
+
+# /home/pollution 
+msgid "Run-off"
+msgstr "Run-off"
+
+# /home/pollution 
+msgid "Sewage"
+msgstr "Sewage"
+
+# /home/pollution 
+msgid "Sewage fungus"
+msgstr "Sewage fungus"
+
+# /home/pollution 
+msgid "Silt"
+msgstr "Silt"
+
+# /home/pollution 
+msgid "Algal blooms or scums can make the water look bright green or blue-green, and sometimes the water surface appears dirty and crusty. Some algae blooms can produce harmful toxins, and you and your pets should keep out of the water. You may also see filamentous algae which can looks like stringy or slimy material under the water."
+msgstr "Algal blooms or scums can make the water look bright green or blue-green, and sometimes the water surface appears dirty and crusty. Some algae blooms can produce harmful toxins, and you and your pets should keep out of the water. You may also see filamentous algae which can looks like stringy or slimy material under the water."
+
+# /home/pollution 
+msgid "Are there livestock in or that have access to the water? You may see cows or sheep that are able to enter the river, where they have potential to erode the bank, disturb the bottom and transfer faeces or chemicals into the water."
+msgstr "Are there livestock in or that have access to the water? You may see cows or sheep that are able to enter the river, where they have potential to erode the bank, disturb the bottom and transfer faeces or chemicals into the water."
+
+# /home/pollution 
+msgid "Mine water in a river can be quite distinctive and is often a vibrant orange colour. It can flow out of abandoned mines, bringing high levels of iron and other metals with it which can be damaging to river wildlife."
+msgstr "Mine water in a river can be quite distinctive and is often a vibrant orange colour. It can flow out of abandoned mines, bringing high levels of iron and other metals with it which can be damaging to river wildlife."
+
+# /home/pollution 
+msgid "Water containing run-off can look oily, blackish or have a rainbow sheen on the surface. Often this is washed off from roads and contains oil and brake and tyre residues that gets into rivers."
+msgstr "Water containing run-off can look oily, blackish or have a rainbow sheen on the surface. Often this is washed off from roads and contains oil and brake and tyre residues that gets into rivers."
+
+# /home/pollution 
+msgid "Sewage in the river can look brown, or it can look milky grey if it has been mixed with grey wastewater before it reaches the river. It can also smell strongly, and you might spot personal care or sanitary items in or around it, making it easy to identify. Sometimes sewage outlets themselves can also be seen."
+msgstr "Sewage in the river can look brown, or it can look milky grey if it has been mixed with grey wastewater before it reaches the river. It can also smell strongly, and you might spot personal care or sanitary items in or around it, making it easy to identify. Sometimes sewage outlets themselves can also be seen."
+
+# /home/pollution 
+msgid "Sewage fungus can be tricky to identify. Often it looks slimy and grey, and cotton wool-like. It is often found downstream from a sewage outfall."
+msgstr "Sewage fungus can be tricky to identify. Often it looks slimy and grey, and cotton wool-like. It is often found downstream from a sewage outfall."
+
+# /home/pollution 
+msgid "Silty water has lots of sediment in it and often appears brown, a bit like milky tea or hot chocolate. This type of pollution often happens after heavy rain or cattle/animals entering the water."
+msgstr "Silty water has lots of sediment in it and often appears brown, a bit like milky tea or hot chocolate. This type of pollution often happens after heavy rain or cattle/animals entering the water."
+
+# /home/info 
 msgid "Info"
 msgstr "Info"
+
+# /home/info 
+msgid "Settings"
+msgstr "Settings"
+
+# /home/info 
+msgid "About"
+msgstr "About"
+
+# /home/info 
+msgid "Partners"
+msgstr "Partners"
+
+# /home/info 
+msgid "Health and Safety"
+msgstr "Health and Safety"
+
+# /home/info 
+msgid "Terms and Conditions"
+msgstr "Terms and Conditions"
+
+# /home/info 
+msgid "Privacy Policy"
+msgstr "Privacy Policy"
+
+# /home/info 
+msgid "Share App Analytics"
+msgstr "Share App Analytics"
+
+# /home/info 
+msgid "Share app crash data so we can make the app more reliable."
+msgstr "Share app crash data so we can make the app more reliable."
+
+# /home/info 
+msgid "App version"
+msgstr "App version"
+
+# /info/about 
+msgid "Back"
+msgstr "Back"
+
+# /info/about 
+msgid "The Big River Watch has been developed by <2>The Rivers Trust</2> and other partner organisations within <5>CaSTCo</5> (a project creating a national framework for improving river health data, with citizen scientists at the heart). Big River Watch is an important tool to support CaSTCo in introducing new and diverse audiences to river science and to encourage accessible engagement and diverse recruitment of volunteers. The Rivers Trust is the umbrella organisation for our 65 member Rivers Trusts across Britain, Northern Ireland and Ireland. We are river and catchment conservation experts with a wealth of data and expertise at our fingertips. We are together, for rivers."
+msgstr "The Big River Watch has been developed by <2>The Rivers Trust</2> and other partner organisations within <5>CaSTCo</5> (a project creating a national framework for improving river health data, with citizen scientists at the heart). Big River Watch is an important tool to support CaSTCo in introducing new and diverse audiences to river science and to encourage accessible engagement and diverse recruitment of volunteers. The Rivers Trust is the umbrella organisation for our 65 member Rivers Trusts across Britain, Northern Ireland and Ireland. We are river and catchment conservation experts with a wealth of data and expertise at our fingertips. We are together, for rivers."
+
+# /info/about 
+msgid "To find out more about The Rivers Trust, follow us on social media @theriverstrust."
+msgstr "To find out more about The Rivers Trust, follow us on social media @theriverstrust."
+
+# /info/about 
+msgid "Registered charity number: 1107144"
+msgstr "Registered charity number: 1107144"
+
+# /info/about 
+msgid "This app was hand crafted with love by <2>Flumens.</2> A technical consultancy that excels at building bespoke environmental science and community focussed solutions. For suggestions and feedback please do not hesitate to <6>contact us</6>."
+msgstr "This app was hand crafted with love by <2>Flumens.</2> A technical consultancy that excels at building bespoke environmental science and community focussed solutions. For suggestions and feedback please do not hesitate to <6>contact us</6>."
+
+# /survey/record/1 
+msgid "First name"
+msgstr "First name"
+
+# /survey/record/1 
+msgid "Last name"
+msgstr "Last name"
+
+# /survey/record/1 
+msgid "Email"
+msgstr "Email"
+
+# /survey/record/1 
+msgid "of"
+msgstr "of"
+
+# /survey/record/1 
+msgid "<0>Please tell us more about yourself.</0>"
+msgstr "<0>Please tell us more about yourself.</0>"
+
+# /survey/record/1 
+msgid "Next"
+msgstr "Next"
+
+# /survey/record/2 
+msgid "User"
+msgstr "User"
+
+# /survey/record/2 
+msgid "<0>Are you happy to be contacted by The Rivers Trust?</0><1><0>Read our full <2>Privacy Notice</2> to find out how we use your personal data.</0></1>"
+msgstr "<0>Are you happy to be contacted by The Rivers Trust?</0><1><0>Read our full <2>Privacy Notice</2> to find out how we use your personal data.</0></1>"
+
+# /survey/record/2 
+msgid "I am happy to be contacted by The Rivers Trust"
+msgstr "I am happy to be contacted by The Rivers Trust"
+
+# /survey/record/2 
+msgid "Are you happy to be contacted by your local Rivers Trust to receive the results from this survey and information about future campaigns, local events and volunteering? To match you to your local Rivers Trust, please share with us your postcode."
+msgstr "Are you happy to be contacted by your local Rivers Trust to receive the results from this survey and information about future campaigns, local events and volunteering? To match you to your local Rivers Trust, please share with us your postcode."
+
+# /survey/record/2 
+msgid "I am happy to be contacted by my local Rivers Trust"
+msgstr "I am happy to be contacted by my local Rivers Trust"
+
+# /survey/record/2 
+msgid "Postcode"
+msgstr "Postcode"
+
+# /survey/record/3 
+msgid "Contact"
+msgstr "Contact"
+
+# /survey/record/3 
+msgid "Have you ever taken part in a citizen science activity before?"
+msgstr "Have you ever taken part in a citizen science activity before?"
+
+# /survey/record/3 
+msgid "Yes"
+msgstr "Yes"
+
+# /survey/record/3 
+msgid "No"
+msgstr "No"
+
+# /survey/record/3 
+msgid "Unsure"
+msgstr "Unsure"
+
+# /survey/record/4 
+msgid "Experience"
+msgstr "Experience"
+
+# /survey/record/4 
+msgid "How many of you have taken part in this survey today?"
+msgstr "How many of you have taken part in this survey today?"
+
+# /survey/record/5 
+msgid "Surveyors"
+msgstr "Surveyors"
+
+# /survey/record/5 
+msgid "Enable your GPS to set your location, or use the map to zoom in and tap on your location."
+msgstr "Enable your GPS to set your location, or use the map to zoom in and tap on your location."
+
+# /survey/record/5 
+msgid "READ MORE"
+msgstr "READ MORE"
+
+# /survey/record/5 
+msgid "Got it"
+msgstr "Got it"
+
+# /survey/record/5 
+msgid "Please zoom in to find the spot that best matches your location."
+msgstr "Please zoom in to find the spot that best matches your location."
+
+# /survey/record/5 
+msgid "Make sure you have the GPS turned on and permissions granted. If you are conducting the survey offline or without a network connection, the app will not find your location on the map, but your GPS should record this for uploading later."
+msgstr "Make sure you have the GPS turned on and permissions granted. If you are conducting the survey offline or without a network connection, the app will not find your location on the map, but your GPS should record this for uploading later."
+
+# /survey/record/6 
+msgid "Location"
+msgstr "Location"
+
+# /survey/record/6 
+msgid "<0>Upload a photo of the river.</0>"
+msgstr "<0>Upload a photo of the river.</0>"
+
+# /survey/record/6 
+msgid "No photo has been added.<br/>Press <4><0></0></4> to add."
+msgstr "No photo has been added.<br/>Press <4><0></0></4> to add."
+
+# /survey/record/6 
+msgid "Gallery"
+msgstr "Gallery"
+
+# /survey/record/6 
+msgid "Camera"
+msgstr "Camera"
+
+# /survey/record/6 
+msgid "Cancel"
+msgstr "Cancel"
+
+# /survey/record/6 
+msgid "Choose a method to upload a photo"
+msgstr "Choose a method to upload a photo"
+
+# /survey/record/6 
+msgid "Delete"
+msgstr "Delete"
+
+# /survey/record/6 
+msgid "Are you sure you want to remove this photo?"
+msgstr "Are you sure you want to remove this photo?"
+
+# /survey/record/6 
+msgid "Note: it will remain in the gallery."
+msgstr "Note: it will remain in the gallery."
+
+# /survey/record/7 
+msgid "Photo"
+msgstr "Photo"
+
+# /survey/record/7 
+msgid "Has it rained in the last 24 hours?"
+msgstr "Has it rained in the last 24 hours?"
+
+# /survey/record/7 
+msgid "Don't know"
+msgstr "Don't know"
+
+# /survey/record/7 
+msgid "Currently raining"
+msgstr "Currently raining"
+
+# /survey/record/8 
+msgid "Rain"
+msgstr "Rain"
+
+# /survey/record/8 
+msgid "How fast is the river flowing?"
+msgstr "How fast is the river flowing?"
+
+# /survey/record/8 
+msgid "Still"
+msgstr "Still"
+
+# /survey/record/8 
+msgid "Slow – Slower than walking pace"
+msgstr "Slow – Slower than walking pace"
+
+# /survey/record/8 
+msgid "Steady – About walking pace"
+msgstr "Steady – About walking pace"
+
+# /survey/record/8 
+msgid "Surging – Faster than walking pace"
+msgstr "Surging – Faster than walking pace"
+
+# /survey/record/9 
+msgid "River Speed"
+msgstr "River Speed"
+
+# /survey/record/9 
+msgid "How often do you usually visit this river/place?"
+msgstr "How often do you usually visit this river/place?"
+
+# /survey/record/9 
+msgid "Daily"
+msgstr "Daily"
+
+# /survey/record/9 
+msgid "Weekly"
+msgstr "Weekly"
+
+# /survey/record/9 
+msgid "Monthly"
+msgstr "Monthly"
+
+# /survey/record/9 
+msgid "Less than monthly"
+msgstr "Less than monthly"
+
+# /survey/record/9 
+msgid "This is my first time"
+msgstr "This is my first time"
+
+# /survey/record/10 
+msgid "Visits"
+msgstr "Visits"
+
+# /survey/record/10 
+msgid "Based on what you can see, what is your first impression of this river?"
+msgstr "Based on what you can see, what is your first impression of this river?"
+
+# /survey/record/10 
+msgid "Healthy"
+msgstr "Healthy"
+
+# /survey/record/10 
+msgid "Unhealthy"
+msgstr "Unhealthy"
+
+# /survey/record/10 
+msgid "Other"
+msgstr "Other"
+
+# /survey/record/11 
+msgid "Health"
+msgstr "Health"
+
+# /survey/record/11 
+msgid "What one word would you use to describe how you feel when you are by this river?"
+msgstr "What one word would you use to describe how you feel when you are by this river?"
+
+# /survey/record/11 
+msgid "Remember to describe how you feel, not what you can see."
+msgstr "Remember to describe how you feel, not what you can see."
+
+# /survey/record/12 
+msgid "Feeling"
+msgstr "Feeling"
+
+# /survey/record/12 
+msgid "From where you are standing, do you think this river is natural?"
+msgstr "From where you are standing, do you think this river is natural?"
+
+# /survey/record/12 
+msgid "A natural river is a flowing body of water that has not been significantly altered or impacted by human activities."
+msgstr "A natural river is a flowing body of water that has not been significantly altered or impacted by human activities."
+
+# /survey/record/12 
+msgid "Natural"
+msgstr "Natural"
+
+# /survey/record/12 
+msgid "Mixed"
+msgstr "Mixed"
+
+# /survey/record/12 
+msgid "Unnatural"
+msgstr "Unnatural"
+
+# /survey/record/13 
+msgid "Naturalness"
+msgstr "Naturalness"
+
+# /survey/record/13 
+msgid "Can you see any barriers in this river?"
+msgstr "Can you see any barriers in this river?"
+
+# /survey/record/13 
+msgid "A barrier is a physical structure, either natural or artificial, located within a river channel. They can have both positive and negative impacts on ecosystem health. Select all that apply:"
+msgstr "A barrier is a physical structure, either natural or artificial, located within a river channel. They can have both positive and negative impacts on ecosystem health. Select all that apply:"
+
+# /survey/record/13 
+msgid "Natural – e.g. waterfalls, fallen trees stretching across the river"
+msgstr "Natural – e.g. waterfalls, fallen trees stretching across the river"
+
+# /survey/record/13 
+msgid "Artificial – e.g. dams, weirs, locks, culverts, fords, sluices"
+msgstr "Artificial – e.g. dams, weirs, locks, culverts, fords, sluices"
+
+# /survey/record/13 
+msgid "None"
+msgstr "None"
+
+# /survey/record/14 
+msgid "Barriers"
+msgstr "Barriers"
+
+# /survey/record/14 
+msgid "Are the river banks mostly natural or artificial?"
+msgstr "Are the river banks mostly natural or artificial?"
+
+# /survey/record/14 
+msgid "Mostly natural – made up of soil, rocks and vegetation that have been shaped by the movement of the river"
+msgstr "Mostly natural – made up of soil, rocks and vegetation that have been shaped by the movement of the river"
+
+# /survey/record/14 
+msgid "Mixed – both natural features, as well as sections of straightening or human built structures"
+msgstr "Mixed – both natural features, as well as sections of straightening or human built structures"
+
+# /survey/record/14 
+msgid "Mostly artificial – typically made of metal, concrete, wood or stone and characterised by a range of features such as straight sides, and concrete riverbeds"
+msgstr "Mostly artificial – typically made of metal, concrete, wood or stone and characterised by a range of features such as straight sides, and concrete riverbeds"
+
+# /survey/record/15 
+msgid "Banks"
+msgstr "Banks"
+
+# /survey/record/15 
+msgid "What wildlife have you seen during your survey?"
+msgstr "What wildlife have you seen during your survey?"
+
+# /survey/record/15 
+msgid "Seeing a variety of species, including those listed below, can provide a good indication of the overall health of a river."
+msgstr "Seeing a variety of species, including those listed below, can provide a good indication of the overall health of a river."
+
+# /survey/record/15 
+msgid "Duck"
+msgstr "Duck"
+
+# /survey/record/15 
+msgid "Mayflies or stoneflies"
+msgstr "Mayflies or stoneflies"
+
+# /survey/record/15 
+msgid "None – I didn't see any wildlife"
+msgstr "None – I didn't see any wildlife"
+
+# /survey/record/16 
+msgid "What plants can you see in and around the river today?"
+msgstr "What plants can you see in and around the river today?"
+
+# /survey/record/16 
+msgid "Plants may suggest a healthy river but that can be misleading, sometimes they can be non-native. Select all that apply:"
+msgstr "Plants may suggest a healthy river but that can be misleading, sometimes they can be non-native. Select all that apply:"
+
+# /survey/record/16 
+msgid "Plants growing completely under the water"
+msgstr "Plants growing completely under the water"
+
+# /survey/record/16 
+msgid "Plants emerging out of the water"
+msgstr "Plants emerging out of the water"
+
+# /survey/record/16 
+msgid "Plants floating on the surface"
+msgstr "Plants floating on the surface"
+
+# /survey/record/16 
+msgid "Plants growing on the bank, completely out of the water (including trees)"
+msgstr "Plants growing on the bank, completely out of the water (including trees)"
+
+# /survey/record/16 
+msgid "Algae – green, hair-like, can form clumps on the surface of the water"
+msgstr "Algae – green, hair-like, can form clumps on the surface of the water"
+
+# /survey/record/16 
+msgid "None – I can't see any plants in or out of the water"
+msgstr "None – I can't see any plants in or out of the water"
+
+# /survey/record/17 
+msgid "Plants"
+msgstr "Plants"
+
+# /survey/record/17 
+msgid "How clear or cloudy is the water?"
+msgstr "How clear or cloudy is the water?"
+
+# /survey/record/17 
+msgid "Please don't climb down the river bank and only look if it is safe to do so. If you can't see because it is too far away or the water is too murky, then select 'Don't know'."
+msgstr "Please don't climb down the river bank and only look if it is safe to do so. If you can't see because it is too far away or the water is too murky, then select 'Don't know'."
+
+# /survey/record/17 
+msgid "Very clear, I can see right through the water"
+msgstr "Very clear, I can see right through the water"
+
+# /survey/record/17 
+msgid "There’s a bit of sediment"
+msgstr "There’s a bit of sediment"
+
+# /survey/record/17 
+msgid "It’s quite murky"
+msgstr "It’s quite murky"
+
+# /survey/record/17 
+msgid "There’s lots of sediment, I can’t see through the water at all"
+msgstr "There’s lots of sediment, I can’t see through the water at all"
+
+# /survey/record/18 
+msgid "Water"
+msgstr "Water"
+
+# /survey/record/18 
+msgid "Does the water smell unpleasant?"
+msgstr "Does the water smell unpleasant?"
+
+# /survey/record/18 
+msgid "Different odors can be associated with different types and levels of pollution. On the other hand, a river with a clean, fresh smell can indicate good water quality and a healthy ecosystem."
+msgstr "Different odors can be associated with different types and levels of pollution. On the other hand, a river with a clean, fresh smell can indicate good water quality and a healthy ecosystem."
+
+# /survey/record/19 
+msgid "Smell"
+msgstr "Smell"
+
+# /survey/record/19 
+msgid "Can you see any litter?"
+msgstr "Can you see any litter?"
+
+# /survey/record/19 
+msgid "Yes – in the river"
+msgstr "Yes – in the river"
+
+# /survey/record/19 
+msgid "Yes – caught in the bankside vegetation (above river surface)"
+msgstr "Yes – caught in the bankside vegetation (above river surface)"
+
+# /survey/record/19 
+msgid "Yes – on the river banks"
+msgstr "Yes – on the river banks"
+
+# /survey/record/19 
+msgid "No – I can't see any litter"
+msgstr "No – I can't see any litter"
+
+# /survey/record/20 
+msgid "Litter"
+msgstr "Litter"
+
+# /survey/record/20 
+msgid "Can you see any other signs of pollution?"
+msgstr "Can you see any other signs of pollution?"
+
+# /survey/record/20 
+msgid "There are several visible signs of pollution in a river that can indicate poor water quality. It's important to monitor and address pollution sources in order to protect and restore the health of our rivers."
+msgstr "There are several visible signs of pollution in a river that can indicate poor water quality. It's important to monitor and address pollution sources in order to protect and restore the health of our rivers."
+
+# /survey/record/20 
+msgid "Think you can see a serious pollution incident? Click here to read guidance on understanding and reporting pollution to your local relevant authority."
+msgstr "Think you can see a serious pollution incident? Click here to read guidance on understanding and reporting pollution to your local relevant authority."
+
+# /survey/record/20 
+msgid "Sewage – often milky grey or brown, can smell strongly. Sometimes outlets or personal care products may also be visible"
+msgstr "Sewage – often milky grey or brown, can smell strongly. Sometimes outlets or personal care products may also be visible"
+
+# /survey/record/20 
+msgid "Sewage fungus – slimy grey, cotton wool-like, usually downstream from an outfall"
+msgstr "Sewage fungus – slimy grey, cotton wool-like, usually downstream from an outfall"
+
+# /survey/record/20 
+msgid "Livestock – farm animals in or have access to the river"
+msgstr "Livestock – farm animals in or have access to the river"
+
+# /survey/record/20 
+msgid "Mine water – often a bright orange colour"
+msgstr "Mine water – often a bright orange colour"
+
+# /survey/record/20 
+msgid "Silt – the water looks brown, like milky tea or hot chocolate"
+msgstr "Silt – the water looks brown, like milky tea or hot chocolate"
+
+# /survey/record/20 
+msgid "Road runoff – blackish, oily, rainbow sheen on the surface"
+msgstr "Road runoff – blackish, oily, rainbow sheen on the surface"
+
+# /survey/record/20 
+msgid "Algal bloom or scum – green or blue-green"
+msgstr "Algal bloom or scum – green or blue-green"
+
+# /survey/record/20 
+msgid "None – I can't see any visible signs of pollution"
+msgstr "None – I can't see any visible signs of pollution"
+
+# /survey/record/21 
+msgid "Noticing the good things in nature can bring sustained and significant improvements in your well-being. Note down three good things that you've noticed by the river today."
+msgstr "Noticing the good things in nature can bring sustained and significant improvements in your well-being. Note down three good things that you've noticed by the river today."
+
+# /survey/record/21 
+msgid "This could be something you have seen, heard, or smelled."
+msgstr "This could be something you have seen, heard, or smelled."
+
+# /survey/record/21 
+msgid "Enter here..."
+msgstr "Enter here..."
+
+# /survey/record/22 
+msgid "Good things"
+msgstr "Good things"
+
+# /survey/record/22 
+msgid "Is there anything else you'd like to share before you submit your survey?"
+msgstr "Is there anything else you'd like to share before you submit your survey?"
+
+# /survey/record/22 
+msgid "This could be other animals you have seen, things you have observed on previous occasions, anything we have not asked about that you feel is important."
+msgstr "This could be other animals you have seen, things you have observed on previous occasions, anything we have not asked about that you feel is important."
+
+# /survey/record/22 
+msgid "Enter more information here..."
+msgstr "Enter more information here..."
+
+# /survey/record/22 
+msgid "Finish"
+msgstr "Finish"
+
+# /survey/record/end 
+msgid "Comment"
+msgstr "Comment"
+
+# /home/records 
+msgid "Save for later"
+msgstr "Save for later"
+
+# /home/records 
+msgid "Upload"
+msgstr "Upload"
+
+# /home/records 
+msgid "Draft"
+msgstr "Draft"
+
+# /home/records 
+msgid "Today"
+msgstr "Today"
+
+# /home/records 
+msgid "Thank you!"
+msgstr "Thank you!"
+
+# /home/records 
+msgid "We appreciate you taking the time to fill out the survey."
+msgstr "We appreciate you taking the time to fill out the survey."
+
+# /home/records 
+msgid "Are you sure you want to delete this record?"
+msgstr "Are you sure you want to delete this record?"

@@ -31,9 +31,13 @@ const MainComponent = ({ onToggle }: Props) => {
   return (
     <Main>
       <IonList lines="full">
-        <h1 className="my-10 text-center">Info</h1>
+        <h1 className="my-10 text-center">
+          <T>Info</T>
+        </h1>
 
-        <IonItemDivider>Info</IonItemDivider>
+        <IonItemDivider>
+          <T>Info</T>
+        </IonItemDivider>
         <div className="rounded">
           <IonItem routerLink="/info/about" detail>
             <IonIcon
@@ -77,7 +81,9 @@ const MainComponent = ({ onToggle }: Props) => {
           </IonItem>
         </div>
 
-        <IonItemDivider>Settings</IonItemDivider>
+        <IonItemDivider>
+          <T>Settings</T>
+        </IonItemDivider>
         <div className="rounded">
           <MenuAttrToggle
             icon={shareSocialOutline}
