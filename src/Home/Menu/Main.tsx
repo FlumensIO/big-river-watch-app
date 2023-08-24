@@ -41,7 +41,7 @@ const MainComponent = ({ onToggle }: Props) => {
               size="small"
               slot="start"
             />
-            About
+            <T>About</T>
           </IonItem>
           <IonItem
             href={`${CONFIG.websitePath}/take-action/the-big-river-watch/big-river-watch-partners?lang=${language}`}
@@ -98,7 +98,7 @@ const MainComponent = ({ onToggle }: Props) => {
 
           <p className="mb-10 pt-4 text-primary-900 opacity-70">
             <span>
-              App version: v{CONFIG.version} ({CONFIG.build})
+              <T>App version</T>: v{CONFIG.version} ({CONFIG.build})
             </span>
           </p>
         </div>

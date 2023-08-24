@@ -10,7 +10,7 @@ window.getNewTerms = function getNewTermsWrap() {
   window.dic = window.dic || [];
   let all = '';
   const showUntranslatedTerms = word => {
-    all += `\n# Context term \nmsgid "${word}"\nmsgstr "${word}"\n`;
+    all += `\n# ${window.location.pathname} \nmsgid "${word}"\nmsgstr "${word}"\n`;
   };
   window.dic.forEach(showUntranslatedTerms);
   console.log(all);
