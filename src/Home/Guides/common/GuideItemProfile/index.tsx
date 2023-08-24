@@ -100,14 +100,18 @@ const GuideItemProfile = ({ item, onClose }: Props) => {
           {getSlides()}
 
           <IonCardHeader>
-            <h1 className="m-0 font-bold text-primary">{item.name}</h1>
+            <h1 className="m-0 font-bold text-primary">
+              <T>{item.name}</T>
+            </h1>
           </IonCardHeader>
 
           <IonCardContent>
             <h3 className="text-primary">
               <T>Description</T>:
             </h3>
-            <p>{item.description}</p>
+            <p>
+              <T>{item.description}</T>
+            </p>
           </IonCardContent>
         </Main>
       </IonModal>

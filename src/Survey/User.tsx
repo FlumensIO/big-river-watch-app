@@ -35,7 +35,7 @@ const User = ({ sample: record }: Props) => {
 
       <Main className="survey">
         <InfoMessage className="info-message">
-          Please tell us more about yourself.
+          <div className="font-medium">Please tell us more about yourself.</div>
         </InfoMessage>
 
         <IonList>

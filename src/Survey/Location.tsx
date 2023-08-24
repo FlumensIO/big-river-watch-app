@@ -33,7 +33,7 @@ const OfflineLocation = ({ record, onGPSClick }: OfflineLocationProps) => {
   const gridref = location.gridref && prettyPrintGridRef(location.gridref);
 
   const latLng = hasLocation
-    ? `${location.latitude.toFixed(3)},${location.longitude.toFixed(3)}`
+    ? `${location.latitude.toFixed(3)}, ${location.longitude.toFixed(3)}`
     : '';
 
   return (
@@ -118,7 +118,10 @@ const Location = ({ sample: record }: Props) => {
         )}
 
         {device.isOnline && showInfo && (
-          <InfoMessage className="info-message absolute left-1/2 top-0 z-10 !mx-0 w-[calc(100%-20px)] -translate-x-1/2">
+          <InfoMessage
+            skipTranslation
+            className="info-message absolute left-1/2 top-0 z-10 !mx-0 w-[calc(100%-20px)] -translate-x-1/2"
+          >
             <IonButton
               onClick={closeInfoMessage}
               fill="clear"
@@ -126,17 +129,26 @@ const Location = ({ sample: record }: Props) => {
             >
               <IonIcon icon={closeCircleOutline} slot="icon-only" />
             </IonButton>
-            Enable your GPS to set your location, or use the map to zoom in and
-            tap on your location.
+            <div className="font-medium">
+              <T>
+                Enable your GPS to set your location, or use the map to zoom in
+                and tap on your location.
+              </T>
+            </div>
             <InfoButton label="READ MORE" header="Info">
               <p>
-                Please zoom in to find the spot that best matches your location.
+                <T>
+                  Please zoom in to find the spot that best matches your
+                  location.
+                </T>
               </p>
               <p className="mt-3">
-                Make sure you have the GPS turned on and permissions granted. If
-                you are conducting the survey offline or without a network
-                connection, the app will not find your location on the map, but
-                your GPS should record this for uploading later.
+                <T>
+                  Make sure you have the GPS turned on and permissions granted.
+                  If you are conducting the survey offline or without a network
+                  connection, the app will not find your location on the map,
+                  but your GPS should record this for uploading later.
+                </T>
               </p>
             </InfoButton>
           </InfoMessage>

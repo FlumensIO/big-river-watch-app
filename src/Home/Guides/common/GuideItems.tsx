@@ -1,4 +1,5 @@
 import { observer } from 'mobx-react';
+import { Trans as T } from 'react-i18next';
 import { IonGrid, IonRow, IonCol } from '@ionic/react';
 
 export type GuideItem = {
@@ -38,7 +39,7 @@ const GuideItems = ({ items, onClick }: Props) => {
           }}
         >
           <span className="absolute bottom-0 w-full bg-black/60 px-4 py-1 text-sm font-semibold text-white">
-            {name}
+            <T>{name}</T>
           </span>
         </div>
       </IonCol>

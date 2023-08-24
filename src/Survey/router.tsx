@@ -1,35 +1,59 @@
 import { RouteWithModels } from '@flumens';
+import { Attrs } from 'common/models/record';
 import records from 'models/collections/records';
 import End from './End';
 import Location from './Location';
 import Photo from './Photo';
-import Rain from './Rain';
 import StartNewSurvey from './StartNewSurvey';
-import Surveyors from './Surveyors';
+import SurveyAttrPage from './SurveyAttrPage';
 import User from './User';
 import UserContact from './UserContact';
-import UserExperience from './UserExperience';
 
 const baseURL = '/survey';
 
-const getQuestionRoute = (Component: unknown, index: number) => [
-  `${baseURL}/:smpId/${index + 1}`,
-  Component,
-];
+const getQuestionRoute = (Component: unknown, index: number) => {
+  if (typeof Component === 'string') {
+    const attr = Component as keyof Attrs;
+    return [
+      `${baseURL}/:smpId/${index + 1}`,
+      // eslint-disable-next-line @getify/proper-arrows/name
+      ({ sample }: any) => <SurveyAttrPage sample={sample} attr={attr} />,
+    ];
+  }
 
-const questionRoutes = [
+  return [`${baseURL}/:smpId/${index + 1}`, Component];
+};
+
+export const questionRoutes = [
   User,
   UserContact,
-  UserExperience,
-  Surveyors,
+  'citSciExperience',
+  'surveyors',
   Location,
   Photo,
-  Rain,
-].map(getQuestionRoute);
+  'rain',
+  'flow',
+  'visitFrequency',
+  'riverHealth',
+  'feeling',
+  'riverNaturalness',
+  'barriers',
+  'banks',
+  'wildlife',
+  'plants',
+  'water',
+  'smell',
+  'litter',
+  'pollution',
+  // TODO: 3 things
+  'comments',
+];
 
 const routes = [
   [`${baseURL}`, StartNewSurvey, true],
-  ...questionRoutes,
+
+  ...questionRoutes.map(getQuestionRoute),
+
   [`${baseURL}/:smpId/end`, End],
 ];
 

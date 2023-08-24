@@ -11,7 +11,7 @@ import {
   IonIcon,
   NavContext,
 } from '@ionic/react';
-import config from '../config';
+import { questionRoutes } from '../router';
 
 type Props = {
   className?: string;
@@ -24,7 +24,7 @@ const Footer = ({ comingFrom, className }: Props) => {
   const route = match.url.split('/');
   const step = parseInt(route.pop()!, 10);
 
-  const surveyStepCount = config.stepCount;
+  const surveyStepCount = questionRoutes.length;
   const isLastStep = surveyStepCount === step;
   const footerTitle = isLastStep ? 'Finish' : 'Next';
 

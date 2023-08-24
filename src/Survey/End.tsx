@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { checkmarkCircleOutline } from 'ionicons/icons';
+import { Trans as T } from 'react-i18next';
 import { Redirect } from 'react-router-dom';
 import { useAlert } from '@flumens';
 import { IonIcon } from '@ionic/react';
@@ -18,10 +19,12 @@ function useShowThankYouMessage() {
               icon={checkmarkCircleOutline}
             />
           </div>
-          <h3 className="my-3 text-center text-lg">Thank you!</h3>
+          <h3 className="my-3 text-center text-lg">
+            <T>Thank you!</T>
+          </h3>
 
           <p className="text-center">
-            We appreciate you taking the time to fill out the survey.
+            <T>We appreciate you taking the time to fill out the survey.</T>
           </p>
         </div>
       ),

@@ -26,10 +26,11 @@ function printErroneousPayload(payload: any) {
   }
 }
 
-type Attrs = ModelAttrs &
+export type Attrs = ModelAttrs &
   UserAttrs & {
     date: string;
     rain: any;
+    riverSpeed: any;
     surveyors: number;
     location: Location;
   };

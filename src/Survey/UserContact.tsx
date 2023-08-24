@@ -67,14 +67,21 @@ const UserContact = ({ sample: record }: Props) => {
 
       <Main className="survey">
         <InfoMessage className="info-message">
-          Are you happy to be contacted by The Rivers Trust? Read our full{' '}
-          <a
-            href={`${config.websitePath}/privacy?lang=${language}`}
-            className="underline"
-          >
-            Privacy Notice
-          </a>{' '}
-          to find out how we use your personal data.
+          <div className="font-medium">
+            Are you happy to be contacted by The Rivers Trust?
+          </div>
+          <div className="mt-2">
+            <i>
+              Read our full{' '}
+              <a
+                href={`${config.websitePath}/privacy?lang=${language}`}
+                className="underline"
+              >
+                Privacy Notice
+              </a>{' '}
+              to find out how we use your personal data.
+            </i>
+          </div>
         </InfoMessage>
 
         <IonList>

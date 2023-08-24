@@ -15,7 +15,7 @@ const Photo = ({ sample: record }: Props) => {
 
       <Main>
         <InfoMessage className="info-message">
-          Upload a photo of the river.
+          <div className="font-medium">Upload a photo of the river.</div>
         </InfoMessage>
 
         <IonList>
