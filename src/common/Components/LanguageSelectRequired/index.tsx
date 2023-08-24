@@ -47,7 +47,7 @@ const LanguageSelectRequired = ({ children }: Props) => {
           icon={globeOutline}
           className="w-full py-20 text-center text-8xl [--ionicon-stroke-width:8px]"
         />
-        <IonList className="h-1/3">
+        <IonList className="absolute bottom-[35vh] w-full">
           <IonItemGroup>{languagesOptions}</IonItemGroup>
         </IonList>
       </Main>

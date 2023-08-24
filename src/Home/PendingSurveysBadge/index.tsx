@@ -22,11 +22,7 @@ const PendingSurveysBadge = ({ collection }: Props) => {
     return null;
   }
 
-  return (
-    <IonBadge color="tertiary" className="pending-surveys-badge">
-      {count}
-    </IonBadge>
-  );
+  return <IonBadge className="pending-surveys-badge">{count}</IonBadge>;
 };
 
 export default observer(PendingSurveysBadge);

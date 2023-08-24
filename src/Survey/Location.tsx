@@ -175,7 +175,14 @@ const Location = ({ sample: record }: Props) => {
               </MapContainer.Control>
             )}
 
-            <MapContainer.Marker {...locationWithoutGridRef} />
+            <MapContainer.Marker.Circle
+              {...locationWithoutGridRef}
+              paint={{
+                'circle-color': '#32F3E3',
+                'circle-stroke-color': '#32F3E3',
+                'circle-radius': 10,
+              }}
+            />
           </MapContainer>
         )}
       </Main>

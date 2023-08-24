@@ -238,13 +238,13 @@ ion-item-divider {
 }
 
 // ACCESSIBILITY IMPROVEMENTS START
-ion-button:not(.button-has-icon-only):not(.info-button),
-ion-item {
-  font-size: 0.9em;
-  &.md {
-    font-size: 0.9em;
-  }
-}
+// ion-button:not(.button-has-icon-only):not(.info-button),
+// ion-item {
+//   font-size: 0.9em;
+//   &.md {
+//     font-size: 0.9em;
+//   }
+// }
 // clearer image picker empty message
 .photo-picker {
   &.ios .empty {
@@ -346,9 +346,9 @@ ion-item-sliding.survey-list-item,
 }
 
 // make all primary button text colours secondary
-ion-item[type='button'][color='primary'],
-ion-button[color='primary'] {
-  --ion-color-contrast: var(--color-secondary) !important;
+ion-item[type='button'][color='secondary'],
+ion-button[color='secondary'] {
+  --ion-color-contrast: var(--color-primary) !important;
 }
 
 a[href]:not([role='listitem']) {

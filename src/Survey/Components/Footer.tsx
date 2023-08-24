@@ -54,17 +54,13 @@ const Footer = ({ comingFrom, className }: Props) => {
       <div>
         <IonItem
           lines="none"
-          className="next-button rounded-md font-bold shadow-btn"
+          className="next-button rounded-md font-bold shadow-lg shadow-secondary-800/30"
           onClick={onClick}
           type="button"
-          color="primary"
+          color="secondary"
         >
           {!isLastStep && (
-            <IonIcon
-              slot="end"
-              color="secondary"
-              icon={chevronForwardOutline}
-            />
+            <IonIcon slot="end" color="primary" icon={chevronForwardOutline} />
           )}
           <IonLabel className="ion-text-center">
             <T>{footerTitle}</T>

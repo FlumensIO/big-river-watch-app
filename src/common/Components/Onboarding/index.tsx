@@ -9,13 +9,7 @@ import 'swiper/css/pagination';
 import { Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Main, Page } from '@flumens';
-import {
-  IonButton,
-  IonButtons,
-  IonFooter,
-  IonIcon,
-  IonToolbar,
-} from '@ionic/react';
+import { IonButtons, IonFooter, IonIcon, IonToolbar } from '@ionic/react';
 import '@ionic/react/css/ionic-swiper.css';
 import config from 'common/config';
 import appModel from 'models/app';
@@ -175,12 +169,13 @@ const Onboarding = ({ children }: any) => {
         <IonToolbar>
           <div className="pagination-container mx-5" />
           <IonButtons slot="end">
-            <IonButton
+            <button
               onClick={slideNextOrClose}
-              color="primary"
-              fill="solid"
-              shape="round"
-              className={clsx('!m-3 h-12', moreSlidesExist && 'w-12')}
+              color="secondary"
+              className={clsx(
+                '!m-3 flex h-12 items-center justify-center rounded-full bg-secondary text-primary shadow-lg shadow-secondary-800/30',
+                moreSlidesExist && 'w-12'
+              )}
             >
               {!moreSlidesExist ? (
                 <span className="px-5 font-bold">
@@ -189,7 +184,7 @@ const Onboarding = ({ children }: any) => {
               ) : (
                 <IonIcon slot="icon-only" icon={arrowForward} />
               )}
-            </IonButton>
+            </button>
           </IonButtons>
         </IonToolbar>
       </IonFooter>
