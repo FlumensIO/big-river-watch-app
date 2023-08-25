@@ -44,7 +44,7 @@ workflows:
     before_run:
       - web
       - android
-      # - ios
+      - ios
     after_run:
       - deploy
   deploy:
@@ -59,24 +59,24 @@ workflows:
           inputs:
             - package_name: $BITRISE_PROJECT_NAME
             - service_account_json_key_path: $BITRISEIO_GOOGLE_SERVICE_KEY_URL
-            # - deploy-to-itunesconnect-application-loader@1:
-            #     run_if: enveq "BUILD_ONLY" ""
-            #     inputs:
-            #       - password: $ITUNES_CONNECT_PASS
-            #       - app_password: $ITUNES_CONNECT_APP_PASS
-            #       - itunescon_user: $ITUNES_CONNECT_USER
+      - deploy-to-itunesconnect-application-loader@1:
+          run_if: enveq "BUILD_ONLY" ""
+          inputs:
+            - password: $ITUNES_CONNECT_PASS
+            - app_password: $ITUNES_CONNECT_APP_PASS
+            - itunescon_user: $ITUNES_CONNECT_USER
       - script@1:
           title: Upload Builds to OneDrive
           inputs:
             - content: |
                 DIRECTORY="$BITRISE_PROJECT_NAME/$NPM_PACKAGE_VERSION"
                 npx @flumens/onedrive-upload --directory $DIRECTORY --file $BITRISE_DEPLOY_DIR/app-debug.aab
-            # - script@1:
-            #     title: Upload Builds to OneDrive
-            #     inputs:
-            #       - content: |
-            #           DIRECTORY="$BITRISE_PROJECT_NAME/$NPM_PACKAGE_VERSION"
-            #           npx @flumens/onedrive-upload --directory $DIRECTORY --file $BITRISE_DEPLOY_DIR/App.ipa
+      - script@1:
+          title: Upload Builds to OneDrive
+          inputs:
+            - content: |
+                DIRECTORY="$BITRISE_PROJECT_NAME/$NPM_PACKAGE_VERSION"
+                npx @flumens/onedrive-upload --directory $DIRECTORY --file $BITRISE_DEPLOY_DIR/App.ipa
       - script@1:
           title: Git Tag
           run_if: enveq "BUILD_ONLY" ""
@@ -108,7 +108,6 @@ workflows:
           inputs:
             - content: |
                 #!/usr/bin/env bash
-
                 echo "Node version:"
                 node --version
                 npm --version
