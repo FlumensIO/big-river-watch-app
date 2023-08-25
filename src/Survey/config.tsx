@@ -1,5 +1,7 @@
 import { Trans as T } from 'react-i18next';
 import * as Yup from 'yup';
+import { InfoButton } from '@flumens';
+import { IonRouterLink } from '@ionic/react';
 import user from 'models/user';
 
 const survey = {
@@ -153,13 +155,9 @@ const survey = {
                   are by this river?
                 </T>
               </div>
-              <div className="mt-2">
-                <i>
-                  <T>
-                    Remember to describe how you feel, not what you can see.
-                  </T>
-                </i>
-              </div>
+              <InfoButton label="READ MORE" header="Info">
+                Remember to describe how you feel, not what you can see.
+              </InfoButton>
             </>
           ),
           infoProps: { icon: null, skipTranslation: true },
@@ -183,14 +181,10 @@ const survey = {
                   natural?
                 </T>
               </div>
-              <div className="mt-2">
-                <i>
-                  <T>
-                    A natural river is a flowing body of water that has not been
-                    significantly altered or impacted by human activities.
-                  </T>
-                </i>
-              </div>
+              <InfoButton label="READ MORE" header="Info">
+                A natural river is a flowing body of water that has not been
+                significantly altered or impacted by human activities.
+              </InfoButton>
             </>
           ),
           infoProps: { icon: null, skipTranslation: true },
@@ -216,16 +210,11 @@ const survey = {
               <div className="font-medium">
                 <T>Can you see any barriers in this river?</T>
               </div>
-              <div className="mt-2">
-                <i>
-                  <T>
-                    A barrier is a physical structure, either natural or
-                    artificial, located within a river channel. They can have
-                    both positive and negative impacts on ecosystem health.
-                    Select all that apply:
-                  </T>
-                </i>
-              </div>
+              <InfoButton label="READ MORE" header="Info">
+                A barrier is a physical structure, either natural or artificial,
+                located within a river channel. They can have both positive and
+                negative impacts on ecosystem health. Select all that apply:
+              </InfoButton>
             </>
           ),
           infoProps: { icon: null, skipTranslation: true },
@@ -289,15 +278,10 @@ const survey = {
               <div className="font-medium">
                 <T>What wildlife have you seen during your survey?</T>
               </div>
-              <div className="mt-2">
-                <i>
-                  <T>
-                    Seeing a variety of species, including those listed below,
-                    can provide a good indication of the overall health of a
-                    river.
-                  </T>
-                </i>
-              </div>
+              <InfoButton label="READ MORE" header="Info">
+                Seeing a variety of species, including those listed below, can
+                provide a good indication of the overall health of a river.
+              </InfoButton>
             </>
           ),
           infoProps: { icon: null, skipTranslation: true },
@@ -335,15 +319,10 @@ const survey = {
               <div className="font-medium">
                 <T>What plants can you see in and around the river today?</T>
               </div>
-              <div className="mt-2">
-                <i>
-                  <T>
-                    Plants may suggest a healthy river but that can be
-                    misleading, sometimes they can be non-native. Select all
-                    that apply:
-                  </T>
-                </i>
-              </div>
+              <InfoButton label="READ MORE" header="Info">
+                Plants may suggest a healthy river but that can be misleading,
+                sometimes they can be non-native. Select all that apply:
+              </InfoButton>
             </>
           ),
           infoProps: { icon: null, skipTranslation: true },
@@ -377,15 +356,11 @@ const survey = {
               <div className="font-medium">
                 <T>How clear or cloudy is the water?</T>
               </div>
-              <div className="mt-2">
-                <i>
-                  <T>
-                    Please don't climb down the river bank and only look if it
-                    is safe to do so. If you can't see because it is too far
-                    away or the water is too murky, then select 'Don't know'.
-                  </T>
-                </i>
-              </div>
+              <InfoButton label="READ MORE" header="Info">
+                Please don't climb down the river bank and only look if it is
+                safe to do so. If you can't see because it is too far away or
+                the water is too murky, then select 'Don't know'.
+              </InfoButton>
             </>
           ),
           infoProps: { icon: null, skipTranslation: true },
@@ -414,16 +389,12 @@ const survey = {
               <div className="font-medium">
                 <T>Does the water smell unpleasant?</T>
               </div>
-              <div className="mt-2">
-                <i>
-                  <T>
-                    Different odors can be associated with different types and
-                    levels of pollution. On the other hand, a river with a
-                    clean, fresh smell can indicate good water quality and a
-                    healthy ecosystem.
-                  </T>
-                </i>
-              </div>
+              <InfoButton label="READ MORE" header="Info">
+                Different odors can be associated with different types and
+                levels of pollution. On the other hand, a river with a clean,
+                fresh smell can indicate good water quality and a healthy
+                ecosystem.
+              </InfoButton>
             </>
           ),
           infoProps: { icon: null, skipTranslation: true },
@@ -444,21 +415,9 @@ const survey = {
         attrProps: {
           input: 'radio',
           info: (
-            <>
-              <div className="font-medium">
-                <T>Can you see any litter?</T>
-              </div>
-              <div className="mt-2">
-                <i>
-                  <T>
-                    Different odors can be associated with different types and
-                    levels of pollution. On the other hand, a river with a
-                    clean, fresh smell can indicate good water quality and a
-                    healthy ecosystem.
-                  </T>
-                </i>
-              </div>
-            </>
+            <div className="font-medium">
+              <T>Can you see any litter?</T>
+            </div>
           ),
           infoProps: { icon: null, skipTranslation: true },
           inputProps: {
@@ -487,25 +446,26 @@ const survey = {
               <div className="font-medium">
                 <T>Can you see any other signs of pollution?</T>
               </div>
-              <div className="mt-2">
-                <i>
-                  <T>
-                    There are several visible signs of pollution in a river that
-                    can indicate poor water quality. It's important to monitor
-                    and address pollution sources in order to protect and
-                    restore the health of our rivers.
-                  </T>
-                </i>
-              </div>
-              <div className="mt-2">
-                <i>
-                  <T>
-                    Think you can see a serious pollution incident? Click here
-                    to read guidance on understanding and reporting pollution to
-                    your local relevant authority.
-                  </T>
-                </i>
-              </div>
+              <i className="mt-3 block">
+                <T>
+                  Think you can see a serious pollution incident?{' '}
+                  <IonRouterLink
+                    routerLink="/info/pollution"
+                    className="font-semibold underline"
+                  >
+                    Click here
+                  </IonRouterLink>{' '}
+                  to read guidance on understanding and reporting pollution to
+                  your local relevant authority.
+                </T>
+              </i>
+
+              <InfoButton label="READ MORE" header="Info">
+                There are several visible signs of pollution in a river that can
+                indicate poor water quality. It's important to monitor and
+                address pollution sources in order to protect and restore the
+                health of our rivers.
+              </InfoButton>
             </>
           ),
           infoProps: { icon: null, skipTranslation: true },
@@ -561,13 +521,9 @@ const survey = {
                   good things that you've noticed by the river today.
                 </T>
               </div>
-              <div className="mt-2">
-                <i>
-                  <T>
-                    This could be something you have seen, heard, or smelled.
-                  </T>
-                </i>
-              </div>
+              <InfoButton label="READ MORE" header="Info">
+                This could be something you have seen, heard, or smelled.
+              </InfoButton>
             </>
           ),
           infoProps: { icon: null, skipTranslation: true },
@@ -590,15 +546,11 @@ const survey = {
                   your survey?
                 </T>
               </div>
-              <div className="mt-2">
-                <i>
-                  <T>
-                    This could be other animals you have seen, things you have
-                    observed on previous occasions, anything we have not asked
-                    about that you feel is important.
-                  </T>
-                </i>
-              </div>
+              <InfoButton label="READ MORE" header="Info">
+                This could be other animals you have seen, things you have
+                observed on previous occasions, anything we have not asked about
+                that you feel is important.
+              </InfoButton>
             </>
           ),
           infoProps: { icon: null, skipTranslation: true },
