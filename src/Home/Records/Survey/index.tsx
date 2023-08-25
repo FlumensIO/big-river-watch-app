@@ -85,9 +85,11 @@ const Survey: FC<Props> = ({ record, uploadIsPrimary, style }) => {
 
         <div className="w-full">
           <h3 className="text-sm">
-            <div>
-              <IonIcon icon={locationOutline} /> {prettyLocation}
-            </div>
+            {!!prettyLocation && (
+              <div>
+                <IonIcon icon={locationOutline} /> {prettyLocation}
+              </div>
+            )}
           </h3>
 
           <div className="record-details" />
