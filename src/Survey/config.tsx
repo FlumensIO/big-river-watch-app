@@ -166,7 +166,8 @@ const survey = {
           ),
           infoProps: { icon: null, skipTranslation: true },
           inputProps: {
-            // TODO: make it one word only
+            format: (newValue: string) => newValue?.replaceAll(' ', ''),
+            onkeydown: (e: any) => e.key !== ' ',
           },
         },
       },
