@@ -155,7 +155,11 @@ const survey = {
                   are by this river?
                 </T>
               </div>
-              <InfoButton label="READ MORE" header="Info">
+              <InfoButton
+                label="READ MORE"
+                header="Info"
+                className="-mb-2 -mr-2"
+              >
                 Remember to describe how you feel, not what you can see.
               </InfoButton>
             </>
@@ -181,7 +185,11 @@ const survey = {
                   natural?
                 </T>
               </div>
-              <InfoButton label="READ MORE" header="Info">
+              <InfoButton
+                label="READ MORE"
+                header="Info"
+                className="-mb-2 -mr-2"
+              >
                 A natural river is a flowing body of water that has not been
                 significantly altered or impacted by human activities.
               </InfoButton>
@@ -210,7 +218,11 @@ const survey = {
               <div className="font-medium">
                 <T>Can you see any barriers in this river?</T>
               </div>
-              <InfoButton label="READ MORE" header="Info">
+              <InfoButton
+                label="READ MORE"
+                header="Info"
+                className="-mb-2 -mr-2"
+              >
                 A barrier is a physical structure, either natural or artificial,
                 located within a river channel. They can have both positive and
                 negative impacts on ecosystem health. Select all that apply:
@@ -278,7 +290,11 @@ const survey = {
               <div className="font-medium">
                 <T>What wildlife have you seen during your survey?</T>
               </div>
-              <InfoButton label="READ MORE" header="Info">
+              <InfoButton
+                label="READ MORE"
+                header="Info"
+                className="-mb-2 -mr-2"
+              >
                 Seeing a variety of species, including those listed below, can
                 provide a good indication of the overall health of a river.
               </InfoButton>
@@ -319,7 +335,11 @@ const survey = {
               <div className="font-medium">
                 <T>What plants can you see in and around the river today?</T>
               </div>
-              <InfoButton label="READ MORE" header="Info">
+              <InfoButton
+                label="READ MORE"
+                header="Info"
+                className="-mb-2 -mr-2"
+              >
                 Plants may suggest a healthy river but that can be misleading,
                 sometimes they can be non-native. Select all that apply:
               </InfoButton>
@@ -356,7 +376,11 @@ const survey = {
               <div className="font-medium">
                 <T>How clear or cloudy is the water?</T>
               </div>
-              <InfoButton label="READ MORE" header="Info">
+              <InfoButton
+                label="READ MORE"
+                header="Info"
+                className="-mb-2 -mr-2"
+              >
                 Please don't climb down the river bank and only look if it is
                 safe to do so. If you can't see because it is too far away or
                 the water is too murky, then select 'Don't know'.
@@ -389,7 +413,11 @@ const survey = {
               <div className="font-medium">
                 <T>Does the water smell unpleasant?</T>
               </div>
-              <InfoButton label="READ MORE" header="Info">
+              <InfoButton
+                label="READ MORE"
+                header="Info"
+                className="-mb-2 -mr-2"
+              >
                 Different odors can be associated with different types and
                 levels of pollution. On the other hand, a river with a clean,
                 fresh smell can indicate good water quality and a healthy
@@ -460,7 +488,11 @@ const survey = {
                 </T>
               </i>
 
-              <InfoButton label="READ MORE" header="Info">
+              <InfoButton
+                label="READ MORE"
+                header="Info"
+                className="-mb-2 -mr-2"
+              >
                 There are several visible signs of pollution in a river that can
                 indicate poor water quality. It's important to monitor and
                 address pollution sources in order to protect and restore the
@@ -521,7 +553,11 @@ const survey = {
                   good things that you've noticed by the river today.
                 </T>
               </div>
-              <InfoButton label="READ MORE" header="Info">
+              <InfoButton
+                label="READ MORE"
+                header="Info"
+                className="-mb-2 -mr-2"
+              >
                 This could be something you have seen, heard, or smelled.
               </InfoButton>
             </>
@@ -546,7 +582,11 @@ const survey = {
                   your survey?
                 </T>
               </div>
-              <InfoButton label="READ MORE" header="Info">
+              <InfoButton
+                label="READ MORE"
+                header="Info"
+                className="-mb-2 -mr-2"
+              >
                 This could be other animals you have seen, things you have
                 observed on previous occasions, anything we have not asked about
                 that you feel is important.
