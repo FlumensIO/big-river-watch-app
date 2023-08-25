@@ -53,17 +53,17 @@ const OfflineLocation = ({ record, onGPSClick }: OfflineLocationProps) => {
               <T>Current survey location</T>
             </div>
             <ul className="mx-4 list-disc">
-              {latLng && (
+              {!!latLng && (
                 <li>
                   <T>Coordinates</T>: {latLng}
                 </li>
               )}
-              {gridref && (
+              {!!gridref && (
                 <li>
                   <T>OS Grid</T>: {gridref}
                 </li>
               )}
-              {accuracy && (
+              {!!accuracy && (
                 <li>
                   <T>Accuracy</T>: ±{accuracy}m
                 </li>
