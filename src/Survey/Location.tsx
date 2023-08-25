@@ -36,6 +36,8 @@ const OfflineLocation = ({ record, onGPSClick }: OfflineLocationProps) => {
     ? `${location.latitude.toFixed(3)}, ${location.longitude.toFixed(3)}`
     : '';
 
+  const accuracy = location.accuracy?.toFixed(0);
+
   return (
     <>
       <InfoMessage icon={warningOutline} className="info-message warning">
@@ -51,17 +53,21 @@ const OfflineLocation = ({ record, onGPSClick }: OfflineLocationProps) => {
               <T>Current survey location</T>
             </div>
             <ul className="mx-4 list-disc">
-              <li>
-                <T>Coordinates</T>: {latLng}
-              </li>
+              {latLng && (
+                <li>
+                  <T>Coordinates</T>: {latLng}
+                </li>
+              )}
               {gridref && (
                 <li>
                   <T>OS Grid</T>: {gridref}
                 </li>
               )}
-              <li>
-                <T>Accuracy</T>: ±{location.accuracy?.toFixed(0)}m
-              </li>
+              {accuracy && (
+                <li>
+                  <T>Accuracy</T>: ±{accuracy}m
+                </li>
+              )}
             </ul>
           </div>
 
