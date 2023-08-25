@@ -1,8 +1,17 @@
+/* eslint-disable @getify/proper-arrows/name */
 import { Trans as T } from 'react-i18next';
 import * as Yup from 'yup';
 import { InfoButton } from '@flumens';
 import { IonRouterLink } from '@ionic/react';
 import user from 'models/user';
+
+const noneSetter = (attr: string) => (val: any, model: any) => {
+  // eslint-disable-next-line no-param-reassign
+  model.attrs[attr] =
+    val.includes('None') && !model.attrs[attr].includes('None')
+      ? ['None']
+      : val.filter((v: any) => v !== 'None');
+};
 
 const survey = {
   attrs: {
@@ -245,6 +254,7 @@ const survey = {
               { value: 'None' },
             ],
           },
+          set: noneSetter('barriers'),
         },
       },
     },
@@ -319,9 +329,10 @@ const survey = {
               { value: 'Otter' },
               { value: 'Rat' },
               { value: 'Other' },
-              { value: "None – I didn't see any wildlife" },
+              { value: 'None' },
             ],
           },
+          set: noneSetter('wildlife'),
         },
       },
     },
@@ -360,9 +371,10 @@ const survey = {
                 value:
                   'Algae – green, hair-like, can form clumps on the surface of the water',
               },
-              { value: "None – I can't see any plants in or out of the water" },
+              { value: 'None' },
             ],
           },
+          set: noneSetter('plants'),
         },
       },
     },
@@ -532,9 +544,10 @@ const survey = {
               },
               { value: 'Other' },
               { value: "Don't know" },
-              { value: "None – I can't see any visible signs of pollution" },
+              { value: 'None' },
             ],
           },
+          set: noneSetter('pollution'),
         },
       },
     },
