@@ -1,4 +1,7 @@
+import { useContext } from 'react';
+import { useRouteMatch } from 'react-router';
 import { RouteWithModels } from '@flumens';
+import { NavContext } from '@ionic/react';
 import { Attrs } from 'common/models/record';
 import records from 'models/collections/records';
 import End from './End';
@@ -10,19 +13,6 @@ import User from './User';
 import UserContact from './UserContact';
 
 const baseURL = '/survey';
-
-const getQuestionRoute = (Component: unknown, index: number) => {
-  if (typeof Component === 'string') {
-    const attr = Component as keyof Attrs;
-    return [
-      `${baseURL}/:smpId/${index + 1}`,
-      // eslint-disable-next-line @getify/proper-arrows/name
-      ({ sample }: any) => <SurveyAttrPage sample={sample} attr={attr} />,
-    ];
-  }
-
-  return [`${baseURL}/:smpId/${index + 1}`, Component];
-};
 
 export const questionRoutes = [
   User,
@@ -48,6 +38,46 @@ export const questionRoutes = [
   'goodThings',
   'comment',
 ];
+
+export const useNavigateNext = (comingFrom?: string) => {
+  const { navigate } = useContext(NavContext);
+  const match = useRouteMatch();
+  const route = match.url.split('/');
+  const step = parseInt(route.pop()!, 10);
+
+  const surveyStepCount = questionRoutes.length;
+  const isLastStep = surveyStepCount === step;
+
+  const navigateNext = () => {
+    if (isLastStep) {
+      route.push(`end`);
+    } else {
+      route.push(`${step + 1}`);
+    }
+
+    const navigateTo = route.join('/');
+
+    navigate(navigateTo, 'forward', 'push', undefined, {
+      comingFrom,
+      unmount: true,
+    });
+  };
+
+  return navigateNext;
+};
+
+const getQuestionRoute = (Component: unknown, index: number) => {
+  if (typeof Component === 'string') {
+    const attr = Component as keyof Attrs;
+    return [
+      `${baseURL}/:smpId/${index + 1}`,
+      // eslint-disable-next-line @getify/proper-arrows/name
+      ({ sample }: any) => <SurveyAttrPage sample={sample} attr={attr} />,
+    ];
+  }
+
+  return [`${baseURL}/:smpId/${index + 1}`, Component];
+};
 
 const routes = [
   [`${baseURL}`, StartNewSurvey, true],
