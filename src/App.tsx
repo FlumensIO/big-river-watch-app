@@ -22,6 +22,7 @@ import LanguageSelectRequired from 'Components/LanguageSelectRequired';
 import Onboarding from 'Components/Onboarding';
 import Home from './Home';
 import Info from './Info/router';
+import Settings from './Settings/router';
 import Survey from './Survey/router';
 
 const IonApp = IonAppPlain as any; // IonApp has 'lang' prop missing.
@@ -58,6 +59,7 @@ const App = () => {
               <Route exact path="/" component={HomeRedirect} />
               <Route path="/home" component={Home} />
               {Info}
+              {Settings}
               {Survey}
             </IonRouterOutlet>
           </IonReactRouter>

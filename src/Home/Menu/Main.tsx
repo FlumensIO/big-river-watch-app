@@ -1,6 +1,7 @@
 import { observer } from 'mobx-react';
 import {
   documentTextOutline,
+  globeOutline,
   heartOutline,
   informationCircleOutline,
   lockClosedOutline,
@@ -85,6 +86,14 @@ const MainComponent = ({ onToggle }: Props) => {
           <T>Settings</T>
         </IonItemDivider>
         <div className="rounded">
+          <IonItem routerLink="/settings/language" detail>
+            <IonIcon icon={globeOutline} size="small" slot="start" />
+            <T>Language</T>
+            <div slot="end" className="text-black/50">
+              {appModel.attrs.language}
+            </div>
+          </IonItem>
+
           <MenuAttrToggle
             icon={shareSocialOutline}
             label="Share App Analytics"
