@@ -14,6 +14,7 @@ import { InfoMessage, Main, MenuAttrToggle, PickByType } from '@flumens';
 import { IonIcon, IonList, IonItem, IonItemDivider } from '@ionic/react';
 import CONFIG from 'common/config';
 import flumensLogo from 'common/images/flumens.svg';
+import sewerIcon from 'common/images/sewer.svg';
 import appModel, { Attrs } from 'models/app';
 
 type Props = {
@@ -55,7 +56,11 @@ const MainComponent = ({ onToggle }: Props) => {
           >
             <IonIcon icon={heartOutline} size="small" slot="start" />
             <T>Partners</T>
-          </IonItem>{' '}
+          </IonItem>
+          <IonItem routerLink="/info/pollution" detail>
+            <IonIcon icon={sewerIcon} size="small" slot="start" />
+            <T>Pollution</T>
+          </IonItem>
           <IonItem
             href={`${CONFIG.websitePath}/take-action/the-big-river-watch/health-and-safety-brw?lang=${language}`}
             detail
