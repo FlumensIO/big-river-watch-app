@@ -3,6 +3,7 @@ import {
   documentTextOutline,
   globeOutline,
   heartOutline,
+  helpBuoyOutline,
   informationCircleOutline,
   lockClosedOutline,
   openOutline,
@@ -30,6 +31,8 @@ const MainComponent = ({ onToggle }: Props) => {
   const onSendAnalyticsToggle = (checked: boolean) =>
     onToggle('sendAnalytics', checked);
 
+  const welshPath = language === 'cy' ? '-cymru' : '';
+
   return (
     <Main>
       <IonList lines="full">
@@ -50,19 +53,27 @@ const MainComponent = ({ onToggle }: Props) => {
             <T>About</T>
           </IonItem>
           <IonItem
-            href={`${CONFIG.websitePath}/take-action/the-big-river-watch/big-river-watch-partners?lang=${language}`}
+            href={`${CONFIG.websitePath}/take-action/the-big-river-watch/big-river-watch-partners`}
             detail
             detailIcon={openOutline}
           >
             <IonIcon icon={heartOutline} size="small" slot="start" />
             <T>Partners</T>
           </IonItem>
+          <IonItem
+            href={`${CONFIG.websitePath}/take-action/the-big-river-watch/big-river-watch-faqs`}
+            detail
+            detailIcon={openOutline}
+          >
+            <IonIcon icon={helpBuoyOutline} size="small" slot="start" />
+            <T>FAQ</T>
+          </IonItem>
           <IonItem routerLink="/info/pollution" detail>
             <IonIcon icon={sewerIcon} size="small" slot="start" />
             <T>Pollution</T>
           </IonItem>
           <IonItem
-            href={`${CONFIG.websitePath}/take-action/the-big-river-watch/health-and-safety-brw?lang=${language}`}
+            href={`${CONFIG.websitePath}/take-action/the-big-river-watch/big-river-watch-health-saftey${welshPath}`}
             detail
             detailIcon={openOutline}
           >
@@ -70,7 +81,7 @@ const MainComponent = ({ onToggle }: Props) => {
             <T>Health and Safety</T>
           </IonItem>{' '}
           <IonItem
-            href={`${CONFIG.websitePath}/take-action/the-big-river-watch/big-river-watch-t-cs?lang=${language}`}
+            href={`${CONFIG.websitePath}/take-action/the-big-river-watch/big-river-watch-t-cs${welshPath}`}
             detail
             detailIcon={openOutline}
           >
@@ -78,7 +89,7 @@ const MainComponent = ({ onToggle }: Props) => {
             <T>Terms and Conditions</T>
           </IonItem>
           <IonItem
-            href={`${CONFIG.websitePath}/privacy?lang=${language}`}
+            href={`${CONFIG.websitePath}/take-action/the-big-river-watch/big-river-watch-privacy-policy${welshPath}`}
             detail
             detailIcon={openOutline}
           >

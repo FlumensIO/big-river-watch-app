@@ -1240,3 +1240,7 @@ msgstr ""
 # /info/about
 msgid "Thanks to the following for additional photos:"
 msgstr ""
+
+# /home/info
+msgid "FAQ"
+msgstr ""

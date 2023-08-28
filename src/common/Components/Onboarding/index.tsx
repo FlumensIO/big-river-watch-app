@@ -21,6 +21,7 @@ import slide4 from './welcome4.jpg';
 
 const Onboarding = ({ children }: any) => {
   const { language } = appModel.attrs;
+  const welshPath = language === 'cy' ? '-cymru' : '';
 
   const [moreSlidesExist, setMoreSlidesExist] = useState(true);
   const [controlledSwiper, setControlledSwiper] = useState<SwiperCore>();
@@ -147,13 +148,13 @@ const Onboarding = ({ children }: any) => {
                 <T>
                   Click to confirm you’ve read the{' '}
                   <a
-                    href={`${config.websitePath}/take-action/the-big-river-watch/health-and-safety-brw?lang=${language}`}
+                    href={`${config.websitePath}/take-action/the-big-river-watch/big-river-watch-health-saftey${welshPath}`}
                   >
                     Health and Safety guidance
                   </a>{' '}
                   and you agree to our{' '}
                   <a
-                    href={`${config.websitePath}/take-action/the-big-river-watch/big-river-watch-t-cs?lang=${language}`}
+                    href={`${config.websitePath}/take-action/the-big-river-watch/big-river-watch-t-cs${welshPath}`}
                   >
                     Terms and Conditions
                   </a>

@@ -873,3 +873,7 @@ msgstr "Language"
 # /info/about 
 msgid "Thanks to the following for additional photos:"
 msgstr "Thanks to the following for additional photos:"
+
+# /home/info 
+msgid "FAQ"
+msgstr "FAQ"

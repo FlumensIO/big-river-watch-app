@@ -61,6 +61,8 @@ const UserContact = ({ sample: record }: Props) => {
     return normalisedValue || newValueUppercase;
   };
 
+  const isWelsh = language === 'cy';
+
   return (
     <Page id="survey-user-contact">
       <Header />
@@ -74,7 +76,11 @@ const UserContact = ({ sample: record }: Props) => {
             <i>
               Read our full{' '}
               <a
-                href={`${config.websitePath}/privacy?lang=${language}`}
+                href={`${
+                  config.websitePath
+                }/take-action/the-big-river-watch/big-river-watch-privacy-policy${
+                  isWelsh ? '-cymru' : ''
+                }`}
                 className="underline"
               >
                 Privacy Notice
