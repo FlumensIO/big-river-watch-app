@@ -5,7 +5,7 @@ import logo from 'common/images/flumens.svg';
 import CaSTCoLogo from './CaSTCoLogo.png';
 import TheRiversTrustLogo from './TheRiversTrustLogo.png';
 
-const { P } = Section;
+const { P, H } = Section;
 
 const Component: React.FC = () => (
   <Page id="about">
@@ -46,6 +46,19 @@ const Component: React.FC = () => (
       </Section>
       <Section>
         <P>Registered charity number: 1107144</P>
+      </Section>
+
+      <Section>
+        <H>Thanks to the following for additional photos:</H>
+        <P skipTranslation>
+          <ul>
+            <li>Annie Jenkin</li>
+            <li>James Pugh</li>
+            <li>Richard Symonds</li>
+            <li>Toby Hull</li>
+            <li>Wigan Adam Rourke</li>
+          </ul>
+        </P>
       </Section>
 
       <Section className="!mt-8">

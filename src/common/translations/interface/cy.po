@@ -1232,3 +1232,11 @@ msgstr "Rydym yn ddiolchgar i chi am gymryd yr amser i lenwi'r arolwg."
 # /home/records
 msgid "Are you sure you want to delete this record?"
 msgstr "Ydych chi'n siŵr eich bod am ddileu'r cofnod hwn?"
+
+# /home/info
+msgid "Language"
+msgstr ""
+
+# /info/about
+msgid "Thanks to the following for additional photos:"
+msgstr ""
