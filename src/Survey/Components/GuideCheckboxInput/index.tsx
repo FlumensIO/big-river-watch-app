@@ -101,13 +101,12 @@ const GuideCheckboxInput: FC<Props> = ({
         className={clsx(
           itemClassName,
           isDefault && 'checkbox-input-default-option',
-          icon && 'hasIcon',
-          '[--padding-start:0]'
+          icon && 'hasIcon'
         )}
       >
         {!!icon && (
           <div className="relative z-10 h-full">
-            <img src={icon} className="h-full w-16" onClick={onOpenProfile} />
+            <img src={icon} onClick={onOpenProfile} />
             <IonIcon
               icon={informationCircleOutline}
               className="absolute left-1 top-1 text-white [--ionicon-stroke-width:50px]"
@@ -115,7 +114,7 @@ const GuideCheckboxInput: FC<Props> = ({
           </div>
         )}
 
-        <IonLabel className="ion-text-wrap normal-font-size ml-4 mr-3">
+        <IonLabel className="ion-text-wrap normal-font-size mr-3">
           {checkboxInput}
         </IonLabel>
         <IonCheckbox

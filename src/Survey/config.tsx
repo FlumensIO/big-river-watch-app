@@ -7,6 +7,15 @@ import user from 'models/user';
 import pollution from '../Home/Guides/Pollution/items.json';
 import wildlife from '../Home/Guides/Wildlife/items.json';
 import GuideCheckboxInput from './Components/GuideCheckboxInput';
+import litter from './photos/litter.jpg';
+import litterRiverbank from './photos/litter_riverbank.jpg';
+import litterVegetation from './photos/litter_vegetation.jpg';
+import plantsAlgae from './photos/plants_algae.jpg';
+import plantsBanks from './photos/plants_banks.jpg';
+import plantsEmerging from './photos/plants_emerging.jpg';
+import plantsNone from './photos/plants_none.jpg';
+import plantsSurface from './photos/plants_surface.jpg';
+import plantsUnderwater from './photos/plants_underwater.jpg';
 
 const getWildlifeOptions = () => {
   const getOption = (item: any) => ({
@@ -381,18 +390,26 @@ const survey = {
           infoProps: { icon: null, skipTranslation: true },
           inputProps: {
             options: [
-              { value: 'Plants growing completely under the water' },
-              { value: 'Plants emerging out of the water' },
-              { value: 'Plants floating on the surface' },
+              {
+                value: 'Plants growing completely under the water',
+                icon: plantsUnderwater,
+              },
+              {
+                value: 'Plants emerging out of the water',
+                icon: plantsEmerging,
+              },
+              { value: 'Plants floating on the surface', icon: plantsSurface },
               {
                 value:
                   'Plants growing on the bank, completely out of the water (including trees)',
+                icon: plantsBanks,
               },
               {
                 value:
                   'Algae – green, hair-like, can form clumps on the surface of the water',
+                icon: plantsAlgae,
               },
-              { value: 'None' },
+              { value: 'None', icon: plantsNone },
             ],
           },
           set: noneSetter('plants'),
@@ -488,12 +505,13 @@ const survey = {
           infoProps: { icon: null, skipTranslation: true },
           inputProps: {
             options: [
-              { value: 'Yes – in the river' },
+              { value: 'Yes – in the river', icon: litter },
               {
                 value:
                   'Yes – caught in the bankside vegetation (above river surface)',
+                icon: litterVegetation,
               },
-              { value: 'Yes – on the river banks' },
+              { value: 'Yes – on the river banks', icon: litterRiverbank },
               { value: "Don't know" },
               { value: 'None' },
             ],
