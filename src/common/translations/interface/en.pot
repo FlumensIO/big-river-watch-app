@@ -599,8 +599,8 @@ msgid "Can you see any barriers in this river?"
 msgstr "Can you see any barriers in this river?"
 
 # /survey/record/13 
-msgid "A barrier is a physical structure, either natural or artificial, located within a river channel. They can have both positive and negative impacts on ecosystem health. Select all that apply:"
-msgstr "A barrier is a physical structure, either natural or artificial, located within a river channel. They can have both positive and negative impacts on ecosystem health. Select all that apply:"
+msgid "A barrier is a physical structure, either natural or artificial, located within a river channel. They can have both positive and negative impacts on ecosystem health. Select all that apply."
+msgstr "A barrier is a physical structure, either natural or artificial, located within a river channel. They can have both positive and negative impacts on ecosystem health. Select all that apply."
 
 # /survey/record/13 
 msgid "Natural – e.g. waterfalls, fallen trees stretching across the river"
@@ -663,8 +663,8 @@ msgid "What plants can you see in and around the river today?"
 msgstr "What plants can you see in and around the river today?"
 
 # /survey/record/16 
-msgid "Plants may suggest a healthy river but that can be misleading, sometimes they can be non-native. Select all that apply:"
-msgstr "Plants may suggest a healthy river but that can be misleading, sometimes they can be non-native. Select all that apply:"
+msgid "Plants may suggest a healthy river but that can be misleading, sometimes they can be non-native. Select all that apply."
+msgstr "Plants may suggest a healthy river but that can be misleading, sometimes they can be non-native. Select all that apply."
 
 # /survey/record/16 
 msgid "Plants growing completely under the water"
@@ -767,8 +767,8 @@ msgid "There are several visible signs of pollution in a river that can indicate
 msgstr "There are several visible signs of pollution in a river that can indicate poor water quality. It's important to monitor and address pollution sources in order to protect and restore the health of our rivers."
 
 # /survey/record/20 
-msgid "Think you can see a serious pollution incident? Click here to read guidance on understanding and reporting pollution to your local relevant authority."
-msgstr "Think you can see a serious pollution incident? Click here to read guidance on understanding and reporting pollution to your local relevant authority."
+msgid "Think you can see a serious pollution incident? <2>Click here</2> to read guidance on understanding and reporting pollution to your local relevant authority."
+msgstr "Think you can see a serious pollution incident? <2>Click here</2> to read guidance on understanding and reporting pollution to your local relevant authority."
 
 # /survey/record/20 
 msgid "Sewage – often milky grey or brown, can smell strongly. Sometimes outlets or personal care products may also be visible"

@@ -1,11 +1,12 @@
 # 
 # Translators:
 # Bla, 2023
+# Flumens Apps, 2023
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Bla, 2023\n"
+"Last-Translator: Flumens Apps, 2023\n"
 "Language-Team: Welsh (https://app.transifex.com/rivers-trust/teams/174713/cy/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -15,7 +16,7 @@ msgstr ""
 
 # /onboarding
 msgid "Welcome to <1>Big River Watch</1>!"
-msgstr "Croeso i'r arolwg<1>Big River Watch</1>!"
+msgstr "Croeso i'r arolwg <1>Big River Watch</1>!"
 
 # /onboarding
 msgid ""
@@ -600,7 +601,7 @@ msgid ""
 " <2>Privacy Notice</2> to find out how we use your personal data.</0></1>"
 msgstr ""
 "<0>A ydych chi'n hapus i'r Ymddiriedolaeth Afonydd gysylltu â "
-"chi?</0><1><0>Darllenwch ein<2>Hysbysiad Preifatrwydd</2> llawn i gael "
+"chi?</0><1><0>Darllenwch ein <2>Hysbysiad Preifatrwydd</2> llawn i gael "
 "gwybod sut y byddwn yn defnyddio eich data personol.</0></1>"
 
 # /survey/record/2
@@ -884,11 +885,11 @@ msgstr "A allwch chi weld unrhyw rwystrau yn yr afon hon?"
 msgid ""
 "A barrier is a physical structure, either natural or artificial, located "
 "within a river channel. They can have both positive and negative impacts on "
-"ecosystem health. Select all that apply:"
+"ecosystem health. Select all that apply."
 msgstr ""
 "Mae rhwystr yn strwythur ffisegol, naill ai naturiol neu artiffisial, wedi'i"
 " leoli o fewn sianel afon. Gallant gael effeithiau cadarnhaol a negyddol ar "
-"iechyd ecosystemau. Dewiswch bob un sy'n berthnasol:"
+"iechyd ecosystemau. Dewiswch bob un sy'n berthnasol."
 
 # /survey/record/13
 msgid "Natural – e.g. waterfalls, fallen trees stretching across the river"
@@ -973,10 +974,10 @@ msgstr "Pa blanhigion allwch chi eu gweld yn ac o gwmpas yr afon heddiw?"
 # /survey/record/16
 msgid ""
 "Plants may suggest a healthy river but that can be misleading, sometimes "
-"they can be non-native. Select all that apply:"
+"they can be non-native. Select all that apply."
 msgstr ""
 "Gall planhigion awgrymu afon iach ond gall hynny fod yn gamarweiniol, "
-"weithiau gallant fod yn anfrodorol. Dewiswch bob un sy'n berthnasol:"
+"weithiau gallant fod yn anfrodorol. Dewiswch bob un sy'n berthnasol."
 
 # /survey/record/16
 msgid "Plants growing completely under the water"
@@ -1103,12 +1104,13 @@ msgstr ""
 
 # /survey/record/20
 msgid ""
-"Think you can see a serious pollution incident? Click here to read guidance "
-"on understanding and reporting pollution to your local relevant authority."
+"Think you can see a serious pollution incident? <2>Click here</2> to read "
+"guidance on understanding and reporting pollution to your local relevant "
+"authority."
 msgstr ""
-"Ydych chi'n meddwl y gallwch chi weld digwyddiad llygredd difrifol? Cliciwch"
-" yma i ddarllen canllawiau ar ddeall ac adrodd am lygredd i'ch awdurdod "
-"lleol perthnasol."
+"Ydych chi'n meddwl y gallwch chi weld digwyddiad llygredd difrifol? "
+"<2>Cliciwch yma</2> i ddarllen canllawiau ar ddeall ac adrodd am lygredd "
+"i'ch awdurdod lleol perthnasol."
 
 # /survey/record/20
 msgid ""
