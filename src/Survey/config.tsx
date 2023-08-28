@@ -466,7 +466,7 @@ const survey = {
       pageProps: {
         headerProps: { title: 'Litter' },
         attrProps: {
-          input: 'radio',
+          input: 'checkbox',
           info: (
             <div className="font-medium">
               <T>Can you see any litter?</T>
@@ -482,9 +482,10 @@ const survey = {
               },
               { value: 'Yes – on the river banks' },
               { value: "Don't know" },
-              { value: "No – I can't see any litter" },
+              { value: 'None' },
             ],
           },
+          set: noneSetter('litter'),
         },
       },
     },
