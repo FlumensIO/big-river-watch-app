@@ -242,8 +242,6 @@ export default class Record extends Model {
     }
 
     await destroySubModels();
-
-    this.attrs.deleted = true;
   }
 }
 
