@@ -33,7 +33,7 @@ const getPollutionOptions = () => {
 const noneSetter = (attr: string) => (val: any, model: any) => {
   // eslint-disable-next-line no-param-reassign
   model.attrs[attr] =
-    val.includes('None') && !model.attrs[attr].includes('None')
+    val?.includes('None') && !model.attrs[attr]?.includes('None')
       ? ['None']
       : val.filter((v: any) => v !== 'None');
 };
