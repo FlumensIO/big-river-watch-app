@@ -314,6 +314,18 @@ msgstr "Registered charity number: 1107144"
 msgid "This app was hand crafted with love by <2>Flumens.</2> A technical consultancy that excels at building bespoke environmental science and community focussed solutions. For suggestions and feedback please do not hesitate to <6>contact us</6>."
 msgstr "This app was hand crafted with love by <2>Flumens.</2> A technical consultancy that excels at building bespoke environmental science and community focussed solutions. For suggestions and feedback please do not hesitate to <6>contact us</6>."
 
+# /survey 
+msgid "Discard"
+msgstr "Discard"
+
+# /survey 
+msgid "Continue"
+msgstr "Continue"
+
+# /survey 
+msgid "Previous survey draft exists, would you like to continue it?"
+msgstr "Previous survey draft exists, would you like to continue it?"
+
 # /survey/record/1 
 msgid "First name"
 msgstr "First name"

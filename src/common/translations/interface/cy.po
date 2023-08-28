@@ -554,6 +554,18 @@ msgstr ""
 "sy'n canolbwyntio ar y gymuned. Mae croeso i chi <6>gysylltu â ni</6> os "
 "hoffech rannu unrhyw adborth neu awgrymiadau."
 
+# /survey
+msgid "Discard"
+msgstr ""
+
+# /survey
+msgid "Continue"
+msgstr ""
+
+# /survey
+msgid "Previous survey draft exists, would you like to continue it?"
+msgstr ""
+
 # /survey/record/1
 msgid "First name"
 msgstr "Enw cyntaf"
