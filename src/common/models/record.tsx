@@ -73,6 +73,8 @@ export default class Record extends Model {
 
   gpsExtensionInit: any;
 
+  collection?: any;
+
   constructor(options: ModelOptions) {
     super({ store: modelStore, ...options });
 
@@ -220,6 +222,28 @@ export default class Record extends Model {
     data.media = this.media?.map(getMedia) || [];
 
     return JSON.parse(JSON.stringify(data));
+  }
+
+  /**
+   * Destroy the model and remove from the offline store.
+   */
+  async destroy() {
+    const destroySubModels = () =>
+      Promise.all(this.media.map((media: any) => media.destroy(true))); // eslint-disable-line @getify/proper-arrows/name
+
+    if (!this._store) {
+      throw new Error('Trying to sync locally without a store');
+    }
+
+    await this._store.destroy(this.cid);
+
+    if (this.collection) {
+      this.collection.remove(this);
+    }
+
+    await destroySubModels();
+
+    this.attrs.deleted = true;
   }
 }
 
