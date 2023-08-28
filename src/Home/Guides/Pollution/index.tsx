@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { informationCircle } from 'ionicons/icons';
 import { InfoMessage, Main, Page } from '@flumens';
-import GuideItemProfile from '../common/GuideItemProfile';
+import GuideItemProfile from 'Components/GuideItemProfile';
 import GuideItems, { GuideItem } from '../common/GuideItems';
 import './images';
 import items from './items.json';

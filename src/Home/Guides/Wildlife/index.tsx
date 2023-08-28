@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Main, Page } from '@flumens';
-import GuideItemProfile from '../common/GuideItemProfile';
+import GuideItemProfile from 'Components/GuideItemProfile';
 import GuideItems, { GuideItem } from '../common/GuideItems';
 import './images';
 import items from './items.json';

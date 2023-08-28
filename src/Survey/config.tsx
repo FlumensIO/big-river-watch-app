@@ -4,6 +4,31 @@ import * as Yup from 'yup';
 import { InfoButton } from '@flumens';
 import { IonRouterLink } from '@ionic/react';
 import user from 'models/user';
+import pollution from '../Home/Guides/Pollution/items.json';
+import wildlife from '../Home/Guides/Wildlife/items.json';
+import GuideCheckboxInput from './Components/GuideCheckboxInput';
+
+const getWildlifeOptions = () => {
+  const getOption = (item: any) => ({
+    label: item.name,
+    value: item.id,
+    ...item,
+    icon: `/images/${item.id}_thumbnail.jpg`,
+  });
+
+  return wildlife.map(getOption);
+};
+
+const getPollutionOptions = () => {
+  const getOption = (item: any) => ({
+    label: item.name,
+    value: item.id,
+    ...item,
+    icon: `/images/${item.id}_thumbnail.jpg`,
+  });
+
+  return pollution.map(getOption);
+};
 
 const noneSetter = (attr: string) => (val: any, model: any) => {
   // eslint-disable-next-line no-param-reassign
@@ -295,7 +320,7 @@ const survey = {
       pageProps: {
         headerProps: { title: 'Wildlife' },
         attrProps: {
-          input: 'checkbox',
+          input: GuideCheckboxInput,
           info: (
             <>
               <div className="font-medium">
@@ -314,20 +339,7 @@ const survey = {
           infoProps: { icon: null, skipTranslation: true },
           inputProps: {
             options: [
-              { value: 'Duck' },
-              { value: 'Swan' },
-              { value: 'Moorhen' },
-              { value: 'Coot' },
-              { value: 'Heron' },
-              { value: 'Kingfisher' },
-              { value: 'Dipper' },
-              { value: 'Grey Wagtail' },
-              { value: 'Dragonflies or damselflies' },
-              { value: 'Mayflies or stoneflies' },
-              { value: 'Fish' },
-              { value: 'Beaver' },
-              { value: 'Otter' },
-              { value: 'Rat' },
+              ...getWildlifeOptions(),
               { value: 'Other' },
               { value: 'None' },
             ],
@@ -481,7 +493,7 @@ const survey = {
       pageProps: {
         headerProps: { title: 'Pollution' },
         attrProps: {
-          input: 'checkbox',
+          input: GuideCheckboxInput,
           info: (
             <>
               <div className="font-medium">
@@ -516,32 +528,7 @@ const survey = {
           infoProps: { icon: null, skipTranslation: true },
           inputProps: {
             options: [
-              {
-                value:
-                  'Sewage – often milky grey or brown, can smell strongly. Sometimes outlets or personal care products may also be visible',
-              },
-              {
-                value:
-                  'Sewage fungus – slimy grey, cotton wool-like, usually downstream from an outfall',
-              },
-              {
-                value:
-                  'Livestock – farm animals in or have access to the river',
-              },
-              {
-                value: 'Mine water – often a bright orange colour',
-              },
-              {
-                value:
-                  'Silt – the water looks brown, like milky tea or hot chocolate',
-              },
-              {
-                value:
-                  'Road runoff – blackish, oily, rainbow sheen on the surface',
-              },
-              {
-                value: 'Algal bloom or scum – green or blue-green',
-              },
+              ...getPollutionOptions(),
               { value: 'Other' },
               { value: "Don't know" },
               { value: 'None' },
