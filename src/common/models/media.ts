@@ -236,6 +236,11 @@ class Media extends Model {
   }
 
   async saveRemote() {
+    if (this.id) {
+      console.log('Media already uploaded');
+      return null;
+    }
+
     console.log('Uploading media', this.cid);
 
     const { type } = this.attrs;
@@ -253,13 +258,24 @@ class Media extends Model {
 
     const fileName = `${this.cid}.${extension}`;
 
-    const res = await supabase.storage
-      .from('media')
-      .upload(`public/${fileName}`, blob, { upsert: true });
+    try {
+      const res = await supabase.storage
+        .from('media')
+        .upload(`public/${fileName}`, blob, { upsert: false });
 
-    if (res.error) throw new Error(res.error.message); // https://github.com/supabase/storage-api/issues/273
+      if (res.error) throw new Error(res.error.message); // https://github.com/supabase/storage-api/issues/273
 
-    this.id = res.data.path;
+      this.id = res.data.path;
+    } catch (error: any) {
+      if (error.message.includes('The resource already exists')) {
+        console.log('Recovering duplicate remote image path');
+        this.id = `public/${fileName}`;
+        return this.save();
+      }
+
+      throw error;
+    }
+
     return this.save();
   }
 
