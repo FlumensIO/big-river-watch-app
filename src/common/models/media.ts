@@ -1,10 +1,12 @@
 /* eslint-disable @getify/proper-arrows/name */
+import { Capacitor } from '@capacitor/core';
 import {
   Filesystem,
   Directory as FilesystemDirectory,
 } from '@capacitor/filesystem';
 import { Model, ModelAttrs, createImage, getBlobFromURL } from '@flumens';
 import { isPlatform } from '@ionic/core';
+import config from 'common/config';
 import supabase from 'common/supabase';
 import Record from './record';
 
@@ -283,11 +285,14 @@ class Media extends Model {
     this.parent?.save();
   }
 
-  /**
-   * Returns image's absolute URL or dataURI.
-   */
   getURL() {
-    return this.attrs.data;
+    const { data: name } = this.attrs;
+
+    if (!isPlatform('hybrid') || process.env.NODE_ENV === 'test') {
+      return name;
+    }
+
+    return Capacitor.convertFileSrc(`${config.dataPath}/${name}`);
   }
 
   /**
