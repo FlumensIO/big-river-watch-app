@@ -2,11 +2,11 @@ import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
   appId: 'org.theriverstrust.bigriverwatch',
-  appName: 'big-river-watch',
+  appName: 'Big River Watch',
   webDir: 'build',
   server: {
-    androidScheme: 'https'
-  }
+    androidScheme: 'https',
+  },
 };
 
 export default config;
