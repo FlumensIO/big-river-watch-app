@@ -190,8 +190,7 @@ export default class Record extends Model {
     try {
       const res = await supabase
         .from('records')
-        .insert([{ cid: this.cid, data, deleted, media }])
-        .select();
+        .insert([{ cid: this.cid, data, deleted, media }]);
 
       if (res.error) {
         const error: any = new Error(res.error.message);
@@ -199,23 +198,27 @@ export default class Record extends Model {
         throw error;
       }
 
-      return res.data?.[0];
+      return this._fetchRecordMetaByCid();
     } catch (e: any) {
       const isDuplicate =
         e.status === 409 && e.message.includes('records_external_id_key');
       if (isDuplicate) {
-        const res = await supabase
-          .from('records')
-          .select('*')
-          .eq('cid', this.cid);
-        if (res.error) throw res.error;
-        return res.data[0];
+        return this._fetchRecordMetaByCid();
       }
 
       //  TODO: timeout?
 
       throw e;
     }
+  }
+
+  async _fetchRecordMetaByCid() {
+    const res = await supabase
+      .from('records_anon')
+      .select('*')
+      .eq('cid', this.cid);
+    if (res.error) throw res.error;
+    return res.data[0];
   }
 
   /**
