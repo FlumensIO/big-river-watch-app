@@ -214,7 +214,7 @@ export default class Record extends Model {
 
   async _fetchRecordMetaByCid() {
     const res = await supabase
-      .from('records_anon')
+      .from('records_public')
       .select('*')
       .eq('cid', this.cid);
     if (res.error) throw res.error;
