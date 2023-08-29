@@ -15,7 +15,7 @@ const CONFIG = {
   },
 
   backend: {
-    url: 'https://zroimasbjhsbchprbllu.supabase.co',
+    url: `https://${process.env.SUPABASE_PROJECT}.supabase.co`,
     mediaPath: 'storage/v1/object/public/media',
     anonKey: process.env.SUPABASE_ANON_KEY as string,
   },
