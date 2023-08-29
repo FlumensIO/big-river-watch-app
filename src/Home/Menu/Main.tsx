@@ -73,7 +73,7 @@ const MainComponent = ({ onToggle }: Props) => {
             <T>Pollution</T>
           </IonItem>
           <IonItem
-            href={`${CONFIG.websitePath}/take-action/the-big-river-watch/big-river-watch-health-saftey${welshPath}`}
+            href={`${CONFIG.websitePath}/take-action/the-big-river-watch/big-river-watch-health-safety${welshPath}`}
             detail
             detailIcon={openOutline}
           >

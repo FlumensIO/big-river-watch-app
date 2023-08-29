@@ -148,7 +148,7 @@ const Onboarding = ({ children }: any) => {
                 <T>
                   Click to confirm you’ve read the{' '}
                   <a
-                    href={`${config.websitePath}/take-action/the-big-river-watch/big-river-watch-health-saftey${welshPath}`}
+                    href={`${config.websitePath}/take-action/the-big-river-watch/big-river-watch-health-safety${welshPath}`}
                   >
                     Health and Safety guidance
                   </a>{' '}
