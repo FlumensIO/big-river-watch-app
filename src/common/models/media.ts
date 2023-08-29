@@ -174,8 +174,8 @@ class Media extends Model {
       data = imageURL.split('/').pop();
     } else {
       [data, , width, height] = await MediaClass.getDataURI(imageURL, {
-        width: 2000,
-        height: 2000,
+        width: 1500,
+        height: 1500,
       });
     }
 
