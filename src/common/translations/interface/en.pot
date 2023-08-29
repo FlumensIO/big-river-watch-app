@@ -877,3 +877,19 @@ msgstr "Thanks to the following for additional photos:"
 # /home/info 
 msgid "FAQ"
 msgstr "FAQ"
+
+# Warning message
+msgid "Looks like you are offline!"
+msgstr "Looks like you are offline!"
+
+# Loader message
+msgid "Please wait..."
+msgstr "Please wait..."
+
+# Error message
+msgid "Sorry, we have encountered a problem while uploading the record."
+msgstr "Sorry, we have encountered a problem while uploading the record."
+
+# Error message 
+msgid "timeout"
+msgstr "timeout"

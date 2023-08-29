@@ -1235,7 +1235,7 @@ msgstr "Ydych chi'n siŵr eich bod am ddileu'r cofnod hwn?"
 
 # /home/info
 msgid "Language"
-msgstr ""
+msgstr "Iaith"
 
 # /info/about
 msgid "Thanks to the following for additional photos:"
@@ -1244,3 +1244,19 @@ msgstr ""
 # /home/info
 msgid "FAQ"
 msgstr ""
+
+# Warning message
+msgid "Looks like you are offline!"
+msgstr "Rydych chi oddi ar-lein mae'n debyg!"
+
+# Loader message
+msgid "Please wait..."
+msgstr "Arhoswch..."
+
+# Error message
+msgid "Sorry, we have encountered a problem while uploading the record."
+msgstr "Rydym wedi dod ar draws problem wrth anfon y cofnod"
+
+# Error message
+msgid "timeout"
+msgstr "amser wedi dod i ben "
