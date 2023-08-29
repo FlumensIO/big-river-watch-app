@@ -236,6 +236,8 @@ class Media extends Model {
   }
 
   async saveRemote() {
+    console.log('Uploading media', this.cid);
+
     const { type } = this.attrs;
     let extension = type;
     let mediaType = type;

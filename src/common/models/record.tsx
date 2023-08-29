@@ -134,6 +134,8 @@ export default class Record extends Model {
   }
 
   async saveRemote() {
+    console.log('Uploading record', this.cid);
+
     try {
       const submission = this.toJSON();
       try {
@@ -156,7 +158,11 @@ export default class Record extends Model {
       } catch (err: any) {
         this.remote.synchronising = false;
         err.payload = submission;
-        throw err;
+
+        console.error(err);
+        throw new Error(
+          'Sorry, we have encountered a problem while uploading the record.'
+        );
       }
     } catch (error: any) {
       if (error.status === 400 && error.payload)

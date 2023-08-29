@@ -890,6 +890,10 @@ msgstr "Please wait..."
 msgid "Sorry, we have encountered a problem while uploading the record."
 msgstr "Sorry, we have encountered a problem while uploading the record."
 
+# Error message
+msgid "Sorry"
+msgstr "Sorry"
+
 # Error message 
 msgid "timeout"
 msgstr "timeout"

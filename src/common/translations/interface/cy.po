@@ -1258,5 +1258,9 @@ msgid "Sorry, we have encountered a problem while uploading the record."
 msgstr "Rydym wedi dod ar draws problem wrth anfon y cofnod"
 
 # Error message
+msgid "Sorry"
+msgstr "Sori"
+
+# Error message
 msgid "timeout"
 msgstr "amser wedi dod i ben "
