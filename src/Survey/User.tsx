@@ -48,6 +48,7 @@ const User = ({ sample: record }: Props) => {
                 label: t('First name'),
                 labelPlacement: 'floating',
                 autofocus: false,
+                autocapitalize: 'on',
               }}
             />
           </div>
@@ -61,6 +62,7 @@ const User = ({ sample: record }: Props) => {
                 label: t('Last name'),
                 labelPlacement: 'floating',
                 autofocus: false,
+                autocapitalize: 'on',
               }}
             />
           </div>
