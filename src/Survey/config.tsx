@@ -209,6 +209,7 @@ const survey = {
           ),
           infoProps: { icon: null, skipTranslation: true },
           inputProps: {
+            autofocus: false,
             format: (newValue: string) => newValue?.replaceAll(' ', ''),
             onkeydown: (e: any) => e.key !== ' ',
           },
