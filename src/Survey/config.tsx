@@ -7,6 +7,8 @@ import user from 'models/user';
 import pollution from '../Home/Guides/Pollution/items.json';
 import wildlife from '../Home/Guides/Wildlife/items.json';
 import GuideCheckboxInput from './Components/GuideCheckboxInput';
+import barriersArtificial from './photos/barriers_artificial.jpg';
+import barriersNatural from './photos/barriers_natural.jpg';
 import litter from './photos/litter.jpg';
 import litterRiverbank from './photos/litter_riverbank.jpg';
 import litterVegetation from './photos/litter_vegetation.jpg';
@@ -285,10 +287,12 @@ const survey = {
               {
                 value:
                   'Natural – e.g. waterfalls, fallen trees stretching across the river',
+                icon: barriersNatural,
               },
               {
                 value:
                   'Artificial – e.g. dams, weirs, locks, culverts, fords, sluices',
+                icon: barriersArtificial,
               },
               { value: "Don't know" },
               { value: 'None' },
