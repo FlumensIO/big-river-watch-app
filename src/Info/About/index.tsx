@@ -2,7 +2,6 @@ import { Page, Main, Header, Section } from '@flumens';
 import config from 'common/config';
 import TheBigRiverWatchLogo from 'common/images/TheBigRiverWatchLogo.png';
 import logo from 'common/images/flumens.svg';
-import CaSTCoLogo from './CaSTCoLogo.png';
 import TheRiversTrustLogo from './TheRiversTrustLogo.png';
 
 const { P, H } = Section;
@@ -15,7 +14,6 @@ const Component: React.FC = () => (
         <div className="mt-5 flex flex-wrap justify-center gap-3 [&>img]:block [&>img]:w-2/5">
           <img src={TheRiversTrustLogo} alt="TheRiversTrustLogo" />
           <img src={TheBigRiverWatchLogo} alt="TheBigRiverWatchLogo" />
-          <img src={CaSTCoLogo} alt="CaSTCoLogo" />
         </div>
 
         <P>
@@ -57,6 +55,8 @@ const Component: React.FC = () => (
             <li>Richard Symonds</li>
             <li>Toby Hull</li>
             <li>Wigan Adam Rourke</li>
+            <li>Matthew Woodard</li>
+            <li>Steve Woodard</li>
           </ul>
         </P>
       </Section>
