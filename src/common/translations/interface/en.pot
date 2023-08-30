@@ -91,8 +91,8 @@ msgid "Dipper"
 msgstr "Dipper"
 
 # /home/wildlife 
-msgid "Dragonflies or damselflies"
-msgstr "Dragonflies or damselflies"
+msgid "Dragonflies and damselflies"
+msgstr "Dragonflies and damselflies"
 
 # /home/wildlife 
 msgid "Ducks"
@@ -115,8 +115,8 @@ msgid "Kingfisher"
 msgstr "Kingfisher"
 
 # /home/wildlife 
-msgid "Mayflies, caddisflies, and stoneflies"
-msgstr "Mayflies, caddisflies, and stoneflies"
+msgid "Mayflies, caddisflies and stoneflies"
+msgstr "Mayflies, caddisflies and stoneflies"
 
 # /home/wildlife 
 msgid "Moorhen"
@@ -603,12 +603,12 @@ msgid "A barrier is a physical structure, either natural or artificial, located 
 msgstr "A barrier is a physical structure, either natural or artificial, located within a river channel. They can have both positive and negative impacts on ecosystem health. Select all that apply."
 
 # /survey/record/13 
-msgid "Natural – e.g. waterfalls, fallen trees stretching across the river"
-msgstr "Natural – e.g. waterfalls, fallen trees stretching across the river"
+msgid "<0>Natural</0> – e.g. waterfalls, fallen trees stretching across the river"
+msgstr "<0>Natural</0> – e.g. waterfalls, fallen trees stretching across the river"
 
 # /survey/record/13 
-msgid "Artificial – e.g. dams, weirs, locks, culverts, fords, sluices"
-msgstr "Artificial – e.g. dams, weirs, locks, culverts, fords, sluices"
+msgid "<0>Artificial</0> – e.g. dams, weirs, locks, culverts, fords, sluices"
+msgstr "<0>Artificial</0> – e.g. dams, weirs, locks, culverts, fords, sluices"
 
 # /survey/record/13 
 msgid "None"
@@ -623,16 +623,16 @@ msgid "Are the river banks mostly natural or artificial?"
 msgstr "Are the river banks mostly natural or artificial?"
 
 # /survey/record/14 
-msgid "Mostly natural – made up of soil, rocks and vegetation that have been shaped by the movement of the river"
-msgstr "Mostly natural – made up of soil, rocks and vegetation that have been shaped by the movement of the river"
+msgid "<0>Mostly natural</0> – made up of soil, rocks and vegetation that have been shaped by the movement of the river"
+msgstr "<0>Mostly natural</0> – made up of soil, rocks and vegetation that have been shaped by the movement of the river"
 
 # /survey/record/14 
-msgid "Mixed – both natural features, as well as sections of straightening or human built structures"
-msgstr "Mixed – both natural features, as well as sections of straightening or human built structures"
+msgid "<0>Mixed</0> – both natural features, as well as sections of straightening or human built structures"
+msgstr "<0>Mixed</0> – both natural features, as well as sections of straightening or human built structures"
 
 # /survey/record/14 
-msgid "Mostly artificial – typically made of metal, concrete, wood or stone and characterised by a range of features such as straight sides, and concrete riverbeds"
-msgstr "Mostly artificial – typically made of metal, concrete, wood or stone and characterised by a range of features such as straight sides, and concrete riverbeds"
+msgid "<0>Mostly artificial</0> – typically made of metal, concrete, wood or stone and characterised by a range of features such as straight sides, and concrete riverbeds"
+msgstr "<0>Mostly artificial</0> – typically made of metal, concrete, wood or stone and characterised by a range of features such as straight sides, and concrete riverbeds"
 
 # /survey/record/15 
 msgid "Banks"
@@ -767,8 +767,8 @@ msgid "There are several visible signs of pollution in a river that can indicate
 msgstr "There are several visible signs of pollution in a river that can indicate poor water quality. It's important to monitor and address pollution sources in order to protect and restore the health of our rivers."
 
 # /survey/record/20 
-msgid "Think you can see a serious pollution incident? <2>Click here</2> to read guidance on understanding and reporting pollution to your local relevant authority."
-msgstr "Think you can see a serious pollution incident? <2>Click here</2> to read guidance on understanding and reporting pollution to your local relevant authority."
+msgid "Think you see a serious pollution incident? <2>Click here</2> to read guidance on reporting it."
+msgstr "Think you see a serious pollution incident? <2>Click here</2> to read guidance on reporting it."
 
 # /survey/record/20 
 msgid "Sewage – often milky grey or brown, can smell strongly. Sometimes outlets or personal care products may also be visible"

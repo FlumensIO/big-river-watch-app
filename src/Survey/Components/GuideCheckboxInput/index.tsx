@@ -64,7 +64,7 @@ const GuideCheckboxInput: FC<Props> = ({
   };
 
   const getCheckbox = ({
-    label,
+    label: labelProp,
     value,
     icon,
     isDefault,
@@ -74,19 +74,23 @@ const GuideCheckboxInput: FC<Props> = ({
     disabled: itemDisabled,
     ...otherItemProps
   }: any) => {
-    let checkboxInput = label || `${value}`; // wrap value in string to skip i18n interpolation
-    if (!skipTranslation) {
-      checkboxInput = t(checkboxInput);
+    let label = labelProp || `${value}`; // wrap value in string to skip i18n interpolation
+
+    if (!skipTranslation && typeof label === 'string') {
+      label = t(label);
     }
+
+    let key = `${value} + ${id}`;
+    if (typeof label === 'string') key += label;
+
     if (isPlaceholder) {
       return (
-        <IonItemDivider key={checkboxInput}>
-          <IonLabel>{checkboxInput}</IonLabel>
+        <IonItemDivider key={key} className={itemClassName}>
+          <IonLabel>{label}</IonLabel>
         </IonItemDivider>
       );
     }
 
-    const key = `${label}${value}${id}`;
     const checked = valueProp?.includes(value);
 
     const onOpenProfile = (e: any) => {
@@ -105,7 +109,7 @@ const GuideCheckboxInput: FC<Props> = ({
         )}
       >
         {!!icon && (
-          <div className="relative z-10 h-full">
+          <div className="relative z-10 mr-3 h-full">
             <img src={icon} onClick={onOpenProfile} />
             <IonIcon
               icon={informationCircleOutline}
@@ -114,15 +118,16 @@ const GuideCheckboxInput: FC<Props> = ({
           </div>
         )}
 
-        <IonLabel className="ion-text-wrap normal-font-size mr-3">
-          {checkboxInput}
-        </IonLabel>
         <IonCheckbox
           value={value}
           onIonChange={onCheckboxValueChanged}
           checked={checked}
           disabled={itemDisabled}
-        />
+        >
+          <IonLabel className="ion-text-wrap normal-font-size mr-3">
+            {label}
+          </IonLabel>
+        </IonCheckbox>
       </IonItem>
     );
   };

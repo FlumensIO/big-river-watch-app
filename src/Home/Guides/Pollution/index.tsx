@@ -4,7 +4,7 @@ import { InfoMessage, Main, Page } from '@flumens';
 import GuideItemProfile from 'Components/GuideItemProfile';
 import GuideItems, { GuideItem } from '../common/GuideItems';
 import './images';
-import items from './items.json';
+import items from './items';
 import './thumbnails';
 
 const Wildlife = () => {

@@ -4,7 +4,7 @@ import * as Yup from 'yup';
 import { InfoButton } from '@flumens';
 import { IonRouterLink } from '@ionic/react';
 import user from 'models/user';
-import pollution from '../Home/Guides/Pollution/items.json';
+import pollution from '../Home/Guides/Pollution/items';
 import wildlife from '../Home/Guides/Wildlife/items.json';
 import GuideCheckboxInput from './Components/GuideCheckboxInput';
 import barriersArtificial from './photos/barriers_artificial.jpg';
@@ -200,13 +200,14 @@ const survey = {
                   are by this river?
                 </T>
               </div>
-              <InfoButton
-                label="READ MORE"
-                header="Info"
-                className="-mb-2 -mr-2"
-              >
-                <T>Remember to describe how you feel, not what you can see.</T>
-              </InfoButton>
+
+              <div className="mt-3">
+                <i>
+                  <T>
+                    Remember to describe how you feel, not what you can see.
+                  </T>
+                </i>
+              </div>
             </>
           ),
           infoProps: { icon: null, skipTranslation: true },
@@ -285,13 +286,23 @@ const survey = {
           inputProps: {
             options: [
               {
-                value:
-                  'Natural – e.g. waterfalls, fallen trees stretching across the river',
+                label: (
+                  <T>
+                    <span className="font-semibold">Natural</span> – e.g.
+                    waterfalls, fallen trees stretching across the river
+                  </T>
+                ),
+                value: 'Natural',
                 icon: barriersNatural,
               },
               {
-                value:
-                  'Artificial – e.g. dams, weirs, locks, culverts, fords, sluices',
+                label: (
+                  <T>
+                    <span className="font-semibold">Artificial</span> – e.g.
+                    dams, weirs, locks, culverts, fords, sluices
+                  </T>
+                ),
+                value: 'Artificial',
                 icon: barriersArtificial,
               },
               { value: "Don't know" },
@@ -317,16 +328,35 @@ const survey = {
           inputProps: {
             options: [
               {
-                value:
-                  'Mostly natural – made up of soil, rocks and vegetation that have been shaped by the movement of the river',
+                label: (
+                  <T>
+                    <span className="font-semibold">Mostly natural</span> – made
+                    up of soil, rocks and vegetation that have been shaped by
+                    the movement of the river
+                  </T>
+                ),
+                value: 'Natural',
               },
               {
-                value:
-                  'Mixed – both natural features, as well as sections of straightening or human built structures',
+                label: (
+                  <T>
+                    <span className="font-semibold">Mixed</span> – both natural
+                    features, as well as sections of straightening or human
+                    built structures
+                  </T>
+                ),
+                value: 'Mixed',
               },
               {
-                value:
-                  'Mostly artificial – typically made of metal, concrete, wood or stone and characterised by a range of features such as straight sides, and concrete riverbeds',
+                label: (
+                  <T>
+                    <span className="font-semibold">Mostly artificial</span> –
+                    typically made of metal, concrete, wood or stone and
+                    characterised by a range of features such as straight sides,
+                    and concrete riverbeds
+                  </T>
+                ),
+                value: 'Artificial',
               },
               { value: "Don't know" },
             ],
@@ -538,15 +568,14 @@ const survey = {
               </div>
               <i className="mt-3 block">
                 <T>
-                  Think you can see a serious pollution incident?{' '}
+                  Think you see a serious pollution incident?{' '}
                   <IonRouterLink
                     routerLink="/info/pollution"
                     className="font-semibold underline"
                   >
                     Click here
                   </IonRouterLink>{' '}
-                  to read guidance on understanding and reporting pollution to
-                  your local relevant authority.
+                  to read guidance on reporting it.
                 </T>
               </i>
 
@@ -593,13 +622,14 @@ const survey = {
                   good things that you've noticed by the river today.
                 </T>
               </div>
-              <InfoButton
-                label="READ MORE"
-                header="Info"
-                className="-mb-2 -mr-2"
-              >
-                <T>This could be something you have seen, heard, or smelled.</T>
-              </InfoButton>
+
+              <div className="mt-3">
+                <i>
+                  <T>
+                    This could be something you have seen, heard, or smelled.
+                  </T>
+                </i>
+              </div>
             </>
           ),
           infoProps: { icon: null, skipTranslation: true },

@@ -58,7 +58,7 @@ msgid ""
 "Remember, you should never enter the river to take part in <2>Big River "
 "Watch</2>."
 msgstr ""
-"Cofiwch: ni ddylech byth fynd i mewn i afon wrth gymryd rhan yn <2>Big River"
+"Cofiwch: ni ddylech fyth fynd i mewn i afon wrth gymryd rhan yn <2>Big River"
 " Watch</2>."
 
 # /onboarding
@@ -126,7 +126,7 @@ msgid "Dipper"
 msgstr "Trochwr"
 
 # /home/wildlife
-msgid "Dragonflies or damselflies"
+msgid "Dragonflies and damselflies"
 msgstr "Gweision y neidr neu fursennod"
 
 # /home/wildlife
@@ -150,7 +150,7 @@ msgid "Kingfisher"
 msgstr "Glas y dorlan"
 
 # /home/wildlife
-msgid "Mayflies, caddisflies, and stoneflies"
+msgid "Mayflies, caddisflies and stoneflies"
 msgstr "Cylion Mai, pryfed pric a phryfed y cerrig"
 
 # /home/wildlife
@@ -192,8 +192,7 @@ msgid ""
 "forehead."
 msgstr ""
 "Mae cwtieir yn ganolig eu maint.  Mae eu plu yn ddu yn bennaf ac mae "
-"ganddynt big gwyn llachar a phlu gwyn sy'n ymestyn tuag yn ôl dros eu "
-"talcen."
+"ganddynt big gwyn llachar a phlu gwyn sy'n ymestyn yn ôl dros eu talcen."
 
 # /home/wildlife
 msgid ""
@@ -557,11 +556,11 @@ msgstr ""
 
 # /survey
 msgid "Discard"
-msgstr ""
+msgstr "Dileu"
 
 # /survey
 msgid "Continue"
-msgstr ""
+msgstr "Parhau"
 
 # /survey
 msgid "Previous survey draft exists, would you like to continue it?"
@@ -892,14 +891,17 @@ msgstr ""
 "iechyd ecosystemau. Dewiswch bob un sy'n berthnasol."
 
 # /survey/record/13
-msgid "Natural – e.g. waterfalls, fallen trees stretching across the river"
+msgid ""
+"<0>Natural</0> – e.g. waterfalls, fallen trees stretching across the river"
 msgstr ""
-"Naturiol - e.e. rhaeadrau, coed wedi cwympo'n ymestyn ar draws yr afon"
+"<0>Naturiol</0> - e.e. rhaeadrau, coed wedi cwympo'n ymestyn ar draws yr "
+"afon"
 
 # /survey/record/13
-msgid "Artificial – e.g. dams, weirs, locks, culverts, fords, sluices"
+msgid "<0>Artificial</0> – e.g. dams, weirs, locks, culverts, fords, sluices"
 msgstr ""
-"Artiffisial e.e. argaeau, coredau, lociau, ceuffosydd, rhydau, llifddorau"
+"<0>Artiffisial</0> - e.e. argaeau, coredau, lociau, ceuffosydd, rhydau, "
+"llifddorau"
 
 # /survey/record/13
 msgid "None"
@@ -915,29 +917,29 @@ msgstr "A yw'r cefnau yn naturiol neu'n artiffisial yn bennaf?"
 
 # /survey/record/14
 msgid ""
-"Mostly natural – made up of soil, rocks and vegetation that have been shaped"
-" by the movement of the river"
+"<0>Mostly natural</0> – made up of soil, rocks and vegetation that have been"
+" shaped by the movement of the river"
 msgstr ""
-"Naturiol yn bennaf - wedi'u creu o bridd, creigiau a llystyfiant sydd wedi'u"
-" siapio gan symudiad yr afon"
+"<0>Naturiol yn bennaf</0> - wedi'u creu o bridd, creigiau a llystyfiant sydd"
+" wedi'u siapio gan symudiad yr afon"
 
 # /survey/record/14
 msgid ""
-"Mixed – both natural features, as well as sections of straightening or human"
-" built structures"
+"<0>Mixed</0> – both natural features, as well as sections of straightening "
+"or human built structures"
 msgstr ""
-"Cymysg - gyda nodweddion naturiol, yn ogystal â rhannu sydd wedi'u sythu "
-"neu'n cynnwys strwythurau wedi'u hadeiladu gan ddyn"
+"<0>Cymysg</0> - gyda nodweddion naturiol, yn ogystal â rhannu sydd wedi'u "
+"sythu neu'n cynnwys strwythurau wedi'u hadeiladu gan ddyn"
 
 # /survey/record/14
 msgid ""
-"Mostly artificial – typically made of metal, concrete, wood or stone and "
-"characterised by a range of features such as straight sides, and concrete "
-"riverbeds"
+"<0>Mostly artificial</0> – typically made of metal, concrete, wood or stone "
+"and characterised by a range of features such as straight sides, and "
+"concrete riverbeds"
 msgstr ""
-"Artiffisial yn bennaf - wedi'u gwneud fel arfer o fetel, concrit, pren neu "
-"garreg ac wedi'u nodweddu gan amrywiaeth o nodweddion fel ochrau syth, a "
-"gwelyau afon concrit"
+"<0>Artiffisial yn bennaf</0> - wedi'u gwneud fel arfer o fetel, concrit, "
+"pren neu garreg ac wedi'u nodweddu gan amrywiaeth o nodweddion fel ochrau "
+"syth, a gwelyau afon concrit"
 
 # /survey/record/15
 msgid "Banks"
@@ -1104,13 +1106,9 @@ msgstr ""
 
 # /survey/record/20
 msgid ""
-"Think you can see a serious pollution incident? <2>Click here</2> to read "
-"guidance on understanding and reporting pollution to your local relevant "
-"authority."
+"Think you see a serious pollution incident? <2>Click here</2> to read "
+"guidance on reporting it."
 msgstr ""
-"Ydych chi'n meddwl y gallwch chi weld digwyddiad llygredd difrifol? "
-"<2>Cliciwch yma</2> i ddarllen canllawiau ar ddeall ac adrodd am lygredd "
-"i'ch awdurdod lleol perthnasol."
 
 # /survey/record/20
 msgid ""
@@ -1239,11 +1237,11 @@ msgstr "Iaith"
 
 # /info/about
 msgid "Thanks to the following for additional photos:"
-msgstr ""
+msgstr "Diolch i'r canlynol am y lluniau ychwanegol"
 
 # /home/info
 msgid "FAQ"
-msgstr ""
+msgstr "Cwestiynau Cyffredin"
 
 # Warning message
 msgid "Looks like you are offline!"
