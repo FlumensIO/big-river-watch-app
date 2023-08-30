@@ -371,3 +371,11 @@ ion-content.survey {
     margin-right: 10px;
   }
 }
+
+// fix mapbox attribution size
+.mapboxgl-ctrl-attrib.mapboxgl-compact-show {
+  margin-bottom: 3px;
+  .mapboxgl-ctrl-attrib-inner {
+    font-size: 10px;
+  }
+}
