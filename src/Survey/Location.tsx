@@ -118,7 +118,7 @@ const Location = ({ sample: record }: Props) => {
     <Page id="survey-location">
       <Header />
 
-      <Main>
+      <Main className="[--padding-top:0]" forceOverscroll={false}>
         {!device.isOnline && (
           <OfflineLocation record={record} onGPSClick={onGPSClick} />
         )}
