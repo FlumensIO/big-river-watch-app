@@ -1,0 +1,20 @@
+name: Backup storage
+
+on:
+  schedule:
+    - cron: '0 4 * * *'
+
+jobs:
+  acceptance-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: '16.x'
+      - run: node other/backup.js
+        env:
+          SUPABASE_PROJECT: ${{ secrets.SUPABASE_PROJECT }}
+          SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
