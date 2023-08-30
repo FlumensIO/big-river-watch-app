@@ -19,7 +19,6 @@ import {
 } from '@ionic/react';
 import '@ionic/react/css/ionic-swiper.css';
 import FullScreenPhotoViewer from './FullScreenPhotoViewer';
-import ImageWithBackground from './ImageWithBackground';
 import './styles.scss';
 
 type Props = {
@@ -53,7 +52,7 @@ const GuideItemProfile = ({ item, onClose }: Props) => {
           onClick={showPhotoInFullScreenWrap}
           className="item-profile-photo"
         >
-          <ImageWithBackground src={imageURL} />
+          <img src={imageURL} />
         </SwiperSlide>
       );
     };
