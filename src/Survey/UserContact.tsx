@@ -70,7 +70,8 @@ const UserContact = ({ sample: record }: Props) => {
       <Main className="survey">
         <InfoMessage className="info-message">
           <div className="font-medium">
-            Are you happy to be contacted by The Rivers Trust?
+            Are you happy to be contacted by The Rivers Trust to receive the
+            results from this survey and information about future campaigns?
           </div>
           <div className="mt-2">
             <i>
@@ -106,7 +107,7 @@ const UserContact = ({ sample: record }: Props) => {
               Are you happy to be contacted by your local Rivers Trust to
               receive the results from this survey and information about future
               campaigns, local events and volunteering? To match you to your
-              local Rivers Trust, please share with us your postcode.
+              local Rivers Trust, please share your postcode with us.
             </InfoMessage>
 
             <IonList>

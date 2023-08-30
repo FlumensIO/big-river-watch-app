@@ -355,16 +355,16 @@ msgid "User"
 msgstr "User"
 
 # /survey/record/2 
-msgid "<0>Are you happy to be contacted by The Rivers Trust?</0><1><0>Read our full <2>Privacy Notice</2> to find out how we use your personal data.</0></1>"
-msgstr "<0>Are you happy to be contacted by The Rivers Trust?</0><1><0>Read our full <2>Privacy Notice</2> to find out how we use your personal data.</0></1>"
+msgid "<0>Are you happy to be contacted by The Rivers Trust to receive the results from this survey and information about future campaigns?</0><1><0>Read our full <2>Privacy Notice</2> to find out how we use your personal data.</0></1>"
+msgstr "<0>Are you happy to be contacted by The Rivers Trust to receive the results from this survey and information about future campaigns?</0><1><0>Read our full <2>Privacy Notice</2> to find out how we use your personal data.</0></1>"
 
 # /survey/record/2 
 msgid "I am happy to be contacted by The Rivers Trust"
 msgstr "I am happy to be contacted by The Rivers Trust"
 
 # /survey/record/2 
-msgid "Are you happy to be contacted by your local Rivers Trust to receive the results from this survey and information about future campaigns, local events and volunteering? To match you to your local Rivers Trust, please share with us your postcode."
-msgstr "Are you happy to be contacted by your local Rivers Trust to receive the results from this survey and information about future campaigns, local events and volunteering? To match you to your local Rivers Trust, please share with us your postcode."
+msgid "Are you happy to be contacted by your local Rivers Trust to receive the results from this survey and information about future campaigns, local events and volunteering? To match you to your local Rivers Trust, please share your postcode with us."
+msgstr "Are you happy to be contacted by your local Rivers Trust to receive the results from this survey and information about future campaigns, local events and volunteering? To match you to your local Rivers Trust, please share your postcode with us."
 
 # /survey/record/2 
 msgid "I am happy to be contacted by my local Rivers Trust"
