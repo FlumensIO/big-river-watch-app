@@ -5,7 +5,7 @@ on:
     - cron: '0 4 * * *'
 
 jobs:
-  acceptance-test:
+  backup:
     runs-on: ubuntu-latest
 
     steps:
@@ -14,6 +14,7 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: '16.x'
+      - run: npm install
       - run: node other/backup.js
         env:
           SUPABASE_PROJECT: ${{ secrets.SUPABASE_PROJECT }}
