@@ -30,9 +30,9 @@ const API = {
       const location = {
         latitude: position.coords.latitude.toFixed(8),
         longitude: position.coords.longitude.toFixed(8),
-        accuracy: position.coords.accuracy,
-        altitude: position.coords.altitude,
-        altitudeAccuracy: position.coords.altitudeAccuracy,
+        accuracy: position.coords.accuracy.toFixed(2),
+        altitude: position.coords.altitude?.toFixed(2),
+        altitudeAccuracy: position.coords.altitudeAccuracy?.toFixed(2),
       };
 
       if (location.accuracy <= accuracyLimit) {
