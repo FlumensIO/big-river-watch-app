@@ -379,3 +379,17 @@ ion-content.survey {
     font-size: 10px;
   }
 }
+
+// make selected radio items bolder
+ion-radio-group .item-radio-checked:not(.radio-input-default-option) {
+  border: 2px solid rgb(var(--ion-color-primary-rgb), 0.25);
+
+  ion-radio .radio-label {
+    font-weight: 600;
+  }
+}
+
+// hide 3 things input buttons - always show minimum 3 out of 3
+.input-list-attr-item ion-button {
+  display: none;
+}
