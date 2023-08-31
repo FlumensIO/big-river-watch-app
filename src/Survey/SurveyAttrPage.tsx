@@ -3,6 +3,7 @@ import { Page, Main, Attr } from '@flumens';
 import Record, { Attrs } from 'models/record';
 import Footer from './Components/Footer';
 import Header from './Components/Header';
+import useValidationProps from './Components/useValidationProps';
 import survey from './config';
 import { useNavigateNext } from './router';
 
@@ -23,6 +24,10 @@ const SurveyAttrPage = ({ sample: record, attr }: Props) => {
       return length >= attrConf.attrProps?.inputProps?.min;
     }
 
+    if (attrConf.attrProps.validation) {
+      return attrConf.attrProps.validation.isValidSync(record.attrs[attr]);
+    }
+
     return (
       attrConf.attrProps.required === false ||
       (Array.isArray(record.attrs[attr])
@@ -37,17 +42,31 @@ const SurveyAttrPage = ({ sample: record, attr }: Props) => {
     if (exit && validate()) navigateNext();
   };
 
-  const getAttr = (attrProps: any) => (
-    <Attr
-      key={attr}
-      model={record}
-      attr={attr}
-      onChange={onChange}
-      {...attrProps}
-    />
-  );
+  const getValidationProps = useValidationProps();
 
-  const attrs = Array.isArray(attrConf.attrProps)
+  const getAttr = (attrProps: any) => {
+    let inputProps = { ...attrProps.inputProps };
+    if (attrProps.validation) {
+      inputProps = {
+        ...inputProps,
+        ...getValidationProps(attrProps.validation, record.attrs[attr]),
+      };
+    }
+
+    return (
+      <Attr
+        key={attr}
+        model={record}
+        attr={attr}
+        onChange={onChange}
+        {...attrProps}
+        inputProps={inputProps}
+      />
+    );
+  };
+
+  const { attrProps } = attrConf;
+  const attrs = Array.isArray(attrProps)
     ? attrConf.attrProps.map(getAttr)
     : [getAttr(attrConf.attrProps)];
 
