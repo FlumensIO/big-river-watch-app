@@ -6,28 +6,26 @@ import { IonList } from '@ionic/react';
 import Record from 'models/record';
 import Footer from './Components/Footer';
 import Header from './Components/Header';
+import useValidationProps from './Components/useValidationProps';
 
-function isValid(attrs: any) {
-  try {
-    Yup.object()
-      .shape({
-        firstName: Yup.string().required(),
-        lastName: Yup.string().required(),
-        email: Yup.string().email().required(),
-      })
-      .validateSync(attrs, { abortEarly: false });
-  } catch (attrError) {
-    return false;
-  }
-  return true;
-}
+const emailValidation = Yup.string().email().required();
+
+const nameValidation = Yup.string().required();
+
+export const validation = Yup.object().shape({
+  firstName: nameValidation,
+  lastName: nameValidation,
+  email: emailValidation,
+});
 
 type Props = { sample: Record };
 
 const User = ({ sample: record }: Props) => {
-  const isComplete = isValid(record.attrs);
+  const isComplete = validation.isValidSync(record.attrs);
 
   const { t } = useTranslation();
+
+  const getValidationProps = useValidationProps();
 
   return (
     <Page id="survey-user">
@@ -49,6 +47,7 @@ const User = ({ sample: record }: Props) => {
                 labelPlacement: 'floating',
                 autofocus: false,
                 autocapitalize: 'on',
+                ...getValidationProps(nameValidation, record.attrs.firstName),
               }}
             />
           </div>
@@ -63,6 +62,7 @@ const User = ({ sample: record }: Props) => {
                 labelPlacement: 'floating',
                 autofocus: false,
                 autocapitalize: 'on',
+                ...getValidationProps(nameValidation, record.attrs.lastName),
               }}
             />
           </div>
@@ -77,6 +77,8 @@ const User = ({ sample: record }: Props) => {
                 labelPlacement: 'floating',
                 type: 'email',
                 autofocus: false,
+                email: true,
+                ...getValidationProps(emailValidation, record.attrs.email),
               }}
             />
           </div>

@@ -10,28 +10,22 @@ import appModel from 'models/app';
 import Record from 'models/record';
 import Footer from './Components/Footer';
 import Header from './Components/Header';
+import useValidationProps from './Components/useValidationProps';
 
-function isValid(attrs: any, allowLocalContact: boolean) {
-  try {
-    Yup.object()
-      .shape({
-        allowContact: Yup.boolean().required(),
-      })
-      .validateSync(attrs, { abortEarly: false });
+const allowContactValidation = Yup.boolean().required();
 
-    if (allowLocalContact)
-      Yup.object()
-        .shape({
-          postcode: Yup.mixed()
-            .test('postcode', 'Enter valid postcode.', isValidPostcode)
-            .required(),
-        })
-        .validateSync(attrs, { abortEarly: false });
-  } catch (attrError) {
-    return false;
-  }
-  return true;
-}
+const postcodeValidation = Yup.mixed().test(
+  'postcode',
+  'this must be a valid postcode',
+  // eslint-disable-next-line @getify/proper-arrows/name
+  (email: any, { parent }: any) =>
+    parent?.allowLocalContact === false ? true : isValidPostcode(email || '')
+);
+
+export const validation = Yup.object().shape({
+  allowContact: allowContactValidation,
+  postcode: postcodeValidation,
+});
 
 type Props = { sample: Record };
 
@@ -39,6 +33,8 @@ const UserContact = ({ sample: record }: Props) => {
   const { language } = appModel.attrs;
 
   const { t } = useTranslation();
+
+  const getValidationProps = useValidationProps();
 
   const toggleAllowContact = (value: boolean) => {
     // eslint-disable-next-line no-param-reassign
@@ -53,7 +49,10 @@ const UserContact = ({ sample: record }: Props) => {
     if (!value) record.attrs.postcode = ''; // eslint-disable-line no-param-reassign
   };
 
-  const isComplete = isValid(record.attrs, allowLocalContact);
+  const isComplete = validation.isValidSync({
+    allowLocalContact,
+    ...record.attrs,
+  });
 
   const formatPostcode = (newValue: string) => {
     const newValueUppercase = newValue?.toUpperCase();
@@ -136,6 +135,10 @@ const UserContact = ({ sample: record }: Props) => {
                     autocapitalize: 'words',
                     autofocus: false,
                     format: formatPostcode,
+                    ...getValidationProps(
+                      postcodeValidation,
+                      record.attrs.postcode
+                    ),
                   }}
                 />
               </div>
