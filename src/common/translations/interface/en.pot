@@ -319,6 +319,22 @@ msgid "Discard"
 msgstr "Discard"
 
 # /survey 
+msgid "Discard survey"
+msgstr "Discard survey"
+
+# /survey 
+msgid "Exit"
+msgstr "Exit"
+
+# /survey 
+msgid "Do you want to close and save the survey for later or discard it?"
+msgstr "Do you want to close and save the survey for later or discard it?"
+
+# /survey 
+msgid "Close survey"
+msgstr "Close survey"
+
+# /survey 
 msgid "Continue"
 msgstr "Continue"
 
@@ -329,6 +345,14 @@ msgstr "Previous survey draft exists, would you like to continue it?"
 # /survey/record/1 
 msgid "First name"
 msgstr "First name"
+
+# /survey/record/1 
+msgid "this is a required field"
+msgstr "this is a required field"
+
+# /survey/record/1 
+msgid "this must be a valid email"
+msgstr "this must be a valid email"
 
 # /survey/record/1 
 msgid "Last name"
@@ -353,6 +377,10 @@ msgstr "Next"
 # /survey/record/2 
 msgid "User"
 msgstr "User"
+
+# /survey/record/2 
+msgid "this must be a valid postcode"
+msgstr "this must be a valid postcode"
 
 # /survey/record/2 
 msgid "<0>Are you happy to be contacted by The Rivers Trust to receive the results from this survey and information about future campaigns?</0><1><0>Read our full <2>Privacy Notice</2> to find out how we use your personal data.</0></1>"

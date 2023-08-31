@@ -559,6 +559,22 @@ msgid "Discard"
 msgstr "Dileu"
 
 # /survey
+msgid "Discard survey"
+msgstr ""
+
+# /survey
+msgid "Exit"
+msgstr ""
+
+# /survey
+msgid "Do you want to close and save the survey for later or discard it?"
+msgstr ""
+
+# /survey
+msgid "Close survey"
+msgstr ""
+
+# /survey
 msgid "Continue"
 msgstr "Parhau"
 
@@ -569,6 +585,14 @@ msgstr ""
 # /survey/record/1
 msgid "First name"
 msgstr "Enw cyntaf"
+
+# /survey/record/1
+msgid "this is a required field"
+msgstr ""
+
+# /survey/record/1
+msgid "this must be a valid email"
+msgstr ""
 
 # /survey/record/1
 msgid "Last name"
@@ -593,6 +617,10 @@ msgstr "Nesaf"
 # /survey/record/2
 msgid "User"
 msgstr "Defnyddiwr"
+
+# /survey/record/2
+msgid "this must be a valid postcode"
+msgstr ""
 
 # /survey/record/2
 msgid ""
