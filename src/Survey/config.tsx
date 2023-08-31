@@ -677,7 +677,7 @@ const survey = {
       attrs: {
         date: new Date().toISOString(),
         surveyors: 1,
-        location: {},
+        location: { crs: 'EPSG:4326' },
         ...user.attrs,
       },
     });
