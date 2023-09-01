@@ -185,12 +185,30 @@ export default class Record extends Model {
   }
 
   private async _createRemote({ attrs }: any, media: string[]): Promise<any> {
-    const { deleted, ...data } = attrs;
+    const {
+      deleted,
+      firstName,
+      lastName,
+      email,
+      allowContact,
+      postcode,
+      experience,
+      ...data
+    } = attrs;
+
+    const userData = {
+      firstName,
+      lastName,
+      email,
+      allowContact,
+      postcode,
+      experience,
+    };
 
     try {
       const res = await supabase
         .from('records')
-        .insert([{ cid: this.cid, data, deleted, media }]);
+        .insert([{ cid: this.cid, data, userData, deleted, media }]);
 
       if (res.error) {
         const error: any = new Error(res.error.message);
