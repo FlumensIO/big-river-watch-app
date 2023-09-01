@@ -1,12 +1,12 @@
 # 
 # Translators:
-# Bla, 2023
 # Flumens Apps, 2023
+# Bla, 2023
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Flumens Apps, 2023\n"
+"Last-Translator: Bla, 2023\n"
 "Language-Team: Welsh (https://app.transifex.com/rivers-trust/teams/174713/cy/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -560,19 +560,19 @@ msgstr "Dileu"
 
 # /survey
 msgid "Discard survey"
-msgstr ""
+msgstr "Dileu'r arolwg"
 
 # /survey
 msgid "Exit"
-msgstr ""
+msgstr "Gadael"
 
 # /survey
 msgid "Do you want to close and save the survey for later or discard it?"
-msgstr ""
+msgstr "A ydych chi'n dymuno cau ac arbed yr arolwg am y tro neu ei ddileu?"
 
 # /survey
 msgid "Close survey"
-msgstr ""
+msgstr "Cau'r arolwg"
 
 # /survey
 msgid "Continue"
@@ -581,6 +581,8 @@ msgstr "Parhau"
 # /survey
 msgid "Previous survey draft exists, would you like to continue it?"
 msgstr ""
+"Mae drafftiau blaenorol o'r arolwg ar gael, a hoffech chi barhau gyda'r "
+"rheiny?"
 
 # /survey/record/1
 msgid "First name"
@@ -588,11 +590,11 @@ msgstr "Enw cyntaf"
 
 # /survey/record/1
 msgid "this is a required field"
-msgstr ""
+msgstr "rhaid llenwi'r bwlch hwn"
 
 # /survey/record/1
 msgid "this must be a valid email"
-msgstr ""
+msgstr "rhaid i hwn fod yn gyfeiriad ebost dilys"
 
 # /survey/record/1
 msgid "Last name"
@@ -620,7 +622,7 @@ msgstr "Defnyddiwr"
 
 # /survey/record/2
 msgid "this must be a valid postcode"
-msgstr ""
+msgstr "rhaid i hwn fod yn god post dilys"
 
 # /survey/record/2
 msgid ""
@@ -629,6 +631,9 @@ msgid ""
 "full <2>Privacy Notice</2> to find out how we use your personal "
 "data.</0></1>"
 msgstr ""
+"65%match\n"
+"1A ydych chi'n hapus i'r Ymddiriedolaeth Afonydd gysylltu â chi i dderbyn y canlyniadau o'r arolwg hwn ac i roi gwybodaeth am ymgyrchoedd eraill yn y dyfodol?123Darllenwch ein 4Hysbysiad Preifatrwydd4 llawn i gael gwybod sut y byddwn yn defnyddio eich data personol.32\n"
+"1"
 
 # /survey/record/2
 msgid "I am happy to be contacted by The Rivers Trust"
