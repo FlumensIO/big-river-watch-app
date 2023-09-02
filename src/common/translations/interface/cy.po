@@ -1,12 +1,12 @@
 # 
 # Translators:
-# Flumens Apps, 2023
 # Bla, 2023
+# Flumens Apps, 2023
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Bla, 2023\n"
+"Last-Translator: Flumens Apps, 2023\n"
 "Language-Team: Welsh (https://app.transifex.com/rivers-trust/teams/174713/cy/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -571,8 +571,8 @@ msgid "Do you want to close and save the survey for later or discard it?"
 msgstr "A ydych chi'n dymuno cau ac arbed yr arolwg am y tro neu ei ddileu?"
 
 # /survey
-msgid "Close survey"
-msgstr "Cau'r arolwg"
+msgid "Close"
+msgstr "Cau"
 
 # /survey
 msgid "Continue"
@@ -1250,6 +1250,10 @@ msgstr "Drafft"
 # /home/records
 msgid "Today"
 msgstr "Heddiw"
+
+# /home/records
+msgid "Yesterday"
+msgstr "Ddoe"
 
 # /home/records
 msgid "Thank you!"
