@@ -196,7 +196,7 @@ export default class Record extends Model {
       ...data
     } = attrs;
 
-    const userData = {
+    const user = {
       firstName,
       lastName,
       email,
@@ -208,7 +208,7 @@ export default class Record extends Model {
     try {
       const res = await supabase
         .from('records')
-        .insert([{ cid: this.cid, data, userData, deleted, media }]);
+        .insert([{ cid: this.cid, data, user, deleted, media }]);
 
       if (res.error) {
         const error: any = new Error(res.error.message);
