@@ -5,6 +5,7 @@ import Record from 'models/record';
 import Footer from '../Components/Footer';
 import Header from '../Components/Header';
 import PhotoPicker from './PhotoPicker';
+import './styles.scss';
 
 type Props = { sample: Record };
 

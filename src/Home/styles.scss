@@ -9,6 +9,9 @@ ion-tab-bar {
   }
 
   ion-tab-button {
+    max-width: 20vw;
+    --padding-start: 3;
+    --padding-end: 3;
     background: transparent;
     --color: var(--ion-color-primary-contrast);
     --color-selected: var(--ion-color-secondary);
@@ -22,20 +25,7 @@ ion-tab-bar {
       margin: 0;
     }
 
-    @keyframes upscale {
-      from {
-        transform: scale(1);
-      }
-      to {
-        transform: scale(1.2);
-      }
-    }
-
     &.tab-selected {
-      animation-fill-mode: forwards;
-      animation-name: upscale;
-      animation-duration: 0.5s;
-
       ion-label {
         font-family: 'Inter';
         font-weight: 700;
