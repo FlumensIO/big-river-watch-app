@@ -26,6 +26,12 @@ import Record from 'models/record';
 import Footer from './Components/Footer';
 import Header from './Components/Header';
 
+const markerPaint = {
+  'circle-color': '#32F3E3',
+  'circle-stroke-color': '#32F3E3',
+  'circle-radius': 10,
+};
+
 type OfflineLocationProps = { record: Record; onGPSClick: any };
 const OfflineLocation = ({ record, onGPSClick }: OfflineLocationProps) => {
   const { location } = record.attrs;
@@ -107,12 +113,12 @@ const Location = ({ sample: record }: Props) => {
   const onMapClick = (e: any) => setLocation(mapEventToLocation(e));
   const onGPSClick = () => toggleGPS(record);
 
-  const [mapRef, setMapRef] = useState<MapRef>();
-  const flyToLocation = () => mapFlyToLocation(mapRef, location);
-  useEffect(flyToLocation, [mapRef, location]);
-
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const { gridref, ...locationWithoutGridRef } = location;
+
+  const [mapRef, setMapRef] = useState<MapRef>();
+  const flyToLocation = () => mapFlyToLocation(mapRef, locationWithoutGridRef);
+  useEffect(flyToLocation, [mapRef, locationWithoutGridRef]);
 
   const isComplete =
     Number.isFinite(location.latitude) && Number.isFinite(location.longitude);
@@ -184,14 +190,7 @@ const Location = ({ sample: record }: Props) => {
               </MapContainer.Control>
             )}
 
-            <MapContainer.Marker.Circle
-              {...locationWithoutGridRef}
-              paint={{
-                'circle-color': '#32F3E3',
-                'circle-stroke-color': '#32F3E3',
-                'circle-radius': 10,
-              }}
-            />
+            <MapContainer.Marker.Circle paint={markerPaint} {...location} />
           </MapContainer>
         )}
       </Main>
