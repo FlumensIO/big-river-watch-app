@@ -114,6 +114,9 @@ const Location = ({ sample: record }: Props) => {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const { gridref, ...locationWithoutGridRef } = location;
 
+  const isComplete =
+    Number.isFinite(location.latitude) && Number.isFinite(location.longitude);
+
   return (
     <Page id="survey-location">
       <Header />
@@ -193,7 +196,7 @@ const Location = ({ sample: record }: Props) => {
         )}
       </Main>
 
-      <Footer comingFrom="Location" />
+      {isComplete && <Footer comingFrom="Location" />}
     </Page>
   );
 };
