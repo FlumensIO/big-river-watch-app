@@ -178,7 +178,7 @@ const Location = ({ sample: record }: Props) => {
             onReady={setMapRef}
           >
             <MapContainer.Control.Geolocate
-              isLocating={record.gps.locating}
+              isLocating={!!record.gps.locating}
               onClick={onGPSClick}
               className={clsx(showInfo && '!mt-44')}
             />
