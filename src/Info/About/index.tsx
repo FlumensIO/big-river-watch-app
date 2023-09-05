@@ -11,29 +11,36 @@ const Component: React.FC = () => (
     <Header title="About" />
     <Main>
       <Section>
-        <div className="mt-5 flex flex-wrap justify-center gap-3 [&>img]:block [&>img]:w-2/5">
+        <div className="mb-3 mt-5 flex flex-wrap justify-center gap-3 [&>img]:block [&>img]:w-2/5">
           <img src={TheRiversTrustLogo} alt="TheRiversTrustLogo" />
           <img src={TheBigRiverWatchLogo} alt="TheBigRiverWatchLogo" />
         </div>
 
         <P>
-          The Big River Watch has been developed by{' '}
-          <a href={config.websitePath}>The Rivers Trust</a> and other partner
-          organisations within{' '}
-          <a
-            href={`${config.websitePath}/our-work/our-projects/castco-catchment-systems-thinking-cooperative`}
-          >
-            CaSTCo
+          <a href={`${config.websitePath}/take-action/the-big-river-watch`}>
+            Big River Watch
           </a>{' '}
-          (a project creating a national framework for improving river health
-          data, with citizen scientists at the heart). Big River Watch is an
-          important tool to support CaSTCo in introducing new and diverse
-          audiences to river science and to encourage accessible engagement and
-          diverse recruitment of volunteers. The Rivers Trust is the umbrella
-          organisation for our 65 member Rivers Trusts across Britain, Northern
-          Ireland and Ireland. We are river and catchment conservation experts
-          with a wealth of data and expertise at our fingertips. We are
-          together, for rivers.
+          is an invitation for communities to love their local river and to be
+          part of the movement demanding better for our rivers. It consists of a
+          free app containing a simple survey, and anybody in the UK and Ireland
+          who can access a river can take part – all you need to do is spend a
+          little time watching your local watercourse and answering the
+          questions. All of the survey data will provide a large-scale picture
+          of river health, and help us fight for better for our rivers.
+        </P>
+        <P>
+          Big River Watch has been developed by The Rivers Trust. The Rivers
+          Trust is an umbrella organisation for our 65 member Rivers Trusts
+          across Britain, Northern Ireland and Ireland. We are river and
+          catchment conservation experts with a wealth of data and expertise at
+          our fingertips. We are together, for rivers. Find out more about the
+          Big River Watch partners on our{' '}
+          <a
+            href={`${config.websitePath}/take-action/the-big-river-watch/big-river-watch-partners`}
+          >
+            website
+          </a>
+          .
         </P>
       </Section>
       <Section>
