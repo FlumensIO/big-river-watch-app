@@ -24,12 +24,12 @@ const run = async () => {
   console.log(`Found ${files?.length} files`);
 
   for (const file of files) {
-    process.stdout.write(`${file.name} ↓`);
+    process.stdout.write(`${file.name.split('-')[0]} ↓`);
     const { data } = await supabase.storage
       .from('media')
       .download(`public/${file.name}`);
 
-    process.stdout.write('↑');
+    process.stdout.write(` (${(data?.size / 1000000).toFixed(2)}Mb) ↑`);
     await upload(
       data?.stream(),
       data?.size,
@@ -37,7 +37,7 @@ const run = async () => {
       `org.theriverstrust.bigriverwatch/backup/storage`
     );
 
-    process.stdout.write('✓\n');
+    process.stdout.write(' (✓)\n');
   }
 };
 
