@@ -1,12 +1,12 @@
 # 
 # Translators:
-# Bla, 2023
 # Flumens Apps, 2023
+# Bla, 2023
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Flumens Apps, 2023\n"
+"Last-Translator: Bla, 2023\n"
 "Language-Team: Welsh (https://app.transifex.com/rivers-trust/teams/174713/cy/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -631,9 +631,10 @@ msgid ""
 "full <2>Privacy Notice</2> to find out how we use your personal "
 "data.</0></1>"
 msgstr ""
-"65%match\n"
-"1A ydych chi'n hapus i'r Ymddiriedolaeth Afonydd gysylltu â chi i dderbyn y canlyniadau o'r arolwg hwn ac i roi gwybodaeth am ymgyrchoedd eraill yn y dyfodol?123Darllenwch ein 4Hysbysiad Preifatrwydd4 llawn i gael gwybod sut y byddwn yn defnyddio eich data personol.32\n"
-"1"
+"<0>A ydych chi'n hapus i'r Ymddiriedolaeth Afonydd gysylltu â chi i gael "
+"canlyniadau'r arolwg hwn a gwybodaeth am ymgyrchoedd i'r "
+"dyfodol?</0><1><0>Darllenwch ein <2>Hysbysiad Preifatrwydd</2> llawn i gael "
+"gwybod sut y byddwn yn defnyddio eich data personol.</0></1>"
 
 # /survey/record/2
 msgid "I am happy to be contacted by The Rivers Trust"
@@ -1141,6 +1142,8 @@ msgid ""
 "Think you see a serious pollution incident? <2>Click here</2> to read "
 "guidance on reporting it."
 msgstr ""
+"Yn credu eich bod wedi gweld achos difrifol o lygru? <2>Cliciwch yma</2>i "
+"ddarllen canllaw ar sut i'w adrodd."
 
 # /survey/record/20
 msgid ""
