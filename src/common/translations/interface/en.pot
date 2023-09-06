@@ -283,6 +283,10 @@ msgid "Privacy Policy"
 msgstr "Privacy Policy"
 
 # /home/info 
+msgid "Report pollution"
+msgstr "Report pollution"
+
+# /home/info 
 msgid "Share App Analytics"
 msgstr "Share App Analytics"
 
@@ -758,6 +762,26 @@ msgstr "It’s quite murky"
 msgid "There’s lots of sediment, I can’t see through the water at all"
 msgstr "There’s lots of sediment, I can’t see through the water at all"
 
+# /survey/record/17
+msgid "<0>Very clear</0> – It is easy to see through the water and objects at the bottom or far beneath the surface are clearly visible."
+msgstr "<0>Very clear</0> – It is easy to see through the water and objects at the bottom or far beneath the surface are clearly visible."
+
+# /survey/record/17
+msgid "<0>Slightly cloudy</0> – The water is hazy and there is some cloudiness, but objects beneath the surface are still relatively visible. "
+msgstr "<0>Slightly cloudy</0> – The water is hazy and there is some cloudiness, but objects beneath the surface are still relatively visible. "
+
+# /survey/record/17
+msgid "<0>Moderately cloudy</0> – The water is noticeably cloudy, and it is difficult to see objects beneath the surface."
+msgstr "<0>Moderately cloudy</0> – The water is noticeably cloudy, and it is difficult to see objects beneath the surface."
+
+# /survey/record/17
+msgid "<0>Very murky</0> – Water is cloudy or there is a lot of sediment, and objects beneath the surface are not visible at all."
+msgstr "<0>Very murky</0> – Water is cloudy or there is a lot of sediment, and objects beneath the surface are not visible at all."
+
+# /survey/record/17
+msgid "<0>Unsure</0> – I cannot see how clear or cloudy the water is."
+msgstr "<0>Unsure</0> – I cannot see how clear or cloudy the water is."
+
 # /survey/record/18 
 msgid "Water"
 msgstr "Water"
@@ -909,6 +933,10 @@ msgstr "We appreciate you taking the time to fill out the survey."
 # /home/records 
 msgid "Are you sure you want to delete this record?"
 msgstr "Are you sure you want to delete this record?"
+
+# /home/info 
+msgid "Information"
+msgstr "Information"
 
 # /home/info 
 msgid "Language"
