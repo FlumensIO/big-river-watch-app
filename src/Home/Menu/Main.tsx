@@ -9,13 +9,13 @@ import {
   openOutline,
   shareSocialOutline,
   shieldOutline,
+  warningOutline,
 } from 'ionicons/icons';
 import { Trans as T } from 'react-i18next';
 import { InfoMessage, Main, MenuAttrToggle, PickByType } from '@flumens';
 import { IonIcon, IonList, IonItem, IonItemDivider } from '@ionic/react';
 import CONFIG from 'common/config';
 import flumensLogo from 'common/images/flumens.svg';
-import sewerIcon from 'common/images/sewer.svg';
 import appModel, { Attrs } from 'models/app';
 
 type Props = {
@@ -37,7 +37,7 @@ const MainComponent = ({ onToggle }: Props) => {
     <Main>
       <IonList lines="full">
         <h1 className="my-10 text-center">
-          <T>Info</T>
+          <T>Information</T>
         </h1>
 
         <IonItemDivider>
@@ -69,8 +69,8 @@ const MainComponent = ({ onToggle }: Props) => {
             <T>FAQ</T>
           </IonItem>
           <IonItem routerLink="/info/pollution" detail>
-            <IonIcon icon={sewerIcon} size="small" slot="start" />
-            <T>Pollution</T>
+            <IonIcon icon={warningOutline} size="small" slot="start" />
+            <T>Report pollution</T>
           </IonItem>
           <IonItem
             href={`${CONFIG.websitePath}/take-action/the-big-river-watch/big-river-watch-health-safety${welshPath}`}
