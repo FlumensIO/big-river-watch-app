@@ -1,3 +1,4 @@
+import { ReactElement } from 'react';
 import { observer } from 'mobx-react';
 import { Trans as T } from 'react-i18next';
 import { IonGrid, IonRow, IonCol } from '@ionic/react';
@@ -5,6 +6,10 @@ import { IonGrid, IonRow, IonCol } from '@ionic/react';
 export type GuideItem = {
   id: string;
   name: string;
+  /**
+   * For survey only.
+   */
+  label?: ReactElement | string;
   description: string;
 };
 

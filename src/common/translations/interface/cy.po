@@ -371,7 +371,7 @@ msgstr "Dŵr ffo"
 
 # /home/pollution
 msgid "Sewage"
-msgstr "Carthion"
+msgstr "Gall carthion"
 
 # /home/pollution
 msgid "Sewage fungus"
@@ -1242,12 +1242,12 @@ msgstr "<0><0>Da byw</0> - anifeiliaid fferm yn yr afon neu gyda mynediad i'r af
 # /survey/record/20
 msgid ""
 "<0><0>Silt</0> – the water looks brown, like milky tea or hot chocolate</0>"
-msgstr "<0><0>Dŵr mwynglawdd</0> - yn aml o liw oren llachar</0>"
+msgstr ""
+"<0><0>Silt</0> - mae'r dŵr yn edrych yn frown, tebyg i de llaethog neu siocled poeth</0>"
 
 # /survey/record/20
 msgid "<0><0>Mine water</0> – often a bright orange colour</0>"
-msgstr ""
-"<0><0>Silt</0> - mae'r dŵr yn edrych yn frown, tebyg i de llaethog neu siocled poeth</0>"
+msgstr "<0><0>Dŵr mwynglawdd</0> - yn aml o liw oren llachar</0>"
 
 # /survey/record/20
 msgid ""

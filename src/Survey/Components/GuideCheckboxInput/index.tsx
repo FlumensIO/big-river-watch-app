@@ -133,7 +133,15 @@ const GuideCheckboxInput: FC<Props> = ({
     );
   };
 
-  const input = options.map(getCheckbox);
+  const byTranslatedName = (
+    { name: n1, label }: GuideItem,
+    { name: n2 }: GuideItem
+  ) => {
+    if (!label) return 1; // for default options like "Don't know", "None" etc
+    return t(n1).localeCompare(t(n2));
+  };
+
+  const input = [...options].sort(byTranslatedName).map(getCheckbox);
 
   return (
     <>
