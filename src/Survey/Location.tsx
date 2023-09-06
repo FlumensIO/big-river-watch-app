@@ -19,9 +19,11 @@ import {
   mapFlyToLocation,
   device,
   prettyPrintGridRef,
+  useToast,
 } from '@flumens';
 import { IonButton, IonIcon, IonSpinner } from '@ionic/react';
 import config from 'common/config';
+import { hasGPSPermissions } from 'common/helpers/GPS';
 import Record from 'models/record';
 import Footer from './Components/Footer';
 import Header from './Components/Header';
@@ -95,6 +97,8 @@ const OfflineLocation = ({ record, onGPSClick }: OfflineLocationProps) => {
 type Props = { sample: Record };
 
 const Location = ({ sample: record }: Props) => {
+  const toast = useToast();
+
   const { location } = record.attrs;
   const hasAccuracy =
     Number.isFinite(location.accuracy) && location.accuracy! < 100;
@@ -111,7 +115,14 @@ const Location = ({ sample: record }: Props) => {
   };
 
   const onMapClick = (e: any) => setLocation(mapEventToLocation(e));
-  const onGPSClick = () => toggleGPS(record);
+  const onGPSClick = async () => {
+    const hasPermissions = await hasGPSPermissions();
+    if (!hasPermissions) {
+      toast.warn('Location services are not enabled');
+      return;
+    }
+    toggleGPS(record);
+  };
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const { gridref, ...locationWithoutGridRef } = location;

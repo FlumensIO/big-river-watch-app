@@ -1384,3 +1384,7 @@ msgstr "Sori"
 # Error message
 msgid "timeout"
 msgstr "amser wedi dod i ben "
+
+# Device GPS is disabled
+msgid "Location services are not enabled"
+msgstr "Nid yw'r gwasanaethau lleoliad wedi'u galluogi"

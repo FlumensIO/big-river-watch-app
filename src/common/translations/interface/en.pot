@@ -969,3 +969,7 @@ msgstr "Sorry"
 # Error message 
 msgid "timeout"
 msgstr "timeout"
+
+# Device GPS is disabled
+msgid "Location services are not enabled"
+msgstr "Location services are not enabled"
