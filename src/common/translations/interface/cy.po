@@ -1223,27 +1223,30 @@ msgid ""
 "<0><0>Sewage</0> – often milky grey or brown, can smell strongly. Sometimes "
 "outlets or personal care products may also be visible</0>"
 msgstr ""
-"<0><0>Gall carthion</0> – sy'n aml yn lliw llwyd llaethog neu frown, arogli'n gryf. "
-"Weithiau gall gollyngfeydd neu gynhyrchion gofal personol fod yn weladwy "
-"hefyd"
+"<0><0>Gall carthion</0> – sy'n aml yn lliw llwyd llaethog neu frown, "
+"arogli'n gryf. Weithiau gall gollyngfeydd neu gynhyrchion gofal personol fod"
+" yn weladwy hefyd"
 
 # /survey/record/20
 msgid ""
 "<0><0>Sewage fungus</0> – slimy grey, cotton wool-like, usually downstream "
 "from an outfall</0>"
 msgstr ""
-"<0><0>Ffwng carthion</0> – llwyd, llysnafeddog, tebyg i wlân cotwm, fel arfer i lawr "
-"yr afon o ollyngfa</0>"
+"<0><0>Ffwng carthion</0> – llwyd, llysnafeddog, tebyg i wlân cotwm, fel "
+"arfer i lawr yr afon o ollyngfa</0>"
 
 # /survey/record/20
 msgid "<0><0>Livestock</0> – farm animals in or have access to the river</0>"
-msgstr "<0><0>Da byw</0> - anifeiliaid fferm yn yr afon neu gyda mynediad i'r afon</0>"
+msgstr ""
+"<0><0>Da byw</0> - anifeiliaid fferm yn yr afon neu gyda mynediad i'r "
+"afon</0>"
 
 # /survey/record/20
 msgid ""
 "<0><0>Silt</0> – the water looks brown, like milky tea or hot chocolate</0>"
 msgstr ""
-"<0><0>Silt</0> - mae'r dŵr yn edrych yn frown, tebyg i de llaethog neu siocled poeth</0>"
+"<0><0>Silt</0> - mae'r dŵr yn edrych yn frown, tebyg i de llaethog neu "
+"siocled poeth</0>"
 
 # /survey/record/20
 msgid "<0><0>Mine water</0> – often a bright orange colour</0>"
@@ -1252,7 +1255,8 @@ msgstr "<0><0>Dŵr mwynglawdd</0> - yn aml o liw oren llachar</0>"
 # /survey/record/20
 msgid ""
 "<0><0>Road runoff</0> – blackish, oily, rainbow sheen on the surface</0>"
-msgstr "<0><0>Dŵr ffo o ffyrdd</0> - sglein du, olewog, amryliw ar y wyneb</0>"
+msgstr ""
+"<0><0>Dŵr ffo o ffyrdd</0> - sglein du, olewog, amryliw ar y wyneb</0>"
 
 # /survey/record/20
 msgid "<0><0>Algal bloom or scum</0> – green or blue-green</0>"
