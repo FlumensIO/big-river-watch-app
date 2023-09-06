@@ -92,7 +92,7 @@ msgstr "Arolygon"
 
 # /home
 msgid "Wildlife"
-msgstr "Bywyd gwyllt"
+msgstr "Byw gllt"
 
 # /home
 msgid "Pollution"
@@ -464,7 +464,7 @@ msgstr ""
 
 # /home/info
 msgid "Info"
-msgstr "Gwybodaeth"
+msgstr "Gb’aeth"
 
 # /home/info
 msgid "Settings"
