@@ -835,32 +835,32 @@ msgid "Think you see a serious pollution incident? <2>Click here</2> to read gui
 msgstr "Think you see a serious pollution incident? <2>Click here</2> to read guidance on reporting it."
 
 # /survey/record/20 
-msgid "Sewage – often milky grey or brown, can smell strongly. Sometimes outlets or personal care products may also be visible"
-msgstr "Sewage – often milky grey or brown, can smell strongly. Sometimes outlets or personal care products may also be visible"
+msgid "<0><0>Sewage</0> – often milky grey or brown, can smell strongly. Sometimes outlets or personal care products may also be visible</0>"
+msgstr "<0><0>Sewage</0> – often milky grey or brown, can smell strongly. Sometimes outlets or personal care products may also be visible</0>"
 
 # /survey/record/20 
-msgid "Sewage fungus – slimy grey, cotton wool-like, usually downstream from an outfall"
-msgstr "Sewage fungus – slimy grey, cotton wool-like, usually downstream from an outfall"
+msgid "<0><0>Sewage fungus</0> – slimy grey, cotton wool-like, usually downstream from an outfall</0>"
+msgstr "<0><0>Sewage fungus</0> – slimy grey, cotton wool-like, usually downstream from an outfall</0>"
 
 # /survey/record/20 
-msgid "Livestock – farm animals in or have access to the river"
-msgstr "Livestock – farm animals in or have access to the river"
+msgid "<0><0>Livestock</0> – farm animals in or have access to the river</0>"
+msgstr "<0><0>Livestock</0> – farm animals in or have access to the river</0>"
 
 # /survey/record/20 
-msgid "Mine water – often a bright orange colour"
-msgstr "Mine water – often a bright orange colour"
+msgid "<0><0>Silt</0> – the water looks brown, like milky tea or hot chocolate</0>"
+msgstr "<0><0>Silt</0> – the water looks brown, like milky tea or hot chocolate</0>"
 
 # /survey/record/20 
-msgid "Silt – the water looks brown, like milky tea or hot chocolate"
-msgstr "Silt – the water looks brown, like milky tea or hot chocolate"
+msgid "<0><0>Mine water</0> – often a bright orange colour</0>"
+msgstr "<0><0>Mine water</0> – often a bright orange colour</0>"
 
 # /survey/record/20 
-msgid "Road runoff – blackish, oily, rainbow sheen on the surface"
-msgstr "Road runoff – blackish, oily, rainbow sheen on the surface"
+msgid "<0><0>Road runoff</0> – blackish, oily, rainbow sheen on the surface</0>"
+msgstr "<0><0>Road runoff</0> – blackish, oily, rainbow sheen on the surface</0>"
 
 # /survey/record/20 
-msgid "Algal bloom or scum – green or blue-green"
-msgstr "Algal bloom or scum – green or blue-green"
+msgid "<0><0>Algal bloom or scum</0> – green or blue-green</0>"
+msgstr "<0><0>Algal bloom or scum</0> – green or blue-green</0>"
 
 # /survey/record/20 
 msgid "None – I can't see any visible signs of pollution"

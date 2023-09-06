@@ -1,7 +1,7 @@
 import { FC, useState } from 'react';
 import clsx from 'clsx';
 import { informationCircleOutline } from 'ionicons/icons';
-import { useTranslation } from 'react-i18next';
+import { Trans as T, useTranslation } from 'react-i18next';
 import {
   IonItem,
   IonLabel,
@@ -76,7 +76,8 @@ const GuideCheckboxInput: FC<Props> = ({
   }: any) => {
     let label = labelProp || `${value}`; // wrap value in string to skip i18n interpolation
 
-    if (!skipTranslation && typeof label === 'string') {
+    const isLabelString = typeof label === 'string';
+    if (!skipTranslation && isLabelString) {
       label = t(label);
     }
 
@@ -125,7 +126,7 @@ const GuideCheckboxInput: FC<Props> = ({
           disabled={itemDisabled}
         >
           <IonLabel className="ion-text-wrap normal-font-size mr-3">
-            {label}
+            {isLabelString ? label : <T>{label}</T>}
           </IonLabel>
         </IonCheckbox>
       </IonItem>
