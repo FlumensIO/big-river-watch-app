@@ -180,7 +180,7 @@ const Location = ({ sample: record }: Props) => {
             <MapContainer.Control.Geolocate
               isLocating={!!record.gps.locating}
               onClick={onGPSClick}
-              className={clsx(showInfo && '!mt-44')}
+              className={clsx(showInfo && '!mt-48')}
             />
             {hasAccuracy && (
               <MapContainer.Control>
