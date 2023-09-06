@@ -762,6 +762,32 @@ msgstr ""
 " yr ap yn dod o hyd i'ch lleoliad ar y map, ond dylai eich GPS gofnodi hyn "
 "i'w uwchlwytho yn nes ymlaen."
 
+# /survey/record/5
+msgid ""
+"Looks like you're offline. The map view is only available with an internet "
+"connection. You can still use the GPS to set your current survey location."
+msgstr ""
+
+# /survey/record/5
+msgid "Current survey location"
+msgstr ""
+
+# /survey/record/5
+msgid "Coordinates"
+msgstr ""
+
+# /survey/record/5
+msgid "OS Grid"
+msgstr ""
+
+# /survey/record/5
+msgid "Accuracy"
+msgstr ""
+
+# /survey/record/5
+msgid "Refresh"
+msgstr "Adnewyddu"
+
 # /survey/record/6
 msgid "Location"
 msgstr "Lleoliad"

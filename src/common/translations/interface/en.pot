@@ -470,6 +470,31 @@ msgstr "Please zoom in to find the spot that best matches your location."
 msgid "Make sure you have the GPS turned on and permissions granted. If you are conducting the survey offline or without a network connection, the app will not find your location on the map, but your GPS should record this for uploading later."
 msgstr "Make sure you have the GPS turned on and permissions granted. If you are conducting the survey offline or without a network connection, the app will not find your location on the map, but your GPS should record this for uploading later."
 
+
+# /survey/record/5 
+msgid "Looks like you're offline. The map view is only available with an internet connection. You can still use the GPS to set your current survey location."
+msgstr "Looks like you're offline. The map view is only available with an internet connection. You can still use the GPS to set your current survey location."
+
+# /survey/record/5 
+msgid "Current survey location"
+msgstr "Current survey location"
+
+# /survey/record/5 
+msgid "Coordinates"
+msgstr "Coordinates"
+
+# /survey/record/5 
+msgid "OS Grid"
+msgstr "OS Grid"
+
+# /survey/record/5 
+msgid "Accuracy"
+msgstr "Accuracy"
+
+# /survey/record/5 
+msgid "Refresh"
+msgstr "Refresh"
+
 # /survey/record/6 
 msgid "Location"
 msgstr "Location"
