@@ -27,11 +27,11 @@
     <key>NSCameraUsageDescription</key>
     <string>Allow camera access to attach photos to your records.</string>
     <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-    <string>Allow Geolocation while your device is locked?</string>
+    <string>Use your location information to add precise coordinates to your surveys without a map.</string>
     <key>NSLocationAlwaysUsageDescription</key>
-    <string>Allow geolocation so we can improve your records.</string>
+    <string>Use your location information to add precise coordinates to your surveys without a map.</string>
     <key>NSLocationWhenInUseUsageDescription</key>
-    <string>Allow geolocation so we can improve your records.</string>
+    <string>Use your location information to add precise coordinates to your surveys without a map.</string>
     <key>NSPhotoLibraryAddUsageDescription</key>
     <string>Store camera photos to camera</string>
     <key>NSPhotoLibraryUsageDescription</key>
