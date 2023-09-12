@@ -5,6 +5,7 @@ import { Trans as T } from 'react-i18next';
 import { Redirect } from 'react-router-dom';
 import { useAlert } from '@flumens';
 import { IonIcon } from '@ionic/react';
+import appModel from 'models/app';
 import Record from 'models/record';
 import userModel from 'models/user';
 
@@ -72,6 +73,10 @@ const End = ({ sample: record }: Props) => {
       // eslint-disable-next-line no-param-reassign
       record.metadata.saved = true;
       record.save();
+
+      // remove current draft ID
+      appModel.attrs['draftId:survey'] = '';
+      appModel.save();
 
       cacheUserDetails(record);
 
