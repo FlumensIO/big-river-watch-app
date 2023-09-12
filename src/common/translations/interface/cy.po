@@ -1,13 +1,13 @@
 # 
 # Translators:
 # emma brisdion, 2023
-# Flumens Apps, 2023
 # Bla, 2023
+# Flumens Apps, 2023
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Bla, 2023\n"
+"Last-Translator: Flumens Apps, 2023\n"
 "Language-Team: Welsh (https://app.transifex.com/rivers-trust/teams/174713/cy/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -76,7 +76,7 @@ msgid ""
 "agree to our <6>Terms and Conditions</6>."
 msgstr ""
 "Cliciwch i gadarnhau eich bod wedi darllen y <2>canllawiau Iechyd a "
-"Diogelwch</2> a'ch bod yn cytuno â'n<6>Telerau ac Amodau</6>."
+"Diogelwch</2> a'ch bod yn cytuno â'n <6>Telerau ac Amodau</6>."
 
 # /onboarding
 msgid "Confirm"
