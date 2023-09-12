@@ -1,13 +1,13 @@
 # 
 # Translators:
 # emma brisdion, 2023
-# Bla, 2023
 # Flumens Apps, 2023
+# Bla, 2023
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Flumens Apps, 2023\n"
+"Last-Translator: Bla, 2023\n"
 "Language-Team: Welsh (https://app.transifex.com/rivers-trust/teams/174713/cy/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -30,7 +30,7 @@ msgid ""
 "observing."
 msgstr ""
 "Cofrestrwch a dewiswch leoliad glan afon y gallwch dreulio 10-15 munud yn ei"
-" arsylwi."
+" harsylwi."
 
 # /onboarding
 msgid ""
@@ -39,7 +39,7 @@ msgid ""
 "your results!"
 msgstr ""
 "Cadwch olwg am bethau fel bywyd gwyllt, planhigion a llygredd. Cwblhewch yr "
-"arolwg yn yr ap hwn i roi gwybod i ni'r hyn y gallwch ei weld. Cliciwch ar "
+"arolwg yn yr ap hwn i roi gwybod i ni am yr hyn a welwch. Cliciwch ar "
 "'cyflwyno' i anfon eich canlyniadau atom!"
 
 # /onboarding
@@ -67,8 +67,8 @@ msgid ""
 "Find somewhere safe nearby to the river where there is no risk of slipping "
 "into the water, and enjoy a peaceful time observing river life."
 msgstr ""
-"Chwliwch am fan diogel wrth ymyl afon lle nad oes unrhyw berygl o lithro i'r"
-" dŵr. Mwynhewch amser hamddenol yn arsylwi bywyd yr afon."
+"Chwliwch am fan diogel wrth lan yr afon lle nad oes unrhyw berygl o lithro "
+"i'r dŵr. Mwynhewch amser hamddenol yn arsylwi bywyd yr afon."
 
 # /onboarding
 msgid ""
@@ -182,9 +182,9 @@ msgid ""
 "at dawn or at dusk."
 msgstr ""
 "Mae afancod yn dod yn fwy cyffredin ledled y DU. Mae gan y cnofilod mawr, "
-"lled-ddyfrol hyn ffwr brown a chynffon fflat fel padl.  Gallwch eu gweld "
-"weithiau yn nofio neu'n bwyta helyg ar lan yr afon. Rydych chi'n fwyaf "
-"tebygol o'u gweld gyda'r wawr neu gyda'r nos."
+"lled-ddyfrol hyn ffwr brown a chynffon fflat fel rhwyf  Gallwch eu gweld "
+"weithiau yn nofio neu'n bwyta helyg ar lan yr afon. Maent i'w gweld gan "
+"amlaf ar doriad y wawr neu gyda'r nos."
 
 # /home/wildlife
 msgid ""
@@ -192,7 +192,7 @@ msgid ""
 "bright white bill and white feathers that extends backwards over their "
 "forehead."
 msgstr ""
-"Mae cwtieir yn ganolig eu maint.  Mae eu plu yn ddu yn bennaf ac mae "
+"Mae cwtieir yn adar maint canolig.  Mae eu plu yn ddu yn bennaf ac mae "
 "ganddynt big gwyn llachar a phlu gwyn sy'n ymestyn yn ôl dros eu talcen."
 
 # /home/wildlife
@@ -202,9 +202,9 @@ msgid ""
 "on rocks on the water’s edge in fast-flowing rivers, where they search for "
 "insects."
 msgstr ""
-"Mae trochwyr yn adar bach, brown tywyll gyda patsh gwyn ar y frest sy'n "
-"ymestyn i lawr eu gwddf. Gellir eu gweld yn aml yn sefyll ac yn siglo i fyny"
-" ac i lawr ar greigiau ar ymyl y dŵr mewn afonydd cyflym, lle maent yn "
+"Mae trochwyr yn adar bach, brown tywyll gyda phatsh gwyn ar y frest sy'n "
+"ymestyn i lawr dros eu gwddf. Gellir eu gweld yn aml yn sefyll ac yn siglo i"
+" fyny ac i lawr ar greigiau ar y lan mewn afonydd cyflym, lle maent yn "
 "chwilio am bryfed."
 
 # /home/wildlife
@@ -217,11 +217,11 @@ msgid ""
 "normally smaller and more delicate, reach backwards in line with their long "
 "bodies."
 msgstr ""
-"Wrth afon yn yr haf, efallai y gwelwch amrywiaeth o weision neidr a "
+"Ar lan yr afon yn yr haf, efallai y gwelwch amrywiaeth o weision neidr a "
 "mursennod o wahanol faint a lliw.  Mae’r rhain yn bryfed tenau gydag adenydd"
 " tywyll, pennau mawr ac abdomenau hir.  Maent i’w gweld yn aml yn hofran ac "
-"yn hedfan dros ac o gwmpas y dŵr. Mae'r adenydd ar was y neidr sy'n gorffwys"
-" yn ymestyn allan i ochrau ei gorff, tra bod yr adenydd ar fursen sy'n "
+"yn hedfan dros y dŵr ac o gwmpas. Mae'r adenydd ar was y neidr sy'n gorffwys"
+" yn ymestyn allan dros ochrau ei gorff, tra bod yr adenydd ar fursen sy'n "
 "gorffwys, sydd fel arfer yn llai ac yn fwy eiddil, yn ymestyn yn ôl yn unol "
 "â'u cyrff hir."
 
@@ -232,10 +232,10 @@ msgid ""
 " of the UK’s best-known ducks; males have a distinctive green head, and "
 "females are brown."
 msgstr ""
-"Mae hwyaid yn gyffredin mewn llawer o ddyfrffyrdd.  Mae llawer o rywogaethau"
-" o hwyaden, pob un gyda phig mawr, gwddf byr a thraed gweog.  Yr hwyaden "
-"wyllt yw un o'r hwyaid mwyaf adnabyddus yn y DU.  Mae gan y gwrywod ben "
-"gwyrdd nodweddiadol ac mae'r benywod yn frown. "
+"Mae hwyaid yn gyffredin mewn llawer o ddyfrffyrdd.  Mae llawer iawn o "
+"rywogaethau o hwyaid, pob un gyda phig mawr, gwddf byr a thraed gweog.  Yr "
+"hwyaden wyllt yw un o'r hwyaid mwyaf adnabyddus yn y DU.  Mae gan y gwrywod "
+"ben gwyrdd nodweddiadol ac mae'r benywod yn frown. "
 
 # /home/wildlife
 msgid ""
@@ -245,7 +245,7 @@ msgid ""
 "record whether you saw any fish or not during your river observation."
 msgstr ""
 "Mae nifer fawr o rywogaethau pysgod gwahanol i'w cael mewn afonydd yn y DU "
-"ac Iwerddon. Maent yn amrywio o ran maint a siâp, ac nid yw bob amser yn "
+"ac Iwerddon. Maent yn amrywio o ran maint a siâp, ac nid yw hi bob amser yn "
 "bosibl eu hadnabod wrth eu gweld o lan yr afon. Felly, at ddibenion yr "
 "arolwg hwn, cofnodwch a welsoch chi unrhyw bysgodyn ai peidio wrth arsylwi'r"
 " afon."
@@ -256,9 +256,9 @@ msgid ""
 "underside is a vibrant yellow. Grey wagtails nest near fast-flowing water "
 "and eat insects found at the river edge."
 msgstr ""
-"Mae gan yr adar bach hyn blu llwydlas ar eu rhannau uchaf, ond mae eu hochr "
-"isaf yn felyn llachar. Mae siglennod llwyd yn nythu ger dŵr sy'n llifo'n "
-"gyflym ac yn bwyta pryfed a geir ar ymyl yr afon."
+"Mae gan yr adar bach hyn blu llwydlas ar rannau uchaf eu cyrff, ond mae eu "
+"hochr isaf yn felyn llachar. Mae siglennod llwyd yn nythu ger dŵr sy'n "
+"llifo'n gyflym ac yn bwyta pryfed a geir ar lan yr afon."
 
 # /home/wildlife
 msgid ""
@@ -291,12 +291,12 @@ msgid ""
 "not tolerant of pollution, so their presence can be used as an indicator of "
 "good water quality."
 msgstr ""
-"Yn cael eu hadnabod gyda’i gilydd fel ‘pryfed afon’.  Mae larfa’r pryfed "
+"Yn cael eu hadnabod gyda’i gilydd fel ‘pryfed afon’,  mae larfa’r pryfed "
 "asgellog hyn yn treulio’r rhan fwyaf o’u hoes yn yr afon ac maent yn "
-"ffynhonnell fwyd wych i bysgod mawr. Maent yn ymddangos fel oedolion sy'n "
-"hedfan am gyfnod byr yn unig i atgenhedlu. Maent yn aml yn llai na 3cm o "
-"faint. Nid yw llawer o bryfed yr afon yn gallu goddef llygredd, felly mae eu"
-" presenoldeb yn arwydd o ansawdd dŵr da."
+"ffynhonnell fwyd wych i bysgod mawr. Fel oedolion maent yn hedfan am gyfnod "
+"byr yn unig i atgenhedlu. Maent yn aml yn llai na 3cm o faint. Nid yw llawer"
+" o bryfed yr afon yn gallu goddef llygredd, felly mae eu presenoldeb yn "
+"arwydd o ansawdd dŵr da."
 
 # /home/wildlife
 msgid ""
@@ -315,9 +315,9 @@ msgid ""
 "underwater."
 msgstr ""
 "Mae dyfrgwn yn frown neu'n llwyd.  Mae ganddynt gyrff teneuach nag afancod a"
-" chynffon hir denau. Maent yn brif ysglyfaethwr mewn cynefin afon. Gallant "
-"fod yn chwareus ac maent yn nofwyr cyflym iawn gyda gallu trawiadol i ddal "
-"eu hanadl o dan y dŵr."
+" chynffon hir denau. Maent yn ysglyfaethwyr penigamp mewn cynefin afon. "
+"Gallant fod yn chwareus ac maent yn nofwyr cyflym iawn gyda gallu arbennig i"
+" ddal eu hanadl o dan y dŵr."
 
 # /home/wildlife
 msgid ""
@@ -339,8 +339,8 @@ msgid ""
 "as cygnets, which are grey/brown in colour before they turn white."
 msgstr ""
 "Mae elyrch yn adar dŵr mawr gwyn, gyda gwddf hirfain siâp s, pig oren yn aml"
-" a lled esgyll mawr.  Efallai y gwelwch gywion elyrch hefyd sy'n llwyd neu "
-"frown cyn iddynt droi'n wyn."
+" a lled asgell sylweddol.  Efallai y gwelwch gywion elyrch hefyd, sy'n llwyd"
+" neu frown cyn iddynt droi'n wyn."
 
 # /home/pollution
 msgid ""
@@ -351,7 +351,7 @@ msgid ""
 msgstr ""
 "Mae llawer o wahanol fathau o lygredd i'w gweld yn ein dyfrffyrdd. Mae rhai "
 "fel cemegion a maetholion yn anodd eu hadnabod, ond mae eraill yn haws i'w "
-"gweld. Dyma ychydig enghreifftiau o'r mathau mwyaf cyffredin o lygredd."
+"gweld. Dyma ychydig o enghreifftiau o'r mathau mwyaf cyffredin o lygredd."
 
 # /home/pollution
 msgid "Algae"
@@ -404,9 +404,8 @@ msgid ""
 "water."
 msgstr ""
 "A oes yna dda byw yn y dŵr neu gyda mynediad ato? Efallai y gwelwch wartheg "
-"neu ddefaid sy'n gallu mynd i mewn i'r afon. Gall dda byw erydu'r gefnen, "
-"tarfu ar waelod yr afon a throsglwyddo ysgarthion neu gemegau i mewn i'r "
-"dŵr."
+"neu ddefaid sy'n gallu mynd i mewn i'r afon. Gall da byw erydu glan yr afon,"
+" tarfu ar wely'r afon a throsglwyddo ysgarthion neu gemegau i mewn i'r dŵr."
 
 # /home/pollution
 msgid ""
@@ -414,10 +413,9 @@ msgid ""
 " colour. It can flow out of abandoned mines, bringing high levels of iron "
 "and other metals with it which can be damaging to river wildlife."
 msgstr ""
-"Gall dŵr mwynglawdd mewn afon fod yn eithaf nodweddiadol ac yn aml mae'n "
-"lliw oren llachar. Gall lifo allan o fwyngloddiau segur, gan ddod â lefelau "
-"uchel o haearn a metelau eraill gydag ef a all fod yn niweidiol i fywyd "
-"gwyllt yr afon."
+"Gall dŵr o fwynglawdd sy'n llifo i'r afon fod yn amlwg iawn, yn aml yn lliw "
+"oren llachar. Gall lifo allan o fwyngloddiau segur, gan ddod â lefelau uchel"
+" o haearn a metelau eraill a all fod yn niweidiol i fywyd gwyllt yr afon."
 
 # /home/pollution
 msgid ""
@@ -426,8 +424,8 @@ msgid ""
 "and tyre residues that gets into rivers."
 msgstr ""
 "Gall ddŵr sy'n cynnwys dŵr ffo edrych yn olewog, yn dywyll neu fod â sglein "
-"amryliw ar y wyneb. Mae dŵr ffo yn aml yn cael ei gario o ffyrdd ac yn "
-"cynnwys olew a gwaddodion brêcs a theiars sydd yn mynd i mewn i afonydd."
+"amryliw ar y wyneb. Mae dŵr ffo yn aml yn cael ei gario o ffyrdd ac mae'n "
+"cynnwys olew a gwaddodion brêcs a theiars sydd yn mynd i mewn i'r afonydd."
 
 # /home/pollution
 msgid ""
@@ -520,13 +518,13 @@ msgid ""
 "All of the survey data will provide a large-scale picture of river health, "
 "and help us fight for better for our rivers."
 msgstr ""
-"<0> Mae The Big River Watch </0> yn wahoddiad i gymunedau sydd wedi gwirioni"
-" â’u hafonydd lleol i fod yn rhan o’r mudiad sy’n mynnu gwell i’n hafonydd. "
-"Mae’n cynnwys ap am ddim sydd â holiadur syml. Gall unrhyw un yn y Deyrnas "
-"Unedig ac Iwerddon sydd â mynediad i afon gymryd rhan – y cwbl sydd angen i "
-"chi ei wneud yw treulio ychydig o amser yn gwylio dyfrgwrs sy’n lleol i chi "
-"ac ateb y cwestiynau. Bydd holl ddata’r arolwg yn rhoi darlun ar raddfa fawr"
-" o iechyd afonydd, ac yn ein helpu i frwydro am well dros ein hafonydd."
+"<0> Mae The Big River Watch </0> yn wahoddiad i gymunedau sydd yn mwynhau eu"
+" hafonydd lleol fod yn rhan o’r mudiad sy’n mynnu gwell i’n hafonydd. Mae’n "
+"cynnwys ap am ddim sydd â holiadur syml. Gall unrhyw un yn y Deyrnas Unedig "
+"ac Iwerddon sydd â mynediad i afon gymryd rhan – y cwbl sydd angen i chi ei "
+"wneud yw treulio ychydig o amser yn gwylio dyfrgwrs sy’n lleol i chi ac ateb"
+" y cwestiynau. Bydd holl ddata’r arolwg yn rhoi darlun ar raddfa fawr o "
+"iechyd afonydd, ac yn ein helpu i frwydro am well ansawdd yn ein hafonydd."
 
 # /info/about
 msgid ""
@@ -708,11 +706,11 @@ msgstr ""
 
 # /survey/record/3
 msgid "Yes"
-msgstr "Ydw"
+msgstr "Do"
 
 # /survey/record/3
 msgid "No"
-msgstr "Nac ydw"
+msgstr "Naddo"
 
 # /survey/record/3
 msgid "Unsure"
@@ -735,8 +733,8 @@ msgid ""
 "Enable your GPS to set your location, or use the map to zoom in and tap on "
 "your location."
 msgstr ""
-"Defnyddiwch eich GPS i osod eich lleoliad, neu defnyddiwch y map i chwyddo "
-"mewn a thapio ar eich lleoliad."
+"Defnyddiwch eich GPS i osod eich lleoliad, neu defnyddiwch y map i chwyddo i"
+" mewn a thapio ar eich lleoliad."
 
 # /survey/record/5
 msgid "READ MORE"
@@ -748,7 +746,8 @@ msgstr "Iawn"
 
 # /survey/record/5
 msgid "Please zoom in to find the spot that best matches your location."
-msgstr "Chwyddwch mewn i ddod o hyd i'r man sy'n cyd-fynd orau â'ch lleoliad."
+msgstr ""
+"Chwyddwch i mewn i ddod o hyd i'r man sy'n cyd-fynd orau â'ch lleoliad."
 
 # /survey/record/5
 msgid ""
@@ -767,22 +766,25 @@ msgid ""
 "Looks like you're offline. The map view is only available with an internet "
 "connection. You can still use the GPS to set your current survey location."
 msgstr ""
+"Mae'n edrych yn debyg nad ydych ar-lein. Ni allwch ddefnyddio'r golwg map "
+"heb gysylltiad rhyngrwyd. Gallwch barhau i ddefnyddio'r GPS i nodi lleoliad "
+"presennol eich arolwg."
 
 # /survey/record/5
 msgid "Current survey location"
-msgstr ""
+msgstr "Lleoliad presennol eich arolwg"
 
 # /survey/record/5
 msgid "Coordinates"
-msgstr ""
+msgstr "Cyfesurynnau"
 
 # /survey/record/5
 msgid "OS Grid"
-msgstr ""
+msgstr "Grid AO"
 
 # /survey/record/5
 msgid "Accuracy"
-msgstr ""
+msgstr "Cywirdeb"
 
 # /survey/record/5
 msgid "Refresh"
@@ -863,7 +865,7 @@ msgstr "Araf - arafach na chyflymder cerdded"
 
 # /survey/record/8
 msgid "Steady – About walking pace"
-msgstr "Cyflymdra cyson - tua'r un cyflymder â cherdded"
+msgstr "Eithaf cyflym - tua'r un cyflymder â cherdded"
 
 # /survey/record/8
 msgid "Surging – Faster than walking pace"
@@ -1008,7 +1010,7 @@ msgstr "Rhwystrau"
 
 # /survey/record/14
 msgid "Are the river banks mostly natural or artificial?"
-msgstr "A yw'r cefnau yn naturiol neu'n artiffisial yn bennaf?"
+msgstr "A yw glan yr afon yn naturiol neu'n artiffisial yn bennaf?"
 
 # /survey/record/14
 msgid ""
@@ -1023,7 +1025,7 @@ msgid ""
 "<0>Mixed</0> – both natural features, as well as sections of straightening "
 "or human built structures"
 msgstr ""
-"<0>Cymysg</0> - gyda nodweddion naturiol, yn ogystal â rhannu sydd wedi'u "
+"<0>Cymysg</0> - gyda nodweddion naturiol, yn ogystal â rhannau sydd wedi'u "
 "sythu neu'n cynnwys strwythurau wedi'u hadeiladu gan ddyn"
 
 # /survey/record/14
@@ -1038,7 +1040,7 @@ msgstr ""
 
 # /survey/record/15
 msgid "Banks"
-msgstr "Cefnau"
+msgstr "Glannau"
 
 # /survey/record/15
 msgid "What wildlife have you seen during your survey?"
@@ -1066,7 +1068,7 @@ msgstr "Dim - ni welais unrhyw fywyd gwyllt"
 
 # /survey/record/16
 msgid "What plants can you see in and around the river today?"
-msgstr "Pa blanhigion allwch chi eu gweld yn ac o gwmpas yr afon heddiw?"
+msgstr "Pa blanhigion allwch chi eu gweld yn yr afon ac o'i chwmpas heddiw?"
 
 # /survey/record/16
 msgid ""
@@ -1092,8 +1094,7 @@ msgstr "Planhigion yn arnofio ar y wyneb"
 msgid ""
 "Plants growing on the bank, completely out of the water (including trees)"
 msgstr ""
-"Planhigion yn tyfu ar y gefnen, yn gyfan gwbl allan o'r dŵr (yn cynnwys "
-"coed)"
+"Planhigion yn tyfu ar y lan, yn gyfan gwbl allan o'r dŵr (yn cynnwys coed)"
 
 # /survey/record/16
 msgid "Algae – green, hair-like, can form clumps on the surface of the water"
@@ -1128,7 +1129,7 @@ msgstr "Clir iawn, gallaf weld trwy'r dŵr"
 
 # /survey/record/17
 msgid "There’s a bit of sediment"
-msgstr "Mae ychydig o waddod"
+msgstr "Mae yna ychydig o waddod"
 
 # /survey/record/17
 msgid "It’s quite murky"
@@ -1151,8 +1152,8 @@ msgid ""
 "<0>Slightly cloudy</0> – The water is hazy and there is some cloudiness, but"
 " objects beneath the surface are still relatively visible. "
 msgstr ""
-"<0>Ychydig yn gymylog</0> – Mae'r dŵr yn niwlog ac mae ychydig yn gymylog, "
-"ond mae gwrthrychau o dan yr arwyneb yn dal i fod yn weddol weladwy."
+"<0>Ychydig yn gymylog</0> – Mae'r dŵr yn niwlog ac ychydig yn gymylog, ond "
+"mae gwrthrychau o dan yr arwyneb yn dal i fod yn weddol weladwy."
 
 # /survey/record/17
 msgid ""
@@ -1212,7 +1213,7 @@ msgstr ""
 
 # /survey/record/19
 msgid "Yes – on the river banks"
-msgstr "Gallaf - ar y cefnau"
+msgstr "Gallaf - ar y glannau"
 
 # /survey/record/19
 msgid "No – I can't see any litter"
@@ -1276,7 +1277,7 @@ msgstr ""
 
 # /survey/record/20
 msgid "<0><0>Mine water</0> – often a bright orange colour</0>"
-msgstr "<0><0>Dŵr mwynglawdd</0> - yn aml o liw oren llachar</0>"
+msgstr "<0><0>Dŵr mwynglawdd</0> - yn aml yn lliw oren llachar</0>"
 
 # /survey/record/20
 msgid ""
@@ -1286,7 +1287,7 @@ msgstr ""
 
 # /survey/record/20
 msgid "<0><0>Algal bloom or scum</0> – green or blue-green</0>"
-msgstr "<0><0>Blodau algaidd neu lysnafedd</0> - gwyrdd neu wyrddlas</0>"
+msgstr "<0><0>Cynnyrch algaidd neu lysnafedd</0> - gwyrdd neu wyrddlas</0>"
 
 # /survey/record/20
 msgid "None – I can't see any visible signs of pollution"
@@ -1401,11 +1402,11 @@ msgstr "Arhoswch..."
 
 # Error message
 msgid "Sorry, we have encountered a problem while uploading the record."
-msgstr "Rydym wedi dod ar draws problem wrth anfon y cofnod"
+msgstr "Rydym wedi dod ar draws problem wrth uwchlwytho'r cofnod"
 
 # Error message
 msgid "Sorry"
-msgstr "Sori"
+msgstr "Mae'n ddrwg gennym"
 
 # Error message
 msgid "timeout"
