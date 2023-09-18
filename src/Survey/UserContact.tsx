@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { observer } from 'mobx-react';
-import { toNormalised, isValid as isValidPostcode } from 'postcode';
 import { useTranslation } from 'react-i18next';
 import * as Yup from 'yup';
 import { Page, InfoMessage, Main, Attr, MenuAttrToggle } from '@flumens';
@@ -18,8 +17,8 @@ const postcodeValidation = Yup.mixed().test(
   'postcode',
   'this must be a valid postcode',
   // eslint-disable-next-line @getify/proper-arrows/name
-  (email: any, { parent }: any) =>
-    parent?.allowLocalContact === false ? true : isValidPostcode(email || '')
+  (postcode: any, { parent }: any) =>
+    parent?.allowLocalContact === false ? true : !!postcode
 );
 
 export const validation = Yup.object().shape({
@@ -56,8 +55,9 @@ const UserContact = ({ sample: record }: Props) => {
 
   const formatPostcode = (newValue: string) => {
     const newValueUppercase = newValue?.toUpperCase();
-    const normalisedValue = toNormalised(newValueUppercase);
-    return normalisedValue || newValueUppercase;
+    return newValueUppercase;
+    // const normalisedValue = toNormalised(newValueUppercase);
+    // return normalisedValue || newValueUppercase;
   };
 
   const isWelsh = language === 'cy';

@@ -1,3 +1,7 @@
+## 1.0.2
+
+Disabled postcode validation.
+
 ## 1.0.1
 
 Updated translations.
