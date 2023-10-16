@@ -2,7 +2,7 @@ name: Backup storage
 
 on:
   schedule:
-    - cron: '0 4 * * *'
+    - cron: '0 4 1/3 * *'
 
 jobs:
   backup:
