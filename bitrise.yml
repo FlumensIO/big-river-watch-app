@@ -19,6 +19,17 @@ trigger_map:
   - push_branch: '*'
     workflow: ci
 workflows:
+  backup:
+    steps:
+      - npm@1:
+          title: Install
+          timeout: 360
+          inputs:
+            - command: install
+      - npm@1:
+          title: Backup
+          inputs:
+            - command: backup
   android:
     steps:
       - set-java-version@1:
