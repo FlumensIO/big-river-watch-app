@@ -22,6 +22,14 @@ const Photo = ({ sample: record }: Props) => {
         <IonList>
           <div className="rounded">
             <PhotoPicker model={record} />
+            <InfoMessage className="[--inner-padding-end:0] [&>ion-label]:p-0">
+              <div className="text-base">
+                We’ll share selected images to celebrate our rivers and also to
+                shine a light on the problems they face. While we won’t make
+                every image available, we’ll endeavour to use them all in our
+                research behind the scenes.
+              </div>
+            </InfoMessage>
           </div>
         </IonList>
       </Main>

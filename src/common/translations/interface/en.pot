@@ -387,6 +387,10 @@ msgid "<0>Please tell us more about yourself.</0>"
 msgstr "<0>Please tell us more about yourself.</0>"
 
 # /survey/record/1 
+msgid "Take your time to observe the river. This survey should take you 15 minutes."
+msgstr "Take your time to observe the river. This survey should take you 15 minutes."
+
+# /survey/record/1 
 msgid "Next"
 msgstr "Next"
 
@@ -502,6 +506,10 @@ msgstr "Location"
 # /survey/record/6 
 msgid "<0>Upload a photo of the river.</0>"
 msgstr "<0>Upload a photo of the river.</0>"
+
+# /survey/record/6 
+msgid "<0>We’ll share selected images to celebrate our rivers and also to shine a light on the problems they face. While we won’t make every image available, we’ll endeavour to use them all in our research behind the scenes.</0>"
+msgstr "<0>We’ll share selected images to celebrate our rivers and also to shine a light on the problems they face. While we won’t make every image available, we’ll endeavour to use them all in our research behind the scenes.</0>"
 
 # /survey/record/6 
 msgid "No photo has been added.<br/>Press <4><0></0></4> to add."

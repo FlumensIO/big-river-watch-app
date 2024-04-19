@@ -32,6 +32,11 @@ const User = ({ sample: record }: Props) => {
       <Header />
 
       <Main className="survey">
+        <InfoMessage className="info-message !border-sky-900/40 font-medium ![--background:#eef6ff]">
+          Take your time to observe the river. This survey should take you 15
+          minutes.
+        </InfoMessage>
+
         <InfoMessage className="info-message">
           <div className="font-medium">Please tell us more about yourself.</div>
         </InfoMessage>

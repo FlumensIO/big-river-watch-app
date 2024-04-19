@@ -1,3 +1,7 @@
+## 1.0.3
+
+Small text updates.
+
 ## 1.0.2
 
 Disabled postcode validation.
