@@ -2,12 +2,12 @@
 # Translators:
 # Bla, 2023
 # Flumens Apps, 2023
-# emma brisdion, 2023
+# emma brisdion, 2024
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: emma brisdion, 2023\n"
+"Last-Translator: emma brisdion, 2024\n"
 "Language-Team: Welsh (https://app.transifex.com/rivers-trust/teams/174713/cy/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -650,6 +650,8 @@ msgstr "<0>Dywedwch fwy wrthym amdanoch chi'ch hun.</0>"
 msgid ""
 "Take your time to observe the river. This survey should take you 15 minutes."
 msgstr ""
+"Cymerwch eich amser i arsylwi’r afon. Dylai'r arolwg hwn gymryd 15 munud i "
+"chi."
 
 # /survey/record/1
 msgid "Next"
@@ -809,6 +811,10 @@ msgid ""
 "light on the problems they face. While we won’t make every image available, "
 "we’ll endeavour to use them all in our research behind the scenes.</0>"
 msgstr ""
+"<0>Byddwn yn rhannu lluniau wedi’i ddewis i ddathlu ein hafonydd a hefyd i "
+"daflu goleuni ar y problemau y maent yn eu hwynebu. Er na fyddwn yn sicrhau "
+"bod pob llun ar gael, byddwn yn ymdrechu i ddefnyddio pob un yn ein hymchwil"
+" y tu ôl i'r llenni. </0>"
 
 # /survey/record/6
 msgid "No photo has been added.<br/>Press <4><0></0></4> to add."
