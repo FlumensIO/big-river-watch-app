@@ -70,6 +70,7 @@ const Component: React.FC = () => (
 
       <Section className="!mt-8">
         <p>
+          {/* eslint-disable-next-line jsx-a11y/control-has-associated-label */}
           <a href="https://flumens.io">
             <img
               src={logo}

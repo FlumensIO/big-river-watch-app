@@ -112,7 +112,11 @@ const SurveyHeader = () => {
           </IonButton>
         </IonButtons>
 
-        <IonProgressBar color="secondary" value={index / surveyStepCount} />
+        <IonProgressBar
+          color="secondary"
+          className="rounded-none"
+          value={index / surveyStepCount}
+        />
       </IonToolbar>
     </IonHeader>
   );

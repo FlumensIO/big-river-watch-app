@@ -21,6 +21,8 @@ const defaults: Attrs = {
 };
 
 class AppModel extends Model {
+  // eslint-disable-next-line
+  // @ts-ignore
   attrs: Attrs = Model.extendAttrs(this.attrs, defaults);
 }
 

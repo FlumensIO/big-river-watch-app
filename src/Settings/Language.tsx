@@ -15,7 +15,7 @@ const Component: React.FC = () => {
   const goBackWrap = () => goBack();
 
   return (
-    <Page id="lanugage">
+    <Page id="language">
       <Header title="Language" />
       <Main>
         <Attr

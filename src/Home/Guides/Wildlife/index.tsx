@@ -14,7 +14,7 @@ const Wildlife = () => {
 
   return (
     <Page id="wildlife">
-      <Main>
+      <Main className="[--padding-bottom:0] [--padding-top:0]">
         <GuideItems items={items} onClick={onOpen} />
         <GuideItemProfile item={item} onClose={onClose} />
       </Main>

@@ -12,8 +12,8 @@ import {
   warningOutline,
 } from 'ionicons/icons';
 import { Trans as T } from 'react-i18next';
-import { InfoMessage, Main, MenuAttrToggle, PickByType } from '@flumens';
-import { IonIcon, IonList, IonItem, IonItemDivider } from '@ionic/react';
+import { InfoMessage, Main, Toggle, PickByType } from '@flumens';
+import { IonIcon, IonList, IonItem } from '@ionic/react';
 import CONFIG from 'common/config';
 import flumensLogo from 'common/images/flumens.svg';
 import appModel, { Attrs } from 'models/app';
@@ -40,10 +40,10 @@ const MainComponent = ({ onToggle }: Props) => {
           <T>Information</T>
         </h1>
 
-        <IonItemDivider>
+        <h3 className="list-title">
           <T>Info</T>
-        </IonItemDivider>
-        <div className="rounded">
+        </h3>
+        <div className="rounded-list">
           <IonItem routerLink="/info/about" detail>
             <IonIcon
               icon={informationCircleOutline}
@@ -98,10 +98,10 @@ const MainComponent = ({ onToggle }: Props) => {
           </IonItem>
         </div>
 
-        <IonItemDivider>
+        <h3 className="list-title">
           <T>Settings</T>
-        </IonItemDivider>
-        <div className="rounded">
+        </h3>
+        <div className="rounded-list">
           <IonItem routerLink="/settings/language" detail>
             <IonIcon icon={globeOutline} size="small" slot="start" />
             <T>Language</T>
@@ -110,24 +110,23 @@ const MainComponent = ({ onToggle }: Props) => {
             </div>
           </IonItem>
 
-          <MenuAttrToggle
-            icon={shareSocialOutline}
+          <Toggle
             label="Share App Analytics"
-            value={sendAnalytics}
+            prefix={<IonIcon src={shareSocialOutline} className="size-5" />}
             onChange={onSendAnalyticsToggle}
-            className="[&>ion-icon]:text-[18px]"
+            defaultSelected={sendAnalytics}
           />
-          <InfoMessage color="medium">
+          <InfoMessage inline>
             Share app crash data so we can make the app more reliable.
           </InfoMessage>
         </div>
 
-        <div className="text-center">
+        <div className="mt-10 text-center">
           <a href="https://flumens.io">
             <img className="m-auto block w-1/3" src={flumensLogo} alt="logo" />
           </a>
 
-          <p className="mb-10 pt-4 text-primary-900 opacity-70">
+          <p className="mb-5 pt-2 text-primary-900 opacity-70">
             <span>
               <T>App version</T>: v{CONFIG.version} ({CONFIG.build})
             </span>

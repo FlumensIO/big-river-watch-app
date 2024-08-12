@@ -1,6 +1,4 @@
-@import '@ionic/core/css/core.css';
 @import '@ionic/core/css/ionic.bundle.css';
-
 @import '@flumens/ionic/dist/themes/rounded.css';
 
 @tailwind base;
@@ -8,7 +6,7 @@
 @tailwind utilities;
 
 @layer base {
-  a {
+  a:not([role='button']) {
     // change link colours
     color: var(--ion-color-primary);
   }
@@ -64,6 +62,7 @@
   --ion-color-warning-contrast-rgb: var(--color-warning-50-rgb);
   --ion-color-warning-shade: var(--color-warning-700);
   --ion-color-warning-tint: var(--color-warning-500);
+  --ion-color-warning-dark: var(--color-warning-900);
 
   --ion-color-danger: var(--color-danger);
   --ion-color-danger-rgb: var(--color-danger-rgb);
@@ -97,6 +96,18 @@
   --ion-toolbar-background: var(--ion-color-primary-gradient);
   --ion-toolbar-color: var(--color-white);
   --ion-toolbar-color-activated: var(--color-white);
+
+  --form-value-color: rgba(var(--color-primary-800-rgb), 0.85);
+}
+
+// status bar
+html.ios.plt-hybrid #status-bar-background {
+  background: var(--ion-color-primary-dark);
+  width: 100vw;
+  height: env(safe-area-inset-top);
+  position: fixed;
+  top: 0;
+  z-index: 1000;
 }
 
 // FONTS START
@@ -143,21 +154,6 @@ h3 {
 }
 // FONTS END
 
-// status bar
-html.ios.plt-hybrid #status-bar-background {
-  background: var(--ion-color-primary-dark);
-  width: 100vw;
-  height: env(safe-area-inset-top);
-  position: fixed;
-  top: 0;
-  z-index: 1000;
-}
-
-// add safe padding for devices with a notch
-ion-content {
-  --padding-top: env(safe-area-inset-top);
-}
-
 // header colours
 .apps-section .apps-section-h,
 h1,
@@ -166,85 +162,7 @@ h3 {
   color: var(--ion-color-primary-dark);
 }
 
-// info messages
-.info-message {
-  --background: var(--ion-color-primary-contrast);
-  background: var(--ion-color-primary-contrast); // above is transparent
-  border: 1px solid var(--ion-color-primary-border);
-  border-radius: var(--theme-border-radius);
-
-  ion-label {
-    padding: 10px;
-
-    ion-note {
-      color: var(--ion-color-primary);
-      font-size: 1em;
-    }
-
-    ion-button {
-      color: var(--ion-color-primary);
-      --border-color: var(--ion-color-primary);
-    }
-  }
-
-  ion-note,
-  ion-icon {
-    color: var(--ion-color-primary-dark) !important;
-  }
-
-  ion-button {
-    color: var(--ion-color-secondary-dark) !important;
-    --border-color: var(--ion-color-secondary-dark) !important;
-  }
-  ion-note {
-    &.ios {
-      font-size: 1.2em;
-    }
-    &.md {
-      font-size: 1em;
-    }
-  }
-
-  &.warning {
-    --background: rgba(var(--ion-color-warning-rgb), 0.1);
-    background: white; // needed for opacity
-    border: 1px solid var(--ion-color-warning);
-
-    ion-note,
-    ion-icon {
-      color: var(--ion-color-warning-dark) !important;
-    }
-  }
-}
-
-// // move south from status-bar
-// .ion-page ion-content:only-child {
-//   --padding-top: 20px !important;
-// }
-
-// prettier main buttons
-ion-button[type='submit'],
-ion-button[expand='block'] {
-  max-height: 40px;
-  --border-radius: var(--theme-border-radius);
-}
-
-// brighter and bigger divider
-ion-item-divider {
-  font-size: 0.9em;
-  color: var(--ion-text-color);
-  padding: 0 5px 7px 5px;
-  font-weight: 500;
-}
-
 // ACCESSIBILITY IMPROVEMENTS START
-// ion-button:not(.button-has-icon-only):not(.info-button),
-// ion-item {
-//   font-size: 0.9em;
-//   &.md {
-//     font-size: 0.9em;
-//   }
-// }
 // clearer image picker empty message
 .photo-picker {
   &.ios .empty {
@@ -255,59 +173,9 @@ ion-item-divider {
   }
 }
 
-// brighter and bigger divider
-ion-item-divider {
-  font-size: 0.9em;
-  color: var(--ion-text-color);
-  padding: 0 5px 7px 5px;
-}
-
-// brighter attribute page divider
-.attr-page ion-item-divider ion-label {
-  font-family: 'Quicksand Bold' !important;
-  margin-top: 10px;
-  margin-left: 10px;
-}
-
-// brighter default radio option
-.radio-input-attr ion-radio-group > ion-item.radio-input-default-option {
-  opacity: 1 !important;
-  --background: #ffffff78;
-}
-
-// clearer date picker
-.date-input-attr ion-label[slot='end'] {
-  font-size: 1em;
-
-  &.ios {
-    font-size: 0.9em;
-  }
-}
-
-// clearer menu items
-.menu-attr-item,
-.attr-wrapper {
-  ion-icon[slot='start'] {
-    --ionicon-stroke-width: 24px;
-  }
-  ion-label[slot='end'] {
-    opacity: 1 !important;
-    color: #000000b3;
-
-    &.ios {
-      font-size: 0.9em;
-    }
-  }
-}
-
 // larger collapse headers
 .collapse-block ion-label.ion-text-wrap {
   font-size: 0.9em;
-}
-
-// larger radio inputs
-.radio-input-attr ion-item ion-label.ios {
-  font-size: 0.9em !important;
 }
 
 // clearer alert messages
@@ -326,23 +194,55 @@ ion-alert div.alert-message.sc-ion-alert-md {
 ion-textarea.textarea-attr,
 ion-col.grid-input-attr-item,
 ion-item-sliding.survey-list-item,
-.rounded:not(:empty) {
+.rounded-list:not(:empty) {
   border: 1px solid var(--ion-color-primary-border);
   border-radius: var(--theme-border-radius);
 }
 
-.rounded > .info-message {
-  border-style: none;
-  padding: 0;
-  --background: var(--ion-color-primary-contrast);
-  ion-note {
-    color: var(--ion-color-primary-shade);
-  }
+// add borders to all survey info messages
+.survey .info-message:not(.no-padding) {
+  border: 1px solid var(--ion-color-primary-border);
+  border-radius: var(--theme-border-radius);
+  margin: 0.5rem;
 }
 
-.rounded > .attr > ion-input {
-  margin: 0px !important;
-  max-width: 100%;
+// list item picture
+.list-avatar {
+  @apply flex size-14 shrink-0 items-center justify-center overflow-hidden rounded-md bg-neutral-100;
+}
+
+// top of the list title
+.list-title {
+  @apply mx-1 mb-3 mt-4 flex items-center text-lg;
+}
+
+// top of the list item
+.list-divider {
+  @apply flex items-center justify-between bg-neutral-200/70 p-1 px-2 text-sm text-neutral-600;
+}
+
+// Make Android icons dark, same as iOS
+ion-icon[slot='start'].md {
+  color: var(--ion-text-color, #000);
+}
+
+// Makes iOS menu items same height as Android
+ion-item .sc-ion-label-ios-h.sc-ion-label-ios-s.ios {
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+// Add padding to pages
+ion-content {
+  // add safe padding for devices with a notch
+  --padding-top: calc(5px + env(safe-area-inset-top));
+  --padding-bottom: 30px;
+}
+
+// Make menu item value colours same as form values, e.g. Settings page
+ion-item .sc-ion-label-md-h.sc-ion-label-md-s.md[slot='end'],
+ion-item .sc-ion-label-ios-h.sc-ion-label-ios-s.ios[slot='end'] {
+  color: var(--form-value-color);
 }
 
 // make all primary button text colours secondary
@@ -351,6 +251,7 @@ ion-button[color='secondary'] {
   --ion-color-contrast: var(--color-primary) !important;
 }
 
+// underline links
 a[href]:not([role='listitem']) {
   font-weight: 600;
   text-decoration-line: underline;
@@ -380,16 +281,20 @@ ion-content.survey {
   }
 }
 
-// make selected radio items bolder
-ion-radio-group .item-radio-checked:not(.radio-input-default-option) {
-  border: 2px solid rgb(var(--ion-color-primary-rgb), 0.25);
-
-  ion-radio .radio-label {
-    font-weight: 600;
-  }
-}
-
 // hide 3 things input buttons - always show minimum 3 out of 3
 .input-list-attr-item ion-button {
   display: none;
+}
+
+// fix feeling question input alignment
+.attr.attr-feeling .text-input,
+.attr.attr-comment .text-input,
+ion-item.slider-input-attr {
+  @apply mx-2;
+  width: calc(100% - 1rem);
+}
+
+ion-checkbox {
+  --checkbox-background-checked: white;
+  --checkmark-color: var(--form-value-color);
 }

@@ -27,22 +27,34 @@ const User = ({ sample: record }: Props) => {
 
   const getValidationProps = useValidationProps();
 
+  // const recordAttrs = {
+  //   record: record.attrs,
+  //   isDisabled: record.isDisabled(),
+  // };
+
+  // const firstNameAttr = {
+  //   id: 'firstName',
+  //   type: 'text_input',
+  //   title: 'First name',
+  //   validations: { required: true },
+  // } as const;
+
   return (
     <Page id="survey-user">
       <Header />
 
       <Main className="survey">
-        <InfoMessage className="info-message !border-sky-900/40 font-medium ![--background:#eef6ff]">
+        <InfoMessage className="m-2 !border-sky-900/40 font-medium ![background:#eef6ff]">
           Take your time to observe the river. This survey should take you 15
           minutes.
         </InfoMessage>
 
-        <InfoMessage className="info-message">
+        <InfoMessage>
           <div className="font-medium">Please tell us more about yourself.</div>
         </InfoMessage>
 
-        <IonList>
-          <div className="rounded">
+        <IonList className="flex flex-col gap-3">
+          <div className="rounded-list">
             <Attr
               attr="firstName"
               input="input"
@@ -50,14 +62,13 @@ const User = ({ sample: record }: Props) => {
               inputProps={{
                 label: t('First name'),
                 labelPlacement: 'floating',
-                autofocus: false,
                 autocapitalize: 'on',
                 ...getValidationProps(nameValidation, record.attrs.firstName),
               }}
             />
           </div>
 
-          <div className="rounded">
+          <div className="rounded-list">
             <Attr
               attr="lastName"
               input="input"
@@ -72,7 +83,7 @@ const User = ({ sample: record }: Props) => {
             />
           </div>
 
-          <div className="rounded">
+          <div className="rounded-list">
             <Attr
               attr="email"
               input="input"

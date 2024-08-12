@@ -5,10 +5,10 @@ import { initReactI18next } from 'react-i18next';
 import { App as AppPlugin } from '@capacitor/app';
 import { SplashScreen } from '@capacitor/splash-screen';
 import { StatusBar, Style as StatusBarStyle } from '@capacitor/status-bar';
-import { initAnalytics } from '@flumens';
 import { setupIonicReact, isPlatform } from '@ionic/react';
+import * as SentryBrowser from '@sentry/browser';
 import config from 'common/config';
-import 'common/theme.scss';
+import { sentryOptions } from 'common/flumens';
 import appModel from 'models/app';
 import records from 'models/collections/records';
 import App from './App';
@@ -19,20 +19,22 @@ i18n.use(initReactI18next).init({ lng: 'en' });
 
 mobxConfig({ enforceActions: 'never' });
 
-setupIonicReact({
-  swipeBackEnabled: false,
-});
+setupIonicReact();
 
 async function init() {
   await appModel.ready;
   await records.ready;
 
   appModel.attrs.sendAnalytics &&
-    initAnalytics({
+    SentryBrowser.init({
+      ...sentryOptions,
       dsn: config.sentryDNS,
       environment: config.environment,
-      build: config.build,
       release: config.version,
+      dist: config.build,
+      initialScope: {
+        tags: { session: appModel.attrs.appSession },
+      },
     });
 
   appModel.attrs.appSession += 1;

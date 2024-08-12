@@ -1,13 +1,9 @@
 import { FC, useState, useEffect } from 'react';
 import { observer } from 'mobx-react';
-import { Capacitor } from '@capacitor/core';
-import { PhotoPicker, captureImage, useToast } from '@flumens';
-import { isPlatform } from '@ionic/react';
+import { PhotoPicker, captureImage } from '@flumens';
 import config from 'common/config';
 import Media from 'models/media';
 import Record from 'models/record';
-
-type URL = string;
 
 type Props = {
   model: Record;
@@ -40,35 +36,19 @@ const useOnBackButton = (onCancelEdit: () => void, editImage?: Media) => {
 
 const AppPhotoPicker: FC<Props> = ({ model }) => {
   const [editImage, setEditImage] = useState<Media>();
-  const toast = useToast();
 
-  async function onAddNew(shouldUseCamera: boolean) {
-    try {
-      const photoURLs = await captureImage(
-        shouldUseCamera ? { camera: true } : { multiple: true }
-      );
+  const onAdd = async (shouldUseCamera: boolean) => {
+    const [image] = await captureImage({
+      camera: shouldUseCamera,
+    });
+    if (!image) return;
 
-      if (!photoURLs.length) return;
+    const imageModel = await Media.getImageModel(image, config.dataPath);
+    model.media.push(imageModel);
+    model.save();
+  };
 
-      const getImageModel = async (imageURL: URL) => {
-        const media = Media.getImageModel(
-          isPlatform('hybrid') ? Capacitor.convertFileSrc(imageURL) : imageURL,
-          config.dataPath
-        );
-
-        return media;
-      };
-
-      const imageModels: Media[] = await Promise.all<any>(
-        photoURLs.map(getImageModel)
-      );
-
-      model.media.push(...imageModels);
-      model.save();
-    } catch (e: any) {
-      toast.error(e);
-    }
-  }
+  const onRemove = async (media: any) => media.destroy();
 
   const onCancelEdit = () => setEditImage(undefined);
 
@@ -80,8 +60,9 @@ const AppPhotoPicker: FC<Props> = ({ model }) => {
   return (
     <>
       <PhotoPicker
-        onAddNew={onAddNew}
-        model={model}
+        value={model.media}
+        onAdd={onAdd}
+        onRemove={onRemove}
         isDisabled={isDisabled}
         // placeholder={placeholder}
       />

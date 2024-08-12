@@ -18,6 +18,8 @@ const defaults: Attrs = {
 };
 
 export class User extends Model {
+  // eslint-disable-next-line
+  // @ts-ignore
   attrs: Attrs = Model.extendAttrs(this.attrs, defaults);
 }
 

@@ -15,7 +15,6 @@ import {
 } from '@ionic/react';
 import dragonflyIcon from 'common/images/dragonfly.svg';
 import sewerIcon from 'common/images/sewer.svg';
-import records from 'models/collections/records';
 import Pollution from './Guides/Pollution';
 import Wildlife from './Guides/Wildlife';
 import Home from './Home';
@@ -49,7 +48,7 @@ const HomeController = () => {
           <IonLabel>
             <T>Surveys</T>
           </IonLabel>
-          <PendingSurveysBadge collection={records} />
+          <PendingSurveysBadge className="absolute bottom-1/4 left-2/4" />
         </IonTabButton>
 
         <IonTabButton tab="home/wildlife" href="/home/wildlife">

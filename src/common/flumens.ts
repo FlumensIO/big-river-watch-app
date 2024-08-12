@@ -5,12 +5,13 @@ export { default as Header } from '@flumens/ionic/dist/components/Header';
 export { default as Page } from '@flumens/ionic/dist/components/Page';
 export { default as MenuAttrItem } from '@flumens/ionic/dist/components/MenuAttrItem';
 export { default as ModelValidationMessage } from '@flumens/ionic/dist/components/ModelValidationMessage';
-export { default as InfoBackgroundMessage } from '@flumens/ionic/dist/components/InfoBackgroundMessage';
+export { default as InfoBackgroundMessage } from '@flumens/tailwind/dist/components/InfoBackgroundMessage';
+export { default as Badge } from '@flumens/tailwind/dist/components/Badge';
 export { default as VirtualList } from '@flumens/ionic/dist/components/VirtualList';
 export { default as Section } from '@flumens/ionic/dist/components/Section';
 export { default as device } from '@flumens/ionic/dist/utils/device';
 export { useToast, useAlert, useLoader } from '@flumens/ionic/dist/hooks';
-export { default as initAnalytics } from '@flumens/ionic/dist/utils/analytics';
+export { options as sentryOptions } from '@flumens/ionic/dist/utils/sentry';
 export {
   default as Model,
   type Options as ModelOptions,
@@ -18,14 +19,14 @@ export {
   type Attrs as ModelAttrs,
 } from '@flumens/ionic/dist/models/Model';
 export { default as Store } from '@flumens/ionic/dist/models/Store';
-export { default as date } from '@flumens/ionic/dist/utils/date';
+export * from '@flumens/ionic/dist/utils/date';
 export { HandledError } from '@flumens/ionic/dist/utils/errors';
 export * from '@flumens/ionic/dist/utils/type';
 export * from '@flumens/ionic/dist/utils/image';
 export * from '@flumens/ionic/dist/models/Indicia/helpers';
 export { default as initStoredSamples } from '@flumens/ionic/dist/models/initStoredSamples';
-export { default as MenuAttrToggle } from '@flumens/ionic/dist/components/MenuAttrToggle';
-export { default as InfoMessage } from '@flumens/ionic/dist/components/InfoMessage';
+export { default as Toggle } from '@flumens/tailwind/dist/components/Switch';
+export { default as InfoMessage } from '@flumens/tailwind/dist/components/InfoMessage';
 export { default as Gallery } from '@flumens/ionic/dist/components/Gallery';
 export {
   useDisableBackButton,
@@ -50,3 +51,16 @@ export * from '@flumens/ionic/dist/components/Map/utils';
 export { default as InfoButton } from '@flumens/ionic/dist/components/InfoButton';
 export { default as Attr } from '@flumens/ionic/dist/components/Attr';
 export { default as PhotoPicker } from '@flumens/ionic/dist/components/PhotoPicker';
+export {
+  default as TailwindContext,
+  type ContextValue as TailwindContextValue,
+} from '@flumens/tailwind/dist/components/Context';
+export {
+  type Block as BlockT,
+  type ChoiceValues,
+} from '@flumens/tailwind/dist/Survey';
+export {
+  default as TailwindBlockContext,
+  defaultContext,
+} from '@flumens/tailwind/dist/components/Block/Context';
+export { default as Block } from '@flumens/tailwind/dist/components/Block';

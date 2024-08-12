@@ -289,23 +289,37 @@ const survey = {
             options: [
               {
                 label: (
-                  <T>
-                    <span className="font-semibold">Natural</span> – e.g.
-                    waterfalls, fallen trees stretching across the river
-                  </T>
+                  <div>
+                    <T>
+                      <span className="font-semibold">Natural</span> – e.g.
+                      waterfalls, fallen trees stretching across the river
+                    </T>
+                  </div>
                 ),
                 value: 'Natural',
-                icon: barriersNatural,
+                prefix: (
+                  <img
+                    src={barriersNatural}
+                    className="-mx-3 -my-1 mr-1 size-20 rounded-md"
+                  />
+                ),
               },
               {
                 label: (
-                  <T>
-                    <span className="font-semibold">Artificial</span> – e.g.
-                    dams, weirs, locks, culverts, fords, sluices
-                  </T>
+                  <div>
+                    <T>
+                      <span className="font-semibold">Artificial</span> – e.g.
+                      dams, weirs, locks, culverts, fords, sluices
+                    </T>
+                  </div>
                 ),
                 value: 'Artificial',
-                icon: barriersArtificial,
+                prefix: (
+                  <img
+                    src={barriersArtificial}
+                    className="-mx-3 -my-1 mr-1 size-20 rounded-md"
+                  />
+                ),
               },
               { value: "Don't know" },
               { value: 'None' },
@@ -331,32 +345,38 @@ const survey = {
             options: [
               {
                 label: (
-                  <T>
-                    <span className="font-semibold">Mostly natural</span> – made
-                    up of soil, rocks and vegetation that have been shaped by
-                    the movement of the river
-                  </T>
+                  <div>
+                    <T>
+                      <span className="font-semibold">Mostly natural</span> –
+                      made up of soil, rocks and vegetation that have been
+                      shaped by the movement of the river
+                    </T>
+                  </div>
                 ),
                 value: 'Natural',
               },
               {
                 label: (
-                  <T>
-                    <span className="font-semibold">Mixed</span> – both natural
-                    features, as well as sections of straightening or human
-                    built structures
-                  </T>
+                  <div>
+                    <T>
+                      <span className="font-semibold">Mixed</span> – both
+                      natural features, as well as sections of straightening or
+                      human built structures
+                    </T>
+                  </div>
                 ),
                 value: 'Mixed',
               },
               {
                 label: (
-                  <T>
-                    <span className="font-semibold">Mostly artificial</span> –
-                    typically made of metal, concrete, wood or stone and
-                    characterised by a range of features such as straight sides,
-                    and concrete riverbeds
-                  </T>
+                  <div>
+                    <T>
+                      <span className="font-semibold">Mostly artificial</span> –
+                      typically made of metal, concrete, wood or stone and
+                      characterised by a range of features such as straight
+                      sides, and concrete riverbeds
+                    </T>
+                  </div>
                 ),
                 value: 'Artificial',
               },
@@ -429,24 +449,60 @@ const survey = {
             options: [
               {
                 value: 'Plants growing completely under the water',
-                icon: plantsUnderwater,
+                prefix: (
+                  <img
+                    src={plantsUnderwater}
+                    className="-mx-3 -my-1 mr-1 size-20 rounded-md"
+                  />
+                ),
               },
               {
                 value: 'Plants emerging out of the water',
-                icon: plantsEmerging,
+                prefix: (
+                  <img
+                    src={plantsEmerging}
+                    className="-mx-3 -my-1 mr-1 size-20 rounded-md"
+                  />
+                ),
               },
-              { value: 'Plants floating on the surface', icon: plantsSurface },
+              {
+                value: 'Plants floating on the surface',
+                prefix: (
+                  <img
+                    src={plantsSurface}
+                    className="-mx-3 -my-1 mr-1 size-20 rounded-md"
+                  />
+                ),
+              },
               {
                 value:
                   'Plants growing on the bank, completely out of the water (including trees)',
-                icon: plantsBanks,
+                prefix: (
+                  <img
+                    src={plantsBanks}
+                    className="-mx-3 -my-1 mr-1 size-20 rounded-md"
+                  />
+                ),
               },
               {
                 value:
                   'Algae – green, hair-like, can form clumps on the surface of the water',
-                icon: plantsAlgae,
+                prefix: (
+                  <img
+                    src={plantsAlgae}
+                    className="-mx-3 -my-1 mr-1 size-20 rounded-md"
+                  />
+                ),
               },
-              { value: 'None', icon: plantsNone },
+              {
+                value: 'None',
+                prefix: (
+                  <img
+                    src={plantsNone}
+                    className="-mx-3 -my-1 mr-1 size-20 rounded-md"
+                  />
+                ),
+              },
             ],
           },
           set: noneSetter('plants'),
@@ -542,13 +598,34 @@ const survey = {
           infoProps: { icon: null, skipTranslation: true },
           inputProps: {
             options: [
-              { value: 'Yes – in the river', icon: litter },
+              {
+                value: 'Yes – in the river',
+                prefix: (
+                  <img
+                    src={litter}
+                    className="-mx-3 -my-1 mr-1 size-20 rounded-md"
+                  />
+                ),
+              },
               {
                 value:
                   'Yes – caught in the bankside vegetation (above river surface)',
-                icon: litterVegetation,
+                prefix: (
+                  <img
+                    src={litterVegetation}
+                    className="-mx-3 -my-1 mr-1 size-20 rounded-md"
+                  />
+                ),
               },
-              { value: 'Yes – on the river banks', icon: litterRiverbank },
+              {
+                value: 'Yes – on the river banks',
+                prefix: (
+                  <img
+                    src={litterRiverbank}
+                    className="-mx-3 -my-1 mr-1 size-20 rounded-md"
+                  />
+                ),
+              },
               { value: "Don't know" },
               { value: 'None' },
             ],

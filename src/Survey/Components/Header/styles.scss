@@ -32,6 +32,7 @@
 
   ion-progress-bar {
     height: 7px;
+    --background: rgba(var(--ion-color-base-rgb), 0.3);
 
     &::part(progress) {
       transition: transform 700ms linear 0s;

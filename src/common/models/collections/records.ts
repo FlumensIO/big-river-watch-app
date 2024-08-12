@@ -6,3 +6,10 @@ console.log('Records: initializing');
 const samplesCollection = initStoredSamples(modelStore, Record);
 
 export default samplesCollection;
+
+export function getPending() {
+  const byUploadStatus = (sample: Record) =>
+    !sample.metadata.syncedOn && sample.metadata.saved;
+
+  return samplesCollection.filter(byUploadStatus);
+}

@@ -95,7 +95,7 @@ const GuideItemProfile = ({ item, onClose }: Props) => {
           </IonToolbar>
         </IonHeader>
 
-        <Main className="no-ion-padding">
+        <Main className="no-ion-padding [--padding-top:0]">
           {getSlides()}
 
           <IonCardHeader>

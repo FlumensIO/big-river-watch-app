@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { observer } from 'mobx-react';
 import { useTranslation } from 'react-i18next';
 import * as Yup from 'yup';
-import { Page, InfoMessage, Main, Attr, MenuAttrToggle } from '@flumens';
+import { Page, InfoMessage, Main, Attr, Toggle } from '@flumens';
 import { IonList } from '@ionic/react';
 import config from 'common/config';
 import appModel from 'models/app';
@@ -62,12 +62,17 @@ const UserContact = ({ sample: record }: Props) => {
 
   const isWelsh = language === 'cy';
 
+  const formatPostcodeWrap = (val: any) => {
+    // eslint-disable-next-line no-param-reassign
+    record.attrs.postcode = formatPostcode(val);
+  };
+
   return (
     <Page id="survey-user-contact">
       <Header />
 
       <Main className="survey">
-        <InfoMessage className="info-message">
+        <InfoMessage>
           <div className="font-medium">
             Are you happy to be contacted by The Rivers Trust to receive the
             results from this survey and information about future campaigns?
@@ -91,10 +96,10 @@ const UserContact = ({ sample: record }: Props) => {
         </InfoMessage>
 
         <IonList>
-          <div className="rounded">
-            <MenuAttrToggle
+          <div className="rounded-list">
+            <Toggle
               label="I am happy to be contacted by The Rivers Trust"
-              value={record.attrs.allowContact}
+              defaultSelected={record.attrs.allowContact}
               onChange={toggleAllowContact}
             />
           </div>
@@ -102,7 +107,7 @@ const UserContact = ({ sample: record }: Props) => {
 
         {record.attrs.allowContact && (
           <>
-            <InfoMessage color="medium">
+            <InfoMessage>
               Are you happy to be contacted by your local Rivers Trust to
               receive the results from this survey and information about future
               campaigns, local events and volunteering? To match you to your
@@ -110,10 +115,10 @@ const UserContact = ({ sample: record }: Props) => {
             </InfoMessage>
 
             <IonList>
-              <div className="rounded">
-                <MenuAttrToggle
+              <div className="rounded-list">
+                <Toggle
                   label="I am happy to be contacted by my local Rivers Trust"
-                  value={allowLocalContact}
+                  defaultSelected={allowLocalContact}
                   onChange={toggleAllowLocalContact}
                 />
               </div>
@@ -124,17 +129,17 @@ const UserContact = ({ sample: record }: Props) => {
         {allowLocalContact && (
           <>
             <IonList>
-              <div className="rounded">
+              <div className="rounded-list">
                 <Attr
                   attr="postcode"
                   input="input"
                   model={record}
+                  set={formatPostcodeWrap}
                   inputProps={{
                     label: t('Postcode'),
                     labelPlacement: 'floating',
                     autocapitalize: 'words',
                     autofocus: false,
-                    format: formatPostcode,
                     ...getValidationProps(
                       postcodeValidation,
                       record.attrs.postcode

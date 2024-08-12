@@ -1,4 +1,4 @@
-import { InfoBackgroundMessage, date as DateHelp, VirtualList } from '@flumens';
+import { InfoBackgroundMessage, VirtualList, getRelativeDate } from '@flumens';
 import { IonItemDivider, IonLabel, IonList } from '@ionic/react';
 import Record from 'models/record';
 import Survey from './Survey';
@@ -58,7 +58,7 @@ const RecordsList = ({ records }: Props) => {
       const { date, count } = groupedSurveys[index];
       return (
         <IonItemDivider key={date} style={(itemProps as any).style} mode="ios">
-          <IonLabel>{DateHelp.print(date, true)}</IonLabel>
+          <IonLabel>{getRelativeDate(date)}</IonLabel>
           {count > 1 && <IonLabel slot="end">{count}</IonLabel>}
         </IonItemDivider>
       );

@@ -2,7 +2,7 @@ import { FC, useEffect, useState } from 'react';
 import { observer } from 'mobx-react';
 import { Trans as T } from 'react-i18next';
 import { useRouteMatch } from 'react-router-dom';
-import { Page, Main } from '@flumens';
+import { Page, Main, Badge } from '@flumens';
 import {
   IonSegment,
   IonLabel,
@@ -10,9 +10,8 @@ import {
   IonHeader,
   IonToolbar,
 } from '@ionic/react';
-import records from 'models/collections/records';
+import records, { getPending } from 'models/collections/records';
 import Record, { bySurveyDate } from 'models/record';
-import PendingSurveysBadge from '../PendingSurveysBadge';
 import RecordsList from './RecordsList';
 import './styles.scss';
 
@@ -45,6 +44,23 @@ const UserSurveyComponent: FC = () => {
   const uploaded = (record: Record) => !!record.metadata.syncedOn;
   const uploadedRecords = records.filter(uploaded).sort(bySurveyDate);
 
+  const getPendingSurveysCount = () => {
+    const pendingSurveysCount = getPending().length;
+    if (!pendingSurveysCount) return null;
+
+    return (
+      <Badge
+        color="warning"
+        skipTranslation
+        size="small"
+        fill="solid"
+        className="mx-1"
+      >
+        {pendingSurveysCount}
+      </Badge>
+    );
+  };
+
   return (
     <Page id="home-records">
       <IonHeader className="ion-no-border">
@@ -53,7 +69,7 @@ const UserSurveyComponent: FC = () => {
             <IonSegmentButton value="pending">
               <IonLabel className="ion-text-wrap">
                 <T>Pending</T>
-                <PendingSurveysBadge collection={records} />
+                {getPendingSurveysCount()}
               </IonLabel>
             </IonSegmentButton>
 

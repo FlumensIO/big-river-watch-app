@@ -14,15 +14,15 @@ const Photo = ({ sample: record }: Props) => {
     <Page id="survey-photo">
       <Header />
 
-      <Main>
-        <InfoMessage className="info-message">
+      <Main className="survey">
+        <InfoMessage>
           <div className="font-medium">Upload a photo of the river.</div>
         </InfoMessage>
 
         <IonList>
-          <div className="rounded">
+          <div className="rounded-list">
             <PhotoPicker model={record} />
-            <InfoMessage className="[--inner-padding-end:0] [&>ion-label]:p-0">
+            <InfoMessage className="no-padding" inline>
               <div className="text-base">
                 We’ll share selected images to celebrate our rivers and also to
                 shine a light on the problems they face. While we won’t make

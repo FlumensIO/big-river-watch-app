@@ -48,7 +48,10 @@ const OfflineLocation = ({ record, onGPSClick }: OfflineLocationProps) => {
 
   return (
     <>
-      <InfoMessage icon={warningOutline} className="info-message warning">
+      <InfoMessage
+        prefix={<IonIcon icon={warningOutline} className="size-6" />}
+        color="warning"
+      >
         Looks like you're offline. The map view is only available with an
         internet connection. You can still use the GPS to set your current
         survey location.
@@ -124,7 +127,7 @@ const Location = ({ sample: record }: Props) => {
     toggleGPS(record);
   };
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars, unused-imports/no-unused-vars
   const { gridref, ...locationWithoutGridRef } = location;
 
   const [mapRef, setMapRef] = useState<MapRef>();
@@ -138,7 +141,10 @@ const Location = ({ sample: record }: Props) => {
     <Page id="survey-location">
       <Header />
 
-      <Main className="[--padding-top:0]" forceOverscroll={false}>
+      <Main
+        className="[--padding-bottom:0] [--padding-top:0]"
+        forceOverscroll={false}
+      >
         {!device.isOnline && (
           <OfflineLocation record={record} onGPSClick={onGPSClick} />
         )}
@@ -146,14 +152,18 @@ const Location = ({ sample: record }: Props) => {
         {device.isOnline && showInfo && (
           <InfoMessage
             skipTranslation
-            className="info-message absolute left-1/2 top-0 z-10 !mx-0 w-[calc(100%-20px)] -translate-x-1/2"
+            className="w-[calc(100%-20px)] absolute left-1/2 top-0 z-10 !mx-0 mt-2 -translate-x-1/2"
           >
             <IonButton
               onClick={closeInfoMessage}
               fill="clear"
-              className="absolute -right-6 top-0"
+              className="absolute -right-2 -top-2"
             >
-              <IonIcon icon={closeCircleOutline} slot="icon-only" />
+              <IonIcon
+                icon={closeCircleOutline}
+                slot="icon-only"
+                className="size-5"
+              />
             </IonButton>
             <div className="font-medium">
               <T>
@@ -195,7 +205,7 @@ const Location = ({ sample: record }: Props) => {
             />
             {hasAccuracy && (
               <MapContainer.Control>
-                <div className="mx-auto flex h-[41px] w-[41px] flex-col items-center justify-center rounded-full bg-white/90 text-center text-xs font-semibold text-slate-800 shadow-lg">
+                <div className="h-[41px] w-[41px] mx-auto flex flex-col items-center justify-center rounded-full bg-white/90 text-center text-xs font-semibold text-slate-800 shadow-lg">
                   ±{location.accuracy?.toFixed(0)}m
                 </div>
               </MapContainer.Control>
