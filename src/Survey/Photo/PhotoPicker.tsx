@@ -1,72 +1,51 @@
-import { FC, useState, useEffect } from 'react';
 import { observer } from 'mobx-react';
+import { Capacitor } from '@capacitor/core';
 import { PhotoPicker, captureImage } from '@flumens';
+import { isPlatform } from '@ionic/react';
 import config from 'common/config';
 import Media from 'models/media';
 import Record from 'models/record';
+import './styles.scss';
 
 type Props = {
   model: Record;
 };
 
-const useOnBackButton = (onCancelEdit: () => void, editImage?: Media) => {
-  const hideModal = () => {
-    const disableHardwareBackButton = (event: any) => {
-      // eslint-disable-next-line
-      event.detail.register(100, (processNextHandler: any) => {
-        if (!editImage) {
-          processNextHandler();
-          return null;
-        }
+const AppPhotoPicker = ({ model }: Props) => {
+  const isUploaded = model.isUploaded();
 
-        onCancelEdit();
-      });
+  async function onAdd(shouldUseCamera: boolean) {
+    const images = await captureImage(
+      shouldUseCamera ? { camera: true } : { multiple: true }
+    );
+    if (!images.length) return;
+
+    const getImageModel = async (image: any) => {
+      const imageModel: any = await Media.getImageModel(
+        isPlatform('hybrid') ? Capacitor.convertFileSrc(image) : image,
+        config.dataPath
+      );
+
+      return imageModel;
     };
 
-    // eslint-disable-next-line
-    document.addEventListener('ionBackButton', disableHardwareBackButton);
-    // eslint-disable-next-line
-    const removeEventListener = () =>
-      document.removeEventListener('ionBackButton', disableHardwareBackButton);
-    return removeEventListener;
-  };
+    const imageModels: Media[] = await Promise.all<any>(
+      images.map(getImageModel)
+    );
 
-  useEffect(hideModal, [editImage]);
-};
-
-const AppPhotoPicker: FC<Props> = ({ model }) => {
-  const [editImage, setEditImage] = useState<Media>();
-
-  const onAdd = async (shouldUseCamera: boolean) => {
-    const [image] = await captureImage({
-      camera: shouldUseCamera,
-    });
-    if (!image) return;
-
-    const imageModel = await Media.getImageModel(image, config.dataPath);
-    model.media.push(imageModel);
+    model.media.push(...imageModels);
     model.save();
-  };
+  }
 
-  const onRemove = async (media: any) => media.destroy();
-
-  const onCancelEdit = () => setEditImage(undefined);
-
-  useOnBackButton(onCancelEdit, editImage);
-
-  const isDisabled = model.isDisabled();
-  if (isDisabled && !model.media.length) return null;
+  const onRemove = (m: any) => m.destroy();
 
   return (
-    <>
-      <PhotoPicker
-        value={model.media}
-        onAdd={onAdd}
-        onRemove={onRemove}
-        isDisabled={isDisabled}
-        // placeholder={placeholder}
-      />
-    </>
+    <PhotoPicker
+      onAdd={onAdd}
+      onRemove={onRemove}
+      value={model.media}
+      isDisabled={isUploaded}
+    />
   );
 };
 

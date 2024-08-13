@@ -16,7 +16,7 @@ const Wildlife = () => {
 
   return (
     <Page id="pollution">
-      <Main className="[--padding-bottom:0] [--padding-top:0]">
+      <Main className="[--padding-bottom:0]">
         <InfoMessage
           className="!m-0 !max-w-none ![--border-radius:0] ![border-radius:0]"
           prefix={<IonIcon icon={informationCircle} className="size-6" />}

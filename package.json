@@ -28,7 +28,7 @@
     "@capacitor/splash-screen": "6.0.1",
     "@capacitor/status-bar": "6.0.0",
     "@flumens/bigu": "0.4.0",
-    "@flumens/ionic": "2.0.0-alpha.56",
+    "@flumens/ionic": "2.0.0-alpha.58",
     "@flumens/tailwind": "0.17.0",
     "@ionic-native/core": "5.36.0",
     "@ionic/core": "8.2.6",

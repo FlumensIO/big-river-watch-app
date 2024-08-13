@@ -235,7 +235,7 @@ ion-item .sc-ion-label-ios-h.sc-ion-label-ios-s.ios {
 // Add padding to pages
 ion-content {
   // add safe padding for devices with a notch
-  --padding-top: calc(5px + env(safe-area-inset-top));
+  --padding-top: env(safe-area-inset-top);
   --padding-bottom: 30px;
 }
 
@@ -259,6 +259,7 @@ a[href]:not([role='listitem']) {
 
 // survey pages need extra padding for the footer navigation
 ion-content.survey {
+  --padding-top: 0;
   --padding-bottom: 100px;
 }
 
