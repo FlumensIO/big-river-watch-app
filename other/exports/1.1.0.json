@@ -1,0 +1,58 @@
+{
+  "modelStore": {
+    "0199ce36-32a2-7000-9421-77a5558f7188": {
+      "id": "",
+      "cid": "0199ce36-32a2-7000-9421-77a5558f7188",
+      "metadata": {
+        "createdOn": 1760101282466,
+        "updatedOn": 1760101346415,
+        "syncedOn": null,
+        "saved": true
+      },
+      "attrs": {
+        "deleted": false,
+        "date": "2025-10-10T13:01:22.466Z",
+        "surveyors": 21,
+        "location": {
+          "crs": "EPSG:4326",
+          "latitude": 53.55043,
+          "longitude": -2.50194,
+          "accuracy": 5000,
+          "altitude": 0,
+          "altitudeAccuracy": null,
+          "source": "map",
+          "gridref": "SD60"
+        },
+        "firstName": "asfd",
+        "lastName": "asd",
+        "email": "asddsf@asd.sdsdsd",
+        "allowContact": false,
+        "experience": "Yes",
+        "rain": "Yes",
+        "flow": "Steady – About walking pace",
+        "visits": "Monthly",
+        "health": "Unhealthy",
+        "feeling": "test",
+        "naturalness": "Mixed",
+        "barriers": ["Natural", "Artificial", "Don't know"],
+        "banks": "Natural",
+        "wildlife": ["coot", "dipper", "dragonfly", "duck"],
+        "plants": [
+          "Plants growing completely under the water",
+          "Plants emerging out of the water",
+          "Plants floating on the surface"
+        ],
+        "water": "Very clear, I can see right through the water",
+        "smell": "No",
+        "litter": [
+          "Yes – caught in the bankside vegetation (above river surface)",
+          "Yes – in the river"
+        ],
+        "pollution": ["algae", "livestock", "mineWater"],
+        "goodThings": ["test", "test", "test"],
+        "comment": "test"
+      },
+      "media": []
+    }
+  }
+}

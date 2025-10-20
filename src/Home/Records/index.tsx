@@ -1,4 +1,4 @@
-import { FC, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { observer } from 'mobx-react';
 import { Trans as T } from 'react-i18next';
 import { useRouteMatch } from 'react-router-dom';
@@ -17,7 +17,7 @@ import './styles.scss';
 
 type Segment = 'pending' | 'uploaded';
 
-const UserSurveyComponent: FC = () => {
+const UserSurveyComponent = () => {
   const [segment, setSegment] = useState<Segment>('pending');
   const match = useRouteMatch<{ id?: Segment }>();
 
@@ -38,10 +38,10 @@ const UserSurveyComponent: FC = () => {
   const showingPending = segment === 'pending';
   const showingUploaded = segment === 'uploaded';
 
-  const notUploaded = (record: Record) => !record.metadata.syncedOn;
+  const notUploaded = (record: Record) => !record.syncedAt;
   const pendingRecords = records.filter(notUploaded).sort(bySurveyDate);
 
-  const uploaded = (record: Record) => !!record.metadata.syncedOn;
+  const uploaded = (record: Record) => !!record.syncedAt;
   const uploadedRecords = records.filter(uploaded).sort(bySurveyDate);
 
   const getPendingSurveysCount = () => {

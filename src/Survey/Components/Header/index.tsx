@@ -83,7 +83,7 @@ const SurveyHeader = () => {
   const onCancel = async () => {
     const discard = await showCancelPropt();
     if (discard) {
-      record.destroy();
+      record?.destroy();
     }
 
     navigate('/home/landing', 'root');

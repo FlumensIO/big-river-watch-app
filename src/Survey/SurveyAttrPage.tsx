@@ -17,22 +17,22 @@ const SurveyAttrPage = ({ sample: record, attr }: Props) => {
 
   const validate = () => {
     if (attrConf.attrProps?.inputProps?.min) {
-      const length = Array.isArray(record.attrs[attr])
-        ? record.attrs[attr].length
-        : record.attrs[attr];
+      const length = Array.isArray(record.data[attr])
+        ? record.data[attr].length
+        : record.data[attr];
 
       return length >= attrConf.attrProps?.inputProps?.min;
     }
 
     if (attrConf.attrProps.validation) {
-      return attrConf.attrProps.validation.isValidSync(record.attrs[attr]);
+      return attrConf.attrProps.validation.safeParse(record.data[attr]).success;
     }
 
     return (
       attrConf.attrProps.required === false ||
-      (Array.isArray(record.attrs[attr])
-        ? record.attrs[attr].length
-        : !!record.attrs[attr])
+      (Array.isArray(record.data[attr])
+        ? record.data[attr].length
+        : !!record.data[attr])
     );
   };
 
@@ -49,7 +49,7 @@ const SurveyAttrPage = ({ sample: record, attr }: Props) => {
     if (attrProps.validation) {
       inputProps = {
         ...inputProps,
-        ...getValidationProps(attrProps.validation, record.attrs[attr]),
+        ...getValidationProps(attrProps.validation, record.data[attr]),
       };
     }
 

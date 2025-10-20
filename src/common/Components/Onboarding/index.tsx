@@ -20,7 +20,7 @@ import slide3 from './welcome3.jpg';
 import slide4 from './welcome4.jpg';
 
 const Onboarding = ({ children }: any) => {
-  const { language } = appModel.attrs;
+  const { language } = appModel.data;
   const welshPath = language === 'cy' ? '-cymru' : '';
 
   const [moreSlidesExist, setMoreSlidesExist] = useState(true);
@@ -33,7 +33,7 @@ const Onboarding = ({ children }: any) => {
 
   function exit() {
     console.log('Info:Welcome:Controller: exit.');
-    appModel.attrs.showedWelcome = true;
+    appModel.data.showedWelcome = true;
     appModel.save();
   }
 
@@ -46,7 +46,7 @@ const Onboarding = ({ children }: any) => {
     exit();
   };
 
-  const { showedWelcome } = appModel.attrs;
+  const { showedWelcome } = appModel.data;
 
   if (showedWelcome) return children;
 
@@ -68,7 +68,7 @@ const Onboarding = ({ children }: any) => {
             </div>
 
             <div className="message">
-              <h1 className="mb-5 mt-0">
+              <h1 className="mt-0 mb-5">
                 <T>
                   Welcome to <b>Big River Watch</b>!
                 </T>
@@ -89,7 +89,7 @@ const Onboarding = ({ children }: any) => {
             </div>
 
             <div className="message">
-              <h1 className="mb-5 mt-0">
+              <h1 className="mt-0 mb-5">
                 <T>
                   Simply sign up and pick a riverside location that you can
                   spend 10-15 mins observing.
@@ -112,7 +112,7 @@ const Onboarding = ({ children }: any) => {
             </div>
 
             <div className="message">
-              <h1 className="mb-5 mt-0">
+              <h1 className="mt-0 mb-5">
                 <T>Not sure what you’re looking at?</T>
               </h1>
               <p>
@@ -131,7 +131,7 @@ const Onboarding = ({ children }: any) => {
             </div>
 
             <div className="message">
-              <h1 className="mb-5 mt-0">
+              <h1 className="mt-0 mb-5">
                 <T>
                   Remember, you should never enter the river to take part in{' '}
                   <b>Big River Watch</b>.
@@ -174,7 +174,7 @@ const Onboarding = ({ children }: any) => {
               onClick={slideNextOrClose}
               color="secondary"
               className={clsx(
-                '!m-3 flex h-12 items-center justify-center rounded-full bg-secondary text-primary shadow-lg shadow-secondary-800/30',
+                'bg-secondary text-primary shadow-secondary-800/30 !m-3 flex h-12 items-center justify-center rounded-full shadow-lg',
                 moreSlidesExist && 'w-12'
               )}
             >

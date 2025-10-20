@@ -1,15 +1,47 @@
-import { initStoredSamples } from '@flumens';
+import { Collection, CollectionOptions } from 'common/flumens';
 import Record from 'models/record';
-import { modelStore } from '../store';
+import { recordsStore } from '../store';
 
-console.log('Records: initializing');
-const samplesCollection = initStoredSamples(modelStore, Record);
+export class RecordsCollection<T extends Record> extends Collection<T> {
+  constructor(options: CollectionOptions<T>) {
+    super({ id: 'records', Model: Record, ...options });
+  }
 
-export default samplesCollection;
+  async fetch() {
+    if (!this.store || !this.Model) {
+      this.ready.resolve(false);
+      return;
+    }
+
+    const modelsJSON = await this.store.findAll();
+
+    const getModel = (json: any) => {
+      const { data, metadata, media, attrs } = json.data;
+      return new (this.Model as any)({
+        ...json,
+        attrs,
+        data,
+        metadata,
+        media,
+      });
+    };
+    const models = modelsJSON.map(getModel);
+    this.data.push(...models);
+
+    this.ready.resolve(true);
+  }
+}
+
+const records = new RecordsCollection({
+  store: recordsStore,
+  Model: Record,
+});
+
+export default records;
 
 export function getPending() {
   const byUploadStatus = (sample: Record) =>
-    !sample.metadata.syncedOn && sample.metadata.saved;
+    !sample.syncedAt && sample.metadata.saved;
 
-  return samplesCollection.filter(byUploadStatus);
+  return records.filter(byUploadStatus);
 }

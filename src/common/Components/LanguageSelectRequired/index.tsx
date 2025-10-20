@@ -18,10 +18,10 @@ type Props = {
 };
 
 const LanguageSelectRequired = ({ children }: Props) => {
-  if (appModel.attrs.language) return children;
+  if (appModel.data.language) return children;
 
   function onSelect(language: keyof typeof languages) {
-    appModel.attrs.language = language; // eslint-disable-line no-param-reassign
+    appModel.data.language = language; // eslint-disable-line no-param-reassign
   }
 
   const getLanguageOption = ([value, language]: any) => {
@@ -31,7 +31,7 @@ const LanguageSelectRequired = ({ children }: Props) => {
       <IonItem
         key={value}
         onClick={onSelectWrap}
-        className="pretty-button-language font-semibold text-primary"
+        className="pretty-button-language text-primary font-semibold"
         detail
       >
         <IonLabel>{language}</IonLabel>

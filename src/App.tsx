@@ -15,7 +15,7 @@ import {
   useIonRouter,
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import 'common/theme.scss';
+import 'common/theme.css';
 import 'common/translations/translator';
 import appModel from 'models/app';
 import LanguageSelectRequired from 'Components/LanguageSelectRequired';
@@ -56,7 +56,7 @@ const App = () => {
   };
   useEffect(exitApp, []);
 
-  const { language } = appModel.attrs;
+  const { language } = appModel.data;
 
   return (
     <IonApp lang={language as any}>

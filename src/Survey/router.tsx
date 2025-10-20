@@ -87,4 +87,4 @@ const routes = [
   [`${baseURL}/:smpId/end`, End],
 ];
 
-export default RouteWithModels.fromArray(records, routes);
+export default RouteWithModels.fromArray(records as any, routes);

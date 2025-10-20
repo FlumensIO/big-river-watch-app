@@ -5,10 +5,14 @@ import { initReactI18next } from 'react-i18next';
 import { App as AppPlugin } from '@capacitor/app';
 import { SplashScreen } from '@capacitor/splash-screen';
 import { StatusBar, Style as StatusBarStyle } from '@capacitor/status-bar';
+import { loadingController } from '@ionic/core';
 import { setupIonicReact, isPlatform } from '@ionic/react';
-import * as SentryBrowser from '@sentry/browser';
+import * as Sentry from '@sentry/browser';
 import config from 'common/config';
 import { sentryOptions } from 'common/flumens';
+import migrate from 'common/models/migrate';
+import { db } from 'common/models/store';
+import userModel from 'common/models/user';
 import appModel from 'models/app';
 import records from 'models/collections/records';
 import App from './App';
@@ -22,22 +26,40 @@ mobxConfig({ enforceActions: 'never' });
 setupIonicReact();
 
 async function init() {
-  await appModel.ready;
-  await records.ready;
-
-  appModel.attrs.sendAnalytics &&
-    SentryBrowser.init({
+  if (isPlatform('hybrid') && !localStorage.getItem('sqliteMigrated')) {
+    Sentry.init({
       ...sentryOptions,
-      dsn: config.sentryDNS,
+      release: config.version,
+      dist: config.build,
+      dsn: config.sentryDSN,
+    });
+    (await loadingController.create({ message: 'Upgrading...' })).present();
+    await migrate();
+    localStorage.setItem('sqliteMigrated', 'true');
+    window.location.reload();
+    return;
+  }
+
+  await db.init();
+  await appModel.fetch();
+  await userModel.fetch();
+  await records.fetch();
+
+  appModel.data.sendAnalytics &&
+    Sentry.init({
+      ...sentryOptions,
+      dsn: config.sentryDSN,
       environment: config.environment,
       release: config.version,
       dist: config.build,
+      enabled: config.environment === 'production',
       initialScope: {
-        tags: { session: appModel.attrs.appSession },
+        user: { id: userModel.id },
+        tags: { session: appModel.data.appSession },
       },
     });
 
-  appModel.attrs.appSession += 1;
+  appModel.data.appSession += 1;
   appModel.save();
 
   const container = document.getElementById('root');

@@ -7,7 +7,7 @@ import {
   warningOutline,
 } from 'ionicons/icons';
 import { Trans as T } from 'react-i18next';
-import { MapRef } from 'react-map-gl';
+import { MapRef } from 'react-map-gl/mapbox';
 import {
   Page,
   InfoMessage,
@@ -36,7 +36,7 @@ const markerPaint = {
 
 type OfflineLocationProps = { record: Record; onGPSClick: any };
 const OfflineLocation = ({ record, onGPSClick }: OfflineLocationProps) => {
-  const { location } = record.attrs;
+  const { location } = record.data;
   const hasLocation = Number.isFinite(location.latitude);
   const gridref = location.gridref && prettyPrintGridRef(location.gridref);
 
@@ -102,7 +102,7 @@ type Props = { sample: Record };
 const Location = ({ sample: record }: Props) => {
   const toast = useToast();
 
-  const { location } = record.attrs;
+  const { location } = record.data;
   const hasAccuracy =
     Number.isFinite(location.accuracy) && location.accuracy! < 100;
 
@@ -114,7 +114,7 @@ const Location = ({ sample: record }: Props) => {
     if (record.isGPSRunning()) record.stopGPS();
 
     // eslint-disable-next-line no-param-reassign
-    record.attrs.location = { ...record.attrs.location, ...newLocation };
+    record.data.location = { ...record.data.location, ...newLocation };
   };
 
   const onMapClick = (e: any) => setLocation(mapEventToLocation(e));
@@ -142,7 +142,7 @@ const Location = ({ sample: record }: Props) => {
       <Header />
 
       <Main
-        className="[--padding-bottom:0] [--padding-top:0]"
+        className="[--padding-bottom:0]! [--padding-top:0]"
         forceOverscroll={false}
       >
         {!device.isOnline && (
@@ -152,12 +152,12 @@ const Location = ({ sample: record }: Props) => {
         {device.isOnline && showInfo && (
           <InfoMessage
             skipTranslation
-            className="w-[calc(100%-20px)] absolute left-1/2 top-0 z-10 !mx-0 mt-2 -translate-x-1/2"
+            className="absolute top-0 left-1/2 z-10 !mx-0 mt-2 w-[calc(100%-20px)] -translate-x-1/2"
           >
             <IonButton
               onClick={closeInfoMessage}
               fill="clear"
-              className="absolute -right-2 -top-2"
+              className="absolute -top-2 -right-2"
             >
               <IonIcon
                 icon={closeCircleOutline}
@@ -205,7 +205,7 @@ const Location = ({ sample: record }: Props) => {
             />
             {hasAccuracy && (
               <MapContainer.Control>
-                <div className="h-[41px] w-[41px] mx-auto flex flex-col items-center justify-center rounded-full bg-white/90 text-center text-xs font-semibold text-slate-800 shadow-lg">
+                <div className="mx-auto flex h-[41px] w-[41px] flex-col items-center justify-center rounded-full bg-white/90 text-center text-xs font-semibold text-slate-800 shadow-lg">
                   ±{location.accuracy?.toFixed(0)}m
                 </div>
               </MapContainer.Control>

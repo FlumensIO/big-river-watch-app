@@ -39,7 +39,7 @@ const RecordsList = ({ records }: Props) => {
   let counter: any = {};
 
   const getDates = (survey: Record): void => {
-    const date = roundDate(new Date(survey.attrs.date).getTime()).toString();
+    const date = roundDate(new Date(survey.data.date).getTime()).toString();
     if (!dates.includes(date) && date !== 'Invalid Date') {
       dates.push(date);
       dateIndices.push(groupedSurveys.length);

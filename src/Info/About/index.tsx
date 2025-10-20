@@ -6,12 +6,12 @@ import TheRiversTrustLogo from './TheRiversTrustLogo.png';
 
 const { P, H } = Section;
 
-const Component: React.FC = () => (
+const Component = () => (
   <Page id="about">
     <Header title="About" />
     <Main>
       <Section>
-        <div className="mb-3 mt-5 flex flex-wrap justify-center gap-3 [&>img]:block [&>img]:w-2/5">
+        <div className="mt-5 mb-3 flex flex-wrap justify-center gap-3 [&>img]:block [&>img]:w-2/5">
           <img src={TheRiversTrustLogo} alt="TheRiversTrustLogo" />
           <img src={TheBigRiverWatchLogo} alt="TheBigRiverWatchLogo" />
         </div>

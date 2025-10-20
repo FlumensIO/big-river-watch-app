@@ -59,4 +59,4 @@ const newValueWrap = ({ newValue }) => {
 
   i18n.changeLanguage(newValue);
 };
-observe(appModel.attrs, 'language', newValueWrap);
+observe(appModel.data, 'language', newValueWrap);

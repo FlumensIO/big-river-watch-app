@@ -1,6 +1,6 @@
 /* eslint-disable @getify/proper-arrows/name */
 import { Trans as T } from 'react-i18next';
-import * as Yup from 'yup';
+import { z } from 'zod';
 import { InfoButton } from '@flumens';
 import { IonRouterLink } from '@ionic/react';
 import user from 'models/user';
@@ -43,8 +43,8 @@ const getPollutionOptions = () => {
 
 const noneSetter = (attr: string) => (val: any, model: any) => {
   // eslint-disable-next-line no-param-reassign
-  model.attrs[attr] =
-    val?.includes('None') && !model.attrs[attr]?.includes('None')
+  model.data[attr] =
+    val?.includes('None') && !model.data[attr]?.includes('None')
       ? ['None']
       : val.filter((v: any) => v !== 'None');
 };
@@ -217,7 +217,7 @@ const survey = {
             onkeydown: (e: any) => e.key !== ' ',
             placeholder: 'Feeling',
           },
-          validation: Yup.string().required(),
+          validation: z.string().min(1),
         },
       },
     },
@@ -238,7 +238,7 @@ const survey = {
               <InfoButton
                 label="READ MORE"
                 header="Info"
-                className="-mb-2 -mr-2"
+                className="-mr-2 -mb-2"
               >
                 <T>
                   A natural river is a flowing body of water that has not been
@@ -273,7 +273,7 @@ const survey = {
               <InfoButton
                 label="READ MORE"
                 header="Info"
-                className="-mb-2 -mr-2"
+                className="-mr-2 -mb-2"
               >
                 <T>
                   A barrier is a physical structure, either natural or
@@ -400,7 +400,7 @@ const survey = {
               <InfoButton
                 label="READ MORE"
                 header="Info"
-                className="-mb-2 -mr-2"
+                className="-mr-2 -mb-2"
               >
                 <T>
                   Seeing a variety of species, including those listed below, can
@@ -435,7 +435,7 @@ const survey = {
               <InfoButton
                 label="READ MORE"
                 header="Info"
-                className="-mb-2 -mr-2"
+                className="-mr-2 -mb-2"
               >
                 <T>
                   Plants may suggest a healthy river but that can be misleading,
@@ -523,7 +523,7 @@ const survey = {
               <InfoButton
                 label="READ MORE"
                 header="Info"
-                className="-mb-2 -mr-2"
+                className="-mr-2 -mb-2"
               >
                 <T>
                   Please don't climb down the river bank and only look if it is
@@ -562,7 +562,7 @@ const survey = {
               <InfoButton
                 label="READ MORE"
                 header="Info"
-                className="-mb-2 -mr-2"
+                className="-mr-2 -mb-2"
               >
                 <T>
                   Different odors can be associated with different types and
@@ -661,7 +661,7 @@ const survey = {
               <InfoButton
                 label="READ MORE"
                 header="Info"
-                className="-mb-2 -mr-2"
+                className="-mr-2 -mb-2"
               >
                 <T>
                   There are several visible signs of pollution in a river that
@@ -734,7 +734,7 @@ const survey = {
               <InfoButton
                 label="READ MORE"
                 header="Info"
-                className="-mb-2 -mr-2"
+                className="-mr-2 -mb-2"
               >
                 <T>
                   This could be other animals you have seen, things you have
@@ -757,7 +757,7 @@ const survey = {
         date: new Date().toISOString(),
         surveyors: 1,
         location: { crs: 'EPSG:4326' },
-        ...user.attrs,
+        ...user.data,
       },
     });
 
@@ -766,15 +766,7 @@ const survey = {
     return record;
   },
 
-  verify(attrs: any) {
-    try {
-      Yup.object().shape({}).validateSync(attrs, { abortEarly: false });
-    } catch (attrError) {
-      return attrError;
-    }
-
-    return null;
-  },
+  verify: (attrs: any) => z.object({}).safeParse(attrs).error,
 };
 
 export default survey;

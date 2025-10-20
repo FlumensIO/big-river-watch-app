@@ -99,7 +99,7 @@ const GuideItemProfile = ({ item, onClose }: Props) => {
           {getSlides()}
 
           <IonCardHeader>
-            <h1 className="m-0 font-bold text-primary">
+            <h1 className="text-primary m-2 font-bold">
               <T>{item.name}</T>
             </h1>
           </IonCardHeader>

@@ -5,17 +5,16 @@ import {
   ModelValidationMessage,
   useAlert,
   ModelAttrs,
-  ModelMetadata,
   ModelOptions,
   device,
   Location,
 } from '@flumens';
 import config from 'common/config';
 import supabase from 'common/supabase';
-import Media from './media';
-import GPSExtension from './recordGPSExt';
-import { modelStore } from './store';
-import { Attrs as UserAttrs } from './user';
+import Media from '../media';
+import { recordsStore } from '../store';
+import { Attrs as UserAttrs } from '../user';
+import GPSExtension from './GPSExt';
 
 function printErroneousPayload(payload: any) {
   try {
@@ -35,7 +34,7 @@ export type Attrs = ModelAttrs &
     location: Location;
   };
 
-type Metadata = ModelMetadata & {
+type Metadata = {
   /**
    * If the record was saved and ready for upload.
    */
@@ -46,20 +45,8 @@ export interface Remote {
   synchronising?: boolean;
 }
 
-export default class Record extends Model {
-  static fromJSON(json: any) {
-    const { media, ...options } = json;
-    const record = new this(options);
-
-    const addMedia = (m: any) => record.media.push(Media.fromJSON(m));
-    media?.forEach(addMedia);
-
-    return record;
-  }
-
-  declare metadata: Metadata;
-
-  declare attrs: Attrs;
+export default class Record extends Model<Attrs> {
+  metadata: Metadata;
 
   media: IObservableArray<Media>;
 
@@ -75,10 +62,17 @@ export default class Record extends Model {
 
   collection?: any;
 
-  constructor(options: ModelOptions) {
-    super({ store: modelStore, ...options });
+  constructor({
+    metadata,
+    media = [],
+    ...options
+  }: ModelOptions & { metadata?: Metadata; media?: any[] } = {}) {
+    super({ store: recordsStore, ...options });
 
-    this.media = observable([]);
+    const getMedia = (m: any) => new Media(m);
+    this.media = observable(media?.map(getMedia));
+
+    this.metadata = observable(metadata || {}) as any;
 
     const onAddedSetParent = (change: any) => {
       if (change.added && change.added.length) {
@@ -111,7 +105,7 @@ export default class Record extends Model {
   }
 
   isDisabled() {
-    return !!this.metadata.syncedOn;
+    return !!this.syncedAt;
   }
 
   isUploaded() {
@@ -151,8 +145,8 @@ export default class Record extends Model {
         this.id = id;
 
         // update metadata
-        this.metadata.updatedOn = new Date(updated_at).getTime();
-        this.metadata.syncedOn = new Date(updated_at).getTime();
+        this.updatedAt = new Date(updated_at).getTime();
+        this.syncedAt = new Date(updated_at).getTime();
 
         this.save();
       } catch (err: any) {
@@ -184,17 +178,17 @@ export default class Record extends Model {
     return this.media.map(getRemoteUrl);
   }
 
-  private async _createRemote({ attrs }: any, media: string[]): Promise<any> {
+  private async _createRemote({ data }: any, media: string[]): Promise<any> {
     const {
-      deleted,
+      deleted = false,
       firstName,
       lastName,
       email,
       allowContact,
       postcode,
       experience,
-      ...data
-    } = attrs;
+      ...dataOther
+    } = data;
 
     const user = {
       firstName,
@@ -208,7 +202,9 @@ export default class Record extends Model {
     try {
       const res = await supabase
         .from('records')
-        .insert([{ cid: this.cid, data, user_data: user, deleted, media }]);
+        .insert([
+          { cid: this.cid, data: dataOther, user_data: user, deleted, media },
+        ]);
 
       if (res.error) {
         const error: any = new Error(res.error.message);
@@ -243,12 +239,37 @@ export default class Record extends Model {
    * Returns a clean (no observables) JSON representation of the model.
    */
   toJSON() {
-    const data: any = super.toJSON();
+    const json: any = super.toJSON();
 
     const getMedia = (model: Media) => model.toJSON();
-    data.media = this.media?.map(getMedia) || [];
 
-    return JSON.parse(JSON.stringify(data));
+    return JSON.parse(
+      JSON.stringify({
+        ...json,
+        metadata: this.metadata,
+        media: this.media?.map(getMedia) || [],
+      })
+    );
+  }
+
+  /**
+   * Save the model to the offline store.
+   */
+  async save() {
+    if (!this.store) {
+      throw new Error('Trying to sync locally without a store');
+    }
+
+    const { data, metadata, media, ...other } = this.toJSON();
+    const jsonWithDataWrapper = {
+      ...other,
+      data: {
+        data,
+        metadata,
+        media,
+      },
+    };
+    await this.store.save(jsonWithDataWrapper);
   }
 
   /**
@@ -258,11 +279,11 @@ export default class Record extends Model {
     const destroySubModels = () =>
       Promise.all(this.media.map((media: any) => media.destroy(true))); // eslint-disable-line @getify/proper-arrows/name
 
-    if (!this._store) {
+    if (!this.store) {
       throw new Error('Trying to sync locally without a store');
     }
 
-    await this._store.destroy(this.cid);
+    await this.store.delete(this.cid);
 
     if (this.collection) {
       this.collection.remove(this);
@@ -298,10 +319,10 @@ export const useValidateCheck = (record: Record) => {
 };
 
 export function bySurveyDate(record1: Record, record2: Record) {
-  const date1 = new Date(record1.attrs.date);
+  const date1 = new Date(record1.data.date);
   const moveToTop = !date1 || date1.toString() === 'Invalid Date';
   if (moveToTop) return -1;
 
-  const date2 = new Date(record2.attrs.date);
+  const date2 = new Date(record2.data.date);
   return date2.getTime() - date1.getTime();
 }

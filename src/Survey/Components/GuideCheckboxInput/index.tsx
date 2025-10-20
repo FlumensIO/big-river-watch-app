@@ -1,4 +1,4 @@
-import { FC, useState } from 'react';
+import { useState } from 'react';
 import clsx from 'clsx';
 import { informationCircleOutline } from 'ionicons/icons';
 import { Trans as T, useTranslation } from 'react-i18next';
@@ -37,13 +37,13 @@ export type Props = {
   className?: string;
 };
 
-const GuideCheckboxInput: FC<Props> = ({
+const GuideCheckboxInput = ({
   value: valueProp,
   onChange,
   options,
   skipTranslation,
   className,
-}) => {
+}: Props) => {
   const [item, setItem] = useState<GuideItem | null>();
   const onClose = () => setItem(null);
 
@@ -114,7 +114,7 @@ const GuideCheckboxInput: FC<Props> = ({
             <img src={icon} onClick={onOpenProfile} />
             <IonIcon
               icon={informationCircleOutline}
-              className="absolute left-1 top-1 text-white [--ionicon-stroke-width:50px]"
+              className="absolute top-1 left-1 text-white [--ionicon-stroke-width:50px]"
             />
           </div>
         )}
@@ -125,7 +125,7 @@ const GuideCheckboxInput: FC<Props> = ({
           checked={checked}
           disabled={itemDisabled}
         >
-          <IonLabel className="ion-text-wrap normal-font-size mr-3">
+          <IonLabel className="normal-font-size mr-3 whitespace-normal">
             {isLabelString ? label : <T>{label}</T>}
           </IonLabel>
         </IonCheckbox>

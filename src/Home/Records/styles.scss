@@ -6,15 +6,17 @@
     color: var(--ion-color-main);
 
     ion-segment {
+      z-index: 100000000;
+      margin: 8px auto;
+
+      box-shadow:
+        -1px 2px 7px 0 #0000001a,
+        0 2px 9px 0 #3e396b1a;
+      border-radius: var(--theme-border-radius);
+      background: #fff;
       max-width: calc(
         100% - 20px
       ); // -20px to match the padding of the list below
-      margin: 8px auto;
-      z-index: 100000000;
-      border-radius: var(--theme-border-radius);
-      background: #fff;
-
-      box-shadow: -1px 2px 7px 0 #0000001a, 0 2px 9px 0 #3e396b1a;
 
       ion-badge {
         display: inline;
@@ -37,19 +39,19 @@
     --overflow: hidden;
 
     ion-list {
-      height: 100%;
-      width: calc(100% - 20px);
-      padding: 0 !important;
-      max-width: 600px; // ipad
       margin: 0 auto;
+      padding: 0 !important;
+      width: calc(100% - 20px);
+      max-width: 600px; // ipad
+      height: 100%;
     }
   }
 
   ion-item-divider {
-    padding: 0px 4px 0 12px;
-    background: #dcdae0 !important;
-    color: #080014;
     border-radius: var(--theme-border-radius);
+    background: #dcdae0 !important;
+    padding: 0px 4px 0 12px;
+    color: #080014;
   }
 }
 

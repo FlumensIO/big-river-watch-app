@@ -18,7 +18,7 @@ function useShowThankYouMessage() {
         <div>
           <div className="text-center">
             <IonIcon
-              className="text-6xl text-primary-700"
+              className="text-primary-700 text-6xl"
               icon={checkmarkCircleOutline}
             />
           </div>
@@ -52,12 +52,12 @@ function useShowThankYouMessage() {
 }
 
 const cacheUserDetails = (record: Record) => {
-  set(userModel.attrs, {
-    firstName: record.attrs.firstName,
-    lastName: record.attrs.lastName,
-    email: record.attrs.email,
-    allowContact: record.attrs.allowContact,
-    postcode: record.attrs.postcode,
+  set(userModel.data, {
+    firstName: record.data.firstName,
+    lastName: record.data.lastName,
+    email: record.data.email,
+    allowContact: record.data.allowContact,
+    postcode: record.data.postcode,
     experience: 'Yes',
   });
   userModel.save();
@@ -75,7 +75,7 @@ const End = ({ sample: record }: Props) => {
       record.save();
 
       // remove current draft ID
-      appModel.attrs['draftId:survey'] = '';
+      appModel.data['draftId:survey'] = '';
       appModel.save();
 
       cacheUserDetails(record);

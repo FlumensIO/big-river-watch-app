@@ -1,18 +1,17 @@
 import { observer } from 'mobx-react';
 import { useTranslation } from 'react-i18next';
-import * as Yup from 'yup';
+import { z } from 'zod';
 import { Page, InfoMessage, Main, Attr } from '@flumens';
-import { IonList } from '@ionic/react';
 import Record from 'models/record';
 import Footer from './Components/Footer';
 import Header from './Components/Header';
 import useValidationProps from './Components/useValidationProps';
 
-const emailValidation = Yup.string().email().required();
+const emailValidation = z.string().email().min(1);
 
-const nameValidation = Yup.string().required();
+const nameValidation = z.string().min(1);
 
-export const validation = Yup.object().shape({
+export const validation = z.object({
   firstName: nameValidation,
   lastName: nameValidation,
   email: emailValidation,
@@ -21,14 +20,14 @@ export const validation = Yup.object().shape({
 type Props = { sample: Record };
 
 const User = ({ sample: record }: Props) => {
-  const isComplete = validation.isValidSync(record.attrs);
+  const isComplete = validation.safeParse(record.data).success;
 
   const { t } = useTranslation();
 
   const getValidationProps = useValidationProps();
 
   // const recordAttrs = {
-  //   record: record.attrs,
+  //   record: record.data,
   //   isDisabled: record.isDisabled(),
   // };
 
@@ -53,7 +52,7 @@ const User = ({ sample: record }: Props) => {
           <div className="font-medium">Please tell us more about yourself.</div>
         </InfoMessage>
 
-        <IonList className="flex flex-col gap-3">
+        <div className="mx-2 flex flex-col gap-3">
           <div className="rounded-list">
             <Attr
               attr="firstName"
@@ -63,7 +62,7 @@ const User = ({ sample: record }: Props) => {
                 label: t('First name'),
                 labelPlacement: 'floating',
                 autocapitalize: 'on',
-                ...getValidationProps(nameValidation, record.attrs.firstName),
+                ...getValidationProps(nameValidation, record.data.firstName),
               }}
             />
           </div>
@@ -78,7 +77,7 @@ const User = ({ sample: record }: Props) => {
                 labelPlacement: 'floating',
                 autofocus: false,
                 autocapitalize: 'on',
-                ...getValidationProps(nameValidation, record.attrs.lastName),
+                ...getValidationProps(nameValidation, record.data.lastName),
               }}
             />
           </div>
@@ -94,11 +93,11 @@ const User = ({ sample: record }: Props) => {
                 type: 'email',
                 autofocus: false,
                 email: true,
-                ...getValidationProps(emailValidation, record.attrs.email),
+                ...getValidationProps(emailValidation, record.data.email),
               }}
             />
           </div>
-        </IonList>
+        </div>
       </Main>
 
       {isComplete && <Footer comingFrom="User" />}

@@ -24,7 +24,7 @@ const Footer = ({ comingFrom, className }: Props) => {
   return (
     <IonFooter
       className={clsx(
-        'ion-no-border absolute bottom-7 left-1/2 w-3/4 -translate-x-1/2',
+        'ion-no-border absolute! bottom-7 left-1/2 w-3/4! -translate-x-1/2',
         className
       )}
       id="survey-footer"
@@ -32,7 +32,7 @@ const Footer = ({ comingFrom, className }: Props) => {
       <div>
         <IonItem
           lines="none"
-          className="next-button rounded-md font-bold shadow-lg shadow-secondary-800/30"
+          className="next-button shadow-secondary-800/30 rounded-md font-bold shadow-lg"
           onClick={navigateNext}
           type="button"
           color="secondary"
@@ -40,7 +40,7 @@ const Footer = ({ comingFrom, className }: Props) => {
           {!isLastStep && (
             <IonIcon slot="end" color="primary" icon={chevronForwardOutline} />
           )}
-          <IonLabel className="ion-text-center">
+          <IonLabel className="text-center">
             <T>{footerTitle}</T>
           </IonLabel>
         </IonItem>

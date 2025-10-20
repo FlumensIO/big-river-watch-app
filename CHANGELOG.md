@@ -1,3 +1,7 @@
+## 1.2.0
+
+Maintenance update.
+
 ## 1.1.0
 
 Maintenance update.

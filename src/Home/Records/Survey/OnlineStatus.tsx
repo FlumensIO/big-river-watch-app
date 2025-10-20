@@ -1,4 +1,3 @@
-import { FC } from 'react';
 import { observer } from 'mobx-react';
 import { Trans as T } from 'react-i18next';
 import { IonSpinner, IonLabel, IonButton } from '@ionic/react';
@@ -12,15 +11,15 @@ type Props = {
   hasManyPending?: boolean;
 };
 
-const OnlineStatus: FC<Props> = ({ record, onUpload, hasManyPending }) => {
+const OnlineStatus = ({ record, onUpload, hasManyPending }: Props) => {
+  if (record.isDisabled()) return null;
+
   const { saved } = record.metadata;
   if (!saved) return <Badge className="max-w-32">Draft</Badge>;
 
   if (record.remote.synchronising) {
     return <IonSpinner className="mr-2 max-w-[80px]" color="primary" />;
   }
-
-  if (record.isDisabled()) return null;
 
   const isValid = !record.validateRemote();
 

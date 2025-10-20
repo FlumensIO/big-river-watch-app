@@ -33,7 +33,7 @@ async function showDraftAlert(alert: any) {
 }
 
 async function getDraft(alert: any) {
-  const draftID = appModel.attrs['draftId:survey'];
+  const draftID = appModel.data['draftId:survey'];
   if (draftID) {
     const draftById = ({ cid }: Record) => cid === draftID;
     const draftRecord = records.find(draftById);
@@ -56,7 +56,7 @@ async function getNewRecord() {
 
   records.push(record);
 
-  appModel.attrs['draftId:survey'] = record.cid;
+  appModel.data['draftId:survey'] = record.cid;
 
   return record;
 }
@@ -76,7 +76,11 @@ function StartNewSurvey(): null {
 
       const path = '/1';
 
-      context.navigate(`${baseURL}/${record.cid}${path}`, 'forward', 'replace');
+      context.navigate(
+        `${baseURL}/${record!.cid}${path}`,
+        'forward',
+        'replace'
+      );
     };
 
     pickDraftOrCreateRecord();

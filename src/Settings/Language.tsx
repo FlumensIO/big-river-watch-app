@@ -4,7 +4,7 @@ import { NavContext } from '@ionic/react';
 import languages from 'common/languages';
 import app from 'models/app';
 
-const Component: React.FC = () => {
+const Component = () => {
   const { goBack } = useContext(NavContext);
 
   const getOption = ([key, value]: any) => ({
@@ -18,15 +18,17 @@ const Component: React.FC = () => {
     <Page id="language">
       <Header title="Language" />
       <Main>
-        <Attr
-          attr="language"
-          model={app}
-          input="radio"
-          inputProps={{
-            options: Object.entries(languages).map(getOption),
-          }}
-          onChange={goBackWrap}
-        />
+        <div className="my-4">
+          <Attr
+            attr="language"
+            model={app}
+            input="radio"
+            inputProps={{
+              options: Object.entries(languages).map(getOption),
+            }}
+            onChange={goBackWrap}
+          />
+        </div>
       </Main>
     </Page>
   );

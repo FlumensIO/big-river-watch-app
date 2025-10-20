@@ -1,5 +1,7 @@
 import { observer } from 'mobx-react';
 import {
+  cloudDownloadOutline,
+  cloudUploadOutline,
   documentTextOutline,
   globeOutline,
   heartOutline,
@@ -12,21 +14,56 @@ import {
   warningOutline,
 } from 'ionicons/icons';
 import { Trans as T } from 'react-i18next';
-import { InfoMessage, Main, Toggle, PickByType } from '@flumens';
-import { IonIcon, IonList, IonItem } from '@ionic/react';
+import { InfoMessage, Main, Toggle, PickByType, useAlert } from '@flumens';
+import { IonIcon, IonList, IonItem, isPlatform } from '@ionic/react';
 import CONFIG from 'common/config';
 import flumensLogo from 'common/images/flumens.svg';
 import appModel, { Attrs } from 'models/app';
+
+function useDatabaseExportDialog(exportFn: any) {
+  const alert = useAlert();
+
+  const showDatabaseExportDialog = () => {
+    alert({
+      header: 'Export',
+      message: (
+        <T>
+          Are you sure you want to export the data?
+          <p className="my-2 font-bold">
+            This feature is intended solely for technical support and is not a
+            supported method for exporting your data
+          </p>
+        </T>
+      ),
+      buttons: [
+        {
+          text: 'Cancel',
+          role: 'cancel',
+        },
+        {
+          text: 'Export',
+          handler: exportFn,
+        },
+      ],
+    });
+  };
+
+  return showDatabaseExportDialog;
+}
 
 type Props = {
   onToggle: (
     setting: keyof PickByType<Attrs, boolean>,
     checked: boolean
   ) => void;
+  exportDatabase: any;
+  importDatabase: any;
 };
 
-const MainComponent = ({ onToggle }: Props) => {
-  const { sendAnalytics, language } = appModel.attrs;
+const MainComponent = ({ onToggle, exportDatabase, importDatabase }: Props) => {
+  const showDatabaseExportDialog = useDatabaseExportDialog(exportDatabase);
+
+  const { sendAnalytics, language } = appModel.data;
 
   const onSendAnalyticsToggle = (checked: boolean) =>
     onToggle('sendAnalytics', checked);
@@ -106,7 +143,7 @@ const MainComponent = ({ onToggle }: Props) => {
             <IonIcon icon={globeOutline} size="small" slot="start" />
             <T>Language</T>
             <div slot="end" className="text-black/50">
-              {appModel.attrs.language}
+              {appModel.data.language}
             </div>
           </IonItem>
 
@@ -119,6 +156,18 @@ const MainComponent = ({ onToggle }: Props) => {
           <InfoMessage inline>
             Share app crash data so we can make the app more reliable.
           </InfoMessage>
+
+          <IonItem onClick={showDatabaseExportDialog}>
+            <IonIcon icon={cloudDownloadOutline} size="small" slot="start" />
+            <T>Export database</T>
+          </IonItem>
+
+          {!isPlatform('hybrid') && (
+            <IonItem onClick={importDatabase}>
+              <IonIcon icon={cloudUploadOutline} size="small" slot="start" />
+              Import database
+            </IonItem>
+          )}
         </div>
 
         <div className="mt-10 text-center">
@@ -126,7 +175,7 @@ const MainComponent = ({ onToggle }: Props) => {
             <img className="m-auto block w-1/3" src={flumensLogo} alt="logo" />
           </a>
 
-          <p className="mb-5 pt-2 text-primary-900 opacity-70">
+          <p className="text-primary-900 mb-5 pt-2 opacity-70">
             <span>
               <T>App version</T>: v{CONFIG.version} ({CONFIG.build})
             </span>

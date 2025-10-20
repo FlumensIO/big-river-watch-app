@@ -1,0 +1,396 @@
+@import '@ionic/core/css/core.css';
+@import '@ionic/core/css/structure.css';
+@import '@ionic/core/css/typography.css';
+/* @import '@ionic/core/css/normalize.css'; // not adding because messes up tailwind buttons */
+
+@import '@flumens/ionic/dist/themes/rounded.css';
+
+@import 'tailwindcss';
+
+@source "../../node_modules/@flumens/tailwind";
+@source "../../node_modules/@flumens/ionic";
+
+@theme {
+  /* https://www.tailwindshades.com/#color=211.76470588235293%2C100%2C16.666666666666664&step-up=11&step-down=7&hue-shift=0&name=primary&base-stop=8&v=1&overrides=e30%3D  --color-primary: oklch(28.102% 0.09235 254.94); */
+  --color-primary: oklch(28.102% 0.09235 254.94);
+  --color-primary-50: oklch(99.31% 0.0034 247.86);
+  --color-primary-100: oklch(94.305% 0.02805 251.46);
+  --color-primary-200: oklch(84.471% 0.07916 252.18);
+  --color-primary-300: oklch(75.256% 0.1308 252.03);
+  --color-primary-400: oklch(66.76% 0.17984 254.12);
+  --color-primary-500: oklch(59.512% 0.21872 257.83);
+  --color-primary-600: oklch(49.704% 0.17888 257.34);
+  --color-primary-700: oklch(39.159% 0.13797 256.81);
+  --color-primary-800: oklch(28.102% 0.09235 254.94);
+  --color-primary-900: oklch(20.335% 0.06045 251.77);
+  --color-primary-950: oklch(16.351% 0.04246 246.44);
+
+  /* https://www.tailwindshades.com/#color=175.0259067357513%2C88.9400921658986%2C57.45098039215686&step-up=9&step-down=12&hue-shift=0&name=secondary&base-stop=5&v=1&overrides=e30%3D  --color-secondary: oklch(87.143% 0.14497 186.09); */
+  --color-secondary: oklch(87.143% 0.14497 186.09);
+  --color-secondary-50: oklch(99.032% 0.00948 197);
+  --color-secondary-100: oklch(97.198% 0.03118 191.76);
+  --color-secondary-200: oklch(93.97% 0.07066 189.45);
+  --color-secondary-300: oklch(91.056% 0.10342 188.69);
+  --color-secondary-400: oklch(88.908% 0.12968 187.19);
+  --color-secondary-500: oklch(87.143% 0.14497 186.09);
+  --color-secondary-600: oklch(80.205% 0.14022 184.93);
+  --color-secondary-700: oklch(63.832% 0.11097 185.48);
+  --color-secondary-800: oklch(46.29% 0.07981 185.46);
+  --color-secondary-900: oklch(27.204% 0.04553 185.51);
+  --color-secondary-950: oklch(16.087% 0.02609 185.62);
+
+  /* https://www.tailwindshades.com/#color=37.02127659574467%2C100%2C53.92156862745098&step-up=9&step-down=11&hue-shift=0&name=tertiary&base-stop=5&v=1&overrides=e30%3D  --color-tertiary: oklch(79.304% 0.16846 69.901); */
+  --color-tertiary: oklch(79.304% 0.16846 69.901);
+  --color-tertiary-50: oklch(97.123% 0.02534 78.921);
+  --color-tertiary-100: oklch(94.821% 0.04605 78.85);
+  --color-tertiary-200: oklch(90.584% 0.08671 79.369);
+  --color-tertiary-300: oklch(86.426% 0.12293 77.714);
+  --color-tertiary-400: oklch(82.777% 0.15155 75.361);
+  --color-tertiary-500: oklch(79.304% 0.16846 69.901);
+  --color-tertiary-600: oklch(69.578% 0.15367 67.085);
+  --color-tertiary-700: oklch(55.997% 0.12313 67.715);
+  --color-tertiary-800: oklch(41.732% 0.09036 70.081);
+  --color-tertiary-900: oklch(25.868% 0.05471 74.441);
+  --color-tertiary-950: oklch(17.141% 0.03522 83.376);
+
+  /* https://www.tailwindshades.com/#color=0%2C85.36585365853658%2C59.80392156862745&step-up=8&step-down=11&hue-shift=0&name=danger&base-stop=5&v=1&overrides=e30%3D  --color-danger: oklch(63.538% 0.21167 25.6); */
+  --color-danger-50: oklch(95.437% 0.0196 17.501);
+  --color-danger-100: oklch(91.236% 0.04024 17.913);
+  --color-danger-200: oklch(83.016% 0.08326 18.986);
+  --color-danger-300: oklch(75.547% 0.12772 20.507);
+  --color-danger-400: oklch(68.817% 0.17302 22.739);
+  --color-danger-500: oklch(63.538% 0.21167 25.6);
+  --color-danger-600: oklch(58.728% 0.23449 28.638);
+  --color-danger-700: oklch(48.633% 0.19267 28.477);
+  --color-danger-800: oklch(38.007% 0.14816 28.152);
+  --color-danger-900: oklch(26.604% 0.0996 27.398);
+  --color-danger-950: oklch(20.442% 0.07305 26.62);
+
+  /* https://www.tailwindshades.com/#color=128.25396825396825%2C100%2C32&step-up=8&step-down=11&hue-shift=0&name=success&base-stop=7&v=1&overrides=e30%3D */
+  --color-success: oklch(62.054% 0.20566 143.3);
+  --color-success-50: oklch(92.955% 0.12398 148.22);
+  --color-success-100: oklch(91.596% 0.15321 147.42);
+  --color-success-200: oklch(89.364% 0.20593 146.3);
+  --color-success-300: oklch(87.839% 0.24825 145.08);
+  --color-success-400: oklch(86.989% 0.27729 143.81);
+  --color-success-500: oklch(84.126% 0.28028 143.14);
+  --color-success-600: oklch(73.299% 0.24371 143.2);
+  --color-success-700: oklch(62.054% 0.20566 143.3);
+  --color-success-800: oklch(45.799% 0.1499 143.7);
+  --color-success-900: oklch(27.903% 0.08802 144.9);
+  --color-success-950: oklch(17.817% 0.0536 146.56);
+
+  /* https://www.tailwindshades.com/#color=48.48214285714286%2C100%2C43.92156862745098&step-up=8&step-down=11&hue-shift=0&name=warning&base-stop=6&v=1&overrides=e30%3D */
+  --color-warning: oklch(78.872% 0.16128 91.494);
+  --color-warning-50: oklch(96.144% 0.06549 96.138);
+  --color-warning-100: oklch(94.961% 0.08525 96.131);
+  --color-warning-200: oklch(92.716% 0.1223 96.091);
+  --color-warning-300: oklch(90.862% 0.15255 96.044);
+  --color-warning-400: oklch(89.004% 0.17081 94.574);
+  --color-warning-500: oklch(87.313% 0.17747 92.091);
+  --color-warning-600: oklch(78.872% 0.16128 91.494);
+  --color-warning-700: oklch(63.826% 0.13057 92.092);
+  --color-warning-800: oklch(47.597% 0.09738 92.243);
+  --color-warning-900: oklch(30.06% 0.06166 94.346);
+  --color-warning-950: oklch(20.152% 0.04146 96.013);
+}
+
+/* tailwind is loaded later than ionic so resets some of the ionic's base styles */
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    margin: revert-layer;
+  }
+
+  a {
+    /* change link colours */
+    color: var(--color-primary);
+  }
+}
+
+:root {
+  --ion-color-primary: var(--color-primary);
+  --ion-color-primary-contrast: var(--color-primary-50);
+  --ion-color-primary-tint: var(--color-primary-500);
+  --ion-color-primary-dark: var(--color-primary-950);
+  --ion-color-primary-gradient: linear-gradient(
+    165deg,
+    var(--color-primary-800),
+    var(--color-primary-700)
+  );
+
+  --ion-color-secondary: var(--color-secondary);
+  --ion-color-secondary-contrast: var(--color-secondary-50);
+  --ion-color-secondary-shade: var(--color-secondary-700);
+  --ion-color-secondary-tint: var(--color-secondary-500);
+  --ion-color-secondary-dark: var(--color-secondary-950);
+
+  --ion-color-tertiary: var(--color-tertiary);
+  --ion-color-tertiary-contrast: var(--color-tertiary-50);
+  --ion-color-tertiary-shade: var(--color-tertiary-700);
+  --ion-color-tertiary-tint: var(--color-tertiary-500);
+  --ion-color-tertiary-dark: var(--color-tertiary-950);
+
+  --ion-color-success: var(--color-success);
+  --ion-color-success-contrast: var(--color-success-50);
+  --ion-color-success-shade: var(--color-success-700);
+  --ion-color-success-tint: var(--color-success-500);
+  --ion-color-success-dark: var(--color-success-950);
+
+  --ion-color-warning: var(--color-warning);
+  --ion-color-warning-contrast: var(--color-warning-50);
+  --ion-color-warning-shade: var(--color-warning-700);
+  --ion-color-warning-tint: var(--color-warning-500);
+  --ion-color-warning-dark: var(--color-warning-900);
+
+  --ion-color-danger: var(--color-danger);
+  --ion-color-danger-contrast: var(--color-danger-50);
+  --ion-color-danger-shade: var(--color-danger-700);
+  --ion-color-danger-tint: var(--color-danger-500);
+  --ion-color-danger-dark: var(--color-danger-950);
+
+  --ion-color-dark: var(--color-slate-900);
+  --ion-color-dark-contrast: var(--color-slate-50);
+  --ion-color-dark-shade: var(--color-slate-950);
+  --ion-color-dark-tint: var(--color-slate-800);
+
+  --ion-color-medium: var(--color-slate-400);
+  --ion-color-medium-contrast: var(--color-slate-50);
+  --ion-color-medium-shade: var(--color-slate-500);
+  --ion-color-medium-tint: var(--color-slate-300);
+
+  --ion-color-light: var(--color-white);
+  --ion-color-light-contrast: var(--color-slate-950);
+  --ion-color-light-shade: var(--color-slate-200);
+  --ion-color-light-tint: var(--color-white);
+
+  --ion-page-background: #f1f2f6;
+  --ion-item-background: var(--color-white);
+
+  --ion-headings-font-weight: 300;
+  --ion-item-border-color: rgb(0, 0, 0, 0.2);
+
+  --ion-toolbar-background: var(--ion-color-primary-gradient);
+  --ion-toolbar-color: var(--color-white);
+  --ion-toolbar-color-activated: var(--color-white);
+
+  --form-value-color: var(--color-primary-800);
+}
+
+/* status bar */
+html.ios.plt-hybrid #status-bar-background {
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  background: var(--ion-color-primary-dark);
+  width: 100vw;
+  height: env(safe-area-inset-top);
+}
+
+/* FONTS START */
+@font-face {
+  font-weight: 300;
+  src: url('./fonts/Inter-Light.ttf');
+  font-family: 'Inter';
+}
+@font-face {
+  font-weight: 400;
+  src: url('./fonts/Inter-Regular.ttf');
+  font-family: 'Inter';
+}
+@font-face {
+  font-weight: 500;
+  src: url('./fonts/Inter-Medium.ttf');
+  font-family: 'Inter';
+}
+@font-face {
+  font-weight: 600;
+  src: url('./fonts/Inter-SemiBold.ttf');
+  font-family: 'Inter';
+}
+@font-face {
+  font-weight: 700;
+  src: url('./fonts/Inter-Bold.ttf');
+  font-family: 'Inter';
+}
+
+:root {
+  --ion-font-family: 'Inter';
+  font-family: 'Inter';
+}
+
+ion-title,
+h1 {
+  font-weight: 600;
+}
+h2 {
+  font-weight: 500;
+}
+h3 {
+  font-weight: 400;
+}
+/* FONTS END */
+
+/* header colours */
+.apps-section .apps-section-h,
+h1,
+h2,
+h3 {
+  color: var(--color-primary-800);
+}
+
+/* ACCESSIBILITY IMPROVEMENTS START */
+/* clearer image picker empty message */
+.photo-picker.ios .empty {
+  font-size: 0.9em !important;
+}
+
+.photo-picker.md .empty {
+  font-size: 1em !important;
+}
+
+/* larger collapse headers */
+.collapse-block ion-label.ion-text-wrap {
+  font-size: 0.9em;
+}
+
+/* clearer alert messages */
+ion-alert div.alert-message.sc-ion-alert-md {
+  color: black;
+  font-size: 1.1em;
+}
+/* ACCESSIBILITY IMPROVEMENTS END */
+
+/* subtle borders around rounded items */
+.survey-list-item,
+.slider-input-attr,
+.input-list-attr .input-list-attr-item,
+.radio-input-attr ion-item,
+.taxa-filter-edit-dialog-form ion-item,
+ion-textarea.textarea-attr,
+ion-col.grid-input-attr-item,
+ion-item-sliding.survey-list-item,
+.attr .slider-input,
+.attr .input-list .group,
+.attr .text-input,
+.rounded-list:not(:empty) {
+  border: 1px solid var(--color-neutral-300);
+  border-radius: var(--theme-border-radius);
+  overflow: hidden;
+}
+
+/* Fix margin */
+.attr .input-list .group {
+  margin-bottom: 10px;
+}
+
+/* add borders to all survey info messages */
+.survey .info-message:not(.no-padding) {
+  margin: 0.5rem;
+  border: 1px solid var(--color-neutral-300);
+  border-radius: var(--theme-border-radius);
+}
+
+/* list item picture */
+.list-avatar {
+  @apply flex size-14 shrink-0 items-center justify-center overflow-hidden rounded-md bg-neutral-100;
+}
+
+/* top of the list title */
+.list-title {
+  @apply mx-1 mt-4 mb-3 flex items-center text-lg;
+}
+
+/* top of the list item */
+.list-divider {
+  @apply flex items-center justify-between bg-neutral-200/70 p-1 px-2 text-sm text-neutral-600;
+}
+
+/* Make Android icons dark, same as iOS */
+ion-icon[slot='start'].md {
+  color: var(--ion-text-color, #000);
+}
+
+/* Makes iOS menu items same height as Android */
+ion-item .sc-ion-label-ios-h.sc-ion-label-ios-s.ios {
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+/* Add padding to pages */
+ion-content {
+  /* add safe padding for devices with a notch */
+  --padding-top: env(safe-area-inset-top);
+  --padding-bottom: 30px;
+}
+
+/* Make menu item value colours same as form values, e.g. Settings page */
+ion-item .sc-ion-label-md-h.sc-ion-label-md-s.md[slot='end'],
+ion-item .sc-ion-label-ios-h.sc-ion-label-ios-s.ios[slot='end'] {
+  color: var(--form-value-color);
+}
+
+/* make all primary button text colours secondary */
+ion-item[type='button'][color='secondary'],
+ion-button[color='secondary'] {
+  --ion-color-contrast: var(--color-primary) !important;
+}
+
+/* underline links */
+a[href]:not([role='listitem']) {
+  font-weight: 600;
+  text-decoration-line: underline;
+}
+
+/* survey pages need extra padding for the footer navigation */
+ion-content.survey {
+  --padding-top: 0;
+  --padding-bottom: 100px;
+}
+
+/* fix checkbox icons */
+.checkbox-input-attr ion-item.hasIcon img {
+  margin-right: 10px;
+  width: 4rem;
+  height: 100%;
+  object-fit: cover;
+}
+.checkbox-input-attr ion-item.hasIcon {
+  --padding-start: 0;
+}
+
+/* fix mapbox attribution size */
+.mapboxgl-ctrl-attrib.mapboxgl-compact-show .mapboxgl-ctrl-attrib-inner {
+  font-size: 10px;
+}
+.mapboxgl-ctrl-attrib.mapboxgl-compact-show {
+  margin-bottom: 3px;
+}
+
+/* hide 3 things input buttons - always show minimum 3 out of 3 */
+.input-list-attr-item ion-button {
+  display: none;
+}
+
+/* fix feeling question input alignment */
+.attr.attr-feeling .text-input,
+.attr.attr-comment .text-input,
+.attr .slider-input,
+.attr .input-list,
+ion-item.slider-input-attr {
+  @apply mx-2;
+  width: calc(100% - 1rem);
+}
+
+ion-checkbox {
+  --checkbox-background-checked: white;
+  --checkmark-color: var(--form-value-color);
+}
+
+.camera-btn-icon {
+  background: var(--color-neutral-200) !important;
+  color: var(--ion-color-primary-800) !important;
+}

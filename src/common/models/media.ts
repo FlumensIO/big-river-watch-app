@@ -24,13 +24,7 @@ export interface Attrs extends ModelAttrs {
 const isHybrid =
   !!(window as any).cordova || !!(window as any)?.Capacitor?.isNative;
 
-class Media extends Model {
-  declare attrs: Attrs;
-
-  static fromJSON(json: any) {
-    return new this(json);
-  }
-
+class Media extends Model<Attrs> {
   /**
    * Transforms and resizes an image file into a string.
    * Can accept file image path and a file input file.
@@ -182,7 +176,7 @@ class Media extends Model {
     }
 
     const imageModel = new MediaClass({
-      attrs: {
+      data: {
         data,
         type: 'jpg',
         width,
@@ -210,10 +204,10 @@ class Media extends Model {
       this.parent.save();
     }
 
-    const URL = this.attrs.data;
+    const URL = this.data.data;
 
     try {
-      if (this.attrs.path) {
+      if (this.data.path) {
         // backwards compatible - don't delete old media
         await Filesystem.deleteFile({
           path: URL,
@@ -245,7 +239,7 @@ class Media extends Model {
 
     console.log('Uploading media', this.cid);
 
-    const { type } = this.attrs;
+    const { type } = this.data;
     let extension = type;
     let mediaType = type;
     if (type?.match(/image.*/)) {
@@ -286,7 +280,7 @@ class Media extends Model {
   }
 
   getURL() {
-    const { data: name } = this.attrs;
+    const { data: name } = this.data;
 
     if (!isPlatform('hybrid') || process.env.NODE_ENV === 'test') {
       return name;
@@ -303,13 +297,13 @@ class Media extends Model {
     const promise = new Promise((fulfill, reject) => {
       Media.resize(
         this.getURL(),
-        this.attrs.type as string,
+        this.data.type as string,
         MAX_WIDTH,
         MAX_HEIGHT
       )
         .then((args: any) => {
           const [image, data] = args;
-          that.attrs.data = data;
+          that.data.data = data;
           fulfill([image, data]);
         })
         .catch(reject);
