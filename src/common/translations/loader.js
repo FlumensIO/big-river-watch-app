@@ -1,6 +1,7 @@
 /* eslint-disable camelcase */
 import cy from './interface/cy.po';
 import en from './interface/en.pot';
+import ga from './interface/ga.po';
 
 // Adding some context, reference and other in po files:
 
@@ -41,5 +42,8 @@ export default {
   },
   cy: {
     interface: rawToKeyVal(cy),
+  },
+  ga: {
+    interface: rawToKeyVal(ga),
   },
 };

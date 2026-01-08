@@ -1,6 +1,7 @@
 ## 1.2.0
 
 Maintenance update.
+Added Irish language.
 
 ## 1.1.0
 
