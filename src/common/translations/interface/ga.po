@@ -2,11 +2,12 @@
 # Translators:
 # Daniel martin, 2025
 # Flumens Apps, 2026
+# emma brisdion, 2026
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: temp\n"
-"Last-Translator: Flumens Apps, 2026\n"
+"Last-Translator: emma brisdion, 2026\n"
 "Language-Team: Irish (https://app.transifex.com/rivers-trust/teams/174713/ga/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -38,10 +39,9 @@ msgid ""
 "survey in this app to tell us what you can see. Click ‘submit’ to send us "
 "your results!"
 msgstr ""
-"Bí ag faire amach do rudaí cosúil le fiadhúlra, plandaí agus truailliú, "
-"ansin cuir tús leis an suirbhé san aip seo chun a insint dúinn cad is féidir"
-" leat a fheiceáil. Cliceáil ‘cuir isteach’ chun do thorthaí a sheoladh "
-"chugainn!"
+"Bí ag lorg amach do rudaí cosúil le fiadhúlra, plandaí agus truailliú, ansin"
+" cuir tús leis an suirbhé san aip seo chun a insint dúinn cad is féidir leat"
+" a fheiceáil. Cliceáil ‘cuir isteach’ chun do thorthaí a sheoladh chugainn!"
 
 # /onboarding
 msgid "Not sure what you’re looking at?"
@@ -104,7 +104,7 @@ msgstr "Truailliú"
 
 # /home/landing
 msgid "Start survey"
-msgstr "Tosaigh suirbhé"
+msgstr "Tosaigh an suirbhé"
 
 # /home/records
 msgid "Pending"
