@@ -21,8 +21,10 @@ WITH CHECK (true);
 alter table
   records enable row level security;
 
--- Allow uploaded fetching record IDs
-create view records_public(id, cid, updated_at) as
+-- Allow uploaded fetching record IDs only (security_invoker=false means the view runs as its
+-- owner, bypassing RLS on the underlying records table without exposing other columns to anon)
+create view records_public(id, cid, updated_at)
+  with (security_invoker = false) as
 SELECT records.id, records.cid,
        records.updated_at
 FROM records;
