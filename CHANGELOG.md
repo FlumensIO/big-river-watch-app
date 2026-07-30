@@ -1,3 +1,7 @@
+## 1.2.1
+
+Upgrade Capacitor.
+
 ## 1.2.0
 
 Maintenance update.
